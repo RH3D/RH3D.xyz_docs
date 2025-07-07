@@ -5,6 +5,7 @@ parent: v1.2S - (standard)
 grand_parent: E3NG v1.2
 has_children: false
 nav_order: 50
+description: "Set up Klipper or Marlin firmware for your E3NG v1.2S CoreXY build. Get configs, docs, and board compatibility details to prepare your Ender 3 conversion."
 permalink: /E3NG_v1_2/standard/firmware
 ---
 # FIRMWARE
