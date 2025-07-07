@@ -5,6 +5,7 @@ parent: v1.2S - (standard)
 grand_parent: E3NG v1.2
 has_children: false
 nav_order: 30
+description: "Download and organize STL files for E3NG v1.2S CoreXY builds. Learn part naming formats, color coding, quantity hints, and printer compatibility details."
 permalink: /E3NG_v1_2/standard/files
 ---
 # FILES
