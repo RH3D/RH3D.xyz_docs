@@ -4,6 +4,7 @@ layout: default
 parent: Final steps
 #has_children: true
 nav_order: 1
+description: "Finalize your E3NG v1.2S build with setup and calibration tips. Dial in slicer settings, level your bed, and prepare for flawless CoreXY 3D printing."
 permalink: /E3NG_v1_2/final_setup/setup_calibration
 ---
 # PRINTER SETUP AND CALIBRATION
