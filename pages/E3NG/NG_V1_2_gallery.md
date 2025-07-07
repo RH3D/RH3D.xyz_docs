@@ -4,6 +4,7 @@ layout: default
 parent: E3NG v1.2
 #has_children: true
 nav_order: 1
+description: "Browse E3NG v1.2 build photos and wallpapers. See real CoreXY conversions of Ender 3 printers powered by RH3D’s open-source designs and community creativity."
 permalink: /E3NG_v1_2/gallery
 ---
 # WALLPAPERS
