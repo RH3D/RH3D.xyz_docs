@@ -4,6 +4,7 @@ layout: default
 parent: E3NG v1.2
 has_children: true
 nav_order: 30
+description: "Customize your E3NG v1.2 CoreXY printer with modular upgrades, advanced configurations, and full control over sourcing. A flexible DIY platform for expert builders."
 permalink: /E3NG_v1_2/advanced
 ---
 
