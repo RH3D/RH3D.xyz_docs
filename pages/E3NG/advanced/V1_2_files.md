@@ -5,6 +5,7 @@ parent: v1.2 - (advanced)
 grand_parent: E3NG v1.2
 has_children: false
 nav_order: 40
+description: "Download STL files and organize your E3NG v1.2 CoreXY build. Use the RH3D configurator for accurate part lists and explore remix mods on Printables or Discord."
 permalink: /E3NG_v1_2/advanced/files
 ---
 # FILES
