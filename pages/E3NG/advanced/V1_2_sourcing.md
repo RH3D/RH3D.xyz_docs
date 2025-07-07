@@ -5,6 +5,7 @@ parent: v1.2 - (advanced)
 grand_parent: E3NG v1.2
 has_children: false
 nav_order: 20
+description: "Source parts for your advanced E3NG v1.2 CoreXY build using the official BOM and configurator. Discover tested links, reuse tips, and advice for modular configurations."
 permalink: /E3NG_v1_2/advanced/sourcing_parts
 ---
 # SOURCING PARTS
