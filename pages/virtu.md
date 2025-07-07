@@ -10,9 +10,6 @@ permalink: /virtu
 
 ![](../assets/images/VIRTU_E3_big.JPG)
 
-...
-{: .text-center }
-
 #### CURRENTLY IN DEVELOPMENT AND TESTING
 {: .text-center }
 
