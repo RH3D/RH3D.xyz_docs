@@ -5,6 +5,7 @@ parent: Sourcing parts
 grand_parent: v1.2S - (standard)
 has_children: false
 nav_order: 20
+description: "Self-source all parts for your E3NG v1.2S CoreXY build with a detailed BOM, tested links, and reuse tips. Customize your Ender 3 upgrade your way."
 permalink: /E3NG_v1_2/standard/sourcing_parts/self_sourcing
 ---
 # SELF SOURCING
