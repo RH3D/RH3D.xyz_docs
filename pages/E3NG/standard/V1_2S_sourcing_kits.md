@@ -5,6 +5,7 @@ parent: Sourcing parts
 grand_parent: v1.2S - (standard)
 has_children: false
 nav_order: 10
+description: "Explore vendor-supported kits for E3NG v1.2S CoreXY builds. Choose tested components for faster assembly, price-to-performance value, and long-lasting reliability."
 permalink: /E3NG_v1_2/standard/sourcing_parts/kits
 ---
 
