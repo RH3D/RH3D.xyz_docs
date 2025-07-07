@@ -5,6 +5,7 @@ parent: v1.2 - (advanced)
 grand_parent: E3NG v1.2
 has_children: false
 nav_order: 10
+description: "Configure your advanced E3NG v1.2 CoreXY build with modular options for frame, toolhead, cooling, and accessories. Use the RH3D configurator to tailor your upgrade."
 permalink: /E3NG_v1_2/advanced/config
 ---
 # PRINTER CONFIGURATION
