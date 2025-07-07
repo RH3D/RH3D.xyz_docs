@@ -5,6 +5,7 @@ parent: v1.2 - (advanced)
 grand_parent: E3NG v1.2
 has_children: false
 nav_order: 30
+description: "Print parts for your advanced E3NG v1.2 CoreXY build with expert slicing settings, material tips, calibration guides, and color customization advice."
 permalink: /E3NG_v1_2/advanced/printing_parts
 ---
 # PRINTING PARTS
