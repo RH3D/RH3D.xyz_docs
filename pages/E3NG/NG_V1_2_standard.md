@@ -4,6 +4,7 @@ layout: default
 parent: E3NG v1.2
 has_children: true
 nav_order: 20
+description: "E3NG v1.2S offers a guided CoreXY upgrade for your Ender 3. Build faster with curated kits, simplified instructions, and streamlined compatibility."
 permalink: /E3NG_v1_2/standard
 ---
 ![](../../assets/images/E3NG_V1.2S_MULTI_CAD2.png)
