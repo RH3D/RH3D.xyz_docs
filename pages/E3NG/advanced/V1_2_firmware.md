@@ -5,6 +5,7 @@ parent: v1.2 - (advanced)
 grand_parent: E3NG v1.2
 has_children: false
 nav_order: 60
+description: "Firmware support for advanced E3NG v1.2 CoreXY builds. Until available, follow the v1.2S guide for Klipper or Marlin configs and compatible controller boards."
 permalink: /E3NG_v1_2/advanced/firmware
 ---
 # FIRMWARE
