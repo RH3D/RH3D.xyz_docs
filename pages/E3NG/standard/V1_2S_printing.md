@@ -5,6 +5,7 @@ parent: v1.2S - (standard)
 grand_parent: E3NG v1.2
 has_children: false
 nav_order: 20
+description: "Prepare to print E3NG v1.2S parts with material tips, slicing settings, calibration advice, and color guides. Achieve strong and precise CoreXY prints from the start."
 permalink: /E3NG_v1_2/standard/printing_parts
 ---
 # PRINTING PARTS
