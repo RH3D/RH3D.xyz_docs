@@ -8,7 +8,7 @@ permalink: /virtu
 # VIRTU E3
 {: .text-center }
 
-![](../assets/images/VIRTU_E3_02.jpg)
+![](../assets/images/VIRTU_E3_big.jpg)
 
 ...
 {: .text-center }
