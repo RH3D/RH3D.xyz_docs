@@ -2,7 +2,7 @@
 title: RH3D
 layout: home
 nav_order: 10
-description: "Welcome to the RH3D's designs and lets dive into the DIY 3D printing projects. Ender 3? Give him a second life!"
+description: "Explore RH3D's custom Ender 3 upgrades and DIY 3D printing projects. Give your printer a second life and join a passionate maker community."
 permalink: /
 ---
 # E3NG (ENDER 3 NG)
