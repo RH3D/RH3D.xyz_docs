@@ -5,6 +5,7 @@ parent: v1.2S - (standard)
 grand_parent: E3NG v1.2
 has_children: false
 nav_order: 40
+description: "Build your E3NG v1.2S CoreXY printer step by step. Download the official guide with detailed instructions, tips, and notes for a smooth DIY assembly."
 permalink: /E3NG_v1_2/standard/build_guide
 ---
 # BUILD GUIDE
