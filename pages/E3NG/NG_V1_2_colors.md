@@ -4,6 +4,7 @@ layout: default
 parent: E3NG v1.2
 #has_children: true
 nav_order: 40
+description: "Customize your E3NG v1.2 build with RH3D’s color scheme tool. Preview accent and main colors in real-time for a personalized CoreXY printer design."
 permalink: /E3NG_v1_2/color_scheme
 ---
 <html lang="cs">
