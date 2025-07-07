@@ -5,6 +5,7 @@ parent: v1.2S - (standard)
 grand_parent: E3NG v1.2
 has_children: true
 nav_order: 10
+description: "Source parts for your E3NG v1.2S CoreXY build with ease. Choose curated kits for a faster start or follow the full BOM to build your Ender 3 upgrade your way."
 permalink: /E3NG_v1_2/standard/sourcing_parts
 ---
 # SOURCING PARTS
