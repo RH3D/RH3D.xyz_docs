@@ -4,6 +4,7 @@ layout: default
 parent: E3NG v1.2
 #has_children: false
 nav_order: 60
+description: "Find answers to common questions about the E3NG v1.2 CoreXY conversion. Learn about STL files, BOM, manuals, CAD access, costs, and how to start your build."
 permalink: /E3NG_v1_2/faq
 ---
 # FREQUENTLY ASKED QUESTIONS
