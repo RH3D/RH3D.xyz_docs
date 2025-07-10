@@ -53,13 +53,54 @@ While customization is possible post-build, the v1.2S prioritizes user experienc
       Ultimate frame
     </span>
   </p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:200px;">FRAME:</strong> Ultimate frame</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:200px;">Z AXIS RODS:</strong> 3x12mm rod</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>BED CARRIAGE:</strong> Stock E3 bed carriage</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>Z WOBBLE COMP.:</strong> Flexi joint</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>Z AXIS DRIVE:</strong> 1 stepper - 1140 mm belt</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>LEADSCREW PULLEYS:</strong> Aluminium</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>BOARD MOUNT:</strong> BTT SKR mini E3 v2 (but has extra hardware for other options)</p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
+  <span style="display:table-cell; width:180px; font-weight:bold;">
+    Z AXIS RODS:
+  </span>
+  <span style="display:table-cell;">
+    3x12mm rod
+  </span>
+</p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
+  <span style="display:table-cell; width:180px; font-weight:bold;">
+    BED CARRIAGE:
+  </span>
+  <span style="display:table-cell;">
+    Stock E3 bed carriage
+  </span>
+</p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
+  <span style="display:table-cell; width:180px; font-weight:bold;">
+    Z WOBBLE COMP.:
+  </span>
+  <span style="display:table-cell;">
+    Flexi joint
+  </span>
+</p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
+  <span style="display:table-cell; width:180px; font-weight:bold;">
+    Z AXIS DRIVE:
+  </span>
+  <span style="display:table-cell;">
+    1 stepper - 1140 mm belt
+  </span>
+</p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
+  <span style="display:table-cell; width:180px; font-weight:bold;">
+    LEADSCREW PULLEYS:
+  </span>
+  <span style="display:table-cell;">
+    Aluminium
+  </span>
+</p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
+  <span style="display:table-cell; width:180px; font-weight:bold;">
+    BOARD MOUNT:
+  </span>
+  <span style="display:table-cell;">
+    BTT SKR mini E3 v2 (but has extra hardware for other options)
+  </span>
+</p>
 
   <div style="display:flex; margin-left:1.5em;">
     <strong style="width:200px;">BASE PRINTER:</strong>
