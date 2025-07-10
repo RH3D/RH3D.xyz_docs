@@ -29,11 +29,11 @@ While customization is possible post-build, the v1.2S prioritizes user experienc
   </summary>
 
   <h3>BASE BUILD</h3>
-  <p style="margin-top:1.5em; margin-left:1.5em; line-height:0.5;">
-    <span style="display:inline-block; width:200px;">
-      <strong>BASE PRINTER:</strong>
+  <p style="margin-top:1.5em; margin-left:1.5em; line-height:0.5; display:table;">
+    <span style="display:table-cell; width:200px; font-weight:bold;">
+      BASE PRINTER:
     </span>
-    <span style="display:inline-block; max-width:calc(100% - 200px);">
+    <span style="display:table-cell;">
       Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)
     </span>
   </p>
