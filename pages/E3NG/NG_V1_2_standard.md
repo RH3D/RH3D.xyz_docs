@@ -29,7 +29,14 @@ While customization is possible post-build, the v1.2S prioritizes user experienc
   </summary>
 
   <h3>BASE BUILD</h3>
-  <p style="margin-top:1.5em; margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:200px;">BASE PRINTER:</strong> Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)</p>
+  <p style="margin-top:1.5em; margin-left:1.5em; line-height:0.5;">
+    <span style="display:inline-block; width:200px;">
+      <strong>BASE PRINTER:</strong>
+    </span>
+    <span style="display:inline-block; max-width:calc(100% - 200px);">
+      Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)
+    </span>
+  </p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:200px;">ENCLOSURE:</strong> Depends on the kit (some have it included, some separate)</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:200px;">FRAME:</strong> Ultimate frame</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:200px;">Z AXIS RODS:</strong> 3x12mm rod</p>
