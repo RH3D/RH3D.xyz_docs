@@ -64,6 +64,11 @@ Remember that the kits cover all the required parts needed for the conversion bu
     <span style="margin-right: 12px;">🧰</span>
     <a href="https://s.click.aliexpress.com/e/_oFhekto">E3NG v1.2S full kit (incl. enclosure)</a>
   </div>
+  <h3>FYSETC - store</h3><br>
+  <div style="font-size: 16px; line-height: 1.6;">
+    <span style="margin-right: 12px;">🧰</span>
+    <a href="https://www.fysetc.com/products/fysetc-upgraded-kit-for-creality-ender-3-high-quality-3d-printer-parts-corexy-kit-for-ender-3-3d-printers?variant=45279041519791">E3NG v1.2S full kit (incl. enclosure)</a><br>
+   </div>
 </div>
 
 <!-- FUNSSOR -->
