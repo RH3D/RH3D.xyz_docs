@@ -29,57 +29,65 @@ While customization is possible post-build, the v1.2S prioritizes user experienc
   </summary>
 
   <h3>BASE BUILD</h3>
-  <p style="margin:1.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+<p style="margin:1.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
       BASE PRINTER:</span><span style="display:table-cell;">
-      Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)</span>
-  </p>
-  <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)</span></p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
       ENCLOSURE:</span><span style="display:table-cell;">
-      Depends on the kit (some have it included, some separate)</span>
-  </p>
-  <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      Depends on the kit (some have it included, some separate)</span></p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
       FRAME:</span><span style="display:table-cell;">
-      Ultimate frame</span>
-  </p>
+      Ultimate frame</span></p>
 <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
     Z AXIS RODS:</span><span style="display:table-cell;">
-    3x12mm rod</span>
-</p>
+    3x12mm rod</span></p>
 <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
     BED CARRIAGE:</span><span style="display:table-cell;">
-    Stock E3 bed carriage</span>
-</p>
+    Stock E3 bed carriage</span></p>
 <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
     Z WOBBLE COMP.:</span><span style="display:table-cell;">
-    Flexi joint</span>
-</p>
+    Flexi joint</span></p>
 <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
     Z AXIS DRIVE:</span><span style="display:table-cell;">
-    1 stepper - 1140 mm belt</span>
-</p>
+    1 stepper - 1140 mm belt</span></p>
 <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
     LEADSCREW PULLEYS:</span><span style="display:table-cell;">
-    Aluminium</span>
-</p>
+    Aluminium</span></p>
 <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
     BOARD MOUNT:</span><span style="display:table-cell;">
-    BTT SKR mini E3 v2 (but has extra hardware for other options)</span>
-</p>
+    BTT SKR mini E3 v2 (but has extra hardware for other options)</span></p>
 
   <h3>TOOLHEAD</h3>
-  <p style="margin-top:1.5em; margin-left:1.5em; line-height:0.5;"><strong>COOLING:</strong> 2x 4010</p>
-  <p style="margin-left:1.5em; line-height:0.5;">Other toolhead parts (hotend, probe, extruder) are not included</p>
+<p style="margin:1.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      COOLING:</span><span style="display:table-cell;">
+      2x 4010</span></p>
+<p style="margin-left:1.5em; line-height:0.5;">Other toolhead parts (hotend, probe, extruder) are not included</p>
 
   <h3>MODS / UPGRADES</h3>
-  <p style="margin-top:1.5em; margin-left:1.5em; line-height:0.5;"><strong>STEPPER COOLING:</strong> No cooling</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>FRAME BRACES:</strong> No</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>HANDLES:</strong> No</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>LED LIGHTS:</strong> No LED</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>AUX COOLING:</strong> No</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>BED WIRING - WAGO:</strong> No - stock cables</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>UNDER BED FAN:</strong> No</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>AUTO Z - VORON:</strong> No</p>
-  
+<p style="margin:1.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      STEPPER COOLING:</span><span style="display:table-cell;">
+      No cooling</span></p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      FRAME BRACES:</span><span style="display:table-cell;">
+      No</span></p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      HANDLES:</span><span style="display:table-cell;">
+      No</span></p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      LED LIGHTS:</span><span style="display:table-cell;">
+      No LED</span></p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      AUX COOLING:</span><span style="display:table-cell;">
+      No</span></p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      BED WIRING - WAGO:</span><span style="display:table-cell;">
+      No - stock cables</span></p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      UNDER BED FAN:</span><span style="display:table-cell;">
+      No</span></p>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      AUTO Z - VORON:</span><span style="display:table-cell;">
+      No</span></p>
 </details>
 
 
