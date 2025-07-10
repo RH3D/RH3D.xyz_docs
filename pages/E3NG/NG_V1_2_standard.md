@@ -20,6 +20,42 @@ This version includes structured instructions, a standardized Bill of Materials,
 
 While customization is possible post-build, the v1.2S prioritizes user experience and accessibility, making it an excellent entry point into the E3NG ecosystem for those new to CoreXY systems or those seeking a dependable upgrade path from the classic Ender 3 design.
 
+### WHAT IS THE CONFIGURATION FOR E3NG V1.2S?
+<details>
+  <summary>
+    <h4 style="display:inline-block; margin-left:1.5em;">
+      E3NG v1.2S configuration
+    </h4>
+  </summary>
+
+  <p><strong>BASE BUILD</strong></p>
+  <p><strong>BASE PRINTER:</strong> Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)</p>
+  <p><strong>ENCLOSURE:</strong> Depends on the kit (some have it included, some separate)</p>
+  <p><strong>FRAME:</strong> Ultimate frame</p>
+  <p><strong>Z AXIS RODS:</strong> 3x12mm rod</p>
+  <p><strong>BED CARRIAGE:</strong> Stock E3 bed carriage</p>
+  <p><strong>Z WOBBLE COMPENSATION:</strong> Flexi joint</p>
+  <p><strong>Z AXIS DRIVE:</strong> 1 stepper - 1140 mm belt</p>
+  <p><strong>LEADSCREW PULLEYS:</strong> Aluminium</p>
+  <p><strong>BOARD MOUNT:</strong> BTT SKR mini E3 v2 (but has extra hardware for other options)</p>
+
+  <p><strong>TOOLHEAD</strong></p>
+  <p><strong>COOLING:</strong> 2x 4010</p>
+  <p>Other toolhead parts (hotend, probe, extruder) are not included</p>
+
+  <p><strong>MODS / UPGRADES</strong></p>
+  <p><strong>STEPPER COOLING:</strong> No cooling</p>
+  <p><strong>FRAME BRACES:</strong> No</p>
+  <p><strong>HANDLES:</strong> No</p>
+  <p><strong>LED LIGHTS:</strong> No LED</p>
+  <p><strong>AUX COOLING:</strong> No</p>
+  <p><strong>BED WIRING - WAGO 221:</strong> No - stock cables</p>
+  <p><strong>UNDER BED FAN:</strong> No</p>
+  <p><strong>AUTO Z - VORON:</strong> No</p>
+  
+</details>
+
+
 continue to:
 {: .text-right .lh-0 .pt-8 }
 
