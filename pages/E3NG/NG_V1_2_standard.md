@@ -29,10 +29,10 @@ While customization is possible post-build, the v1.2S prioritizes user experienc
   </summary>
 
   <h3>BASE BUILD</h3>
-  <p style="margin-top:1.5em; margin-left:1.5em; line-height:0.5;"><strong>BASE PRINTER:</strong> Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>ENCLOSURE:</strong> Depends on the kit (some have it included, some separate)</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>FRAME:</strong> Ultimate frame</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>Z AXIS RODS:</strong> 3x12mm rod</p>
+  <p style="margin-top:1.5em; margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:80px;">BASE PRINTER:</strong> Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)</p>
+  <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:80px;">ENCLOSURE:</strong> Depends on the kit (some have it included, some separate)</p>
+  <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:80px;">FRAME:</strong> Ultimate frame</p>
+  <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:80px;">Z AXIS RODS:</strong> 3x12mm rod</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>BED CARRIAGE:</strong> Stock E3 bed carriage</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>Z WOBBLE COMPENSATION:</strong> Flexi joint</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>Z AXIS DRIVE:</strong> 1 stepper - 1140 mm belt</p>
