@@ -37,15 +37,22 @@ While customization is possible post-build, the v1.2S prioritizes user experienc
       Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)
     </span>
   </p>
-  <p style="margin:0.3em 0 0 1.5em; line-height:1; display:table;">
+  <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
     <span style="display:table-cell; width:180px; font-weight:bold;">
       ENCLOSURE:
     </span>
     <span style="display:table-cell;">
-       Depends on the kit (some have it included, some separate)
+      Depends on the kit (some have it included, some separate)
     </span>
   </p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:200px;">ENCLOSURE:</strong> Depends on the kit (some have it included, some separate)</p>
+  <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
+    <span style="display:table-cell; width:180px; font-weight:bold;">
+      FRAME:
+    </span>
+    <span style="display:table-cell;">
+      Ultimate frame
+    </span>
+  </p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:200px;">FRAME:</strong> Ultimate frame</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:200px;">Z AXIS RODS:</strong> 3x12mm rod</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>BED CARRIAGE:</strong> Stock E3 bed carriage</p>
