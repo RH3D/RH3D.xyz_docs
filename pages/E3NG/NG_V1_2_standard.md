@@ -29,29 +29,29 @@ While customization is possible post-build, the v1.2S prioritizes user experienc
   </summary>
 
   <h3>BASE BUILD</h3>
-  <p style="margin-left:1.5em; line-height:1.2;"><strong>BASE PRINTER:</strong> Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)</p>
-  <p style="margin-left:1.5em; line-height:1.2;"><strong>ENCLOSURE:</strong> Depends on the kit (some have it included, some separate)</p>
-  <p style="margin-left:1.5em; line-height:1.2;"><strong>FRAME:</strong> Ultimate frame</p>
-  <p style="margin-left:1.5em; line-height:1.2;"><strong>Z AXIS RODS:</strong> 3x12mm rod</p>
-  <p style="margin-left:1.5em; line-height:1.2;"><strong>BED CARRIAGE:</strong> Stock E3 bed carriage</p>
-  <p style="margin-left:1.5em; line-height:1.2;"><strong>Z WOBBLE COMPENSATION:</strong> Flexi joint</p>
-  <p style="margin-left:1.5em; line-height:1.2;"><strong>Z AXIS DRIVE:</strong> 1 stepper - 1140 mm belt</p>
-  <p style="margin-left:1.5em; line-height:1.2;"><strong>LEADSCREW PULLEYS:</strong> Aluminium</p>
-  <p style="margin-left:1.5em; line-height:1.2;"><strong>BOARD MOUNT:</strong> BTT SKR mini E3 v2 (but has extra hardware for other options)</p>
+  <p style="margin-left:1.5em; line-height:1;"><strong>BASE PRINTER:</strong> Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)</p>
+  <p style="margin-left:1.5em; line-height:1;"><strong>ENCLOSURE:</strong> Depends on the kit (some have it included, some separate)</p>
+  <p style="margin-left:1.5em; line-height:1;"><strong>FRAME:</strong> Ultimate frame</p>
+  <p style="margin-left:1.5em; line-height:1;"><strong>Z AXIS RODS:</strong> 3x12mm rod</p>
+  <p style="margin-left:1.5em; line-height:1;"><strong>BED CARRIAGE:</strong> Stock E3 bed carriage</p>
+  <p style="margin-left:1.5em; line-height:1;"><strong>Z WOBBLE COMPENSATION:</strong> Flexi joint</p>
+  <p style="margin-left:1.5em; line-height:1;"><strong>Z AXIS DRIVE:</strong> 1 stepper - 1140 mm belt</p>
+  <p style="margin-left:1.5em; line-height:1;"><strong>LEADSCREW PULLEYS:</strong> Aluminium</p>
+  <p style="margin-left:1.5em; line-height:1;"><strong>BOARD MOUNT:</strong> BTT SKR mini E3 v2 (but has extra hardware for other options)</p>
 
   <h3>TOOLHEAD</h3>
   <p style="margin-left:1.5em; line-height:1.2;"><strong>COOLING:</strong> 2x 4010</p>
   <p style="margin-left:1.5em; line-height:1.2;">Other toolhead parts (hotend, probe, extruder) are not included</p>
 
   <h3>MODS / UPGRADES</h3>
-  <p style="margin-top:0.5em; margin-left:1.5em; line-height:1.2;"><strong>STEPPER COOLING:</strong> No cooling</p>
-  <p style="margin-top:0.5em; margin-left:1.5em; line-height:1.2;"><strong>FRAME BRACES:</strong> No</p>
-  <p style="margin-top:0.5em; margin-left:1.5em; line-height:1.2;"><strong>HANDLES:</strong> No</p>
-  <p style="margin-top:0.5em; margin-left:1.5em; line-height:1.2;"><strong>LED LIGHTS:</strong> No LED</p>
-  <p style="margin-top:0.5em; margin-left:1.5em; line-height:1.2;"><strong>AUX COOLING:</strong> No</p>
-  <p style="margin-top:0.5em; margin-left:1.5em; line-height:1.2;"><strong>BED WIRING - WAGO 221:</strong> No - stock cables</p>
-  <p style="margin-top:0.5em; margin-left:1.5em; line-height:1.2;"><strong>UNDER BED FAN:</strong> No</p>
-  <p style="margin-top:0.5em; margin-left:1.5em; line-height:1.2;"><strong>AUTO Z - VORON:</strong> No</p>
+  <p style="margin-left:1.5em; line-height:1.2;"><strong>STEPPER COOLING:</strong> No cooling</p>
+  <p style="margin-left:1.5em; line-height:1.2;"><strong>FRAME BRACES:</strong> No</p>
+  <p style="margin-left:1.5em; line-height:1.2;"><strong>HANDLES:</strong> No</p>
+  <p style="margin-left:1.5em; line-height:1.2;"><strong>LED LIGHTS:</strong> No LED</p>
+  <p style="margin-left:1.5em; line-height:1.2;"><strong>AUX COOLING:</strong> No</p>
+  <p style="margin-left:1.5em; line-height:1.2;"><strong>BED WIRING - WAGO 221:</strong> No - stock cables</p>
+  <p style="margin-left:1.5em; line-height:1.2;"><strong>UNDER BED FAN:</strong> No</p>
+  <p style="margin-left:1.5em; line-height:1.2;"><strong>AUTO Z - VORON:</strong> No</p>
   
 </details>
 
