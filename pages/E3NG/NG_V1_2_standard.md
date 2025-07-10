@@ -20,14 +20,14 @@ This version includes structured instructions, a standardized Bill of Materials,
 
 While customization is possible post-build, the v1.2S prioritizes user experience and accessibility, making it an excellent entry point into the E3NG ecosystem for those new to CoreXY systems or those seeking a dependable upgrade path from the classic Ender 3 design.
 
-### WHAT IS THE CONFIGURATION FOR E3NG V1.2S?
+## WHAT IS THE CONFIGURATION FOR E3NG V1.2S?
 *Comparing the setup with v1.2 (advanced), these are the v1.2S settings for the [configurator](https://rh3d.xyz/E3NG_v1_2/advanced/config).*
 
 <details>
   <summary>
-    <h4 style="display:inline-block; margin-left:1.5em;">
+    <h3 style="display:inline-block; margin-left:1.5em;">
       E3NG v1.2S configuration
-    </h4>
+    </h3>
   </summary>
 
   <h3>BASE BUILD</h3>
