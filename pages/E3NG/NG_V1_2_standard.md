@@ -39,11 +39,11 @@ While customization is possible post-build, the v1.2S prioritizes user experienc
   <p style="margin-left:1.5em; line-height:0.5;"><strong>LEADSCREW PULLEYS:</strong> Aluminium</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>BOARD MOUNT:</strong> BTT SKR mini E3 v2 (but has extra hardware for other options)</p>
 
-  <div style="display:flex; margin-left:1.5em; line-height:0.5;">
+  <div style="display:flex; margin-left:1.5em;">
     <strong style="width:200px;">BASE PRINTER:</strong>
     <span> Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)</span>
   </div>
-    <div style="display:flex; margin-left:1.5em; line-height:0.5;">
+    <div style="display:flex; margin-left:1.5em;">
     <strong style="width:200px;">ENCLOSURE:</strong>
     <span> Depends on the kit (some have it included, some separate)</span>
   </div>
