@@ -29,88 +29,42 @@ While customization is possible post-build, the v1.2S prioritizes user experienc
   </summary>
 
   <h3>BASE BUILD</h3>
-  <p style="margin:1.5em 0 0 1.5em; line-height:1; display:table;">
-    <span style="display:table-cell; width:180px; font-weight:bold;">
-      BASE PRINTER:
-    </span>
-    <span style="display:table-cell;">
-      Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)
-    </span>
+  <p style="margin:1.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      BASE PRINTER:</span><span style="display:table-cell;">
+      Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)</span>
   </p>
-  <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
-    <span style="display:table-cell; width:180px; font-weight:bold;">
-      ENCLOSURE:
-    </span>
-    <span style="display:table-cell;">
-      Depends on the kit (some have it included, some separate)
-    </span>
+  <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      ENCLOSURE:</span><span style="display:table-cell;">
+      Depends on the kit (some have it included, some separate)</span>
   </p>
-  <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
-    <span style="display:table-cell; width:180px; font-weight:bold;">
-      FRAME:
-    </span>
-    <span style="display:table-cell;">
-      Ultimate frame
-    </span>
+  <p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+      FRAME:</span><span style="display:table-cell;">
+      Ultimate frame</span>
   </p>
-<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
-  <span style="display:table-cell; width:180px; font-weight:bold;">
-    Z AXIS RODS:
-  </span>
-  <span style="display:table-cell;">
-    3x12mm rod
-  </span>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+    Z AXIS RODS:</span><span style="display:table-cell;">
+    3x12mm rod</span>
 </p>
-<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
-  <span style="display:table-cell; width:180px; font-weight:bold;">
-    BED CARRIAGE:
-  </span>
-  <span style="display:table-cell;">
-    Stock E3 bed carriage
-  </span>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+    BED CARRIAGE:</span><span style="display:table-cell;">
+    Stock E3 bed carriage</span>
 </p>
-<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
-  <span style="display:table-cell; width:180px; font-weight:bold;">
-    Z WOBBLE COMP.:
-  </span>
-  <span style="display:table-cell;">
-    Flexi joint
-  </span>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+    Z WOBBLE COMP.:</span><span style="display:table-cell;">
+    Flexi joint</span>
 </p>
-<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
-  <span style="display:table-cell; width:180px; font-weight:bold;">
-    Z AXIS DRIVE:
-  </span>
-  <span style="display:table-cell;">
-    1 stepper - 1140 mm belt
-  </span>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+    Z AXIS DRIVE:</span><span style="display:table-cell;">
+    1 stepper - 1140 mm belt</span>
 </p>
-<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
-  <span style="display:table-cell; width:180px; font-weight:bold;">
-    LEADSCREW PULLEYS:
-  </span>
-  <span style="display:table-cell;">
-    Aluminium
-  </span>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+    LEADSCREW PULLEYS:</span><span style="display:table-cell;">
+    Aluminium</span>
 </p>
-<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;">
-  <span style="display:table-cell; width:180px; font-weight:bold;">
-    BOARD MOUNT:
-  </span>
-  <span style="display:table-cell;">
-    BTT SKR mini E3 v2 (but has extra hardware for other options)
-  </span>
+<p style="margin:0.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
+    BOARD MOUNT:</span><span style="display:table-cell;">
+    BTT SKR mini E3 v2 (but has extra hardware for other options)</span>
 </p>
-
-  <div style="display:flex; margin-left:1.5em;">
-    <strong style="width:200px;">BASE PRINTER:</strong>
-    <span> Ender 3 Pro / Ender 3 V2 / Ender 3 (all compatible)</span>
-  </div>
-    <div style="display:flex; margin-left:1.5em;">
-    <strong style="width:200px;">ENCLOSURE:</strong>
-    <span> Depends on the kit (some have it included, some separate)</span>
-  </div>
-  
 
   <h3>TOOLHEAD</h3>
   <p style="margin-top:1.5em; margin-left:1.5em; line-height:0.5;"><strong>COOLING:</strong> 2x 4010</p>
