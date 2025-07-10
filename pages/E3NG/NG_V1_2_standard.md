@@ -34,7 +34,7 @@ While customization is possible post-build, the v1.2S prioritizes user experienc
   <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:200px;">FRAME:</strong> Ultimate frame</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong style="display:inline-block; width:200px;">Z AXIS RODS:</strong> 3x12mm rod</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>BED CARRIAGE:</strong> Stock E3 bed carriage</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>Z WOBBLE COMPENSATION:</strong> Flexi joint</p>
+  <p style="margin-left:1.5em; line-height:0.5;"><strong>Z WOBBLE COMP.:</strong> Flexi joint</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>Z AXIS DRIVE:</strong> 1 stepper - 1140 mm belt</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>LEADSCREW PULLEYS:</strong> Aluminium</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>BOARD MOUNT:</strong> BTT SKR mini E3 v2 (but has extra hardware for other options)</p>
@@ -49,7 +49,7 @@ While customization is possible post-build, the v1.2S prioritizes user experienc
   <p style="margin-left:1.5em; line-height:0.5;"><strong>HANDLES:</strong> No</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>LED LIGHTS:</strong> No LED</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>AUX COOLING:</strong> No</p>
-  <p style="margin-left:1.5em; line-height:0.5;"><strong>BED WIRING - WAGO 221:</strong> No - stock cables</p>
+  <p style="margin-left:1.5em; line-height:0.5;"><strong>BED WIRING - WAGO:</strong> No - stock cables</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>UNDER BED FAN:</strong> No</p>
   <p style="margin-left:1.5em; line-height:0.5;"><strong>AUTO Z - VORON:</strong> No</p>
   
