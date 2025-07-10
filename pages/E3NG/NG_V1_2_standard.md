@@ -63,7 +63,7 @@ While customization is possible post-build, the v1.2S prioritizes user experienc
 <p style="margin:1.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
       COOLING:</span><span style="display:table-cell;">
       2x 4010</span></p>
-<p style="margin-left:1.5em; line-height:0.5;">Other toolhead parts (hotend, probe, extruder) are not included</p>
+<p style="margin-left:1.5em; line-height:0.5;">Other toolhead parts (hotend, probe, extruder) are not included - the choice is yours.</p>
 
   <h3>MODS / UPGRADES</h3>
 <p style="margin:1.5em 0 0 1.5em; line-height:1; display:table;"><span style="display:table-cell; width:180px; font-weight:bold;">
