@@ -29,4 +29,4 @@ continue to:
 [CONFIGURATION]{: .btn .fs-6 .fw-300 .text-yellow-300 }
 {: .text-right }
 
-[CONFIGURATION]: https://rh3d.xyz/
+[CONFIGURATION]: https://rh3d.xyz/E3NG_v1_2/advanced/config
