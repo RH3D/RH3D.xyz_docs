@@ -19,7 +19,7 @@ For full screen, click the FS_MODE_⛶ button.
   .model-wrapper {
     position: relative;
     width: 100%;
-    height: 720px; /* Tvoje původní výška */
+    height: 640px; /* Tvoje původní výška */
     background-image: radial-gradient(circle at 50% 45%, #5f5f5a 0%, #27262b 60%);
     border-radius: 20px;
     overflow: hidden;
