@@ -20,7 +20,7 @@ For full screen, click the FS_MODE_⛶ button.
     position: relative;
     width: 100%;
     height: 720px; /* Tvoje původní výška */
-    background-image: radial-gradient(circle at 50% 40%, #5a5a5a 0%, #27262b 50%);
+    background-image: radial-gradient(circle at 50% 50%, #5a5a5a 0%, #27262b 50%);
     border-radius: 20px;
     overflow: hidden;
   }
