@@ -1,5 +1,5 @@
 ---
-title: Virtu E3 preview
+title: V-E3prv
 layout: default
 nav_exclude: true
 search_exclude: true
