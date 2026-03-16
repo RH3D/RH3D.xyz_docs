@@ -68,7 +68,7 @@ permalink: /temp_db_archive.html
     poster="poster.webp"
     shadow-intensity="2"
     environment-image="legacy"
-    alt="E3NG Model Preview">
+    alt="E3NG BOM Preview">
     
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
@@ -83,4 +83,22 @@ permalink: /temp_db_archive.html
   const btn = document.getElementById('fs-button');
 
   btn.addEventListener('click', () => {
-    if (!document.fullscreenElement)
+    if (!document.fullscreenElement) {
+      container.requestFullscreen().catch(err => {
+        console.error(`Error: ${err.message}`);
+      });
+      btn.textContent = "EXIT_✕";
+    } else {
+      document.exitFullscreen();
+    }
+  });
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      btn.textContent = "FS_MODE_⛶";
+    }
+  });
+</script>
+
+---
+*Pro zobrazení v plném rozlišení klikněte na FS_MODE.*
