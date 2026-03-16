@@ -27,25 +27,27 @@ permalink: /temp_db_archive.html
   }
 
   /* Nenápadné tlačítko pro Fullscreen */
-  .fs-toggle {
+.fs-toggle {
     position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 6px 10px;
+    top: 15px;         /* Přesunuto nahoru */
+    right: 15px;        /* Zůstává vpravo */
+    background: rgba(0, 0, 0, 0.5); /* Tmavší pozadí pro lepší čitelnost */
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
     font-family: monospace;
     font-size: 11px;
     z-index: 100;
     transition: all 0.2s;
+    backdrop-filter: blur(4px); /* Efekt rozmazaného skla za tlačítkem */
   }
 
-  .fs-toggle:hover {
+.fs-toggle:hover {
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
+    border-color: #fff;
   }
 
   /* Styl pro progress bar z tvého původního kódu */
