@@ -3,12 +3,10 @@
 layout: default
 #has_children: true
 #nav_order: 4
-permalink: /preview.html
+permalink: /temp_db_archive.html
 ---
-# PREVIEW
+# temp_0x771_db
 {: .text-center }
-
-díky za ty fíky
 
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
 
