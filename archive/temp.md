@@ -6,7 +6,8 @@ search_exclude: true
 permalink: /PT2603prv.html
 ---
 
-## don't
+*If you are lucky to find this page, please keep it for yourself, thank you :).*
+*For full screen, click the FS_MODE_⛶ button.*
 {: .text-center }
 
 <style>
