@@ -24,18 +24,18 @@ permalink: /temp_db_archive.html
   ar
   ar-modes="webxr scene-viewer quick-look"
   camera-controls
+  auto-rotate
   disable-tap
   tone-mapping="neutral"
   poster="poster.webp"
   shadow-intensity="2"
-  style="width: 100%; height: 640px; background-color: #27262b;"
+  style="width: 100%; height: 720px; background-color: #27262b;"
   environment-image="legacy"
   alt="modek">
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>
 </model-viewer>
-  </div>
 </div>
 
 <model-viewer src="/assets/docs/old/E3NG_BOM_240820.glb"
