@@ -62,7 +62,7 @@ permalink: /PT2603prv.html
 
   <model-viewer 
     id="model-view"
-    src="/assets/docs/old/E3NG_BOM_240820.glb"
+    src="/assets/docs/old/E3NG_BOM_240820.xlsm"
     ar
     ar-modes="webxr scene-viewer quick-look"
     camera-controls
