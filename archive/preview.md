@@ -16,6 +16,7 @@ díky za ty fíky
   ar
   ar-modes="webxr scene-viewer quick-look"
   camera-controls
+  disable-tap
   tone-mapping="neutral"
   poster="poster.webp"
   shadow-intensity="2"
