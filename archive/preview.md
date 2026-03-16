@@ -31,9 +31,9 @@ permalink: /temp_db_archive.html
     position: absolute;
     top: 15px;         /* Přesunuto nahoru */
     right: 15px;        /* Zůstává vpravo */
-    background: rgba(0, 0, 0, 0.5); /* Tmavší pozadí pro lepší čitelnost */
-    color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1); /* Jemné světlé pozadí */
+    color: rgba(255, 255, 255, 0.8);      /* Skoro bílý text */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Tenký světlý okraj */
     padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
@@ -41,13 +41,14 @@ permalink: /temp_db_archive.html
     font-size: 11px;
     z-index: 100;
     transition: all 0.2s;
-    backdrop-filter: blur(4px); /* Efekt rozmazaného skla za tlačítkem */
+    backdrop-filter: blur(2px); /* Jemný efekt skla */
   }
 
-.fs-toggle:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    border-color: #fff;
+  /* Styl při najetí myší */
+  .fs-toggle:hover {
+    background: rgba(255, 255, 255, 0.9); /* Skoro plná bílá */
+    color: #000;                         /* Černý text pro kontrast */
+    border-color: #fff;                  /* Čistě bílý okraj */
   }
 
   /* Styl pro progress bar z tvého původního kódu */
@@ -65,6 +66,7 @@ permalink: /temp_db_archive.html
     ar
     ar-modes="webxr scene-viewer quick-look"
     camera-controls
+    auto-rotate
     disable-tap
     tone-mapping="neutral"
     poster="poster.webp"
