@@ -18,7 +18,7 @@ díky za ty fíky
   camera-controls 
   touch-action="pan-y" 
   style="width: 100%; height: 500px; background-color: #27262b;"
-  alt="3D model pro patrony">
+  alt="model pro">
 </model-viewer>
 
 
@@ -29,7 +29,7 @@ díky za ty fíky
   tone-mapping="neutral"
   poster="poster.webp"
   shadow-intensity="2"
-  style="background-color:#2b2b2b;"
+  style="width: 100%; height: 500px; background-color: #27262b;"
   environment-image="legacy">
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
