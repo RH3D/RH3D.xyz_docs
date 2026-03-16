@@ -20,7 +20,7 @@ díky za ty fíky
   tone-mapping="neutral"
   poster="poster.webp"
   shadow-intensity="2"
-  style="width: 100%; height: 500px; background-color: #27262b;"
+  style="width: 100%; height: 720px; background-color: #27262b;"
   environment-image="legacy"
   alt="modek">
     <div class="progress-bar hide" slot="progress-bar">
