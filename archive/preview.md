@@ -12,16 +12,6 @@ díky za ty fíky
 
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
 
-<model-viewer 
-  src="/assets/docs/old/E3NG_BOM_240820.glb" 
-  ar 
-  camera-controls 
-  touch-action="pan-y" 
-  style="width: 100%; height: 500px; background-color: #27262b;"
-  alt="model pro">
-</model-viewer>
-
-
 <model-viewer src="/assets/docs/old/E3NG_BOM_240820.glb"
   ar
   ar-modes="webxr scene-viewer quick-look"
@@ -30,11 +20,12 @@ díky za ty fíky
   poster="poster.webp"
   shadow-intensity="2"
   style="width: 100%; height: 500px; background-color: #27262b;"
-  environment-image="legacy">
+  environment-image="legacy"
+  alt="modek">
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>
 </model-viewer>
 
 ---
-*Prosím, nesdílejte tento odkaz veřejně.*
+*You.*
