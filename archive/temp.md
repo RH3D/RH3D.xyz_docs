@@ -8,8 +8,9 @@ permalink: /PT2603prv.html
 
 *If you are lucky to find this page (not coming from Patreon), please keep it for yourself.*
 {: .text-center }
-Thank you :)*
+*Thank you :)*
 {: .text-center }
+---
 For full screen, click the FS_MODE_⛶ button.
 {: .text-center }
 
@@ -107,6 +108,3 @@ For full screen, click the FS_MODE_⛶ button.
     }
   });
 </script>
-
----
-*Pro zobrazení v plném rozlišení klikněte na FS_MODE.*
