@@ -73,7 +73,7 @@ For full screen, click the FS_MODE_⛶ button.
     camera-controls
     auto-rotate
     disable-tap
-    tone-mapping="neutral"
+    tone-mapping="aces"
     poster="poster.webp"
     shadow-intensity="2"
     environment-image="legacy"
