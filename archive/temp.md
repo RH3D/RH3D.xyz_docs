@@ -76,6 +76,7 @@ For full screen, click the FS_MODE_⛶ button.
     tone-mapping="aces"
     poster="poster.webp"
     shadow-intensity="2"
+    exposure="1.5"
     environment-image="/assets/images/HDR/pillars_1k.hdr"
     alt="E3NG BOM Preview">
     
