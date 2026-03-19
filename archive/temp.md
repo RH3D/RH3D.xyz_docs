@@ -67,14 +67,13 @@ For full screen, click the FS_MODE_⛶ button.
 
   <model-viewer 
     id="model-view"
-    src="/assets/docs/old/E3NG_BOM_240820.xlsm"
+    src="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm"
     ar
     ar-modes="webxr scene-viewer quick-look"
     camera-controls
-    auto-rotate
+    camera-orbit="-30deg auto auto"
     disable-tap
     tone-mapping="aces"
-    poster="poster.webp"
     shadow-intensity="2"
     exposure="1.5"
     environment-image="/assets/images/HDR/pillars_1k.hdr"
