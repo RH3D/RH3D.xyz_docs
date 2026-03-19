@@ -78,12 +78,21 @@ For full screen, click the FS_MODE_⛶ button.
     exposure="1.5"
     environment-image="/assets/images/HDR/pillars_1k.hdr"
     alt="E3NG BOM Preview">
-    
-    <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
-    </div>
 
-    <button class="fs-toggle" id="fs-button">FS_MODE_⛶</button>
+  <div id="controls" class="dim glass">
+                    <label for="src">Model:</label>
+                    <select id="src">
+                      <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">Head</option>
+                      <option value="/assets/docs/old/E3NG_BOM_240820_temp.xlsm">Monkey</option>
+                      <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">Cactus</option>
+                    </select><br>
+  </div>
+    
+  <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+  </div>
+
+  <button class="fs-toggle" id="fs-button">FS_MODE_⛶</button>
   </model-viewer>
 </div>
 
