@@ -77,7 +77,7 @@ For full screen, click the FS_MODE_⛶ button.
     poster="poster.webp"
     shadow-intensity="2"
     exposure="1.5"
-    environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr"
+    environment-image="/assets/images/HDR/neon_photostudio_1k.hdr"
     alt="E3NG BOM Preview">
     
     <div class="progress-bar hide" slot="progress-bar">
