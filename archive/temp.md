@@ -76,7 +76,7 @@ For full screen, click the FS_MODE_⛶ button.
     tone-mapping="aces"
     poster="poster.webp"
     shadow-intensity="2"
-    environment-image="pillars_1k.hdr"
+    environment-image="legacy"
     alt="E3NG BOM Preview">
     
     <div class="progress-bar hide" slot="progress-bar">
