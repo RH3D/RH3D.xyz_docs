@@ -27,7 +27,7 @@ permalink: /PT2603prv.html
     --poster-color: transparent;
   }
 
-  /* UI STYLING */
+  /* BUTTON STYLING */
   .fs-toggle, #src {
     position: absolute;
     background: rgba(255, 255, 255, 0.1); 
@@ -52,13 +52,24 @@ permalink: /PT2603prv.html
     border-color: #fff;                   
   }
 
-  .fs-toggle { top: 15px; right: 15px; }
-  #src { top: 15px; left: 15px; }
-  #src option { background: #27262b; color: #fff; }
+  /* POSITIONS */
+  .fs-toggle {
+    top: 15px;
+    right: 15px;
+  }
 
-  /* PROGRESS BAR */
+  #src {
+    top: 15px;
+    left: 15px;
+  }
+
+  #src option {
+    background: #27262b;
+    color: #fff;
+  }
+
   .progress-bar {
-    display: none; /* Controlled via JS */
+    display: none;
     width: 33%;
     height: 12px;
     position: absolute;
@@ -79,6 +90,10 @@ permalink: /PT2603prv.html
     border-radius: 25px;
     transition: width 0.3s;
   }
+  
+  .progress-bar.hide {
+    display: none;
+  }
 </style>
 
 <div class="model-wrapper" id="main-container">
@@ -95,16 +110,16 @@ permalink: /PT2603prv.html
     exposure="1.5"
     environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr">
 
-    <select id="src" onchange="document.getElementById('model-view').src = this.value">
+   <select id="src" onchange="document.getElementById('model-view').src = this.value">
       <option value="/assets/docs/old/E3NG_BOM_240820.xlsm">MODEL: VIRTU E3</option>
       <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">MODEL: V-ION</option>
-    </select>
+   </select>
 
-    <button class="fs-toggle" id="fs-button">FULLSCREEN</button>
+   <button class="fs-toggle" id="fs-button">FULLSCREEN</button>
 
-    <div class="progress-bar" slot="progress-bar">
+   <div class="progress-bar" slot="progress-bar">
         <div class="update-bar"></div>
-    </div>
+   </div>
 
   </model-viewer>
 </div>
@@ -114,39 +129,28 @@ permalink: /PT2603prv.html
   const container = document.getElementById('main-container');
   const btn = document.getElementById('fs-button');
 
-  // THE REPAIRED PROGRESS LOGIC
-  const onProgress = (event) => {
+const onProgress = (event) => {
     const progressBar = event.target.querySelector('.progress-bar');
     const updatingBar = event.target.querySelector('.update-bar');
-    const progress = event.detail.totalProgress;
 
-    // Fix for "Starting at half" or "Hanging":
-    // If progress is very low, we treat it as a fresh start and force reset
-    if (progress <= 0.05) {
+    if (event.detail.totalProgress === 0) {
       progressBar.style.display = 'block';
       updatingBar.style.width = '0%';
-    }
-
-    // Standard update
-    updatingBar.style.width = `${progress * 100}%`;
-
-    // Only hide when actually finished
-    if (progress === 1) {
-      setTimeout(() => {
-        progressBar.style.display = 'none';
-      }, 500);
     } else {
-      progressBar.style.display = 'block';
+      updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+      if (event.detail.totalProgress === 1) {
+        setTimeout(() => {
+          progressBar.style.display = 'none';
+        }, 500);
+      }
     }
   };
-
   mv.addEventListener('progress', onProgress);
-
-  // WORKING FULLSCREEN LOGIC (Pure v0.60)
+  
   btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
       container.requestFullscreen().catch(err => {
-        console.error("FS error", err);
+        alert("Fullscreen failed: Use a direct click.");
       });
       btn.textContent = "EXIT_✕";
     } else {
@@ -161,4 +165,4 @@ permalink: /PT2603prv.html
   });
 </script>
 
-*page rev 0.64*
+*page rev 0.65*
