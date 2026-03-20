@@ -69,7 +69,7 @@ permalink: /PT2603prv.html
   }
 
   .progress-bar {
-    display: block;
+    display: none;
     width: 33%;
     height: 12px;
     position: absolute;
@@ -128,13 +128,24 @@ permalink: /PT2603prv.html
   const mv = document.getElementById('model-view');
   const container = document.getElementById('main-container');
   const btn = document.getElementById('fs-button');
-  const updateBar = document.querySelector('.update-bar');
 
-// --- NEW: ACTUAL PROGRESS EVENT FROM DOCS ---
-  mv.addEventListener('progress', (event) => {
-    const percent = event.detail.totalProgress * 100;
-    updateBar.style.width = percent + '%';
-  });
+const onProgress = (event) => {
+    const progressBar = event.target.querySelector('.progress-bar');
+    const updatingBar = event.target.querySelector('.update-bar');
+
+    if (event.detail.totalProgress === 0) {
+      progressBar.style.display = 'block';
+      updatingBar.style.width = '0%';
+    } else {
+      updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+      if (event.detail.totalProgress === 1) {
+        setTimeout(() => {
+          progressBar.style.display = 'none';
+        }, 500);
+      }
+    }
+  };
+  mv.addEventListener('progress', onProgress);
   
   btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
@@ -154,4 +165,4 @@ permalink: /PT2603prv.html
   });
 </script>
 
-*page rev 0.57*
+*page rev 0.58*
