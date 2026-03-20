@@ -89,7 +89,6 @@ permalink: /PT2603prv.html
     width: 0%;
     height: 100%;
     border-radius: 2px;
-    transition: width 0.2s;
   }
   
   .progress-bar.hide {
@@ -119,7 +118,7 @@ permalink: /PT2603prv.html
    <button class="fs-toggle" id="fs-button">FULLSCREEN</button>
 
    <div class="progress-bar" slot="progress-bar">
-        <div class="update-bar" style="width: 0%;"></div>
+        <div class="update-bar"></div>
    </div>
 
   </model-viewer>
@@ -142,7 +141,7 @@ const onProgress = (event) => {
         setTimeout(() => {
           updatingBar.style.width = '0%';
           progressBar.style.display = 'none';
-        }, 500);
+        }, 200);
       }
     }
   };
@@ -166,4 +165,4 @@ const onProgress = (event) => {
   });
 </script>
 
-*page rev 0.78*
+*page rev 0.79*
