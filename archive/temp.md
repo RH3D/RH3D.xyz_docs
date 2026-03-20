@@ -89,7 +89,7 @@ permalink: /PT2603prv.html
     width: 0%;
     height: 100%;
     border-radius: 2px;
-    transition: width 0.5s;
+    transition: width 0.05s;
   }
   
   .progress-bar.hide {
@@ -166,4 +166,4 @@ const onProgress = (event) => {
   });
 </script>
 
-*page rev 0.75*
+*page rev 0.76*
