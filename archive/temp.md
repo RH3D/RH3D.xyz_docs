@@ -89,7 +89,7 @@ permalink: /PT2603prv.html
 
    <select id="src" onchange="document.getElementById('model-view').src = this.value">
       <option value="/assets/docs/old/E3NG_BOM_240820.xlsm">MODEL: VIRTU E3</option>
-      <option value="/assets/docs/old/E3NG_BOM_240820_th.xlsm">MODEL: V-ION</option>
+      <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">MODEL: V-ION</option>
    </select>
 
    <button class="fs-toggle" id="fs-button">FULLSCREEN</button>
@@ -123,5 +123,7 @@ permalink: /PT2603prv.html
     }
   });
 </script>
+
+*rev 0.46*
 
 *rev 0.42*
