@@ -76,18 +76,19 @@ permalink: /PT2603prv.html
     left: 50%;
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
-    border-radius: 25px;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
     z-index: 2000;
   }
   
   .update-bar {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
     width: 0%;
     height: 100%;
-    border-radius: 25px;
+    border-radius: 2px;
     transition: width 0.3s;
   }
   
@@ -165,4 +166,4 @@ const onProgress = (event) => {
   });
 </script>
 
-*page rev 0.68*
+*page rev 0.69*
