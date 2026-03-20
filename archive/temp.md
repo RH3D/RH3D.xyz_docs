@@ -71,7 +71,7 @@ permalink: /PT2603prv.html
   .progress-bar {
     display: none;
     width: 33%;
-    height: 12px;
+    height: 30px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -134,7 +134,7 @@ const onProgress = (event) => {
     const progressBar = event.target.querySelector('.progress-bar');
     const updatingBar = event.target.querySelector('.update-bar');
 
-    if (event.detail.totalProgress <= 0.8) {
+    if (event.detail.totalProgress < 0.5) {
       progressBar.style.display = 'block';
       updatingBar.style.width = '0%';
     } else {
@@ -166,4 +166,4 @@ const onProgress = (event) => {
   });
 </script>
 
-*page rev 0.69*
+*page rev 0.70*
