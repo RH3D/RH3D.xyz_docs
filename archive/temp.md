@@ -128,6 +128,13 @@ permalink: /PT2603prv.html
   const mv = document.getElementById('model-view');
   const container = document.getElementById('main-container');
   const btn = document.getElementById('fs-button');
+  const updateBar = document.querySelector('.update-bar');
+
+// --- NEW: ACTUAL PROGRESS EVENT FROM DOCS ---
+  mv.addEventListener('progress', (event) => {
+    const percent = event.detail.totalProgress * 100;
+    updateBar.style.width = percent + '%';
+  });
   
   btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
@@ -147,4 +154,4 @@ permalink: /PT2603prv.html
   });
 </script>
 
-*page rev 0.56*
+*page rev 0.57*
