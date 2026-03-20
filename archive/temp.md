@@ -129,23 +129,53 @@ permalink: /PT2603prv.html
   const container = document.getElementById('main-container');
   const btn = document.getElementById('fs-button');
 
-const onProgress = (event) => {
-    const progressBar = event.target.querySelector('.progress-bar');
-    const updatingBar = event.target.querySelector('.update-bar');
+// 1. IMPROVED MODEL SELECTION (Resets bar immediately)
+srcSelect.addEventListener('change', (e) => {
+  const progressBar = document.querySelector('.progress-bar');
+  const updatingBar = document.querySelector('.update-bar');
+  
+  // Reset the bar to 0% and show it immediately before the model even starts asking for the file
+  updatingBar.style.width = '0%';
+  progressBar.style.display = 'block';
+  
+  mv.src = e.target.value;
+});
 
-    if (event.detail.totalProgress === 0) {
-      progressBar.style.display = 'block';
-      updatingBar.style.width = '0%';
-    } else {
-      updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
-      if (event.detail.totalProgress === 1) {
-        setTimeout(() => {
-          progressBar.style.display = 'none';
-        }, 500);
-      }
-    }
-  };
-  mv.addEventListener('progress', onProgress);
+// 2. REFINED PROGRESS LOGIC
+const onProgress = (event) => {
+  const progressBar = event.target.querySelector('.progress-bar');
+  const updatingBar = event.target.querySelector('.update-bar');
+  const progress = event.detail.totalProgress;
+
+  // Update the width based on actual progress
+  updatingBar.style.width = `${progress * 100}%`;
+
+  // Only hide when TRULY finished (1.0)
+  if (progress === 1) {
+    setTimeout(() => {
+      progressBar.style.display = 'none';
+    }, 300); // Slightly faster exit for better feel
+  } else if (progress > 0 && progressBar.style.display === 'none') {
+    // Safety: If the bar was hidden but progress is happening, show it
+    progressBar.style.display = 'block';
+  }
+};
+
+mv.addEventListener('progress', onProgress);
+
+// 3. THE "FIRST LOAD" FIX
+// This ensures that on page refresh, the bar doesn't act glitchy
+window.addEventListener('load', () => {
+  const progressBar = document.querySelector('.progress-bar');
+  const updatingBar = document.querySelector('.update-bar');
+  if (mv.loaded) {
+     progressBar.style.display = 'none';
+  } else {
+     progressBar.style.display = 'block';
+     updatingBar.style.width = '0%';
+  }
+});
+  
   
   btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
@@ -165,4 +195,4 @@ const onProgress = (event) => {
   });
 </script>
 
-*page rev 0.60*
+*page rev 0.61*
