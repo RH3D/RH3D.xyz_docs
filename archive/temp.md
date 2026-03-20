@@ -5,7 +5,7 @@ nav_exclude: true
 search_exclude: true
 permalink: /PT2603prv.html
 ---
-rev 0.40
+rev 0.41
 
 *If you are lucky to find this page (not coming from Patreon), please keep it for yourself.*
 {: .text-center }
@@ -91,16 +91,16 @@ For full screen, click the FS_MODE_⛶ button.
     exposure="1.5"
     environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr">
 
-    <select id="src" onchange="document.getElementById('model-view').src = this.value">
+   <select id="src" onchange="document.getElementById('model-view').src = this.value">
       <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">MODEL: HEAD</option>
       <option value="/assets/docs/old/E3NG_BOM_240820_temp.xlsm">MODEL: MONKEY</option>
-    </select>
+   </select>
 
-    <button class="fs-toggle" id="fs-button">FS_MODE_⛶</button>
+   <button class="fs-toggle" id="fs-button">FULLSCREEN_⛶</button>
     
-    <div class="progress-bar hide" slot="progress-bar">
+   <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
-    </div>
+   </div>
 
   </model-viewer>
 </div>
@@ -123,7 +123,7 @@ For full screen, click the FS_MODE_⛶ button.
 
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
-      btn.textContent = "FS_MODE_⛶";
+      btn.textContent = "FULLSCREEN_⛶";
     }
   });
 </script>
