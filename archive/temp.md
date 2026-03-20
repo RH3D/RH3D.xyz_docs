@@ -94,6 +94,10 @@ permalink: /PT2603prv.html
 
    <button class="fs-toggle" id="fs-button">FULLSCREEN</button>
 
+   <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+   </div>
+
   </model-viewer>
 </div>
 
@@ -120,4 +124,4 @@ permalink: /PT2603prv.html
   });
 </script>
 
-*page rev 0.47*
+*page rev 0.49*
