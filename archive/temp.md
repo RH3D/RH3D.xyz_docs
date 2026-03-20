@@ -5,7 +5,7 @@ nav_exclude: true
 search_exclude: true
 permalink: /PT2603prv.html
 ---
-rev 0.33
+rev 0.34
 
 *If you are lucky to find this page (not coming from Patreon), please keep it for yourself.*
 {: .text-center }
@@ -32,8 +32,8 @@ For full screen, click the FS_MODE_⛶ button.
     --poster-color: transparent;
   }
 
-  /* SHARED STYLE FOR ALL BUTTONS */
-  .fs-toggle, .model-selector-btn {
+  /* SHARED STYLE FOR BUTTON AND SELECT */
+  .fs-toggle, #src {
     position: absolute;
     background: rgba(255, 255, 255, 0.1); 
     color: rgba(255, 255, 255, 0.8);      
@@ -46,42 +46,38 @@ For full screen, click the FS_MODE_⛶ button.
     z-index: 100;
     transition: all 0.2s;
     backdrop-filter: blur(2px);
+    appearance: none; /* Removes default dropdown arrow */
+    -webkit-appearance: none;
+    outline: none;
   }
 
-  .fs-toggle:hover, .model-selector-btn:hover:not(:disabled) {
+  /* HOVER STYLE */
+  .fs-toggle:hover, #src:hover {
     background: rgba(255, 255, 255, 0.9); 
     color: #000;                          
     border-color: #fff;                   
   }
 
-  /* GREYED OUT / DISABLED STYLE */
-  .model-selector-btn:disabled {
-    opacity: 0.4;
-    cursor: default;
-    background: rgba(255, 255, 255, 0.05);
-    color: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-
-  /* INDIVIDUAL POSITIONS */
+  /* POSITIONING */
   .fs-toggle {
     top: 15px;
     right: 15px;
   }
 
-  .btn-group {
+  #controls {
     position: absolute;
     top: 15px;
     left: 15px;
-    display: flex;
-    gap: 8px;
-  }
-  
-  /* Reset relative positioning for buttons inside the group */
-  .btn-group .model-selector-btn {
-    position: relative;
+    z-index: 100;
   }
 
+  /* Dropdown menu options style (limited browser support, but keeps it dark) */
+  #src option {
+    background: #27262b;
+    color: #fff;
+  }
+
+  /* Progress bar styles */
   .progress-bar { display: block; width: 33%; height: 10%; max-height: 2%; position: absolute; left: 50%; top: 50%; transform: translate3d(-50%, -50%, 0); border-radius: 25px; box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); background-color: rgba(0, 0, 0, 0.5); }
   .update-bar { background-color: rgba(255, 255, 255, 0.9); width: 0%; height: 100%; border-radius: 25px; transition: width 0.3s; }
   .hide { display: none; }
@@ -104,47 +100,38 @@ For full screen, click the FS_MODE_⛶ button.
     environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr"
     alt="E3NG BOM Preview">
 
-    <div class="btn-group">
-      <button class="model-selector-btn" id="head-btn" data-path="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm" disabled>Head</button>
-      <button class="model-selector-btn" id="monkey-btn" data-path="/assets/docs/old/E3NG_BOM_240820_temp.xlsm">Monkey</button>
-    </div>
+  <div id="controls">
+    <select id="src">
+      <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">MODEL: HEAD</option>
+      <option value="/assets/docs/old/E3NG_BOM_240820_temp.xlsm">MODEL: MONKEY</option>
+    </select>
+  </div>
     
-    <div class="progress-bar hide" slot="progress-bar">
+  <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
-    </div>
+  </div>
 
-    <button class="fs-toggle" id="fs-button">FS_MODE_⛶</button>
+  <button class="fs-toggle" id="fs-button">FS_MODE_⛶</button>
   </model-viewer>
 </div>
 
 <script>
   const modelViewer = document.querySelector('#model-view');
   const container = document.getElementById('main-container');
-  const fsBtn = document.getElementById('fs-button');
+  const btn = document.getElementById('fs-button');
+
+  // ORIGINAL LOGIC: Listening for input on the select element
+  modelViewer.querySelector('#src').addEventListener('input', (event) => {
+    modelViewer.src = event.target.value;
+  });
   
-  const headBtn = document.getElementById('head-btn');
-  const monkeyBtn = document.getElementById('monkey-btn');
-
-  // Logic to change model and toggle buttons
-  function changeModel(btn) {
-    const path = btn.getAttribute('data-path');
-    modelViewer.src = path;
-
-    // Set active button to disabled, others to enabled
-    headBtn.disabled = (btn === headBtn);
-    monkeyBtn.disabled = (btn === monkeyBtn);
-  }
-
-  headBtn.addEventListener('click', () => changeModel(headBtn));
-  monkeyBtn.addEventListener('click', () => changeModel(monkeyBtn));
-
   // Fullscreen Logic
-  fsBtn.addEventListener('click', () => {
+  btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
       container.requestFullscreen().catch(err => {
         console.error(`Error: ${err.message}`);
       });
-      fsBtn.textContent = "EXIT_✕";
+      btn.textContent = "EXIT_✕";
     } else {
       document.exitFullscreen();
     }
@@ -152,7 +139,7 @@ For full screen, click the FS_MODE_⛶ button.
 
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
-      fsBtn.textContent = "FS_MODE_⛶";
+      btn.textContent = "FS_MODE_⛶";
     }
   });
 </script>
