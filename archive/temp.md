@@ -5,7 +5,8 @@ nav_exclude: true
 search_exclude: true
 permalink: /PT2603prv.html
 ---
-rev 0.36
+rev 0.37
+
 
 *If you are lucky to find this page (not coming from Patreon), please keep it for yourself.*
 {: .text-center }
@@ -16,7 +17,6 @@ For full screen, click the FS_MODE_⛶ button.
 {: .text-center }
 
 <style>
-  /* MODEL AND BUTTON CONTAINER */
   .model-wrapper {
     position: relative;
     width: 100%;
@@ -32,8 +32,9 @@ For full screen, click the FS_MODE_⛶ button.
     --poster-color: transparent;
   }
 
-  /* SHARED STYLE FOR BOTH BUTTONS */
+  /* BUTTON STYLING */
   .fs-toggle, #src {
+    position: absolute;
     background: rgba(255, 255, 255, 0.1); 
     color: rgba(255, 255, 255, 0.8);      
     border: 1px solid rgba(255, 255, 255, 0.3); 
@@ -42,38 +43,31 @@ For full screen, click the FS_MODE_⛶ button.
     cursor: pointer;
     font-family: monospace;
     font-size: 11px;
+    z-index: 100;
     transition: all 0.2s;
     backdrop-filter: blur(2px);
     appearance: none; 
     -webkit-appearance: none;
     outline: none;
-    pointer-events: auto; /* CRITICAL for clicks */
-    z-index: 1100;        /* Very high priority */
   }
 
-  /* HOVER STYLE */
   .fs-toggle:hover, #src:hover {
     background: rgba(255, 255, 255, 0.9); 
     color: #000;                          
     border-color: #fff;                   
   }
 
-  /* POSITIONING WRAPPERS */
-  .fs-wrapper {
-    position: absolute;
+  /* POSITIONS */
+  .fs-toggle {
     top: 15px;
     right: 15px;
-    z-index: 1200;
   }
 
-  .controls-wrapper {
-    position: absolute;
+  #src {
     top: 15px;
     left: 15px;
-    z-index: 1200;
   }
 
-  /* Dropdown menu options style */
   #src option {
     background: #27262b;
     color: #fff;
@@ -91,49 +85,42 @@ For full screen, click the FS_MODE_⛶ button.
     id="model-view"
     src="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm"
     ar
-    ar-modes="webxr scene-viewer quick-look"
     camera-controls
     camera-orbit="-30deg auto auto"
-    disable-tap
     tone-mapping="aces"
     shadow-intensity="2"
     exposure="1.5"
-    environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr"
-    alt="E3NG BOM Preview">
+    environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr">
 
-    <div class="controls-wrapper">
-      <select id="src" onchange="document.getElementById('model-view').src = this.value">
-        <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">MODEL: HEAD</option>
-        <option value="/assets/docs/old/E3NG_BOM_240820_temp.xlsm">MODEL: MONKEY</option>
-      </select>
-    </div>
+    <select id="src" onchange="document.getElementById('model-view').src = this.value">
+      <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">MODEL: HEAD</option>
+      <option value="/assets/docs/old/E3NG_BOM_240820_temp.xlsm">MODEL: MONKEY</option>
+    </select>
+
+    <button class="fs-toggle" id="fs-button">FS_MODE_⛶</button>
     
-    <div class="fs-wrapper">
-      <button class="fs-toggle" id="fs-button">FS_MODE_⛶</button>
-    </div>
-
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>
+
   </model-viewer>
 </div>
 
 <script>
-  const modelViewer = document.querySelector('#model-view');
+  const mv = document.getElementById('model-view');
   const container = document.getElementById('main-container');
   const btn = document.getElementById('fs-button');
 
-  // Fullscreen Logic - Using direct onclick for maximum compatibility
-  btn.onclick = () => {
+  btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
       container.requestFullscreen().catch(err => {
-        console.error(`Error: ${err.message}`);
+        alert("Fullscreen failed: Use a direct click.");
       });
       btn.textContent = "EXIT_✕";
     } else {
       document.exitFullscreen();
     }
-  };
+  });
 
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
