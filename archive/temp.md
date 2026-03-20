@@ -27,7 +27,7 @@ permalink: /PT2603prv.html
     --poster-color: transparent;
   }
 
-  /* UI STYLING - Using your confirmed styles */
+  /* BUTTON STYLING */
   .fs-toggle, #src {
     position: absolute;
     background: rgba(255, 255, 255, 0.1); 
@@ -38,7 +38,7 @@ permalink: /PT2603prv.html
     cursor: pointer;
     font-family: monospace;
     font-size: 11px;
-    z-index: 1000; /* Ensure they stay on top */
+    z-index: 100;
     transition: all 0.2s;
     backdrop-filter: blur(2px);
     appearance: none; 
@@ -52,11 +52,22 @@ permalink: /PT2603prv.html
     border-color: #fff;                   
   }
 
-  .fs-toggle { top: 15px; right: 15px; }
-  #src { top: 15px; left: 15px; }
-  #src option { background: #27262b; color: #fff; }
+  /* POSITIONS */
+  .fs-toggle {
+    top: 15px;
+    right: 15px;
+  }
 
-  /* PROGRESS BAR - Simplified for stability */
+  #src {
+    top: 15px;
+    left: 15px;
+  }
+
+  #src option {
+    background: #27262b;
+    color: #fff;
+  }
+
   .progress-bar {
     display: none;
     width: 33%;
@@ -79,6 +90,10 @@ permalink: /PT2603prv.html
     border-radius: 25px;
     transition: width 0.3s;
   }
+  
+  .progress-bar.hide {
+    display: none;
+  }
 </style>
 
 <div class="model-wrapper" id="main-container">
@@ -95,16 +110,16 @@ permalink: /PT2603prv.html
     exposure="1.5"
     environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr">
 
-    <select id="src" onchange="document.getElementById('model-view').src = this.value">
+   <select id="src" onchange="document.getElementById('model-view').src = this.value">
       <option value="/assets/docs/old/E3NG_BOM_240820.xlsm">MODEL: VIRTU E3</option>
       <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">MODEL: V-ION</option>
-    </select>
+   </select>
 
-    <button class="fs-toggle" id="fs-button">FULLSCREEN</button>
+   <button class="fs-toggle" id="fs-button">FULLSCREEN</button>
 
-    <div class="progress-bar" slot="progress-bar">
+   <div class="progress-bar" slot="progress-bar">
         <div class="update-bar"></div>
-    </div>
+   </div>
 
   </model-viewer>
 </div>
@@ -112,46 +127,42 @@ permalink: /PT2603prv.html
 <script>
   const mv = document.getElementById('model-view');
   const container = document.getElementById('main-container');
-  const fsBtn = document.getElementById('fs-button');
-  const pBar = document.querySelector('.progress-bar');
-  const uBar = document.querySelector('.update-bar');
+  const btn = document.getElementById('fs-button');
 
-  // 1. PROGRESS LOGIC: Solves "Start at half" and "Hidden" issues
-  mv.addEventListener('progress', (e) => {
-    const progress = e.detail.totalProgress;
-    
-    // If it's just starting (under 5%), reset visually
-    if (progress <= 0.05) {
-      uBar.style.width = '0%';
-      pBar.style.display = 'block';
+const onProgress = (event) => {
+    const progressBar = event.target.querySelector('.progress-bar');
+    const updatingBar = event.target.querySelector('.update-bar');
+
+    if (event.detail.totalProgress <= 0.1) {
+      progressBar.style.display = 'block';
+      updatingBar.style.width = '0%';
     } else {
-      uBar.style.width = (progress * 100) + '%';
-      pBar.style.display = 'block';
+      updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+      if (event.detail.totalProgress === 1) {
+        setTimeout(() => {
+          progressBar.style.display = 'none';
+        }, 500);
+      }
     }
-
-    // Hide only when fully finished
-    if (progress === 1) {
-      setTimeout(() => { pBar.style.display = 'none'; }, 500);
-    }
-  });
-
-  // 2. FULLSCREEN LOGIC: Back to basics
-  fsBtn.onclick = () => {
+  };
+  mv.addEventListener('progress', onProgress);
+  
+  btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
       container.requestFullscreen().catch(err => {
         alert("Fullscreen failed: Use a direct click.");
       });
-      fsBtn.textContent = "EXIT_✕";
+      btn.textContent = "EXIT_✕";
     } else {
       document.exitFullscreen();
     }
-  };
+  });
 
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
-      fsBtn.textContent = "FULLSCREEN";
+      btn.textContent = "FULLSCREEN";
     }
   });
 </script>
 
-*page rev 0.66*
+*page rev 0.67*
