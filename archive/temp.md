@@ -19,7 +19,7 @@ For full screen, click the FS_MODE_⛶ button.
   .model-wrapper {
     position: relative;
     width: 100%;
-    height: 640px; /* CUSTOM HEIGHT ON PAGE */
+    height: 640px; 
     background-image: radial-gradient(circle at 50% 45%, #5f5f5a 0%, #27262b 60%);
     border-radius: 20px;
     overflow: hidden;
@@ -31,14 +31,11 @@ For full screen, click the FS_MODE_⛶ button.
     --poster-color: transparent;
   }
 
-  /* FULLSCREEN BUTTON */
-.fs-toggle {
-    position: absolute;
-    top: 15px;         /* POSITION TOP */
-    right: 15px;        /* POSITION RIGHT */
-    background: rgba(255, 255, 255, 0.1); /* BRIGHTER BACKGROUND */
-    color: rgba(255, 255, 255, 0.8);      /* WHITE TEXT */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* THIN WHITE EDGE */
+  /* SHARED BUTTON STYLES (For FS and Model Toggle) */
+  .fs-toggle, .model-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
@@ -46,17 +43,41 @@ For full screen, click the FS_MODE_⛶ button.
     font-size: 11px;
     z-index: 100;
     transition: all 0.2s;
-    backdrop-filter: blur(2px); /* BG BLURR */
+    backdrop-filter: blur(2px);
   }
 
-  /* MOUSE HOVER STYLE CHANGE */
-  .fs-toggle:hover {
-    background: rgba(255, 255, 255, 0.9); /* BRIGHTEN BUTTON */
-    color: #000;                         /* DARKEN TEXT */
-    border-color: #fff;                  /* FULL WHITE EDGE LINE */
+  /* POSITIONING */
+  .fs-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
   }
 
-  /* Styl pro progress bar z tvého původního kódu */
+  #controls {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+  }
+
+  /* HOVER EFFECTS */
+  .fs-toggle:hover, .model-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border-color: #fff;
+  }
+
+  /* ACTIVE/DISABLED STATE (GREYED OUT) */
+  .model-btn:disabled {
+    background: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+    cursor: default;
+    pointer-events: none;
+  }
+
   .progress-bar { display: block; width: 33%; height: 10%; max-height: 2%; position: absolute; left: 50%; top: 50%; transform: translate3d(-50%, -50%, 0); border-radius: 25px; box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); background-color: rgba(0, 0, 0, 0.5); }
   .update-bar { background-color: rgba(255, 255, 255, 0.9); width: 0%; height: 100%; border-radius: 25px; transition: width 0.3s; }
   .hide { display: none; }
@@ -67,7 +88,7 @@ For full screen, click the FS_MODE_⛶ button.
 
   <model-viewer 
     id="model-view"
-    src="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm"
+    src="/assets/models/head.glb"
     ar
     ar-modes="webxr scene-viewer quick-look"
     camera-controls
@@ -77,15 +98,11 @@ For full screen, click the FS_MODE_⛶ button.
     shadow-intensity="2"
     exposure="1.5"
     environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr"
-    alt="E3NG BOM Preview">
+    alt="3D Preview">
 
-  <div id="controls" class="dim glass">
-                    <label for="src">Model:</label>
-                    <select id="src">
-                      <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">Head</option>
-                      <option value="/assets/docs/old/E3NG_BOM_240820_temp.xlsm">Monkey</option>
-                      <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">Cactus</option>
-                    </select><br>
+  <div id="controls">
+      <button class="model-btn" id="btn-head" data-path="/assets/models/head.glb" disabled>HEAD_MOD</button>
+      <button class="model-btn" id="btn-monkey" data-path="/assets/models/monkey.glb">MONKEY_MOD</button>
   </div>
     
   <div class="progress-bar hide" slot="progress-bar">
@@ -99,18 +116,28 @@ For full screen, click the FS_MODE_⛶ button.
 <script>
   const modelViewer = document.querySelector('#model-view');
   const container = document.getElementById('main-container');
-  const btn = document.getElementById('fs-button');
+  const fsBtn = document.getElementById('fs-button');
+  const btnHead = document.getElementById('btn-head');
+  const btnMonkey = document.getElementById('btn-monkey');
 
-  modelViewer.querySelector('#src').addEventListener('input', (event) => {
-                    modelViewer.src = event.target.value;
-                  });
+  // Switch Logic
+  function switchModel(clickedBtn, otherBtn) {
+    const newSrc = clickedBtn.getAttribute('data-path');
+    modelViewer.src = newSrc;
+    clickedBtn.disabled = true;
+    otherBtn.disabled = false;
+  }
+
+  btnHead.addEventListener('click', () => switchModel(btnHead, btnMonkey));
+  btnMonkey.addEventListener('click', () => switchModel(btnMonkey, btnHead));
   
-  btn.addEventListener('click', () => {
+  // Fullscreen Logic
+  fsBtn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
       container.requestFullscreen().catch(err => {
         console.error(`Error: ${err.message}`);
       });
-      btn.textContent = "EXIT_✕";
+      fsBtn.textContent = "EXIT_✕";
     } else {
       document.exitFullscreen();
     }
@@ -118,7 +145,7 @@ For full screen, click the FS_MODE_⛶ button.
 
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
-      btn.textContent = "FS_MODE_⛶";
+      fsBtn.textContent = "FS_MODE_⛶";
     }
   });
 </script>
