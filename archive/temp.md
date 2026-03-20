@@ -27,7 +27,6 @@ permalink: /PT2603prv.html
     --poster-color: transparent;
   }
 
-  /* BUTTON STYLING */
   .fs-toggle, #src {
     position: absolute;
     background: rgba(255, 255, 255, 0.1); 
@@ -52,24 +51,12 @@ permalink: /PT2603prv.html
     border-color: #fff;                   
   }
 
-  /* POSITIONS */
-  .fs-toggle {
-    top: 15px;
-    right: 15px;
-  }
-
-  #src {
-    top: 15px;
-    left: 15px;
-  }
-
-  #src option {
-    background: #27262b;
-    color: #fff;
-  }
+  .fs-toggle { top: 15px; right: 15px; }
+  #src { top: 15px; left: 15px; }
+  #src option { background: #27262b; color: #fff; }
 
   .progress-bar {
-    display: none;
+    display: none; /* Hidden by default */
     width: 33%;
     height: 12px;
     position: absolute;
@@ -90,10 +77,6 @@ permalink: /PT2603prv.html
     border-radius: 25px;
     transition: width 0.3s;
   }
-  
-  .progress-bar.hide {
-    display: none;
-  }
 </style>
 
 <div class="model-wrapper" id="main-container">
@@ -110,16 +93,20 @@ permalink: /PT2603prv.html
     exposure="1.5"
     environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr">
 
-   <select id="src" onchange="document.getElementById('model-view').src = this.value">
+    <select id="src" onchange="
+      document.querySelector('.update-bar').style.width = '0%';
+      document.querySelector('.progress-bar').style.display = 'block';
+      document.getElementById('model-view').src = this.value;
+    ">
       <option value="/assets/docs/old/E3NG_BOM_240820.xlsm">MODEL: VIRTU E3</option>
       <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">MODEL: V-ION</option>
-   </select>
+    </select>
 
-   <button class="fs-toggle" id="fs-button">FULLSCREEN</button>
+    <button class="fs-toggle" id="fs-button">FULLSCREEN</button>
 
-   <div class="progress-bar" slot="progress-bar">
+    <div class="progress-bar" slot="progress-bar">
         <div class="update-bar"></div>
-   </div>
+    </div>
 
   </model-viewer>
 </div>
@@ -129,59 +116,30 @@ permalink: /PT2603prv.html
   const container = document.getElementById('main-container');
   const btn = document.getElementById('fs-button');
 
-// 1. IMPROVED MODEL SELECTION (Resets bar immediately)
-srcSelect.addEventListener('change', (e) => {
-  const progressBar = document.querySelector('.progress-bar');
-  const updatingBar = document.querySelector('.update-bar');
-  
-  // Reset the bar to 0% and show it immediately before the model even starts asking for the file
-  updatingBar.style.width = '0%';
-  progressBar.style.display = 'block';
-  
-  mv.src = e.target.value;
-});
+  // Unified progress handler
+  mv.addEventListener('progress', (event) => {
+    const progressBar = document.querySelector('.progress-bar');
+    const updatingBar = document.querySelector('.update-bar');
+    const progress = event.detail.totalProgress;
 
-// 2. REFINED PROGRESS LOGIC
-const onProgress = (event) => {
-  const progressBar = event.target.querySelector('.progress-bar');
-  const updatingBar = event.target.querySelector('.update-bar');
-  const progress = event.detail.totalProgress;
+    // Show bar if it was hidden
+    if (progress > 0 && progress < 1) {
+      progressBar.style.display = 'block';
+    }
 
-  // Update the width based on actual progress
-  updatingBar.style.width = `${progress * 100}%`;
+    updatingBar.style.width = `${progress * 100}%`;
 
-  // Only hide when TRULY finished (1.0)
-  if (progress === 1) {
-    setTimeout(() => {
-      progressBar.style.display = 'none';
-    }, 300); // Slightly faster exit for better feel
-  } else if (progress > 0 && progressBar.style.display === 'none') {
-    // Safety: If the bar was hidden but progress is happening, show it
-    progressBar.style.display = 'block';
-  }
-};
+    if (progress === 1) {
+      setTimeout(() => {
+        progressBar.style.display = 'none';
+      }, 500);
+    }
+  });
 
-mv.addEventListener('progress', onProgress);
-
-// 3. THE "FIRST LOAD" FIX
-// This ensures that on page refresh, the bar doesn't act glitchy
-window.addEventListener('load', () => {
-  const progressBar = document.querySelector('.progress-bar');
-  const updatingBar = document.querySelector('.update-bar');
-  if (mv.loaded) {
-     progressBar.style.display = 'none';
-  } else {
-     progressBar.style.display = 'block';
-     updatingBar.style.width = '0%';
-  }
-});
-  
-  
+  // Fullscreen Logic
   btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
-      container.requestFullscreen().catch(err => {
-        alert("Fullscreen failed: Use a direct click.");
-      });
+      container.requestFullscreen().catch(err => console.error(err));
       btn.textContent = "EXIT_✕";
     } else {
       document.exitFullscreen();
@@ -194,5 +152,3 @@ window.addEventListener('load', () => {
     }
   });
 </script>
-
-*page rev 0.61*
