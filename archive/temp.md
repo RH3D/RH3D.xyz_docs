@@ -76,7 +76,7 @@ For full screen, click the FS_MODE_⛶ button.
     tone-mapping="aces"
     shadow-intensity="2"
     exposure="1.5"
-    environment-image="/assets/images/HDR/pillars_1k.hdr"
+    environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr"
     alt="E3NG BOM Preview">
 
   <div id="controls" class="dim glass">
