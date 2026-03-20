@@ -97,7 +97,7 @@ For full screen, click the FS_MODE_⛶ button.
 </div>
 
 <script>
-  const modelViewer = document.querySelector('#dimension-demo');
+  const modelViewer = document.querySelector('#model-view');
   const container = document.getElementById('main-container');
   const btn = document.getElementById('fs-button');
 
