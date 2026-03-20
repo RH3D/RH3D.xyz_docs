@@ -71,8 +71,7 @@ permalink: /PT2603prv.html
   .progress-bar {
     display: block;
     width: 33%;
-    height: 10%;
-    max-height: 2%;
+    height: 12px;
     position: absolute;
     left: 50%;
     top: 50%;
