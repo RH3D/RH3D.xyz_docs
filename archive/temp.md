@@ -135,14 +135,14 @@ const onProgress = (event) => {
 
     if (event.detail.totalProgress < 0.8) {
       progressBar.style.display = 'block';
-      transition= 'width 0.5s';
+      transition= 'width 0.25s';
     } else {
       updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
       if (event.detail.totalProgress === 1) {
         setTimeout(() => {
           updatingBar.style.width = '0%';
           progressBar.style.display = 'none';
-        }, 350);
+        }, 500);
       }
     }
   };
@@ -166,4 +166,4 @@ const onProgress = (event) => {
   });
 </script>
 
-*page rev 0.81*
+*page rev 0.82*
