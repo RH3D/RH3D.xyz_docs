@@ -135,6 +135,7 @@ const onProgress = (event) => {
 
     if (event.detail.totalProgress < 0.05) {
       progressBar.style.display = 'block';
+      transition= 'width 0.3s ease';
     } else {
       updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
       if (event.detail.totalProgress === 1) {
@@ -165,4 +166,4 @@ const onProgress = (event) => {
   });
 </script>
 
-*page rev 0.79*
+*page rev 0.80*
