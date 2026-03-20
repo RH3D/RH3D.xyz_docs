@@ -27,6 +27,7 @@ permalink: /PT2603prv.html
     --poster-color: transparent;
   }
 
+  /* BUTTON STYLING */
   .fs-toggle, #src {
     position: absolute;
     background: rgba(255, 255, 255, 0.1); 
@@ -56,7 +57,7 @@ permalink: /PT2603prv.html
   #src option { background: #27262b; color: #fff; }
 
   .progress-bar {
-    display: none; /* Hidden by default */
+    display: none;
     width: 33%;
     height: 12px;
     position: absolute;
@@ -93,11 +94,7 @@ permalink: /PT2603prv.html
     exposure="1.5"
     environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr">
 
-    <select id="src" onchange="
-      document.querySelector('.update-bar').style.width = '0%';
-      document.querySelector('.progress-bar').style.display = 'block';
-      document.getElementById('model-view').src = this.value;
-    ">
+    <select id="src" onchange="switchModel(this.value)">
       <option value="/assets/docs/old/E3NG_BOM_240820.xlsm">MODEL: VIRTU E3</option>
       <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">MODEL: V-ION</option>
     </select>
@@ -115,31 +112,44 @@ permalink: /PT2603prv.html
   const mv = document.getElementById('model-view');
   const container = document.getElementById('main-container');
   const btn = document.getElementById('fs-button');
+  const progressBar = document.querySelector('.progress-bar');
+  const updatingBar = document.querySelector('.update-bar');
 
-  // Unified progress handler
-  mv.addEventListener('progress', (event) => {
-    const progressBar = document.querySelector('.progress-bar');
-    const updatingBar = document.querySelector('.update-bar');
+  // FIX FOR ISSUES 1, 2, 4: Reset the bar manually
+  function switchModel(newSrc) {
+    // 1. Reset visual state immediately
+    updatingBar.style.width = '0%';
+    progressBar.style.display = 'block';
+    
+    // 2. Change the source
+    mv.src = newSrc;
+  }
+
+  // REFINED PROGRESS LOGIC
+  const onProgress = (event) => {
     const progress = event.detail.totalProgress;
-
-    // Show bar if it was hidden
-    if (progress > 0 && progress < 1) {
-      progressBar.style.display = 'block';
-    }
-
+    
+    // Update the width
     updatingBar.style.width = `${progress * 100}%`;
 
+    // Only hide when actually finished
     if (progress === 1) {
       setTimeout(() => {
         progressBar.style.display = 'none';
       }, 500);
+    } else if (progress > 0) {
+      progressBar.style.display = 'block';
     }
-  });
+  };
 
-  // Fullscreen Logic
+  mv.addEventListener('progress', onProgress);
+
+  // FULLSCREEN LOGIC (Back to the working v0.60 version)
   btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
-      container.requestFullscreen().catch(err => console.error(err));
+      container.requestFullscreen().catch(err => {
+        console.error("FS Error", err);
+      });
       btn.textContent = "EXIT_✕";
     } else {
       document.exitFullscreen();
@@ -152,3 +162,5 @@ permalink: /PT2603prv.html
     }
   });
 </script>
+
+*page rev 0.63*
