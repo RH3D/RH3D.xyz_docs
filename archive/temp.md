@@ -125,5 +125,3 @@ permalink: /PT2603prv.html
 </script>
 
 *rev 0.46*
-
-*rev 0.42*
