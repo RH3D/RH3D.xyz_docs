@@ -77,10 +77,10 @@ permalink: /PT2603prv.html
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
     border-radius: 25px;
-    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2000; /* Ensure it's above the 3D model */
+    z-index: 2000;
   }
   
   .update-bar {
@@ -128,25 +128,6 @@ permalink: /PT2603prv.html
   const mv = document.getElementById('model-view');
   const container = document.getElementById('main-container');
   const btn = document.getElementById('fs-button');
-
-const onProgress = (event) => {
-  const progressBar = event.target.querySelector('.progress-bar');
-  const updatingBar = event.target.querySelector('.update-bar');
-
-  if (event.detail.totalProgress === 0) {
-    progressBar.style.display = 'block';
-    updatingBar.style.width = '0%';
-  } else {
-    updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
-
-    if (event.detail.totalProgress === 1) {
-      setTimeout(() => {
-        progressBar.style.display = 'none';
-      }, 500);
-    }
-  }
-};
-document.querySelector('model-viewer').addEventListener('progress', onProgress);
   
   btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
@@ -166,4 +147,4 @@ document.querySelector('model-viewer').addEventListener('progress', onProgress);
   });
 </script>
 
-*page rev 0.55*
+*page rev 0.56*
