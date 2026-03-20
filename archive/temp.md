@@ -15,11 +15,11 @@ For full screen, click the FS_MODE_⛶ button.
 {: .text-center }
 
 <style>
-  /* Kontejner pro model a tlačítko */
+  /* MODEL AND BUTTON CONTAINER */
   .model-wrapper {
     position: relative;
     width: 100%;
-    height: 640px; /* Tvoje původní výška */
+    height: 640px; /* CUSTOM HEIGHT ON PAGE */
     background-image: radial-gradient(circle at 50% 45%, #5f5f5a 0%, #27262b 60%);
     border-radius: 20px;
     overflow: hidden;
@@ -31,14 +31,14 @@ For full screen, click the FS_MODE_⛶ button.
     --poster-color: transparent;
   }
 
-  /* Nenápadné tlačítko pro Fullscreen */
+  /* FULLSCREEN BUTTON */
 .fs-toggle {
     position: absolute;
-    top: 15px;         /* Přesunuto nahoru */
-    right: 15px;        /* Zůstává vpravo */
-    background: rgba(255, 255, 255, 0.1); /* Jemné světlé pozadí */
-    color: rgba(255, 255, 255, 0.8);      /* Skoro bílý text */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Tenký světlý okraj */
+    top: 15px;         /* POSITION TOP */
+    right: 15px;        /* POSITION RIGHT */
+    background: rgba(255, 255, 255, 0.1); /* BRIGHTER BACKGROUND */
+    color: rgba(255, 255, 255, 0.8);      /* WHITE TEXT */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* THIN WHITE EDGE */
     padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
@@ -46,14 +46,14 @@ For full screen, click the FS_MODE_⛶ button.
     font-size: 11px;
     z-index: 100;
     transition: all 0.2s;
-    backdrop-filter: blur(2px); /* Jemný efekt skla */
+    backdrop-filter: blur(2px); /* BG BLURR */
   }
 
-  /* Styl při najetí myší */
+  /* MOUSE HOVER STYLE CHANGE */
   .fs-toggle:hover {
-    background: rgba(255, 255, 255, 0.9); /* Skoro plná bílá */
-    color: #000;                         /* Černý text pro kontrast */
-    border-color: #fff;                  /* Čistě bílý okraj */
+    background: rgba(255, 255, 255, 0.9); /* BRIGHTEN BUTTON */
+    color: #000;                         /* DARKEN TEXT */
+    border-color: #fff;                  /* FULL WHITE EDGE LINE */
   }
 
   /* Styl pro progress bar z tvého původního kódu */
