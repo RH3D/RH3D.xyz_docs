@@ -5,22 +5,18 @@ nav_exclude: true
 search_exclude: true
 permalink: /PT2603prv.html
 ---
-rev 0.41
-
 *If you are lucky to find this page (not coming from Patreon), please keep it for yourself.*
 {: .text-center }
 *Thank you :)*
 {: .text-center }
 ---
-For full screen, click the FS_MODE_⛶ button.
-{: .text-center }
 
 <style>
   .model-wrapper {
     position: relative;
     width: 100%;
     height: 640px; 
-    background-image: radial-gradient(circle at 50% 45%, #5f5f5a 0%, #27262b 60%);
+    background-image: radial-gradient(circle at 50% 45%, #4f4f4a 0%, #27262b 60%);
     border-radius: 20px;
     overflow: hidden;
   }
@@ -96,7 +92,7 @@ For full screen, click the FS_MODE_⛶ button.
       <option value="/assets/docs/old/E3NG_BOM_240820_temp.xlsm">MODEL: MONKEY</option>
    </select>
 
-   <button class="fs-toggle" id="fs-button">FULLSCREEN_⛶</button>
+   <button class="fs-toggle" id="fs-button">FULLSCREEN</button>
     
    <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
@@ -123,7 +119,9 @@ For full screen, click the FS_MODE_⛶ button.
 
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
-      btn.textContent = "FULLSCREEN_⛶";
+      btn.textContent = "FULLSCREEN";
     }
   });
 </script>
+
+*rev 0.42*
