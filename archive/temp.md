@@ -133,16 +133,16 @@ const onProgress = (event) => {
     const progressBar = event.target.querySelector('.progress-bar');
     const updatingBar = event.target.querySelector('.update-bar');
 
-    if (event.detail.totalProgress < 0.05) {
+    if (event.detail.totalProgress < 0.8) {
       progressBar.style.display = 'block';
-      transition= 'width 0.3s ease';
+      transition= 'width 0.5s';
     } else {
       updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
       if (event.detail.totalProgress === 1) {
         setTimeout(() => {
           updatingBar.style.width = '0%';
           progressBar.style.display = 'none';
-        }, 200);
+        }, 350);
       }
     }
   };
@@ -166,4 +166,4 @@ const onProgress = (event) => {
   });
 </script>
 
-*page rev 0.80*
+*page rev 0.81*
