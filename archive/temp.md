@@ -108,8 +108,7 @@ permalink: /PT2603prv.html
     tone-mapping="aces"
     shadow-intensity="2"
     exposure="1.5"
-    environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr"
-    onprogress="document.querySelector('.update-bar').style.width = (event.detail.totalProgress * 100) + '%'">
+    environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr">
 
    <select id="src" onchange="document.getElementById('model-view').src = this.value">
       <option value="/assets/docs/old/E3NG_BOM_240820.xlsm">MODEL: VIRTU E3</option>
@@ -130,6 +129,25 @@ permalink: /PT2603prv.html
   const container = document.getElementById('main-container');
   const btn = document.getElementById('fs-button');
 
+const onProgress = (event) => {
+  const progressBar = event.target.querySelector('.progress-bar');
+  const updatingBar = event.target.querySelector('.update-bar');
+
+  if (event.detail.totalProgress === 0) {
+    progressBar.style.display = 'block';
+    updatingBar.style.width = '0%';
+  } else {
+    updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+
+    if (event.detail.totalProgress === 1) {
+      setTimeout(() => {
+        progressBar.style.display = 'none';
+      }, 500);
+    }
+  }
+};
+document.querySelector('model-viewer').addEventListener('progress', onProgress);
+  
   btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
       container.requestFullscreen().catch(err => {
@@ -148,4 +166,4 @@ permalink: /PT2603prv.html
   });
 </script>
 
-*page rev 0.53*
+*page rev 0.54*
