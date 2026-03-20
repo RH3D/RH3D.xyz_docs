@@ -91,7 +91,7 @@ permalink: /PT2603prv.html
     transition: width 0.3s;
   }
   
-  .hide {
+  .progress-bar.hide {
     display: none;
   }
 </style>
@@ -166,4 +166,4 @@ document.querySelector('model-viewer').addEventListener('progress', onProgress);
   });
 </script>
 
-*page rev 0.54*
+*page rev 0.55*
