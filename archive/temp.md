@@ -89,7 +89,7 @@ permalink: /PT2603prv.html
     width: 0%;
     height: 100%;
     border-radius: 2px;
-    transition: width 0.3s;
+    transition: width 0.5s;
   }
   
   .progress-bar.hide {
@@ -134,7 +134,7 @@ const onProgress = (event) => {
     const progressBar = event.target.querySelector('.progress-bar');
     const updatingBar = event.target.querySelector('.update-bar');
 
-    if (event.detail.totalProgress < 0.5) {
+    if (event.detail.totalProgress < 0.05) {
       progressBar.style.display = 'block';
       updatingBar.style.width = '0%';
     } else {
@@ -142,7 +142,7 @@ const onProgress = (event) => {
       if (event.detail.totalProgress === 1) {
         setTimeout(() => {
           progressBar.style.display = 'none';
-        }, 500);
+        }, 2000);
       }
     }
   };
@@ -166,4 +166,4 @@ const onProgress = (event) => {
   });
 </script>
 
-*page rev 0.70*
+*page rev 0.71*
