@@ -142,7 +142,7 @@ const onProgress = (event) => {
       if (event.detail.totalProgress === 1) {
         setTimeout(() => {
           progressBar.style.display = 'none';
-        }, 2000);
+        }, 500);
       }
     }
   };
@@ -166,4 +166,4 @@ const onProgress = (event) => {
   });
 </script>
 
-*page rev 0.71*
+*page rev 0.72*
