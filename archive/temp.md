@@ -27,7 +27,7 @@ permalink: /PT2603prv.html
     --poster-color: transparent;
   }
 
-  /* BUTTON STYLING */
+  /* UI STYLING */
   .fs-toggle, #src {
     position: absolute;
     background: rgba(255, 255, 255, 0.1); 
@@ -56,8 +56,9 @@ permalink: /PT2603prv.html
   #src { top: 15px; left: 15px; }
   #src option { background: #27262b; color: #fff; }
 
+  /* PROGRESS BAR */
   .progress-bar {
-    display: none;
+    display: none; /* Controlled via JS */
     width: 33%;
     height: 12px;
     position: absolute;
@@ -94,7 +95,7 @@ permalink: /PT2603prv.html
     exposure="1.5"
     environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr">
 
-    <select id="src" onchange="switchModel(this.value)">
+    <select id="src" onchange="document.getElementById('model-view').src = this.value">
       <option value="/assets/docs/old/E3NG_BOM_240820.xlsm">MODEL: VIRTU E3</option>
       <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">MODEL: V-ION</option>
     </select>
@@ -112,24 +113,21 @@ permalink: /PT2603prv.html
   const mv = document.getElementById('model-view');
   const container = document.getElementById('main-container');
   const btn = document.getElementById('fs-button');
-  const progressBar = document.querySelector('.progress-bar');
-  const updatingBar = document.querySelector('.update-bar');
 
-  // FIX FOR ISSUES 1, 2, 4: Reset the bar manually
-  function switchModel(newSrc) {
-    // 1. Reset visual state immediately
-    updatingBar.style.width = '0%';
-    progressBar.style.display = 'block';
-    
-    // 2. Change the source
-    mv.src = newSrc;
-  }
-
-  // REFINED PROGRESS LOGIC
+  // THE REPAIRED PROGRESS LOGIC
   const onProgress = (event) => {
+    const progressBar = event.target.querySelector('.progress-bar');
+    const updatingBar = event.target.querySelector('.update-bar');
     const progress = event.detail.totalProgress;
-    
-    // Update the width
+
+    // Fix for "Starting at half" or "Hanging":
+    // If progress is very low, we treat it as a fresh start and force reset
+    if (progress <= 0.05) {
+      progressBar.style.display = 'block';
+      updatingBar.style.width = '0%';
+    }
+
+    // Standard update
     updatingBar.style.width = `${progress * 100}%`;
 
     // Only hide when actually finished
@@ -137,18 +135,18 @@ permalink: /PT2603prv.html
       setTimeout(() => {
         progressBar.style.display = 'none';
       }, 500);
-    } else if (progress > 0) {
+    } else {
       progressBar.style.display = 'block';
     }
   };
 
   mv.addEventListener('progress', onProgress);
 
-  // FULLSCREEN LOGIC (Back to the working v0.60 version)
+  // WORKING FULLSCREEN LOGIC (Pure v0.60)
   btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
       container.requestFullscreen().catch(err => {
-        console.error("FS Error", err);
+        console.error("FS error", err);
       });
       btn.textContent = "EXIT_✕";
     } else {
@@ -163,4 +161,4 @@ permalink: /PT2603prv.html
   });
 </script>
 
-*page rev 0.63*
+*page rev 0.64*
