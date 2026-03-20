@@ -5,7 +5,7 @@ nav_exclude: true
 search_exclude: true
 permalink: /PT2603prv.html
 ---
-rev 0.34
+rev 0.35
 
 *If you are lucky to find this page (not coming from Patreon), please keep it for yourself.*
 {: .text-center }
@@ -43,12 +43,13 @@ For full screen, click the FS_MODE_⛶ button.
     cursor: pointer;
     font-family: monospace;
     font-size: 11px;
-    z-index: 100;
+    z-index: 999; /* Higher z-index to ensure it is on top */
     transition: all 0.2s;
     backdrop-filter: blur(2px);
-    appearance: none; /* Removes default dropdown arrow */
+    appearance: none; 
     -webkit-appearance: none;
     outline: none;
+    pointer-events: auto; /* Ensures clicks pass through to the element */
   }
 
   /* HOVER STYLE */
@@ -68,16 +69,15 @@ For full screen, click the FS_MODE_⛶ button.
     position: absolute;
     top: 15px;
     left: 15px;
-    z-index: 100;
+    z-index: 1000;
   }
 
-  /* Dropdown menu options style (limited browser support, but keeps it dark) */
+  /* Dropdown menu options style */
   #src option {
     background: #27262b;
     color: #fff;
   }
 
-  /* Progress bar styles */
   .progress-bar { display: block; width: 33%; height: 10%; max-height: 2%; position: absolute; left: 50%; top: 50%; transform: translate3d(-50%, -50%, 0); border-radius: 25px; box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); background-color: rgba(0, 0, 0, 0.5); }
   .update-bar { background-color: rgba(255, 255, 255, 0.9); width: 0%; height: 100%; border-radius: 25px; transition: width 0.3s; }
   .hide { display: none; }
@@ -100,18 +100,18 @@ For full screen, click the FS_MODE_⛶ button.
     environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr"
     alt="E3NG BOM Preview">
 
-  <div id="controls">
-    <select id="src">
-      <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">MODEL: HEAD</option>
-      <option value="/assets/docs/old/E3NG_BOM_240820_temp.xlsm">MODEL: MONKEY</option>
-    </select>
-  </div>
+    <div id="controls">
+      <select id="src" onchange="document.getElementById('model-view').src = this.value">
+        <option value="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm">MODEL: HEAD</option>
+        <option value="/assets/docs/old/E3NG_BOM_240820_temp.xlsm">MODEL: MONKEY</option>
+      </select>
+    </div>
     
-  <div class="progress-bar hide" slot="progress-bar">
+    <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
-  </div>
+    </div>
 
-  <button class="fs-toggle" id="fs-button">FS_MODE_⛶</button>
+    <button class="fs-toggle" id="fs-button">FS_MODE_⛶</button>
   </model-viewer>
 </div>
 
@@ -120,11 +120,6 @@ For full screen, click the FS_MODE_⛶ button.
   const container = document.getElementById('main-container');
   const btn = document.getElementById('fs-button');
 
-  // ORIGINAL LOGIC: Listening for input on the select element
-  modelViewer.querySelector('#src').addEventListener('input', (event) => {
-    modelViewer.src = event.target.value;
-  });
-  
   // Fullscreen Logic
   btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
