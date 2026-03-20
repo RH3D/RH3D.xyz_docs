@@ -133,7 +133,7 @@ const onProgress = (event) => {
     const progressBar = event.target.querySelector('.progress-bar');
     const updatingBar = event.target.querySelector('.update-bar');
 
-    if (event.detail.totalProgress <= 0.1) {
+    if (event.detail.totalProgress <= 0.8) {
       progressBar.style.display = 'block';
       updatingBar.style.width = '0%';
     } else {
@@ -165,4 +165,4 @@ const onProgress = (event) => {
   });
 </script>
 
-*page rev 0.67*
+*page rev 0.68*
