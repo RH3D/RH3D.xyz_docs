@@ -9,6 +9,7 @@ permalink: /PT2603prv.html
 *If you are lucky to find this page (not coming from Patreon), please keep it for yourself.*
 
 *Thank you :)*
+{: .text-right }
 
 <style>
   .model-wrapper {
