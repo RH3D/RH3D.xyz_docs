@@ -117,7 +117,7 @@ permalink: /PT2603prv.html
 
    <button class="fs-toggle" id="fs-button">FULLSCREEN</button>
 
-   <div class="progress-bar hide" slot="progress-bar">
+   <div class="progress-bar" slot="progress-bar">
         <div class="update-bar"></div>
    </div>
 
@@ -165,4 +165,4 @@ const onProgress = (event) => {
   });
 </script>
 
-*page rev 0.58*
+*page rev 0.59*
