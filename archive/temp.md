@@ -5,7 +5,7 @@ nav_exclude: true
 search_exclude: true
 permalink: /PT2603prv.html
 ---
-rev 0.26
+rev 0.27
 
 *If you are lucky to find this page (not coming from Patreon), please keep it for yourself.*
 {: .text-center }
@@ -80,52 +80,59 @@ For full screen, click the FS_MODE_⛶ button.
     environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr">
 
     <div id="controls">
-      <button class="model-btn" id="btn-head" onclick="loadModel('head')" disabled>HEAD_MOD</button>
-      <button class="model-btn" id="btn-monkey" onclick="loadModel('monkey')">MONKEY_MOD</button>
+      <button class="model-btn" id="btn-head" disabled>HEAD_MOD</button>
+      <button class="model-btn" id="btn-monkey">MONKEY_MOD</button>
     </div>
     
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>
 
-    <button class="fs-toggle" id="fs-button" onclick="toggleFS()">FS_MODE_⛶</button>
+    <button class="fs-toggle" id="fs-button">FS_MODE_⛶</button>
   </model-viewer>
 </div>
 
 <script>
-  // Move logic outside of any wrappers so they are globally accessible
-  const viewer = document.getElementById('model-view');
-  const bHead = document.getElementById('btn-head');
-  const bMonkey = document.getElementById('btn-monkey');
-  const fsBtn = document.getElementById('fs-button');
+  // This matches the exact logic flow of your "Working" version
+  const modelViewer = document.querySelector('#model-view');
+  const container = document.getElementById('main-container');
+  const btn = document.getElementById('fs-button');
+  
+  // Find buttons INSIDE the viewer, just like you found the dropdown
+  const bHead = modelViewer.querySelector('#btn-head');
+  const bMonkey = modelViewer.querySelector('#btn-monkey');
 
-  function loadModel(type) {
-    if (type === 'head') {
-      viewer.src = "/assets/docs/old/E3NG_BOM_240820_tmp.xlsm";
-      bHead.disabled = true;
-      bMonkey.disabled = false;
-    } else {
-      viewer.src = "/assets/docs/old/E3NG_BOM_240820_temp.xlsm";
-      bMonkey.disabled = true;
-      bHead.disabled = false;
-    }
-  }
+  const pathHead = "/assets/docs/old/E3NG_BOM_240820_tmp.xlsm";
+  const pathMonkey = "/assets/docs/old/E3NG_BOM_240820_temp.xlsm";
 
-  function toggleFS() {
-    const container = document.getElementById('main-container');
+  // Switching Logic
+  bHead.addEventListener('click', () => {
+    modelViewer.src = pathHead;
+    bHead.disabled = true;
+    bMonkey.disabled = false;
+  });
+
+  bMonkey.addEventListener('click', () => {
+    modelViewer.src = pathMonkey;
+    bMonkey.disabled = true;
+    bHead.disabled = false;
+  });
+  
+  // Fullscreen Logic (Identical to your working version)
+  btn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
-      container.requestFullscreen();
-      fsBtn.textContent = "EXIT_✕";
+      container.requestFullscreen().catch(err => {
+        console.error(`Error: ${err.message}`);
+      });
+      btn.textContent = "EXIT_✕";
     } else {
       document.exitFullscreen();
-      fsBtn.textContent = "FS_MODE_⛶";
     }
-  }
+  });
 
-  // Handle the ESC key or browser Exit FS button
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
-      fsBtn.textContent = "FS_MODE_⛶";
+      btn.textContent = "FS_MODE_⛶";
     }
   });
 </script>
