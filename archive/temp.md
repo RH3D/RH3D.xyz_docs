@@ -108,7 +108,8 @@ permalink: /PT2603prv.html
     tone-mapping="aces"
     shadow-intensity="2"
     exposure="1.5"
-    environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr">
+    environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr"
+    onprogress="document.querySelector('.update-bar').style.width = (event.detail.totalProgress * 100) + '%'">
 
    <select id="src" onchange="document.getElementById('model-view').src = this.value">
       <option value="/assets/docs/old/E3NG_BOM_240820.xlsm">MODEL: VIRTU E3</option>
@@ -147,4 +148,4 @@ permalink: /PT2603prv.html
   });
 </script>
 
-*page rev 0.49*
+*page rev 0.53*
