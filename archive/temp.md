@@ -5,6 +5,7 @@ nav_exclude: true
 search_exclude: true
 permalink: /PT2603prv.html
 ---
+rev 0.33
 
 *If you are lucky to find this page (not coming from Patreon), please keep it for yourself.*
 {: .text-center }
@@ -15,10 +16,11 @@ For full screen, click the FS_MODE_⛶ button.
 {: .text-center }
 
 <style>
+  /* MODEL AND BUTTON CONTAINER */
   .model-wrapper {
     position: relative;
     width: 100%;
-    height: 640px;
+    height: 640px; 
     background-image: radial-gradient(circle at 50% 45%, #5f5f5a 0%, #27262b 60%);
     border-radius: 20px;
     overflow: hidden;
@@ -30,58 +32,54 @@ For full screen, click the FS_MODE_⛶ button.
     --poster-color: transparent;
   }
 
-  /* BUTTON STYLING */
-  .fs-toggle, .model-btn {
+  /* SHARED STYLE FOR ALL BUTTONS */
+  .fs-toggle, .model-selector-btn {
     position: absolute;
-    background: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1); 
+    color: rgba(255, 255, 255, 0.8);      
+    border: 1px solid rgba(255, 255, 255, 0.3); 
     padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
     font-family: monospace;
     font-size: 11px;
-    z-index: 500; /* Increased Z-INDEX */
+    z-index: 100;
     transition: all 0.2s;
     backdrop-filter: blur(2px);
-    pointer-events: auto; /* Forces clickability */
   }
 
-  .fs-toggle:hover, .model-btn:hover:not(:disabled) {
-    background: rgba(255, 255, 255, 0.9);
-    color: #000;
-    border-color: #fff;
+  .fs-toggle:hover, .model-selector-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.9); 
+    color: #000;                          
+    border-color: #fff;                   
   }
 
-  /* DISABLED STATE */
-  .model-btn:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    background: rgba(0, 0, 0, 0.2);
-    border-color: rgba(255, 255, 255, 0.1);
+  /* GREYED OUT / DISABLED STYLE */
+  .model-selector-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+    background: rgba(255, 255, 255, 0.05);
     color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
   }
 
-  /* POSITIONS */
+  /* INDIVIDUAL POSITIONS */
   .fs-toggle {
     top: 15px;
     right: 15px;
   }
 
-  .controls-container {
+  .btn-group {
     position: absolute;
     top: 15px;
     left: 15px;
     display: flex;
     gap: 8px;
-    z-index: 500;
   }
   
-  /* Reset relative position for buttons inside container */
-  .controls-container .model-btn {
+  /* Reset relative positioning for buttons inside the group */
+  .btn-group .model-selector-btn {
     position: relative;
-    top: 0;
-    left: 0;
   }
 
   .progress-bar { display: block; width: 33%; height: 10%; max-height: 2%; position: absolute; left: 50%; top: 50%; transform: translate3d(-50%, -50%, 0); border-radius: 25px; box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); background-color: rgba(0, 0, 0, 0.5); }
@@ -106,13 +104,13 @@ For full screen, click the FS_MODE_⛶ button.
     environment-image="/assets/images/HDR/brown_photostudio_06_1k.hdr"
     alt="E3NG BOM Preview">
 
-    <div class="controls-container">
-      <button class="model-btn" id="btn-head" data-src="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm" disabled>Head</button>
-      <button class="model-btn" id="btn-monkey" data-src="/assets/docs/old/E3NG_BOM_240820_temp.xlsm">Monkey</button>
+    <div class="btn-group">
+      <button class="model-selector-btn" id="head-btn" data-path="/assets/docs/old/E3NG_BOM_240820_tmp.xlsm" disabled>Head</button>
+      <button class="model-selector-btn" id="monkey-btn" data-path="/assets/docs/old/E3NG_BOM_240820_temp.xlsm">Monkey</button>
     </div>
-
+    
     <div class="progress-bar hide" slot="progress-bar">
-      <div class="update-bar"></div>
+        <div class="update-bar"></div>
     </div>
 
     <button class="fs-toggle" id="fs-button">FS_MODE_⛶</button>
@@ -120,39 +118,41 @@ For full screen, click the FS_MODE_⛶ button.
 </div>
 
 <script>
-  const mv = document.querySelector('#model-view');
+  const modelViewer = document.querySelector('#model-view');
   const container = document.getElementById('main-container');
-  const btnFs = document.getElementById('fs-button');
-  const btnHead = document.getElementById('btn-head');
-  const btnMonkey = document.getElementById('btn-monkey');
+  const fsBtn = document.getElementById('fs-button');
+  
+  const headBtn = document.getElementById('head-btn');
+  const monkeyBtn = document.getElementById('monkey-btn');
 
-  // Model switching logic
-  function updateModel(buttonClicked) {
-    const newSrc = buttonClicked.getAttribute('data-src');
-    mv.src = newSrc;
-    
-    // Toggle disabled state
-    btnHead.disabled = (buttonClicked === btnHead);
-    btnMonkey.disabled = (buttonClicked === btnMonkey);
+  // Logic to change model and toggle buttons
+  function changeModel(btn) {
+    const path = btn.getAttribute('data-path');
+    modelViewer.src = path;
+
+    // Set active button to disabled, others to enabled
+    headBtn.disabled = (btn === headBtn);
+    monkeyBtn.disabled = (btn === monkeyBtn);
   }
 
-  btnHead.onclick = () => updateModel(btnHead);
-  btnMonkey.onclick = () => updateModel(btnMonkey);
+  headBtn.addEventListener('click', () => changeModel(headBtn));
+  monkeyBtn.addEventListener('click', () => changeModel(monkeyBtn));
 
-  // Fullscreen logic
-  btnFs.onclick = () => {
+  // Fullscreen Logic
+  fsBtn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
-      container.requestFullscreen();
-      btnFs.textContent = "EXIT_✕";
+      container.requestFullscreen().catch(err => {
+        console.error(`Error: ${err.message}`);
+      });
+      fsBtn.textContent = "EXIT_✕";
     } else {
       document.exitFullscreen();
-      btnFs.textContent = "FS_MODE_⛶";
     }
-  };
+  });
 
-  document.onfullscreenchange = () => {
+  document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
-      btnFs.textContent = "FS_MODE_⛶";
+      fsBtn.textContent = "FS_MODE_⛶";
     }
-  };
+  });
 </script>
