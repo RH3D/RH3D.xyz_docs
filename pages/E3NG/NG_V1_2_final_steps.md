@@ -18,4 +18,4 @@ continue to:
 [SETUP AND CALIBRATION]{: .btn .fs-6 .fw-300 .text-yellow-300 }
 {: .text-right }
 
-[SETUP AND CALIBRATION]: https://rh3d.xyz/setup.html
+[SETUP AND CALIBRATION]: https://rh3d.xyz/E3NG_v1_2/final_setup/setup_calibration
