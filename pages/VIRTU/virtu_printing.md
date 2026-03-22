@@ -6,7 +6,7 @@ grand_parent: VIRTU E3
 has_children: false
 nav_order: 20
 description: "Prepare to print Virtu parts with material tips, slicing settings, calibration advice, and color guides. Achieve strong and precise CoreXY prints from the start."
-permalink: /virtu/standard/printing_parts
+permalink: /virtu/build/printing_parts
 ---
 # PRINTING PARTS
 {: .text-center }
