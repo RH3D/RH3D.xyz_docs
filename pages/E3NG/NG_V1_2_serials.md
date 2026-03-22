@@ -2,6 +2,7 @@
 title: Serial numbers
 layout: default
 parent: Final steps
+grand_parent: E3NG v1.2
 #has_children: true
 nav_order: 30
 description: "Apply for an official serial number for your E3NG v1.2 build. Showcase a finished CoreXY printer and join the lineup of verified RH3D makers."
