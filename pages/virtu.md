@@ -1,7 +1,7 @@
 ---
 title: VIRTU E3
 layout: default
-has_children: true
+has_children: false
 nav_order: 40
 description: "Turn your Ender 3 into an unstopable coreXY machine! Speed, precision, purity - that is Virtu E3 by RH3D."
 permalink: /virtu
