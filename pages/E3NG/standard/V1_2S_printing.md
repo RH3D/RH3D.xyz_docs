@@ -65,6 +65,8 @@ Depending on your configuration and print settings (brim, draft, purge line), yo
 ---
 # CALIBRATION PRINT AND TOLERANCES
 
+For every DIY 3D printer with 3D printed parts, it is crucial to have your parts with proper dimensionaly accuracy. To achieve that, you need to calibrate your printer for the material you will use and compensate for skew and shrinkage properly before printing your parts.
+
 Before printing parts, it is highly recommended to print the calibration cube. It contains essential features that are related to the project parts like holes for 8mm rods, for LM8LUU bearing, M3 and M5 heat inserts and some other print features to view the print quality.
 
 All the parts are designed with rather tight tolerances (.2mm), so depending on your print quality and precision, it might cause too tight fit mainly on linear rods/bearings. If this is your case, you should clear the holes idealy with a reamer. You can also use properly sized drill bit or even a piece of fine-grit sandpaper on a round stick. Just proceed slowly and carefully so you don’t enlarge the holes too much, the ideal situation is to hand press the parts in with no noticeable play.
