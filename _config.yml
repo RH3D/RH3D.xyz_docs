@@ -9,7 +9,7 @@ color_scheme: dark_green
 logo: "/assets/images/RH3D_logo.png"
 
 # Set a path/url to a favicon that will be displayed by the browser
-favicon_ico: "/assets/images/favicon.ico"
+favicon_ico: "/assets/images/RH_favicon.ico"
 
 url: "https://rh3d.xyz"
 #url: https://rh3d.github.io/E3NG_docs
