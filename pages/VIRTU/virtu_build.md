@@ -1,6 +1,7 @@
 ---
 title: Printer build
 layout: default
+has_toc: false
 parent: VIRTU E3
 has_children: true
 nav_order: 20
@@ -14,7 +15,7 @@ permalink: /virtu/build
 
 ![](../../assets/images/virtu cad.png)
 
-# <span style="font-weight:800; font-style:italic;">VIRTU<sup style="font-size: 63%; font-weight:700;"> E3</sup></span>
+# <span style="font-weight:800; font-style:italic;">VIRTU<sup style="font-size: 58%; font-weight:700;"> E3</sup></span>
 {: .text-center }
 #### LOREM IPSUM
 {: .text-center }
