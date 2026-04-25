@@ -10,7 +10,7 @@ permalink: /E3NG_v1_2/advanced
 
 ![](../../assets/images/E3NG_V1.2_MULTI_CAD2.png)
 
-# <span style="font-weight:700; font-style:italic;">E3NG v1.2</span>
+# <span style="font-weight:700; font-size: 125%; font-style:italic;">E3NG v1.2</span>
 {: .text-center }
 #### v1.2 = advanced version (customisable)
 {: .text-center }
