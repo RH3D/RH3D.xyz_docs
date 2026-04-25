@@ -36,7 +36,7 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
   <tr>
     <th colspan="4" style="text-align:center; font-size:1.05rem; padding:6px 0;">
-      SCREWS
+      SCREWS, BOLTS
     </th>
   </tr>
 
