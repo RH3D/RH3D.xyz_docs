@@ -9,7 +9,7 @@ permalink: /e3ng
 ---
 ![](../assets/images/gallery.png)
 
-# <span style="font-weight:700; font-size: 125%; font-style:italic;">E3NG</span>
+# <span style="font-weight:800; font-size: 125%; font-style:italic;">E3NG</span>
 {: .text-center }
 #### (ENDER 3 NG)
 {: .text-center }
