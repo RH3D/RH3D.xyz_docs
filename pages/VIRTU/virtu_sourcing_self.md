@@ -76,6 +76,7 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 {: class="transparant_table"}
 
 #### OTHER - MOTION SYSTEM
+*GT2 belts - cut 3 x 990 mm (445T) for Z-Axis and 2 x 1680 mm (840T) for 4WD-XY-Axis or 2 x 1590 mm (795T) for 2WD-XY-Axis.*
 
 | Type         | Specifications                                  |  Quantity |  Link  |
 |:-------------|:---------------------------------------|:---------:|:------------:|
@@ -86,7 +87,6 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 | **N17** motor  | **Nema 17** - 3x Z-Axis, 2x XY-Axis    |    5     |  [MELLOW](https://s.click.aliexpress.com/e/_c2z32CWX)  |
 | **N14** motor  | **Nema 14**, 10 teeth - extruder  |    1     |  [TRIANGLELAB](https://s.click.aliexpress.com/e/_c4mAKD8R)  |
 {: class="transparant_table"}
-*GT2 belts - cut 3 x 990 mm (445T) for Z-Axis and 2 x 1680 mm (840T) for 4WD-XY-Axis or 2 x 1590 mm (795T) for 2WD-XY-Axis.*
 
 #### FRAME EXTRUSIONS
 
@@ -104,6 +104,7 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 {: class="transparant_table"}
 
 #### OTHER
+*PTFE tube - 9 mm for Goliath air hotend, 20mm for Rapido UHF hotend, 490mm from toolhead, 200mm inside Electronics bay, the rest outside.*
 
 | Type         | Specifications                                  |  Quantity |  Link  |
 |:-------------|:---------------------------------------|:---------:|:------------:|
@@ -112,7 +113,6 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 | Rubber feet  | **M5** screw hole, size 38x19 or 27-47x19   |    4     |  [AliExpress](https://s.click.aliexpress.com/e/_c3g2mEjd)  |
 | EXTRUDER gears  | DDG gears |    1     |  [MELLOW (SET1-DDG)](https://s.click.aliexpress.com/e/_c30sgLPZ)  |
 {: class="transparant_table"}
-*PTFE tube - 9 mm for Goliath air hotend, 20mm for Rapido UHF hotend, 490mm from toolhead, 200mm inside Electronics bay, the rest outside.*
 
 ## ELECTRONICS
 #### FANS
@@ -140,6 +140,7 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 {: class="transparant_table"}
 
 ## PANELS
+*DXF files are available at printables.*
 
 | Location    | Specifications                                   |  Quantity |  Link  |
 |:--------|:---------------------------------------|:---------:|:------------:|
@@ -148,7 +149,6 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 | ELECTRONICS | electronics cover panel `340 x 349 x 3 mm` - cast ycrylic  |     1     |  cut according to DXF  |
 | FRAME | frame panel `350 x 320 x 3 mm` - ALUMINIUM  |     1     |  cut according to DXF  |
 {: class="transparant_table"}
-*DXF files are available at printables.*
 
 continue to:
 {: .text-right .lh-0 .pt-8 }
