@@ -33,21 +33,21 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 | Size    | Type/specifications                                   |  Quantity |  Link  |
 |:--------|:---------------------------------------|:---------:|:------------:|
-| **M2** x 10 | **socket** head `ISO 4762` |     4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 8  | **socket** head `ISO 4762` |    157     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 12  | **socket** head `ISO 4762` |    14     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 20 | **socket** head `ISO 4762` |    2     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 30 | **socket** head `ISO 4762` |     19     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M4** x 6 | **socket** head `ISO 4762` |    4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M2.5** x 6 | **button** head `ISO 7380` |     4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY)  |
-| **M2.5** x 8 | **button** head `ISO 7380` |    4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY)  |
-| **M3** x 6 | **button** head `ISO 7380` |     10     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY)  |
-| **M5** x 6 | **button** head `ISO 7380` |     4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY)  |
-| **M5** x 10 | **button** head `ISO 7380` |     38     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY)  |
-| **M5** x 20 | **button** head `ISO 7380` |     41     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY)  |
-| **M5** x 25 | **button** head `ISO 7380` |     4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY)  |
-| **M3** x 8 | **countersunk** head `ISO 10642` |    20     |  [NINDEJIN](https://s.click.aliexpress.com/e/_okNhDfW)  |
-| **M4** x 14 | **countersunk** head `ISO 10642` |    3     |  [NINDEJIN](https://s.click.aliexpress.com/e/_okNhDfW)  |
+| **M2** x 10 | **socket** head `ISO 4762` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK) |
+| **M3** x 8 | **socket** head `ISO 4762` | 157 | [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK) |
+| **M3** x 12 | **socket** head `ISO 4762` | 14 | [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK) |
+| **M3** x 20 | **socket** head `ISO 4762` | 2 | [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK) |
+| **M3** x 30 | **socket** head `ISO 4762` | 19 | [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK) |
+| **M4** x 6 | **socket** head `ISO 4762` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK) |
+| **M2.5** x 6 | **button** head `ISO 7380` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
+| **M2.5** x 8 | **button** head `ISO 7380` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
+| **M3** x 6 | **button** head `ISO 7380` | 10 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
+| **M5** x 6 | **button** head `ISO 7380` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
+| **M5** x 10 | **button** head `ISO 7380` | 38 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
+| **M5** x 20 | **button** head `ISO 7380` | 41 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
+| **M5** x 25 | **button** head `ISO 7380` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
+| **M3** x 8 | **countersunk** head `ISO 10642` | 20 | [NINDEJIN](https://s.click.aliexpress.com/e/_okNhDfW) |
+| **M4** x 14 | **countersunk** head `ISO 10642` | 3 | [NINDEJIN](https://s.click.aliexpress.com/e/_okNhDfW) |
 {: class="transparant_table"}
 
 #### WASHERS, NUTS, T-NUTS, HEAT SET INSERTS
