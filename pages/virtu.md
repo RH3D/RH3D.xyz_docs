@@ -27,7 +27,7 @@ If you also want to help supporting the development, you can do so through any o
 **PAGE IS UNDER CONSTRUCTION V014**
 {: .text-center }
 
-# <span style="font-weight:700; font-size: 125%; font-style:italic;">VIRTU<sup style="font-size: 58%;"> E3</sup></span>
+# <span style="font-weight:800; font-size: 125%; font-style:italic;">VIRTU<sup style="font-size: 58%;"> E3</sup></span>
 {: .text-center }
 
 **Take your old, faithful Ender 3 and transform it into a high-performance beast. Virtu E3 is the next evolution in DIY upcycling—a ground-up redesign focused on excellence, precision, and raw speed.**
