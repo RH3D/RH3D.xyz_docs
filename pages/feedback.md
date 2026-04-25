@@ -1,6 +1,7 @@
 ---
 #title: Feedback ✉️
 layout: default
+has_toc: false
 nav_order: 100
 permalink: /feedback.html
 ---
