@@ -26,136 +26,135 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 *Some of the AliExpress links are affiliate links. They come at no additional cost to you but provide a small commission to the project, which helps keep development and testing alive. Vendor selection was in no way influenced by affiliate availability—quality, price, and seller reliability were our top priorities.*
 
+# BILL OF MATERIAL
+
+## PRINTER HARDWARE
+
 <table class="bom_table">
   <colgroup>
     <col style="width:120px;">
     <col style="width:320px;">
-    <col style="text-align:center; width:80px;">
-    <col style="text-align:center; width:140px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
   </colgroup>
 
   <tr>
-    <th colspan="4" style="text-align:center; font-size:1.05rem; padding:6px 0;">
-      SCREWS, BOLTS
-    </th>
+    <th colspan="4">SCREWS</th>
   </tr>
 
   <tr>
     <th>Size</th>
-    <th>Type / Specifications</th>
-    <th>Qty</th>
+    <th>Type/specifications</th>
+    <th>Quantity</th>
     <th>Link</th>
   </tr>
 
   <tr>
-    <td><strong>M2 x 10</strong></td>
+    <td><strong>M2</strong> x 10</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M3 x 8</strong></td>
+    <td><strong>M3</strong> x 8</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
     <td>157</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M3 x 12</strong></td>
+    <td><strong>M3</strong> x 12</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
     <td>14</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M3 x 20</strong></td>
+    <td><strong>M3</strong> x 20</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
     <td>2</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M3 x 30</strong></td>
+    <td><strong>M3</strong> x 30</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
     <td>19</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M4 x 6</strong></td>
+    <td><strong>M4</strong> x 6</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M2.5 x 6</strong></td>
+    <td><strong>M2.5</strong> x 6</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M2.5 x 8</strong></td>
+    <td><strong>M2.5</strong> x 8</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M3 x 6</strong></td>
+    <td><strong>M3</strong> x 6</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>10</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M5 x 6</strong></td>
+    <td><strong>M5</strong> x 6</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M5 x 10</strong></td>
+    <td><strong>M5</strong> x 10</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>38</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M5 x 20</strong></td>
+    <td><strong>M5</strong> x 20</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>41</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M5 x 25</strong></td>
+    <td><strong>M5</strong> x 25</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M3 x 8</strong></td>
+    <td><strong>M3</strong> x 8</td>
     <td><strong>countersunk</strong> head <code>ISO 10642</code></td>
     <td>20</td>
     <td><a href="https://s.click.aliexpress.com/e/_okNhDfW">NINDEJIN</a></td>
   </tr>
 
   <tr>
-    <td><strong>M4 x 14</strong></td>
+    <td><strong>M4</strong> x 14</td>
     <td><strong>countersunk</strong> head <code>ISO 10642</code></td>
     <td>3</td>
     <td><a href="https://s.click.aliexpress.com/e/_okNhDfW">NINDEJIN</a></td>
   </tr>
 </table>
 
-# BILL OF MATERIAL
-
-## PRINTER HARDWARE
 #### SCREWS
 
 | Size    | Type/specifications                                   |  Quantity |  Link  |
