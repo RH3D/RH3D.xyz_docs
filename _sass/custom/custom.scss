@@ -8,35 +8,38 @@
   color: #f7d12e;  /* Replace with your desired color */
 }
 
-/* Reset Just-the-Docs default table striping + spacing */
+/* Reset Just-the-Docs default table striping */
 .bom_table tr:nth-child(even),
 .bom_table tr:nth-child(odd) {
   background: transparent !important;
 }
 
-/* Modern BOM table styling */
+/* Base table */
 .bom_table {
   border-collapse: separate;
   border-spacing: 0;
   margin: 1.6rem 0;
   width: auto;
-  background: var(--color-bg);
-  border: 1px solid rgba(255,255,255,0.05);
+
+  /* Light grey background for entire table */
+  background: #f5f5f5 !important;
+
+  border: 1px solid rgba(0,0,0,0.05);
   border-radius: 8px;
   overflow: hidden;
 
-  /* clean, stronger shadow without top/bottom artifacts */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  /* Remove shadow completely */
+  box-shadow: none !important;
 }
 
 /* Title row */
 .bom_table tr:first-child th {
-  background: var(--color-yellow-000);
+  background: #ffd84d !important; /* your yellow */
   font-size: 1.05rem;
   text-align: center;
   padding: 12px 0;
   font-weight: 600;
-  color: var(--color-text);
+  color: #000 !important; /* force readable text */
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
@@ -44,8 +47,8 @@
 .bom_table th {
   padding: 10px 12px;
   font-weight: 600;
-  background: rgba(0,0,0,0.03);
-  color: var(--color-text);
+  background: rgba(0,0,0,0.04) !important;
+  color: #000 !important;
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
@@ -53,7 +56,7 @@
 .bom_table td {
   padding: 8px 12px;
   border-bottom: 1px solid rgba(0,0,0,0.05);
-  color: var(--color-text);
+  color: #000 !important;
 }
 
 /* Remove last-row border */
@@ -61,14 +64,14 @@
   border-bottom: none;
 }
 
-/* Hover highlight (subtle, modern) */
+/* Hover highlight */
 .bom_table tr:hover td {
-  background: rgba(0,0,0,0.04);
+  background: rgba(0,0,0,0.06) !important;
 }
 
-/* Force links to use your theme's green */
+/* Force link color (your green) */
 .bom_table a {
-  color: var(--color-link);
+  color: #2a7f62 !important; /* <-- your custom green */
   text-decoration: none;
 }
 
@@ -76,29 +79,33 @@
   text-decoration: underline;
 }
 
-/* Dark mode adjustments */
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   .bom_table {
+    background: #2a2a2a !important;
     border: 1px solid rgba(255,255,255,0.08);
-    background: rgba(255,255,255,0.03);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.45);
   }
 
   .bom_table tr:first-child th {
-    background: var(--color-yellow-000);
-    color: var(--color-text);
+    background: #ffd84d !important;
+    color: #000 !important;
   }
 
   .bom_table th {
-    background: rgba(255,255,255,0.06);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.08) !important;
+    color: #fff !important;
   }
 
   .bom_table td {
     border-bottom: 1px solid rgba(255,255,255,0.08);
+    color: #fff !important;
   }
 
   .bom_table tr:hover td {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.12) !important;
+  }
+
+  .bom_table a {
+    color: #7fe3b1 !important; /* lighter green for dark mode */
   }
 }
