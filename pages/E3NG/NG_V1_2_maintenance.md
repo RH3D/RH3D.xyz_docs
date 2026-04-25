@@ -1,6 +1,7 @@
 ---
 #title: Printer maintenance
 layout: default
+has_toc: false
 parent: Final steps
 #has_children: true
 nav_order: 20
