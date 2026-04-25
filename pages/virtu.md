@@ -39,8 +39,7 @@ The name comes from "Virtue"—representing excellence, strength, and purity of 
 
 The soul of Virtu is still about rescue and reuse. Many of us started with an Ender 3, and instead of letting those parts gather dust, Virtu gives them a second life at the cutting edge of 3D printing. It is a machine for the "Speed Freaks" who still value the art of the upcycle.
 
-# "VIRTU = VIRTUE IN PERFORMANCE & REUSE"
-{: .text-center }
+---
 
 #### PRINTER PERFORMANCE
 - **Target Acceleration:** 40,000+ mm/s<sup>2</sup> (X) / 18,000+ mm/s<sup>2</sup> (Y)
@@ -54,8 +53,8 @@ The soul of Virtu is still about rescue and reuse. Many of us started with an En
 - Linear rails on all axes.
 - Belt driven Z axis with a 2.5:1 reduction, no leadscrew artifacts, higher speeds, less maintenance.
 - Three independent Z motors and kinematic mounts for automated bed tilt adjustment.
-- Original Ender 3 bed reused with a 3-point kinematic mount for natural expansion during heating, reducing warp.
-- Main PSU placed in the base for a low center of gravity, with a spacious rear compartment for DIN-rail organization.
+- Original Ender 3 bed with kinematic mounts allow for natural expansion during heating, reducing warp.
+- PSU in the base for lower center of gravity, spacious rear compartment for DIN-rail organization.
 
 #### THE V-ION TOOLHEAD
 *Virtu debuts the custom V-ION toolhead, a high-performance project in its own right:*
@@ -67,16 +66,16 @@ The soul of Virtu is still about rescue and reuse. Many of us started with an En
 
 #### OFFICIAL UPGRADES
 *Performance packs designed to push the hardware to its absolute limit:*
-- **4WD XY Axis:** Quad-motor setup for insane torque and higher resonance frequencies.
-- **Double-Shear Mounts:** Supported motor shafts to handle highere belt tensions for max accelerations.
-- **CPAP Part Cooling:** Remote high-pressure cooling for the most demanding high-speed filaments.
-- **Active Motor Cooling:** Built-in cooling and thermistor support to keep XY steppers cool.
-- **In Progress:** Enclosure and CNC Aluminum parts for those who want the ultimate build.
+- **4WD** - quad-motor setup for insane torque and higher resonance frequencies.
+- **Double-Shear Mounts** - supported motor shafts to handle high belt tensions.
+- **CPAP Part Cooling** - remote high-pressure cooling for the most demanding high-speed printing.
+- **Active Motor Cooling** - built-in cooling and thermistor support to keep XY steppers cool.
+- **In Progress:** Enclosure and CNC Aluminum parts for the ultimate build.
 
 #### OFFICIAL MODS
 - Klicky Probe
 - BDsensor
-- Alternative Rails: Support for MGN12H rails on all axes.
+- MGN12H rails on all axes
 
 CONTINUE TO: INTO THE PROJECT
 
