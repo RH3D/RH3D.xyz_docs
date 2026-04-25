@@ -26,7 +26,7 @@
 
 /* Title row — yellow TEXT, normal background */
 .bom_table tr:first-child th {
-  background: rgba(0,0,0,0.03); // subtle header-like background
+  background: rgba(0,0,0,0.08); // subtle header-like background
   font-size: 1.05rem;
   text-align: center;
   padding: 12px 0;
@@ -52,7 +52,7 @@
 
 /* Softer zebra striping */
 .bom_table tr:nth-child(even) td {
-  background: rgba(0,0,0,0.15);
+  background: rgba(0,0,0,0.015);
 }
 
 /* Hover highlight */
