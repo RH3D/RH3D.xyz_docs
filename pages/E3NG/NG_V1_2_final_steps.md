@@ -1,6 +1,7 @@
 ---
 title: Final steps
 layout: default
+has_toc: false
 has_children: true
 nav_order: 50
 parent: E3NG v1.2
