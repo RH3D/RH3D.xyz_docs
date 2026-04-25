@@ -24,7 +24,7 @@ If you also want to help supporting the development, you can do so through any o
 ---
 
 {: .warning }
-**PAGE IS UNDER CONSTRUCTION V014**
+**THE SITE IS UNDER CONSTRUCTION**
 {: .text-center }
 
 # <span style="font-weight:800; font-size: 125%; font-style:italic;">VIRTU<sup style="font-weight:700; font-size: 58%;"> E3</sup></span>
