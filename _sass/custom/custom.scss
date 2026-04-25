@@ -7,3 +7,23 @@
 #site-nav ul.nav-list ul.nav-list ul.nav-list .nav-list-link {
   color: #f7d12e;  /* Replace with your desired color */
 }
+
+.bom_table {
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+  width: auto;
+}
+
+.bom_table th,
+.bom_table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.bom_table th {
+  font-weight: 600;
+}
+
+.bom_table tr:nth-child(even) {
+  background: rgba(0,0,0,0.03);
+}
