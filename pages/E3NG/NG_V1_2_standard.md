@@ -9,7 +9,7 @@ permalink: /E3NG_v1_2/standard
 ---
 ![](../../assets/images/E3NG_V1.2S_MULTI_CAD2.png)
 
-# <span style="font-weight:800; font-style:italic;">E3NG v1.2S</span>
+# <span style="font-weight:800; font-size: 120%; font-style:italic;">E3NG v1.2S</span>
 {: .text-center }
 #### v1.2S = standard version (kit-based)
 {: .text-center }
