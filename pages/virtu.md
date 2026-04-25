@@ -29,48 +29,47 @@ If you also want to help supporting the development, you can do so through any o
 **WORK IN PROGRESS**
 {: .text-center }
 
-# <span style="font-weight:900;">VIRTU</span><sup><span style="font-size: 63%; font-weight:bold;"> E3</span></sup>
+# <span style="font-weight:800; font-style:italic;">VIRTU</span><sup><span style="font-size: 63%; font-weight:bold; font-style:italic;"> E3</span></sup>
 {: .text-center }
 
-**Take your old, faithful Ender 3 and transform it into a high-performance beast. Virtu E3 is designed for those who want uncompromising speed and reliability without throwing away the hardware that started their journey.**
+**Take your old, faithful Ender 3 and transform it into a high-performance beast. Virtu E3 is the next evolution in DIY upcycling—a ground-up redesign focused on excellence, precision, and raw speed.**
 {: .text-center .mb-6 }
 
-The soul of Virtu is upcycling. It’s a DIY project focused on reusing as many parts as possible from your original printer and giving them a second life in a machine that rivals modern high-end CoreXY printers. Whether you call it the Virtu E3 (the conversion) or simply Virtu (the standalone build), the goal is the same: a printer built for extreme performance.
+The name comes from "Virtue"—representing excellence, strength, and purity of design. While this project started as a successor to the E3NG, it has evolved into a completely different animal. It’s more compact, significantly more rigid, and designed for those who want to push the absolute limits of what "budget" hardware can do. Whether you are converting an Ender 3 Pro or building the **VIRTU** as a standalone high-speed machine, you are building a printer that honors its roots while outperforming the industry standard.
 
-Originally born as the next step for the Ender 3 series, Virtu is much more than just a conversion—it is a platform built for speed. It features a refined design focused on rigidity and lightweight motion, allowing you to push your hardware to its absolute limit. Whether you are looking for a budget-friendly way to get a Pro-level machine or you want to build the ultimate speed demon from scratch, Virtu is the answer.
+The soul of Virtu is still about rescue and reuse. Many of us started with an Ender 3, and instead of letting those parts gather dust, Virtu gives them a second life at the cutting edge of 3D printing. It is a machine for the "Speed Freaks" who still value the art of the upcycle.
 
 # "VIRTU = VIRTUE IN PERFORMANCE & REUSE"
 {: .text-center }
 
 #### PRINTER PERFORMANCE
-- Target Acceleration: up to 30,000 mm/s<sup>2</sup>
-- Print Speed: up to $600 \text{ mm/s}$
-- Build Volume (X-Y-Z): $230 \times 230 \times 230 \text{ mm}$
+- Target Acceleration: 40,000+ mm/s<sup>2</sup> (X) / 18,000+ mm/s<sup>2</sup> (Y)
+- Print Speed: 600+ mm/s
+- Build Volume (X-Y-Z): 230 x 230 x 230 mm
+- Footprint: 35 x 40 x 50 cm *(roughly 6cm narrower than E3NG)*
 - Motion System: High-speed CoreXY
-- Reliability: Focused on long-term, high-speed stability.
 
 #### KEY FEATURES
-- Advanced CoreXY Motion: Optimized for extreme acceleration and high-speed directional changes.
-- Linear Rods/Rails: High-precision movement for X, Y, and Z axes.
-- Stable Triple-Z: Designed for a perfectly leveled bed and rock-solid first layers.
-- Integrated Electronics: Clean, enclosed compartment at the back for safety and organization.
-- Easy Enclosure: The frame is designed to be easily enclosed for printing technical materials.
-- Double Shear Design: Enhanced mechanical rigidity for the motion system to handle high G-forces.
+- Ultra-Rigid Frame: Zero printed joints. Virtu uses 2040 and 4040 extrusions with aluminum-to-aluminum blind joints for a rock-solid, professional structure.
+- Full Linear Rail Motion: High-speed, high-precision motion using MGN12H (X) and MGN12C (Y/Z) rails.
+- Belted Triple-Z with Z-Tilt: Features three independent Z motors with a 2.5:1 compound pulley reduction for perfect 3-point kinematic bed leveling without leadscrew artifacts.
+- Kinematic Bed Mount: Reuse your original Ender bed with a 3-point sliding mount that allows the plate to expand naturally during heating, eliminating warp.
+- Integrated Electronics: The main PSU is hidden in the base for a low center of gravity, with a spacious rear compartment for DIN-rail organization.
 
-#### UPCYCLING & ECOSYSTEM
-- Maximum Reuse: Designed to save as many parts as possible (Motors, PSU, Lead screws, etc.) from the Ender 3.
-- Optimized Airflow: Fanducts developed using CFD analysis for maximum part cooling.
-- Universal Toolhead: Compatible with a wide variety of high-flow hotends and extruders.
-- Printability: Every part is designed to be easily printed on a standard 3D printer without complex supports.
+#### THE V-ION TOOLHEAD
+Virtu debuts the custom V-ION toolhead, a high-performance project in its own right:
+- Featherweight: Only ~260 g (including Rapido UHF and Cartographer).
+- Optimized cooling: Designed with CFD analysis and a balanced center of mass to ensure flawless print quality at extreme speeds.
+- Universal mounting: Uses the Voron mounting pattern for compatibility, while optimized for high-flow hotends and high-end probes.
 
 #### OFFICIAL MODS & UPGRADES
-- Virtu is built to be "Your" printer. While the base configuration is a powerhouse, you can choose official "Performance Packs" to push it even further:
-- 4WD XY Axis: Double the motors on X and Y for insane torque and acceleration.
-- CPAP Part Cooling: Remote powerful cooling for printing at 600mm/s+.
-- Active Motor Cooling: Keep your steppers cool during long, high-speed print jobs.
-- Double Shear Gantry: Maximum stiffness for those chasing the highest Input Shaper frequencies.
+Virtu is a platform built to evolve. You can choose to stay with a clean base build or push the performance envelope:
+- 4WD XY Axis: Quad-motor setup for insane torque and higher resonance frequencies.
+- Double-Shear Mounts: Supported motor shafts to handle extreme belt tensions for 40k+ accelerations.
+- CPAP Part Cooling: Remote high-pressure cooling for the most demanding high-speed filaments.
+- Active Motor Cooling: Built-in cooling paths and thermistor support to keep your steppers stable during long runs.
 
 CONTINUE TO: INTO THE PROJECT
 
 ---
-Note on Upcycling: The percentage of reused parts depends on your specific Ender 3 model and chosen configuration. By reusing the core hardware, you are significantly reducing waste while building a machine that outperforms the original in every measurable way.
+A Note on the Build: Virtu E3 is about more than just assembly—it’s a project. To achieve this level of rigidity, you will need to drill new holes into your profiles for the blind joints. It’s an extra step that pays off with a cleaner, faster, and more precise machine than any other conversion.
