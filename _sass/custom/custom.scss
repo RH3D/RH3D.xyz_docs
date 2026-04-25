@@ -8,52 +8,46 @@
   color: #f7d12e;  /* Replace with your desired color */
 }
 
-/* Reset Just-the-Docs default table striping */
-.bom_table tr:nth-child(even),
-.bom_table tr:nth-child(odd) {
-  background: transparent;
-}
-
-/* Base table */
+/* Modern BOM table styling */
 .bom_table {
   border-collapse: separate;
   border-spacing: 0;
   margin: 1.6rem 0;
   width: auto;
-  /* Light grey background for entire table */
-  background: #f5f5f5;
-  border: 1px solid rgba(0,0,0,0.05);
+  background: var(--color-bg);
+  border: 1px solid rgba(0,0,0,0.06);
   border-radius: 8px;
-  overflow: hidden;
-  /* Remove shadow completely */
-  box-shadow: none;
-}
-
-/* Title row */
-.bom_table tr:first-child th {
-  background: #e7af06; /* your yellow */
-  font-size: 1.05rem;
-  text-align: center;
-  padding: 12px 0;
-  font-weight: 600;
-  color: #000; /* force readable text */
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden; /* ensures rounded corners apply to rows */
 }
 
 /* Header row */
 .bom_table th {
   padding: 10px 12px;
   font-weight: 600;
-  background: rgba(0,0,0,0.03);
-  color: #000;
+  background: rgba(0,0,0,0.04);
+  color: var(--color-text);
+  text-align: left;
   border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Title row (colspan=4) */
+.bom_table tr:first-child th {
+  background: rgba(0,0,0,0.06);
+  font-size: 1.05rem;
+  text-align: center;
+  padding: 12px 0;
 }
 
 /* Table cells */
 .bom_table td {
   padding: 8px 12px;
   border-bottom: 1px solid rgba(0,0,0,0.05);
-  color: #000;
+  color: var(--color-text);
+}
+
+/* Zebra striping */
+.bom_table tr:nth-child(even) td {
+  background: rgba(0,0,0,0.02);
 }
 
 /* Remove last-row border */
@@ -61,48 +55,12 @@
   border-bottom: none;
 }
 
-/* Hover highlight */
-.bom_table tr:hover td {
-  background: rgba(0,0,0,0.04);
-}
-
-/* Force link color (your green) */
+/* Links inside table */
 .bom_table a {
-  color: #5ca33c; /* <-- your custom green */
+  color: var(--color-link);
   text-decoration: none;
 }
 
 .bom_table a:hover {
   text-decoration: underline;
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  .bom_table {
-    background: #2a2a2a !important;
-    border: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .bom_table tr:first-child th {
-    background: #ffd84d;
-    color: #000;
-  }
-
-  .bom_table th {
-    background: rgba(255,255,255,0.08);
-    color: #fff;
-  }
-
-  .bom_table td {
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    color: #fff;
-  }
-
-  .bom_table tr:hover td {
-    background: rgba(255,255,255,0.12);
-  }
-
-  .bom_table a {
-    color: #7fe3b1; /* lighter green for dark mode */
-  }
 }
