@@ -8,7 +8,9 @@ permalink: /e3ng
 ---
 ![](../assets/images/gallery.png)
 
-# <span style="font-weight:800; font-style:italic;">E3NG</span> (ENDER 3 NG)
+# <span style="font-weight:700; font-style:italic;">E3NG</span>
+{: .text-center }
+#### (ENDER 3 NG)
 {: .text-center }
 
 **Take your old, unused Creality Ender 3 and turn it into something amazing—something fast, powerful, precise, and reliable and enjoy the new level of tinkering.**
