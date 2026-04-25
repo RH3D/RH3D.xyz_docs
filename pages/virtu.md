@@ -50,11 +50,12 @@ The soul of Virtu is still about rescue and reuse. Many of us started with an En
 
 #### KEY FEATURES
 *Performance Focused Design: Every component is engineered to handle extreme accelerations while maintaining flawless print quality.*
-- **Ultra-Rigid Frame:** Zero printed joints. Virtu uses 2040 and 4040 extrusions with aluminum-to-aluminum blind joints for a rock-solid, professional structure.
-- **Full Linear Rail Motion:** High-speed, high-precision motion using MGN12H (X) and MGN12C (Y/Z) rails.
-- **Belted Triple-Z with Z-Tilt:** Features three independent Z motors with a 2.5:1 compound pulley reduction for perfect 3-point kinematic bed leveling without leadscrew artifacts.
-- **Kinematic Bed Mount:** Reuse your original Ender bed with a 3-point sliding mount that allows the plate to expand naturally during heating, eliminating warp.
-- **Integrated Electronics:** The main PSU is hidden in the base for a low center of gravity, with a spacious rear compartment for DIN-rail organization.
+- **Ultra-Rigid Frame:** 2040 and 4040 extrusions with blind joints, no printed joints.
+- **Full Linear Rail Motion:** MGN12H (X) and MGN12C (Y/Z) linear rails.
+- **Belted Z-Axis:** Belt driven Z axis with a 2.5:1 reduction, no leadscrew artifacts, higher speeds, less maintenance.
+- **Triple-Motor Z-Tilt:** Three independent Z motors and kinematic mounts for automated bed tilt adjustment.
+- **Kinematic Bed Mount:** Original Ender bed reused with a 3-point sliding mount for natural expansion during heating, reducing warp.
+- **Integrated Electronics:** Main PSU hidden in the base for a low center of gravity, with a spacious rear compartment for DIN-rail organization.
 
 #### THE V-ION TOOLHEAD
 *Virtu debuts the custom V-ION toolhead, a high-performance project in its own right:*
