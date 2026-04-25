@@ -9,12 +9,12 @@ permalink: /virtu/build
 ---
 
 {: .warning }
-**WORK IN PROGRESS**
+**WORK IN PROGRESS V003**
 {: .text-center }
 
 ![](../../assets/images/virtu cad.png)
 
-# <span style="font-weight:800; font-style:italic;">VIRTU</span><sup><span style="font-size: 63%; font-weight:bold; font-style:italic;"> E3</span></sup>
+# <span style="font-weight:800; font-style:italic;">VIRTU</span><sup><span style="font-size: 63%; font-weight:700; font-style:italic;"> E3</span></sup>
 {: .text-center }
 #### LOREM IPSUM
 {: .text-center }
