@@ -11,7 +11,7 @@ permalink: /virtu/build/sourcing_parts/self_sourcing
 ---
 
 {: .warning }
-**WORK IN PROGRESS**
+**THIS SITE IS UNDER CONSTRUCTION**
 {: .text-center }
 
 {: .warning }
@@ -20,7 +20,7 @@ THIS IS A TEST PAGE, THE BILL OF MATERIAL LISTED BELLOW IS NOT A REAL BILL OF MA
 # SELF SOURCING
 {: .text-center }
 
-If you prefer to source parts yourself or have spare hardware ready to use, this is your path. This gives you full control over the build, the part quality and price while adding the ability to customize your performance levels from the start.
+If you prefer to source parts yourself or have spare hardware ready to use, this is your path. This gives you full control over the build, over the parts quality and price while adding the ability to customize your performance levels from the start.
 
 The links provided in the Bill of Materials (BOM) point to products that have been tested for the quality and tolerances required to hit the high-speed targets and reliability. If you choose to source from elsewhere, ensure your parts—especially linear rails, bearings, belts and high-speed steppers—meet these standards to avoid issues during tuning.
 
