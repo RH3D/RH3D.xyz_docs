@@ -14,23 +14,23 @@
   border-spacing: 0;
   margin: 1.6rem 0;
   width: auto;
-  background: var(--color-bg);
+  background: $table-background-color; // or $body-background-color if you prefer
   border: 1px solid rgba(0,0,0,0.04);
   border-radius: 8px;
   overflow: hidden;
 
   /* soft, modern shadow */
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
 /* Title row */
 .bom_table tr:first-child th {
-  background: var(--color-yellow-000); /* your yellow-300 from theme */
+  background: $body-heading-color; // your yellow-300
   font-size: 1.05rem;
   text-align: center;
   padding: 12px 0;
   font-weight: 600;
-  color: var(--color-text); /* uses your theme text color */
+  color: $body-text-color; // ng-grey-30
 }
 
 /* Header row */
@@ -38,7 +38,7 @@
   padding: 10px 12px;
   font-weight: 600;
   background: rgba(0,0,0,0.03);
-  color: var(--color-text);
+  color: $body-text-color;
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
@@ -46,10 +46,10 @@
 .bom_table td {
   padding: 8px 12px;
   border-bottom: 1px solid rgba(0,0,0,0.04);
-  color: var(--color-text);
+  color: $body-text-color;
 }
 
-/* Remove zebra striping */
+/* No zebra striping */
 .bom_table tr:nth-child(even) td {
   background: transparent;
 }
@@ -59,9 +59,9 @@
   border-bottom: none;
 }
 
-/* Keep your original green link color */
+/* Links use your theme green */
 .bom_table a {
-  color: var(--color-link); /* this maps to $link-color = $ng-green-30 */
+  color: $link-color; // $ng-green-30
   text-decoration: none;
 }
 
@@ -73,13 +73,13 @@
 @media (prefers-color-scheme: dark) {
   .bom_table {
     border: 1px solid rgba(255,255,255,0.06);
-    background: rgba(255,255,255,0.04);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+    background: $table-background-color;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
   }
 
   .bom_table tr:first-child th {
-    background: var(--color-yellow-000);
-    color: var(--color-text);
+    background: $body-heading-color;
+    color: $body-text-color;
   }
 
   .bom_table th {
@@ -91,7 +91,6 @@
     border-bottom: 1px solid rgba(255,255,255,0.06);
   }
 
-  /* still no striping */
   .bom_table tr:nth-child(even) td {
     background: transparent;
   }
