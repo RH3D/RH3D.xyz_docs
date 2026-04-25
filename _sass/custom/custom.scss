@@ -17,12 +17,12 @@
   width: auto;
 
   background: $body-background-color; // dark background from your theme
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 8px;
   overflow: hidden;
 
   /* softened shadow */
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.04);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.0);
 }
 
 /* Center align last two columns (Qty + Link) */
@@ -35,7 +35,7 @@
 
 /* Title row — yellow TEXT, subtle dark background */
 .bom_table tr:first-child th {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.2);
   font-size: 1.05rem;
   text-align: center;
   padding: 12px 0;
@@ -47,7 +47,7 @@
 .bom_table th {
   padding: 10px 12px;
   font-weight: 600;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.15);
   color: $body-text-color;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
@@ -60,12 +60,8 @@
 }
 
 /* Custom subtle striping */
-.bom_table tr:nth-child(odd) td {
-  background: rgba(255,255,255,0.03);
-}
-
 .bom_table tr:nth-child(even) td {
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.05);
 }
 
 /* Hover highlight */
