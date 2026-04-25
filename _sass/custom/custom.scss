@@ -60,11 +60,11 @@
 
 /* Softer zebra striping */
 .bom_table tr:nth-child(odd) td {
-  background: rgba(0,0,0,0.015); // ultra-light
+  background: rgba(0,0,0,0.01); // ultra-light
 }
 
 .bom_table tr:nth-child(even) td {
-  background: rgba(0,0,0,0.015);
+  background: rgba(0,0,0,0.02);
 }
 
 /* Hover highlight */
@@ -113,6 +113,10 @@
 
   .bom_table tr:nth-child(even) td {
     background: rgba(255,255,255,0.03);
+  }
+  
+    .bom_table tr:nth-child(odd) td {
+    background: rgba(255,255,255,0.06);
   }
 
   .bom_table tr:hover td {
