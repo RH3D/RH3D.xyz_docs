@@ -65,6 +65,11 @@
   border-bottom: none;
 }
 
+/* Hover highlight */
+.bom_table tr:hover td {
+  background: rgba(0,0,0,0.06);
+}
+
 /* Links use your theme green */
 .bom_table a {
   color: $link-color; // $ng-green-30
