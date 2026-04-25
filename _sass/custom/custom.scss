@@ -19,13 +19,13 @@
   border-radius: 8px;
   overflow: hidden;
 
-  /* stronger but soft shadow */
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  /* stronger, cleaner shadow without top/bottom artifacts */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
 }
 
 /* Title row */
 .bom_table tr:first-child th {
-  background: var(--color-yellow-000); /* your default yellow */
+  background: var(--color-yellow-000); /* your site’s yellow */
   font-size: 1.05rem;
   text-align: center;
   padding: 12px 0;
@@ -49,9 +49,9 @@
   color: var(--color-text);
 }
 
-/* Softer zebra striping */
+/* Remove zebra striping completely */
 .bom_table tr:nth-child(even) td {
-  background: rgba(0,0,0,0.015); /* very subtle */
+  background: transparent;
 }
 
 /* Remove last-row border */
@@ -61,7 +61,7 @@
 
 /* Keep your original green link color */
 .bom_table a {
-  color: var(--color-link); /* uses your theme’s green */
+  color: var(--color-link); /* your theme’s green */
   text-decoration: none;
 }
 
@@ -74,11 +74,11 @@
   .bom_table {
     border: 1px solid rgba(255,255,255,0.06);
     background: rgba(255,255,255,0.04);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
   }
 
   .bom_table tr:first-child th {
-    background: var(--color-yellow-000); /* same yellow in dark mode */
+    background: var(--color-yellow-000);
     color: var(--color-text);
   }
 
@@ -91,7 +91,9 @@
     border-bottom: 1px solid rgba(255,255,255,0.06);
   }
 
+  /* still no striping */
   .bom_table tr:nth-child(even) td {
-    background: rgba(255,255,255,0.03);
+    background: transparent;
   }
 }
+
