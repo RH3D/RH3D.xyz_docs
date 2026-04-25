@@ -1,6 +1,7 @@
 ---
 title: Support the development ❤️
 layout: default
+has_toc: false
 nav_order: 99
 description: "Support RH3D's open-source development of Ender 3 NG, Virtu E3, and DIY 3D printing projects. Your donation helps keep innovation alive and accessible."
 permalink: /donate
