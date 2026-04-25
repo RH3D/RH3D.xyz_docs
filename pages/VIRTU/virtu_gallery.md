@@ -1,6 +1,7 @@
 ---
 title: Gallery
 layout: default
+has_toc: false
 parent: VIRTU E3
 #has_children: true
 nav_order: 1
