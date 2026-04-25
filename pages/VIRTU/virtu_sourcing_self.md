@@ -54,15 +54,15 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 | Size    | Type/specifications                                   |  Quantity |  Link  |
 |:--------|:---------------------------------------|:---------:|:------------:|
-| **M3** | **washer** `ISO 7089` |    8     |  [NINDEJIN](https://s.click.aliexpress.com/e/_olHMc2g)  |
-| **M5** | **washer** `ISO 7089` |    4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_olHMc2g)  |
-| **M3** | **hex nut** `ISO 8673` |    10     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oDy3nla)  |
-| **M3** | **Roll-in T-nut** `for 2020 V-Slot extrusion` |    72     |  [NINDEJIN](https://s.click.aliexpress.com/e/_ooSJSAs)  |
-| **M5** | **Roll-in T-nut** `for 2020 V-Slot extrusion` |    35     |  [NINDEJIN](https://s.click.aliexpress.com/e/_ooSJSAs)  |
-| **M3** | **heat set threaded insert** `M3 x L 4 x OD 4,5 mm` |    89     |  [EDGAR GARY st.](https://s.click.aliexpress.com/e/_oB9tEk4)  |
-| **M5** | **heat set threaded insert** `M5 x L 5 x OD 7 mm` |    4     |  [EDGAR GARY st.](https://s.click.aliexpress.com/e/_oB9tEk4)  |
-| **10-M4** | **steel ball** `10mm OD, M4 threaded hole` |    3     |  [MELLOW](https://s.click.aliexpress.com/e/_c3l19mx9)  |
-| **8x8x5** | **spacer** `8mm OD, 8mm H, 5mm hole` |    3     |  REUSE E3 V-WHEEL ALU-SPACER  |
+| **M3** | **washer** `ISO 7089` | 8 | [NINDEJIN](https://s.click.aliexpress.com/e/_olHMc2g) |
+| **M5** | **washer** `ISO 7089` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_olHMc2g) |
+| **M3** | **hex nut** `ISO 8673` | 10 | [NINDEJIN](https://s.click.aliexpress.com/e/_oDy3nla) |
+| **M3** | **Roll-in T-nut** `for 2020 V-Slot extrusion` | 72 | [NINDEJIN](https://s.click.aliexpress.com/e/_ooSJSAs) |
+| **M5** | **Roll-in T-nut** `for 2020 V-Slot extrusion` | 35 | [NINDEJIN](https://s.click.aliexpress.com/e/_ooSJSAs) |
+| **M3** | **heat set threaded insert** `M3 x L 4 x OD 4,5 mm` | 89 | [EDGAR GARY st.](https://s.click.aliexpress.com/e/_oB9tEk4) |
+| **M5** | **heat set threaded insert** `M5 x L 5 x OD 7 mm` | 4 | [EDGAR GARY st.](https://s.click.aliexpress.com/e/_oB9tEk4) |
+| **10-M4** | **steel ball** `10mm OD, M4 threaded hole` | 3 | [MELLOW](https://s.click.aliexpress.com/e/_c3l19mx9) |
+| **8x8x5** | **spacer** `8mm OD, 8mm H, 5mm hole` | 3 | REUSE E3 V-WHEEL ALU-SPACER |
 {: class="transparant_table"}
 
 ## MOTION AND FRAME PARTS
