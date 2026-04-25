@@ -26,7 +26,6 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 *Some of the AliExpress links are affiliate links. They come at no additional cost to you but provide a small commission to the project, which helps keep development and testing alive. Vendor selection was in no way influenced by affiliate availability—quality, price, and seller reliability were our top priorities.*
 
-<div class="table-fade">
 <table class="bom_table">
   <colgroup>
     <col style="width:120px;">
@@ -153,7 +152,6 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <td><a href="https://s.click.aliexpress.com/e/_okNhDfW">NINDEJIN</a></td>
   </tr>
 </table>
-</div>
 
 # BILL OF MATERIAL
 
