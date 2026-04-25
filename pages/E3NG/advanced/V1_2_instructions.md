@@ -1,6 +1,7 @@
 ---
 title: Build guide
 layout: default
+has_toc: false
 parent: v1.2 - (advanced)
 grand_parent: E3NG v1.2
 has_children: false
