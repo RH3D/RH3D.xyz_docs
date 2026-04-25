@@ -29,7 +29,7 @@ If you also want to help supporting the development, you can do so through any o
 **WORK IN PROGRESS**
 {: .text-center }
 
-# **VIRTU**<sup><span style="font-size: 63%; font-weight:900;"> E3</span></sup>
+# <span style="font-weight:900;">VIRTU</span><sup><span style="font-size: 63%; font-weight:bold;"> E3</span></sup>
 {: .text-center }
 
 **Take your old, faithful Ender 3 and transform it into a high-performance beast. Virtu E3 is designed for those who want uncompromising speed and reliability without throwing away the hardware that started their journey.**
