@@ -7,9 +7,6 @@ nav_order: 40
 description: "Turn your Ender 3 into an unstopable coreXY machine! Speed, precision, purity - that is Virtu E3 by RH3D."
 permalink: /virtu
 ---
-# VIRTU E3
-{: .text-center }
-
 ![](../assets/images/VIRTU_E3_big.JPG)
 
 #### CURRENTLY IN DEVELOPMENT AND TESTING
@@ -27,10 +24,10 @@ If you also want to help supporting the development, you can do so through any o
 ---
 
 {: .warning }
-**PAGE IS UNDER CONSTRUCTION V008**
+**PAGE IS UNDER CONSTRUCTION V012**
 {: .text-center }
 
-# <span style="font-weight:700; font-size: 125%; font-style:italic;">VIRTU</span><sup><span style="font-size: 100%; font-weight:700; font-style:italic;"> E3</span></sup>
+# <span style="font-weight:700; font-size: 125%; font-style:italic;">VIRTU</span><sup><span style="font-size: 90%; font-weight:700; font-style:italic;"> E3</span></sup>
 {: .text-center }
 
 **Take your old, faithful Ender 3 and transform it into a high-performance beast. Virtu E3 is the next evolution in DIY upcycling—a ground-up redesign focused on excellence, precision, and raw speed.**
