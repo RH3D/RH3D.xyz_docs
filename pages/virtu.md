@@ -50,32 +50,32 @@ The soul of Virtu is still about rescue and reuse. Many of us started with an En
 
 #### KEY FEATURES
 *Performance Focused Design: Every component is engineered to handle extreme accelerations while maintaining flawless print quality.*
-- **Ultra-Rigid Frame:** 2040 and 4040 extrusions with blind joints, no printed joints.
-- **Full Linear Rail Motion:** MGN12H (X) and MGN12C (Y/Z) linear rails.
-- **Belted Z-Axis:** Belt driven Z axis with a 2.5:1 reduction, no leadscrew artifacts, higher speeds, less maintenance.
-- **Triple-Motor Z-Tilt:** Three independent Z motors and kinematic mounts for automated bed tilt adjustment.
-- **Kinematic Bed Mount:** Original Ender bed reused with a 3-point sliding mount for natural expansion during heating, reducing warp.
-- **Integrated Electronics:** Main PSU hidden in the base for a low center of gravity, with a spacious rear compartment for DIN-rail organization.
+- Ultra-Rigid frame using 2040 and 4040 extrusions with blind joints, no printed joints.
+- Linear rails on all axes.
+- Belt driven Z axis with a 2.5:1 reduction, no leadscrew artifacts, higher speeds, less maintenance.
+- Three independent Z motors and kinematic mounts for automated bed tilt adjustment.
+- Original Ender 3 bed reused with a 3-point kinematic mount for natural expansion during heating, reducing warp.
+- Main PSU placed in the base for a low center of gravity, with a spacious rear compartment for DIN-rail organization.
 
 #### THE V-ION TOOLHEAD
 *Virtu debuts the custom V-ION toolhead, a high-performance project in its own right:*
-- Featherweight: Only ~260 g (including hotend, bed probe and fans).
-- Integrated Design: A compact, rigid assembly with a very short, well-constrained filament path for superior extrusion control.
-- CFD Optimized Cooling: Part cooling ducts refined through fluid dynamics for high-speed printing.
-- Center of Mass Optimized: Perfectly balanced to reduce vibrations and artifacts at high G-forces.
-- Universal Mounting: Uses the Voron mounting pattern while remaining optimized for high-flow hotends and advanced probes.
+- **Lightweight:** Only ~260 g (including hotend, bed probe and fans).
+- **Integrated Design:** A compact, rigid assembly with a very short, well-constrained filament path.
+- **CFD Optimized Cooling:** Part cooling ducts refined through fluid dynamics for high-speed printing.
+- **Center of Mass Optimized:** Perfectly balanced to reduce vibrations and artifacts at high G-forces.
+- **Universal Mounting:** Voron mounting pattern for compatibility across different machines.
 
 #### OFFICIAL UPGRADES
 *Performance packs designed to push the hardware to its absolute limit:*
-- 4WD XY Axis: Quad-motor setup for insane torque and higher resonance frequencies.
-- Double-Shear Mounts: Supported motor shafts to handle extreme belt tensions for 40k+ accelerations.
-- CPAP Part Cooling: Remote high-pressure cooling for the most demanding high-speed filaments.
-- Active Motor Cooling: Built-in cooling paths and thermistor support to keep your steppers stable during long runs.
-- In Progress: Enclosure and CNC Aluminum parts for those who want the ultimate build.
+- **4WD XY Axis:** Quad-motor setup for insane torque and higher resonance frequencies.
+- **Double-Shear Mounts:** Supported motor shafts to handle highere belt tensions for max accelerations.
+- **CPAP Part Cooling:** Remote high-pressure cooling for the most demanding high-speed filaments.
+- **Active Motor Cooling:** Built-in cooling and thermistor support to keep XY steppers cool.
+- **In Progress:** Enclosure and CNC Aluminum parts for those who want the ultimate build.
 
 #### OFFICIAL MODS
-- Klicky Probe: For those who prefer the reliability of a physical docking probe.
-- BDsensor: Support for high-speed bed leveling.
+- Klicky Probe
+- BDsensor
 - Alternative Rails: Support for MGN12H rails on all axes.
 
 CONTINUE TO: INTO THE PROJECT
