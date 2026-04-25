@@ -21,17 +21,17 @@
   margin: 1.6rem 0;
   width: auto;
   background: var(--color-bg);
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(255,255,255,0.05);
   border-radius: 8px;
   overflow: hidden;
 
   /* clean, stronger shadow without top/bottom artifacts */
-  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
 }
 
 /* Title row */
 .bom_table tr:first-child th {
-  background: var(--color-yellow-000) !important;
+  background: var(--color-yellow-000);
   font-size: 1.05rem;
   text-align: center;
   padding: 12px 0;
@@ -68,7 +68,7 @@
 
 /* Force links to use your theme's green */
 .bom_table a {
-  color: var(--color-link) !important;
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -85,7 +85,7 @@
   }
 
   .bom_table tr:first-child th {
-    background: var(--color-yellow-000) !important;
+    background: var(--color-yellow-000);
     color: var(--color-text);
   }
 
