@@ -8,6 +8,7 @@
   color: #f7d12e;  /* Replace with your desired color */
 }
 
+
 /* Modern BOM table styling */
 .bom_table {
   border-collapse: separate;
@@ -49,9 +50,14 @@
   color: $body-text-color;
 }
 
-/* No zebra striping */
+/* Softer zebra striping */
 .bom_table tr:nth-child(even) td {
-  background: transparent;
+  background: rgba(0,0,0,0.015); /* very subtle */
+}
+
+/* Softer zebra striping */
+.bom_table tr:nth-child(odd) td {
+  background: rgba(0,0,0,0.015); /* very subtle */
 }
 
 /* Remove last-row border */
