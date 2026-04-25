@@ -7,6 +7,10 @@ nav_order: 1
 description: "Browse Virtu E3 build photos and wallpapers. See real CoreXY conversions of Ender 3 printers powered by RH3D’s open-source designs and community creativity."
 permalink: /virtu/gallery
 ---
+{: .warning }
+**WORK IN PROGRESS**
+{: .text-center }
+
 # WALLPAPERS
 {: .text-center }
 
