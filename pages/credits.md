@@ -1,6 +1,7 @@
 ---
 title: Credits
 layout: default
+has_toc: false
 nav_order: 60
 description: "Discover the makers, contributors, and open-source projects behind E3NG. RH3D thanks the DIY 3D printing community for sharing innovation and inspiration."
 permalink: /credits
