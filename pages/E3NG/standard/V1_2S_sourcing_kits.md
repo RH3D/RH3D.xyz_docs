@@ -1,6 +1,7 @@
 ---
 title: Kits
 layout: default
+has_toc: false
 parent: Sourcing parts
 grand_parent: v1.2S - (standard)
 has_children: false
