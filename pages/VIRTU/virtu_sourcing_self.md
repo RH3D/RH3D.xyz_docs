@@ -26,6 +26,43 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 *Some of the AliExpress links are affiliate links. They come at no additional cost to you but provide a small commission to the project, which helps keep development and testing alive. Vendor selection was in no way influenced by affiliate availability—quality, price, and seller reliability were our top priorities.*
 
+| **My Chart Title** |   |   |
+|--------------------|---|---|
+| Column A | Column B | Column C |
+| 10 | 20 | 30 |
+
+<table>
+  <tr>
+    <th colspan="3" style="text-align:center; font-size:1.1rem;">
+      My Chart Title
+    </th>
+  </tr>
+  <tr>
+    <th>Column A</th>
+    <th>Column B</th>
+    <th>Column C</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>20</td>
+    <td>30</td>
+  </tr>
+</table>
+
+
+<table>
+  <caption style="caption-side: top; font-weight:600; text-align:center;">
+    My Chart Title
+  </caption>
+  <tr>
+    <th>A</th><th>B</th><th>C</th>
+  </tr>
+  <tr>
+    <td>10</td><td>20</td><td>30</td>
+  </tr>
+</table>
+
+
 # BILL OF MATERIAL
 
 ## PRINTER HARDWARE
@@ -149,25 +186,6 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 | ELECTRONICS | electronics cover panel `340 x 349 x 3 mm` - cast ycrylic  |     1     |  cut according to DXF  |
 | FRAME | frame panel `350 x 320 x 3 mm` - ALUMINIUM  |     1     |  cut according to DXF  |
 {: class="transparant_table"}
-
-<table>
-  <tr>
-    <th colspan="3" style="text-align:center; font-size:1.1rem;">
-      My Chart Title
-    </th>
-  </tr>
-  <tr>
-    <th>Column A</th>
-    <th>Column B</th>
-    <th>Column C</th>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>20</td>
-    <td>30</td>
-  </tr>
-</table>
-
 
 continue to:
 {: .text-right .lh-0 .pt-8 }
