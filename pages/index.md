@@ -1,6 +1,7 @@
 ---
 title: RH3D
 layout: home
+has_toc: false
 nav_order: 10
 description: "Explore RH3D's custom Ender 3 upgrades and DIY 3D printing projects. Give your printer a second life and join a passionate maker community."
 permalink: /
