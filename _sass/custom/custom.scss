@@ -8,6 +8,12 @@
   color: #f7d12e;  /* Replace with your desired color */
 }
 
+/* Reset Just-the-Docs default table striping + spacing */
+.bom_table tr:nth-child(even),
+.bom_table tr:nth-child(odd) {
+  background: transparent !important;
+}
+
 /* Modern BOM table styling */
 .bom_table {
   border-collapse: separate;
@@ -15,22 +21,23 @@
   margin: 1.6rem 0;
   width: auto;
   background: var(--color-bg);
-  border: 1px solid rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.05);
   border-radius: 8px;
   overflow: hidden;
 
-  /* stronger, cleaner shadow without top/bottom artifacts */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  /* clean, stronger shadow without top/bottom artifacts */
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
 }
 
 /* Title row */
 .bom_table tr:first-child th {
-  background: var(--color-yellow-000); /* your site’s yellow */
+  background: var(--color-yellow-000) !important;
   font-size: 1.05rem;
   text-align: center;
   padding: 12px 0;
   font-weight: 600;
   color: var(--color-text);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 /* Header row */
@@ -39,19 +46,14 @@
   font-weight: 600;
   background: rgba(0,0,0,0.03);
   color: var(--color-text);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 /* Table cells */
 .bom_table td {
   padding: 8px 12px;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
   color: var(--color-text);
-}
-
-/* Remove zebra striping completely */
-.bom_table tr:nth-child(even) td {
-  background: transparent;
 }
 
 /* Remove last-row border */
@@ -59,9 +61,14 @@
   border-bottom: none;
 }
 
-/* Keep your original green link color */
+/* Hover highlight (subtle, modern) */
+.bom_table tr:hover td {
+  background: rgba(0,0,0,0.04);
+}
+
+/* Force links to use your theme's green */
 .bom_table a {
-  color: var(--color-link); /* your theme’s green */
+  color: var(--color-link) !important;
   text-decoration: none;
 }
 
@@ -72,28 +79,26 @@
 /* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
   .bom_table {
-    border: 1px solid rgba(255,255,255,0.06);
-    background: rgba(255,255,255,0.04);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.45);
   }
 
   .bom_table tr:first-child th {
-    background: var(--color-yellow-000);
+    background: var(--color-yellow-000) !important;
     color: var(--color-text);
   }
 
   .bom_table th {
     background: rgba(255,255,255,0.06);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 
   .bom_table td {
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
   }
 
-  /* still no striping */
-  .bom_table tr:nth-child(even) td {
-    background: transparent;
+  .bom_table tr:hover td {
+    background: rgba(255,255,255,0.08);
   }
 }
-
