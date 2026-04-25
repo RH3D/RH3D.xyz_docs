@@ -9,18 +9,19 @@
 }
 
 
-/* Modern BOM table styling */
+/* Modern BOM table styling — dark mode only */
 .bom_table {
   border-collapse: separate;
   border-spacing: 0;
   margin: 1.6rem 0;
   width: auto;
-  background: $table-background-color; // from your theme
-  border: 1px solid rgba(0,0,0,0.04);
+
+  background: $table-background-color; // dark background from your theme
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 8px;
   overflow: hidden;
 
-  /* stronger but soft shadow */
+  /* softened shadow */
   box-shadow: 4px 4px 4px rgba(0,0,0,0.04);
 }
 
@@ -32,44 +33,44 @@
   text-align: center;
 }
 
-/* Title row — yellow TEXT, normal background */
+/* Title row — yellow TEXT, subtle dark background */
 .bom_table tr:first-child th {
-  background: rgba(0,0,0,0.08); // subtle header-like background
+  background: rgba(255,255,255,0.06);
   font-size: 1.05rem;
   text-align: center;
   padding: 12px 0;
   font-weight: 600;
-  color: $body-heading-color; // <-- your yellow-300 text
+  color: $body-heading-color; // yellow-300 text
 }
 
 /* Header row */
 .bom_table th {
   padding: 10px 12px;
   font-weight: 600;
-  background: rgba(0,0,0,0.03);
+  background: rgba(255,255,255,0.06);
   color: $body-text-color;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 /* Table cells */
 .bom_table td {
   padding: 8px 12px;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   color: $body-text-color;
 }
 
-/* Softer zebra striping */
+/* Custom subtle striping */
 .bom_table tr:nth-child(odd) td {
-  background: rgba(0,0,0,0.01); // ultra-light
+  background: rgba(255,255,255,0.03);
 }
 
 .bom_table tr:nth-child(even) td {
-  background: rgba(0,0,0,0.02);
+  background: rgba(255,255,255,0.06);
 }
 
 /* Hover highlight */
 .bom_table tr:hover td {
-  background: rgba(0,0,0,0.05);
+  background: rgba(255,255,255,0.08);
 }
 
 /* Remove last-row border */
@@ -85,41 +86,4 @@
 
 .bom_table a:hover {
   text-decoration: underline;
-}
-
-/* Dark mode adjustments */
-@media (prefers-color-scheme: dark) {
-  .bom_table {
-    border: 1px solid rgba(255,255,255,0.06);
-    background: $table-background-color;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
-  }
-
-  .bom_table tr:first-child th {
-    background: rgba(255,255,255,0.06);
-    color: $body-heading-color; // yellow text in dark mode too
-  }
-
-  .bom_table th {
-    background: rgba(255,255,255,0.06);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    color: $body-text-color;
-  }
-
-  .bom_table td {
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    color: $body-text-color;
-  }
-
-  .bom_table tr:nth-child(even) td {
-    background: rgba(255,255,255,0.03);
-  }
-  
-    .bom_table tr:nth-child(odd) td {
-    background: rgba(255,255,255,0.06);
-  }
-
-  .bom_table tr:hover td {
-    background: rgba(255,255,255,0.08);
-  }
 }
