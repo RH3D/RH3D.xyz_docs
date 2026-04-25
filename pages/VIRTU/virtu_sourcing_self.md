@@ -151,22 +151,23 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 {: class="transparant_table"}
 
 <table>
-  <colgroup>
-    <col style="width: 180px;">
-    <col style="width: 300px;">
-    <col style="width: 120px;">
-  </colgroup>
   <tr>
-    <th>Part</th>
-    <th>Description</th>
-    <th>Qty</th>
+    <th colspan="3" style="text-align:center; font-size:1.1rem;">
+      My Chart Title
+    </th>
   </tr>
   <tr>
-    <td>M3x8</td>
-    <td>Button head screw</td>
-    <td>12</td>
+    <th>Column A</th>
+    <th>Column B</th>
+    <th>Column C</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>20</td>
+    <td>30</td>
   </tr>
 </table>
+
 
 continue to:
 {: .text-right .lh-0 .pt-8 }
