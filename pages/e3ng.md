@@ -1,6 +1,7 @@
 ---
 title: E3NG v1.2
 layout: default
+has_toc: false
 has_children: true
 nav_order: 20
 description: "Transform your Ender 3 into a powerful CoreXY machine with E3NG by RH3D. Reuse up to 78% of original parts for a faster, more precise 3D printing experience."
