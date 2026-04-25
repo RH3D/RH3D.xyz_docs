@@ -6,14 +6,14 @@ nav_order: 10
 description: "Explore RH3D's custom Ender 3 upgrades and DIY 3D printing projects. Give your printer a second life and join a passionate maker community."
 permalink: /
 ---
-# E3NG (ENDER 3 NG)
+# <span style="font-weight:700; font-size: 125%; font-style:italic;">E3NG</span>
 
 The legacy design that transforms your basic Ender 3 into a Next Generation machine. Want to keep it simple and affordable or go fully loaded? The choice is yours.
 
 [![E3NG](../assets/images/E3NG.png)](https://rh3d.xyz/e3ng)
 {: .text-center }
 
-# VIRTU E3
+# <span style="font-weight:700; font-size: 125%; font-style:italic;">VIRTU<sup style="font-size: 58%;"> E3</sup></span>
 {: .mt-9 }
 
 The second-generation hero, built to revive all the unused Enders. Purity, speed, precision — this is Virtu.
