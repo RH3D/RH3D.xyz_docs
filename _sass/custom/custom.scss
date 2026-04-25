@@ -24,6 +24,14 @@
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
+/* Center align last two columns (Qty + Link) */
+.bom_table td:nth-child(3),
+.bom_table td:nth-child(4),
+.bom_table th:nth-child(3),
+.bom_table th:nth-child(4) {
+  text-align: center;
+}
+
 /* Title row — yellow TEXT, normal background */
 .bom_table tr:first-child th {
   background: rgba(0,0,0,0.08); // subtle header-like background
