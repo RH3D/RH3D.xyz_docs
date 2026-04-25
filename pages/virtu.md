@@ -43,21 +43,21 @@ The soul of Virtu is still about rescue and reuse. Many of us started with an En
 {: .text-center }
 
 #### PRINTER PERFORMANCE
-- Target Acceleration: 40,000+ mm/s<sup>2</sup> (X) / 18,000+ mm/s<sup>2</sup> (Y)
-- Print Speed: 600+ mm/s
-- Build Volume (X-Y-Z): 230 x 230 x 230 mm
-- Footprint: 35 x 40 x 50 cm *(roughly 6cm narrower than E3NG)*
+- **Target Acceleration:** 40,000+ mm/s<sup>2</sup> (X) / 18,000+ mm/s<sup>2</sup> (Y)
+- **Print Speed:** 600+ mm/s
+- **Build Volume (X-Y-Z):** 230 x 230 x 230 mm
+- **Footprint:** 35 x 40 x 50 cm *(roughly 6cm narrower than E3NG)*
 
 #### KEY FEATURES
--Performance Focused Design: Every component is engineered to handle extreme accelerations while maintaining flawless print quality.
-- Ultra-Rigid Frame: Zero printed joints. Virtu uses 2040 and 4040 extrusions with aluminum-to-aluminum blind joints for a rock-solid, professional structure.
-- Full Linear Rail Motion: High-speed, high-precision motion using MGN12H (X) and MGN12C (Y/Z) rails.
-- Belted Triple-Z with Z-Tilt: Features three independent Z motors with a 2.5:1 compound pulley reduction for perfect 3-point kinematic bed leveling without leadscrew artifacts.
-- Kinematic Bed Mount: Reuse your original Ender bed with a 3-point sliding mount that allows the plate to expand naturally during heating, eliminating warp.
-- Integrated Electronics: The main PSU is hidden in the base for a low center of gravity, with a spacious rear compartment for DIN-rail organization.
+*Performance Focused Design: Every component is engineered to handle extreme accelerations while maintaining flawless print quality.*
+- **Ultra-Rigid Frame:** Zero printed joints. Virtu uses 2040 and 4040 extrusions with aluminum-to-aluminum blind joints for a rock-solid, professional structure.
+- **Full Linear Rail Motion:** High-speed, high-precision motion using MGN12H (X) and MGN12C (Y/Z) rails.
+- **Belted Triple-Z with Z-Tilt:** Features three independent Z motors with a 2.5:1 compound pulley reduction for perfect 3-point kinematic bed leveling without leadscrew artifacts.
+- **Kinematic Bed Mount:** Reuse your original Ender bed with a 3-point sliding mount that allows the plate to expand naturally during heating, eliminating warp.
+- **Integrated Electronics:** The main PSU is hidden in the base for a low center of gravity, with a spacious rear compartment for DIN-rail organization.
 
 #### THE V-ION TOOLHEAD
-Virtu debuts the custom V-ION toolhead, a high-performance project in its own right:
+*Virtu debuts the custom V-ION toolhead, a high-performance project in its own right:*
 - Featherweight: Only ~260 g (including hotend, bed probe and fans).
 - Integrated Design: A compact, rigid assembly with a very short, well-constrained filament path for superior extrusion control.
 - CFD Optimized Cooling: Part cooling ducts refined through fluid dynamics for high-speed printing.
@@ -65,7 +65,7 @@ Virtu debuts the custom V-ION toolhead, a high-performance project in its own ri
 - Universal Mounting: Uses the Voron mounting pattern while remaining optimized for high-flow hotends and advanced probes.
 
 #### OFFICIAL UPGRADES
-Performance packs designed to push the hardware to its absolute limit:
+*Performance packs designed to push the hardware to its absolute limit:*
 - 4WD XY Axis: Quad-motor setup for insane torque and higher resonance frequencies.
 - Double-Shear Mounts: Supported motor shafts to handle extreme belt tensions for 40k+ accelerations.
 - CPAP Part Cooling: Remote high-pressure cooling for the most demanding high-speed filaments.
