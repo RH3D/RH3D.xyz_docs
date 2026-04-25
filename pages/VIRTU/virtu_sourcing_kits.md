@@ -20,7 +20,8 @@ permalink: /virtu/build/sourcing_parts/kits
 {: .no_toc .text-center }
 
 {: .note }
-**THERE ARE CURRENTLY NO OFFICIAL KITS AVAILABLE FOR VIRTU E3.**
+**THERE ARE CURRENTLY NO KITS AVAILABLE FOR VIRTU E3.**
+{: .text-center }
 
 I am actively working with partners to prepare curated kits that will include all the necessary hardware for the conversion. However, during this initial phase, the project is only available via self-sourcing.
 
