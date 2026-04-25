@@ -17,11 +17,11 @@
   width: auto;
 
   background: $body-background-color; // dark background from your theme
-  border: 1px solid rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.4);
   border-radius: 8px;
   overflow: hidden;
   /* softened shadow */
-  box-shadow: 4px 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
 }
 
 
