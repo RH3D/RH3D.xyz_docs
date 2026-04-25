@@ -1,6 +1,7 @@
 ---
 title: Setup and calibration
 layout: default
+has_toc: false
 parent: Final steps
 grand_parent: E3NG v1.2
 #has_children: true
