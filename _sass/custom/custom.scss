@@ -15,23 +15,23 @@
   border-spacing: 0;
   margin: 1.6rem 0;
   width: auto;
-  background: $table-background-color; // or $body-background-color if you prefer
+  background: var(--color-bg);
   border: 1px solid rgba(0,0,0,0.04);
   border-radius: 8px;
   overflow: hidden;
 
-  /* soft, modern shadow */
+  /* stronger but soft shadow */
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
 /* Title row */
 .bom_table tr:first-child th {
-  background: var(--color-yellow-000); // your yellow-300
+  background: var(--color-yellow-000); /* your default yellow */
   font-size: 1.05rem;
   text-align: center;
   padding: 12px 0;
   font-weight: 600;
-  color: $body-heading-color; // ng-grey-30
+  color: var(--color-text);
 }
 
 /* Header row */
@@ -39,7 +39,7 @@
   padding: 10px 12px;
   font-weight: 600;
   background: rgba(0,0,0,0.03);
-  color: $body-text-color;
+  color: var(--color-text);
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
@@ -47,16 +47,11 @@
 .bom_table td {
   padding: 8px 12px;
   border-bottom: 1px solid rgba(0,0,0,0.04);
-  color: $body-text-color;
+  color: var(--color-text);
 }
 
 /* Softer zebra striping */
 .bom_table tr:nth-child(even) td {
-  background: rgba(0,0,0,0.015); /* very subtle */
-}
-
-/* Softer zebra striping */
-.bom_table tr:nth-child(odd) td {
   background: rgba(0,0,0,0.015); /* very subtle */
 }
 
@@ -65,14 +60,9 @@
   border-bottom: none;
 }
 
-/* Hover highlight */
-.bom_table tr:hover td {
-  background: rgba(0,0,0,0.06);
-}
-
-/* Links use your theme green */
+/* Keep your original green link color */
 .bom_table a {
-  color: $link-color; // $ng-green-30
+  color: var(--color-link); /* uses your theme’s green */
   text-decoration: none;
 }
 
@@ -84,13 +74,13 @@
 @media (prefers-color-scheme: dark) {
   .bom_table {
     border: 1px solid rgba(255,255,255,0.06);
-    background: $table-background-color;
+    background: rgba(255,255,255,0.04);
     box-shadow: 0 4px 14px rgba(0,0,0,0.4);
   }
 
   .bom_table tr:first-child th {
-    background: $body-heading-color;
-    color: $body-text-color;
+    background: var(--color-yellow-000); /* same yellow in dark mode */
+    color: var(--color-text);
   }
 
   .bom_table th {
@@ -103,6 +93,6 @@
   }
 
   .bom_table tr:nth-child(even) td {
-    background: transparent;
+    background: rgba(255,255,255,0.03);
   }
 }
