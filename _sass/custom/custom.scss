@@ -60,6 +60,10 @@
 }
 
 /* Custom subtle striping */
+.bom_table tr:nth-child(odd) td {
+  background: rgba(255,255,255,0.05);
+}
+
 .bom_table tr:nth-child(even) td {
   background: rgba(255,255,255,0.05);
 }
