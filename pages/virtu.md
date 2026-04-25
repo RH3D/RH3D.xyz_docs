@@ -42,7 +42,7 @@ The soul of Virtu is still about rescue and reuse. Many of us started with an En
 ---
 
 #### PRINTER PERFORMANCE
-- **Target Acceleration:** 40,000+ mm/s<sup>2</sup> (X) / 18,000+ mm/s<sup>2</sup> (Y)
+- **Target Acceleration:** 35,000+ mm/s<sup>2</sup> (X) / 18,000+ mm/s<sup>2</sup> (Y)
 - **Print Speed:** 600+ mm/s
 - **Build Volume (X-Y-Z):** 230 x 230 x 230 mm
 - **Footprint:** 35 x 40 x 50 cm *(roughly 6cm narrower than E3NG)*
@@ -53,7 +53,7 @@ The soul of Virtu is still about rescue and reuse. Many of us started with an En
 - Linear rails on all axes.
 - Belt driven Z axis with a 2.5:1 reduction, no leadscrew artifacts, higher speeds, less maintenance.
 - Three independent Z motors and kinematic mounts for automated bed tilt adjustment.
-- Original Ender 3 bed with kinematic mounts allow for natural expansion during heating, reducing warp.
+- OG Ender 3 bed with kinematic mounts allow for natural expansion during heating, reducing warp.
 - PSU in the base for lower center of gravity, spacious rear compartment for DIN-rail organization.
 
 #### THE V-ION TOOLHEAD
@@ -76,8 +76,6 @@ The soul of Virtu is still about rescue and reuse. Many of us started with an En
 - Klicky Probe
 - BDsensor
 - MGN12H rails on all axes
-
-CONTINUE TO: INTO THE PROJECT
 
 ---
 A Note on the Build: Virtu E3 is about more than just assembly—it’s a project. To achieve this level of rigidity, you will need to drill new holes into your profiles for the blind joints. It’s an extra step that pays off with a cleaner, faster, and more precise machine than any other conversion.
