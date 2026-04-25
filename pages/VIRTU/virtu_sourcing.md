@@ -21,10 +21,10 @@ Getting your hardware ready is the first step. Whether you buy a kit or source i
 
 Because Virtu is a performance machine, the quality of your parts matters. You have two ways to get what you need:
 
-1. Available Kits
+#### Available Kits
 This is the fastest path. Kits include the specific extra hardware needed for the Virtu conversion—like the extra motors, linear rails, fasteners etc.—in one package. It saves you the time of hunting down separate items and ensures everything is compatible with the design from day one.
 
-2. Self-Sourcing & BOM
+#### Self-Sourcing & BOM
 If you prefer to hand-pick your components or already have some spare parts in your workshop, use the Bill of Materials (BOM). This path gives you full control over exactly what goes into your build and allows you to balance your budget and performance goals manually.
 
 [KITS]{: .btn .fs-7 .fw-300 .mt-8 .mb-8 .text-yellow-300 .mr-7 }
