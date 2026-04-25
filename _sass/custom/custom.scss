@@ -12,44 +12,6 @@
   display: contents;
 }
 
-/* Fade-out effect for horizontal scroll */
-.table-fade {
-  position: relative;
-  overflow-x: auto;
-}
-
-/* Left fade */
-.table-fade::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 100%;
-  pointer-events: none;
-  background: linear-gradient(
-    to right,
-    $body-background-color 0%,
-    rgba($body-background-color, 0) 100%
-  );
-}
-
-/* Right fade */
-.table-fade::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 32px;
-  height: 100%;
-  pointer-events: none;
-  background: linear-gradient(
-    to left,
-    $body-background-color 0%,
-    rgba($body-background-color, 0) 100%
-  );
-}
-
 /* Modern BOM table styling — dark mode only */
 .bom_table {
   border-collapse: separate;
