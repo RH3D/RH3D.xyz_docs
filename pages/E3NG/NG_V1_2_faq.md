@@ -1,6 +1,7 @@
 ---
 title: FAQ
 layout: default
+has_toc: false
 parent: E3NG v1.2
 #has_children: false
 nav_order: 60
