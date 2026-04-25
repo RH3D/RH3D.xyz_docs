@@ -26,12 +26,12 @@
 
 /* Title row */
 .bom_table tr:first-child th {
-  background: $body-heading-color; // your yellow-300
+  background: var(--color-yellow-000); // your yellow-300
   font-size: 1.05rem;
   text-align: center;
   padding: 12px 0;
   font-weight: 600;
-  color: $body-text-color; // ng-grey-30
+  color: $body-heading-color; // ng-grey-30
 }
 
 /* Header row */
