@@ -47,9 +47,9 @@ The soul of Virtu is still about rescue and reuse. Many of us started with an En
 - Print Speed: 600+ mm/s
 - Build Volume (X-Y-Z): 230 x 230 x 230 mm
 - Footprint: 35 x 40 x 50 cm *(roughly 6cm narrower than E3NG)*
-- Motion System: High-speed CoreXY
 
 #### KEY FEATURES
+-Performance Focused Design: Every component is engineered to handle extreme accelerations while maintaining flawless print quality.
 - Ultra-Rigid Frame: Zero printed joints. Virtu uses 2040 and 4040 extrusions with aluminum-to-aluminum blind joints for a rock-solid, professional structure.
 - Full Linear Rail Motion: High-speed, high-precision motion using MGN12H (X) and MGN12C (Y/Z) rails.
 - Belted Triple-Z with Z-Tilt: Features three independent Z motors with a 2.5:1 compound pulley reduction for perfect 3-point kinematic bed leveling without leadscrew artifacts.
@@ -58,16 +58,24 @@ The soul of Virtu is still about rescue and reuse. Many of us started with an En
 
 #### THE V-ION TOOLHEAD
 Virtu debuts the custom V-ION toolhead, a high-performance project in its own right:
-- Featherweight: Only ~260 g (including Rapido UHF and Cartographer).
-- Optimized cooling: Designed with CFD analysis and a balanced center of mass to ensure flawless print quality at extreme speeds.
-- Universal mounting: Uses the Voron mounting pattern for compatibility, while optimized for high-flow hotends and high-end probes.
+- Featherweight: Only ~260 g (including hotend, bed probe and fans).
+- Integrated Design: A compact, rigid assembly with a very short, well-constrained filament path for superior extrusion control.
+- CFD Optimized Cooling: Part cooling ducts refined through fluid dynamics for high-speed printing.
+- Center of Mass Optimized: Perfectly balanced to reduce vibrations and artifacts at high G-forces.
+- Universal Mounting: Uses the Voron mounting pattern while remaining optimized for high-flow hotends and advanced probes.
 
-#### OFFICIAL MODS & UPGRADES
-Virtu is a platform built to evolve. You can choose to stay with a clean base build or push the performance envelope:
+#### OFFICIAL UPGRADES
+Performance packs designed to push the hardware to its absolute limit:
 - 4WD XY Axis: Quad-motor setup for insane torque and higher resonance frequencies.
 - Double-Shear Mounts: Supported motor shafts to handle extreme belt tensions for 40k+ accelerations.
 - CPAP Part Cooling: Remote high-pressure cooling for the most demanding high-speed filaments.
 - Active Motor Cooling: Built-in cooling paths and thermistor support to keep your steppers stable during long runs.
+- In Progress: Enclosure and CNC Aluminum parts for those who want the ultimate build.
+
+#### OFFICIAL MODS
+- Klicky Probe: For those who prefer the reliability of a physical docking probe.
+- BDsensor: Support for high-speed bed leveling.
+- Alternative Rails: Support for MGN12H rails on all axes.
 
 CONTINUE TO: INTO THE PROJECT
 
