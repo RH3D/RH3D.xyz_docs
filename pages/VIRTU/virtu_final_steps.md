@@ -6,11 +6,13 @@ nav_order: 50
 parent: VIRTU E3
 permalink: /virtu/final_setup
 ---
-# VIRTU FINAL SETUP
-{: .text-center }
 
 {: .warning }
-This page is under construction.
+**WORK IN PROGRESS**
+{: .text-center }
+
+# VIRTU FINAL SETUP
+{: .text-center }
 
 continue to:
 {: .text-right .lh-0 .pt-8 }
