@@ -17,7 +17,7 @@
   width: auto;
 
   background: $body-background-color; // dark background from your theme
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.1);
   border-radius: 8px;
   overflow: hidden;
 
@@ -61,16 +61,16 @@
 
 /* Custom subtle striping */
 .bom_table tr:nth-child(odd) td {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.075);
 }
 
 .bom_table tr:nth-child(even) td {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.1);
 }
 
 /* Hover highlight */
 .bom_table tr:hover td {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.1);
 }
 
 /* Remove last-row border */
