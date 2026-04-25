@@ -25,9 +25,10 @@ If you also want to help supporting the development, you can do so through any o
 
 ---
 
+{: .warning }
 **WORK IN PROGRESS**
 
-# VIRTU E3ᵉ³ <sup>E3</sup>
+# VIRTU E3ᵉ³ <sup>E3</sup> <sup><span style="font-size: 60%;">E3</span></sup>
 {: .text-center }
 
 **Take your old, faithful Ender 3 and transform it into a high-performance beast. Virtu E3 is designed for those who want uncompromising speed and reliability without throwing away the hardware that started their journey.**
@@ -41,7 +42,7 @@ Originally born as the next step for the Ender 3 series, Virtu is much more than
 {: .text-center }
 
 #### PRINTER PERFORMANCE
-- Target Acceleration: up to $30,000 \text{ mm/s}^2$
+- Target Acceleration: up to 30,000 mm/s<sup>2</sup>
 - Print Speed: up to $600 \text{ mm/s}$
 - Build Volume (X-Y-Z): $230 \times 230 \times 230 \text{ mm}$
 - Motion System: High-speed CoreXY
