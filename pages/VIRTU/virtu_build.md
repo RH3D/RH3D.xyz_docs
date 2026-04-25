@@ -14,7 +14,7 @@ permalink: /virtu/build
 
 ![](../../assets/images/virtu cad.png)
 
-# <span style="font-weight:800; font-style:italic;">VIRTU</span><sup><span style="font-size: 63%; font-weight:700; font-style:italic;"> E3</span></sup>
+# <span style="font-weight:800; font-style:italic;">VIRTU<sup style="font-size: 63%; font-weight:700;"> E3</sup></span>
 {: .text-center }
 #### LOREM IPSUM
 {: .text-center }
