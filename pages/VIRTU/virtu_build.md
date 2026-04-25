@@ -17,6 +17,7 @@ permalink: /virtu/build
 
 # <span style="font-weight:800; font-style:italic;">VIRTU<sup style="font-size: 58%; font-weight:700;"> E3</sup></span>
 {: .text-center }
+<!--
 #### BUILDING THE PRINTER
 {: .text-center }
 
@@ -29,7 +30,7 @@ The real beauty of this design is that high performance isn't an "add-on"—it i
 
 #### Ready to start the build?
 The following pages will guide you through the entire process step-by-step. We recommend following the roadmap in order: start with **Sourcing Parts** to figure out your **BOM**, move to **Printing Parts** and **Files** to prepare everything properly, and then dive into the **Build guide** to start the physical build. Take your time, enjoy the process.
-
+-->
 continue to:
 {: .text-right .lh-0 .pt-8 }
 
