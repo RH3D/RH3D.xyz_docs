@@ -10,7 +10,7 @@ permalink: /virtu/build
 ---
 
 {: .warning }
-**WORK IN PROGRESS**
+**THE SITE IS UNDER CONSTRUCTION**
 {: .text-center }
 
 ![](../../assets/images/virtu cad.png)
