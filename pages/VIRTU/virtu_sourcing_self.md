@@ -150,6 +150,24 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 | FRAME | frame panel `350 x 320 x 3 mm` - ALUMINIUM  |     1     |  cut according to DXF  |
 {: class="transparant_table"}
 
+<table>
+  <colgroup>
+    <col style="width: 180px;">
+    <col style="width: 300px;">
+    <col style="width: 120px;">
+  </colgroup>
+  <tr>
+    <th>Part</th>
+    <th>Description</th>
+    <th>Qty</th>
+  </tr>
+  <tr>
+    <td>M3x8</td>
+    <td>Button head screw</td>
+    <td>12</td>
+  </tr>
+</table>
+
 continue to:
 {: .text-right .lh-0 .pt-8 }
 
