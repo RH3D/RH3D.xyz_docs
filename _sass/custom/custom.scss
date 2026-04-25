@@ -16,13 +16,13 @@
   margin: 1.6rem 0;
   width: auto;
 
-  background: $table-background-color; // dark background from your theme
+  background: $body-background-color; // dark background from your theme
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 8px;
   overflow: hidden;
 
   /* softened shadow */
-  box-shadow: 4px 4px 4px rgba(0,0,0,0.04);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.04);
 }
 
 /* Center align last two columns (Qty + Link) */
@@ -35,7 +35,7 @@
 
 /* Title row — yellow TEXT, subtle dark background */
 .bom_table tr:first-child th {
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.12);
   font-size: 1.05rem;
   text-align: center;
   padding: 12px 0;
