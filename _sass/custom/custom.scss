@@ -8,6 +8,12 @@
   color: #f7d12e;  /* Replace with your desired color */
 }
 
+.table-wrapper {
+  margin: 0;               // odstraní ten divný okraj
+  padding: 0;
+  border-radius: 8px;      // stejné jako tabulka
+  overflow: hidden;        // aby rohy fungovaly
+}
 
 /* Modern BOM table styling — dark mode only */
 .bom_table {
