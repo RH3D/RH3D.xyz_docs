@@ -57,7 +57,7 @@
 
 /* Links inside table */
 .bom_table a {
-  color: var(--color-link);
+  color: var($link-color);
   text-decoration: none;
 }
 
