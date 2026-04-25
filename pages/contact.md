@@ -1,6 +1,7 @@
 ---
 title: Contact ✉️
 layout: default
+has_toc: false
 nav_order: 110
 description: "Reach out to RH3D with questions, feedback, or collaboration ideas. Connect with the maker behind Ender 3 NG, Virtu E3, and other 3D printer upgrade projects."
 permalink: /contact
