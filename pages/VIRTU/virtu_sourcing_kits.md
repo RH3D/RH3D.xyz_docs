@@ -13,7 +13,7 @@ permalink: /virtu/build/sourcing_parts/kits
 {% include popup.html %}
 
 {: .warning }
-**WORK IN PROGRESS**
+**THIS SITE IS UNDER CONSTRUCTION**
 {: .text-center }
 
 # KITS
