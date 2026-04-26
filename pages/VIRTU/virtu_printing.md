@@ -51,16 +51,16 @@ Can be used on an open frame printer but not with an enclosure as the parts will
 All STL files are prepared for direct import-and-slice, they are properly oriented, there are built-in supports where needed and some have notes embeded - follow if needed.
 
 #### RECOMMENDED PRINT SETTINGS:
-<ul>
-<li>4 perimeters</li>
-<li>5 top and bottom layers</li>
-<li>30% infill</li>
-<li>infill type: cubic, gyroid, grid, honeycomb, 3D honeycomb, triangles, stars</li>
-<li>0.2 mm layer height</li>
-<li>0.4 - 0.5 mm layer width</li>
-<li>Arachne slicing mode</li>
-<li>No supports</li>
-</ul>
+
+ - 4 perimeters
+ - 5 top and bottom layers
+ - 30% infill
+ - infill type: cubic, gyroid, grid, honeycomb, 3D honeycomb, triangles, stars
+ - 0.2 mm layer height
+ - 0.4 - 0.5 mm layer width
+ - Ensure vertical shell thickness: All
+ - Arachne slicing mode
+ - No supports
 
 ---
 # CALIBRATION PRINT AND TOLERANCES
