@@ -1,6 +1,7 @@
 ---
 title: Build guide
 layout: default
+has_toc: false
 parent: Printer build
 grand_parent: VIRTU E3
 has_children: false
@@ -10,13 +11,18 @@ permalink: /virtu/build/build_guide
 ---
 
 {: .warning }
-**WORK IN PROGRESS**
+**THE SITE IS UNDER CONSTRUCTIONS**
 {: .text-center }
 
-# BUILD GUIDE
+# BUILD GUIDE?
 {: .text-center }
 
-Lorem ipsum
+There is no build guide at this moment. Even though Virtu has been in development for a very long time and has gone through thorough testing and issue fixing, build guide will be finished and released once it is a little bit settled and proven by even more community members.
+Thanks to the current stage I don't expect this to take too long.
+
+For now, feel free to use the online model viewer where you will find all the information needed.
+
+AUTODESK VIEWER
 
 continue to:
 {: .text-right .lh-0 .pt-8 }
