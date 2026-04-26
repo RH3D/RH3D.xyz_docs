@@ -1,6 +1,7 @@
 ---
 title: Firmware
 layout: default
+has_toc: false
 parent: Printer build
 grand_parent: VIRTU E3
 has_children: false
@@ -10,13 +11,14 @@ permalink: /virtu/build/firmware
 ---
 
 {: .warning }
-**WORK IN PROGRESS**
+**THE SITE IS UNDER CONSTRUCTION**
 {: .text-center }
 
 # FIRMWARE
 {: .text-center }
 
-Lorem ipsum
+{: .warning }
+**Files Coming Soon:** These files are in the final stages of testing and will be uploaded here shortly. If you are building your Virtu right now, keep an eye on the Discord announcement channel for the release of the initial config pack, files will be linked here as well.
 
 continue to:
 {: .text-right .lh-0 .pt-8 }
