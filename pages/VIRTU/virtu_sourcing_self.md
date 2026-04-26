@@ -630,6 +630,140 @@ The BOM covers all the required parts for the default build. Required parts for 
 </table>
 *DXF files are available at printables.*
 
+## UPGRADES
+
+<table class="bom_table">
+  <colgroup>
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">CPAP</th>
+  </tr>
+  <tr>
+    <th>Part</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>WS7040</td>
+    <td>big fan</td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3ikALxp">MELLOW 3D</a></td>
+  </tr>
+  <tr>
+    <td>CPAP tube</td>
+    <td>big tube</td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c4EZYKrl">MELLOW 3D</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 8</td>
+    <td><strong>socket</strong> head <code>ISO 4762</code></td>
+    <td>3</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 12</td>
+    <td><strong>socket</strong> head <code>ISO 4762</code></td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>Roll‑in T‑nut</strong> <code>for 2020 V‑Slot extrusion</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ooSJSAs">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>heat set threaded insert</strong> <code>M3 x L 4 x OD 4,5 mm</code></td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oB9tEk4">EDGAR GARY st.</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>hex nut</strong> <code>ISO 8673</code></td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oDy3nla">NINDEJIN</a></td>
+  </tr>
+</table>
+
+<table class="bom_table">
+  <colgroup>
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">4WD</th>
+  </tr>
+  <tr>
+    <th>Part</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>BOTTOM</td>
+    <td>bottom panel <code>305 × 305 × 3 mm</code> – cast acrylic</td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ompcb2M">AliExpress</a></td>
+  </tr>
+</table>
+
+<table class="bom_table">
+  <colgroup>
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">MOTOR COOLING</th>
+  </tr>
+  <tr>
+    <th>Part</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>BOTTOM</td>
+    <td>bottom panel <code>305 × 305 × 3 mm</code> – cast acrylic</td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ompcb2M">AliExpress</a></td>
+  </tr>
+</table>
+
+<table class="bom_table">
+  <colgroup>
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">DOUBLE SHEAR</th>
+  </tr>
+  <tr>
+    <th>Part</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>BOTTOM</td>
+    <td>bottom panel <code>305 × 305 × 3 mm</code> – cast acrylic</td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ompcb2M">AliExpress</a></td>
+  </tr>
+</table>
+
 continue to:
 {: .text-right .lh-0 .pt-8 }
 
