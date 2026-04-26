@@ -16,7 +16,7 @@ permalink: /virtu/build/build_guide
 
 # BUILD GUIDE?
 {: .text-center }
-
+<!--
 #### There is no build guide at this moment.
 {: .text-center }
 
@@ -35,3 +35,4 @@ continue to:
 {: .text-right }
 
 [FIRMWARE]: https://rh3d.xyz/virtu/build/firmware
+-->
