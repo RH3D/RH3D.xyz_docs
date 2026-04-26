@@ -25,7 +25,7 @@ Thanks to the current stage I hope this will not take too long.
 
 For now, feel free to use the online model viewer as a guide for the build or get the STEP files.
 
-[![AUTODESK VIEWER](../../pages/VIRTU/img/VIRTU_viewer_slim.png)](https://rh3d.xyz/virtu/build/build_guide)
+[![AUTODESK VIEWER](../../pages/VIRTU/img/VIRTU_viewer_slim2.png)](https://rh3d.xyz/virtu/build/build_guide)
 {: .text-center }
 
 continue to:
