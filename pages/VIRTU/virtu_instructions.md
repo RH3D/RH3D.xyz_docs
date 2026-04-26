@@ -17,15 +17,15 @@ permalink: /virtu/build/build_guide
 # BUILD GUIDE?
 {: .text-center }
 
-There is no build guide at this moment.
+#### There is no build guide at this moment.
 {: .text-center }
 
 Even though Virtu has been in development for a very long time and has gone through thorough testing and issue fixing, build guide will be finished and released once it is a little bit settled and proven by even more community members.
-Thanks to the current stage I don't expect this to take too long.
+Thanks to the current stage I hope this will not take too long.
 
-For now, feel free to use the online model viewer where you will find all the information needed.
+For now, feel free to use the online model viewer as a guide for the build or get the STEP files.
 
-AUTODESK VIEWER
+[![AUTODESK VIEWER](../../pages/VIRTU/img/VIRTU_viewer.png)](https://rh3d.xyz/virtu/build/build_guide)
 {: .text-center }
 
 continue to:
@@ -35,4 +35,3 @@ continue to:
 {: .text-right }
 
 [FIRMWARE]: https://rh3d.xyz/virtu/build/firmware
-[E3NG v1.2S BUILD GUIDE]: ../../../assets/docs/Build_guide_E3NG_v1.2S.pdf
