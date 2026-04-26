@@ -1,6 +1,7 @@
 ---
 title: Files
 layout: default
+has_toc: false
 parent: Printer build
 grand_parent: VIRTU E3
 has_children: false
