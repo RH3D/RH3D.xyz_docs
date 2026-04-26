@@ -68,7 +68,8 @@ All STL files are prepared for direct import-and-slice, they are properly orient
 Even though the base of Virtu is the all-metal frame, which gives you the precision needed, it is still crucial to use dimensionally accurate 3D printed parts to experience a smooth build process with a great result. To achieve it, you need to calibrate your printer for the material used and compensate for skew and shrinkage properly before printing your parts.
 
 For proper calibration, there are more steps involved:
-1) General printer calibration - [ELLIS' PRINT TUNING GUIDE](https://ellis3dp.com/Print-Tuning-Guide/)
+
+1) General printer calibration - [ELLIS' PRINT TUNING GUIDE](https://ellis3dp.com/Print-Tuning-Guide/) / OrcaSlicer calibration tools
 2) Skew and shrinkage calibration - [CALISTAR](https://github.com/dirtdigger/fleur_de_cali) / [CALIFLOWER](https://vector3d.shop/products/califlower-calibration-tool-mk2) / [CALILANTERN](https://vector3d.shop/products/calilantern-calibration)
 
 ---
