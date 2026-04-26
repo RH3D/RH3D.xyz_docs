@@ -631,6 +631,68 @@ The BOM covers all the required parts for the default build. Required parts for 
 </table>
 *DXF files are available at printables.*
 
+# TOOLS FOR THE BUILD
+
+<table class="bom_table">
+  <colgroup>
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">TOOLS FOR THE BUILD</th>
+  </tr>
+  <tr>
+    <th>Part</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>Drill sleeve</td>
+    <td>M14 x 1.5 - 5 mm (can add 3 / 4 mm for stepped drilling)</td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c4BwfSjl">AliExpress</a></td>
+  </tr>
+  <tr>
+    <td>Drill bit</td>
+    <td>4 and 5 mm, drill bit for metal</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Chamfer bit</td>
+    <td>For chamfering M4 screw holes in the bed</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Thread tap</td>
+    <td>M5 thread tap</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Tapping oil</td>
+    <td>Almost any oil will help</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Allen keys</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Heat press</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
 # UPGRADES
 
 <table class="bom_table">
