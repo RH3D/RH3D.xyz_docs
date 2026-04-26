@@ -630,7 +630,7 @@ The BOM covers all the required parts for the default build. Required parts for 
 </table>
 *DXF files are available at printables.*
 
-## UPGRADES
+# UPGRADES
 
 <table class="bom_table">
   <colgroup>
@@ -640,7 +640,7 @@ The BOM covers all the required parts for the default build. Required parts for 
     <col style="width:150px;">
   </colgroup>
   <tr>
-    <th colspan="4">CPAP</th>
+    <th colspan="4">CPAP part cooling</th>
   </tr>
   <tr>
     <th>Part</th>
@@ -709,10 +709,64 @@ The BOM covers all the required parts for the default build. Required parts for 
     <th>Link</th>
   </tr>
   <tr>
-    <td>BOTTOM</td>
-    <td>bottom panel <code>305 × 305 × 3 mm</code> – cast acrylic</td>
-    <td>1</td>
-    <td><a href="https://s.click.aliexpress.com/e/_ompcb2M">AliExpress</a></td>
+    <td><strong>M3</strong> x 8</td>
+    <td><strong>socket</strong> head <code>ISO 4762</code></td>
+    <td>6</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 30</td>
+    <td><strong>socket</strong> head <code>ISO 4762</code></td>
+    <td>6</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong> x 20</td>
+    <td><strong>button</strong> head <code>ISO 7380</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong></td>
+    <td><strong>Roll‑in T‑nut</strong> <code>for 2020 V‑Slot extrusion</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ooSJSAs">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>heat set threaded insert</strong> <code>M3 x L 4 x OD 4,5 mm</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oB9tEk4">EDGAR GARY st.</a></td>
+  </tr>
+  <tr>
+    <td><strong>5x24 mm</strong></td>
+    <td>steel pin <code>5mm OD, 24–25mm L</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3GC2P2f">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>F695</strong>‑2RS</td>
+    <td>flanged ball bearing <code>ABEC ‑ 7</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3kOfRCT">FUSHI</a></td>
+  </tr>
+  <tr>
+    <td><strong>GT2</strong> pulley</td>
+    <td><strong>20T, 5 mm bore, for 6 mm belt</strong></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c4k19Yon">POWGE</a></td>
+  </tr>
+  <tr>
+    <td><strong>N17</strong> motor</td>
+    <td><strong>Nema 17</strong></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c2z32CWX">MELLOW</a></td>
+  </tr>
+  <tr>
+    <td>Thermistor</td>
+    <td>Thermistor optional</td>
+    <td>2</td>
+    <td></td>
   </tr>
 </table>
 
@@ -733,10 +787,40 @@ The BOM covers all the required parts for the default build. Required parts for 
     <th>Link</th>
   </tr>
   <tr>
-    <td>BOTTOM</td>
-    <td>bottom panel <code>305 × 305 × 3 mm</code> – cast acrylic</td>
-    <td>1</td>
-    <td><a href="https://s.click.aliexpress.com/e/_ompcb2M">AliExpress</a></td>
+    <td><strong>M2</strong> x 10</td>
+    <td><strong>socket</strong> head <code>ISO 4762</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 20</td>
+    <td><strong>socket</strong> head <code>ISO 4762</code></td>
+    <td>8</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>heat set threaded insert</strong> <code>M3 x L 4 x OD 4,5 mm</code></td>
+    <td>8</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oB9tEk4">EDGAR GARY st.</a></td>
+  </tr>
+  <tr>
+    <td><strong>Heatsink</strong></td>
+    <td>40x40x10 mm heatsink</td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c37xq8b9">AliExpress</a></td>
+  </tr>
+  <tr>
+    <td><strong>4020</strong> fan</td>
+    <td><strong>axial</strong> fan <code>24V, dual ball bearing</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3yZp3QP">GDStime</a></td>
+  </tr>
+  <tr>
+    <td><strong>4010</strong> fan</td>
+    <td><strong>radial</strong> fan <code>24V, dual ball bearing, higher RPM</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c45SGJGb">GDStime</a></td>
   </tr>
 </table>
 
@@ -757,10 +841,16 @@ The BOM covers all the required parts for the default build. Required parts for 
     <th>Link</th>
   </tr>
   <tr>
-    <td>BOTTOM</td>
-    <td>bottom panel <code>305 × 305 × 3 mm</code> – cast acrylic</td>
-    <td>1</td>
-    <td><a href="https://s.click.aliexpress.com/e/_ompcb2M">AliExpress</a></td>
+    <td><strong>M5</strong></td>
+    <td><strong>washer</strong> <code>ISO 7089</code></td>
+    <td>1 (per motor)</td>
+    <td><a href="https://s.click.aliexpress.com/e/_olHMc2g">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>F695</strong>‑2RS</td>
+    <td>flanged ball bearing <code>ABEC ‑ 7</code></td>
+    <td>1 (per motor)</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3kOfRCT">FUSHI</a></td>
   </tr>
 </table>
 
