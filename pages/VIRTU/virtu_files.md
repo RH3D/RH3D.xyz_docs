@@ -53,6 +53,7 @@ A typical filename looks like this: `filename_[M-2].stl`. The bracket contains t
    - `Mcooling` = Use only with stepper motor cooling (optional), *eg. `EL_cover_top_fan-R_[Mcooling-M-1].stl`*
    - `4WD` = Use only with 4WD setup (optional), *eg. `XY_L_bottom_[4WD-M-1].stl`*
    - and more...
+ - This means if the description doesn't match your build, don't print the part even if there is a non-zero number.
 
 ---
 #### MODS / REMIXES
