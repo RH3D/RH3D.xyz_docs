@@ -155,41 +155,89 @@ The links provided in the Bill of Materials (BOM) point to products that have be
   </tr>
 </table>
 
-#### SCREWS
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
 
-| Size    | Type/specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| **M2** x 10 | **socket** head `ISO 4762` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK) |
-| **M3** x 8 | **socket** head `ISO 4762` | 157 | [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK) |
-| **M3** x 12 | **socket** head `ISO 4762` | 14 | [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK) |
-| **M3** x 20 | **socket** head `ISO 4762` | 2 | [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK) |
-| **M3** x 30 | **socket** head `ISO 4762` | 19 | [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK) |
-| **M4** x 6 | **socket** head `ISO 4762` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK) |
-| **M2.5** x 6 | **button** head `ISO 7380` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
-| **M2.5** x 8 | **button** head `ISO 7380` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
-| **M3** x 6 | **button** head `ISO 7380` | 10 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
-| **M5** x 6 | **button** head `ISO 7380` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
-| **M5** x 10 | **button** head `ISO 7380` | 38 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
-| **M5** x 20 | **button** head `ISO 7380` | 41 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
-| **M5** x 25 | **button** head `ISO 7380` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY) |
-| **M3** x 8 | **countersunk** head `ISO 10642` | 20 | [NINDEJIN](https://s.click.aliexpress.com/e/_okNhDfW) |
-| **M4** x 14 | **countersunk** head `ISO 10642` | 3 | [NINDEJIN](https://s.click.aliexpress.com/e/_okNhDfW) |
-{: class="transparant_table"}
+  <tr>
+    <th colspan="4">WASHERS, NUTS, T‑NUTS, HEAT SET INSERTS</th>
+  </tr>
 
-#### WASHERS, NUTS, T-NUTS, HEAT SET INSERTS
+  <tr>
+    <th>Size</th>
+    <th>Type/specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
 
-| Size    | Type/specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| **M3** | **washer** `ISO 7089` | 8 | [NINDEJIN](https://s.click.aliexpress.com/e/_olHMc2g) |
-| **M5** | **washer** `ISO 7089` | 4 | [NINDEJIN](https://s.click.aliexpress.com/e/_olHMc2g) |
-| **M3** | **hex nut** `ISO 8673` | 10 | [NINDEJIN](https://s.click.aliexpress.com/e/_oDy3nla) |
-| **M3** | **Roll-in T-nut** `for 2020 V-Slot extrusion` | 72 | [NINDEJIN](https://s.click.aliexpress.com/e/_ooSJSAs) |
-| **M5** | **Roll-in T-nut** `for 2020 V-Slot extrusion` | 35 | [NINDEJIN](https://s.click.aliexpress.com/e/_ooSJSAs) |
-| **M3** | **heat set threaded insert** `M3 x L 4 x OD 4,5 mm` | 89 | [EDGAR GARY st.](https://s.click.aliexpress.com/e/_oB9tEk4) |
-| **M5** | **heat set threaded insert** `M5 x L 5 x OD 7 mm` | 4 | [EDGAR GARY st.](https://s.click.aliexpress.com/e/_oB9tEk4) |
-| **10-M4** | **steel ball** `10mm OD, M4 threaded hole` | 3 | [MELLOW](https://s.click.aliexpress.com/e/_c3l19mx9) |
-| **8x8x5** | **spacer** `8mm OD, 8mm H, 5mm hole` | 3 | REUSE E3 V-WHEEL ALU-SPACER |
-{: class="transparant_table"}
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>washer</strong> <code>ISO 7089</code></td>
+    <td>8</td>
+    <td><a href="https://s.click.aliexpress.com/e/_olHMc2g">NINDEJIN</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>M5</strong></td>
+    <td><strong>washer</strong> <code>ISO 7089</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_olHMc2g">NINDEJIN</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>hex nut</strong> <code>ISO 8673</code></td>
+    <td>10</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oDy3nla">NINDEJIN</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>Roll‑in T‑nut</strong> <code>for 2020 V‑Slot extrusion</code></td>
+    <td>72</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ooSJSAs">NINDEJIN</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>M5</strong></td>
+    <td><strong>Roll‑in T‑nut</strong> <code>for 2020 V‑Slot extrusion</code></td>
+    <td>35</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ooSJSAs">NINDEJIN</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>heat set threaded insert</strong> <code>M3 x L 4 x OD 4,5 mm</code></td>
+    <td>89</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oB9tEk4">EDGAR GARY st.</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>M5</strong></td>
+    <td><strong>heat set threaded insert</strong> <code>M5 x L 5 x OD 7 mm</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oB9tEk4">EDGAR GARY st.</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>10‑M4</strong></td>
+    <td><strong>steel ball</strong> <code>10mm OD, M4 threaded hole</code></td>
+    <td>3</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3l19mx9">MELLOW</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>8x8x5</strong></td>
+    <td><strong>spacer</strong> <code>8mm OD, 8mm H, 5mm hole</code></td>
+    <td>3</td>
+    <td>REUSE E3 V‑WHEEL ALU‑SPACER</td>
+  </tr>
+</table>
+
 
 ## MOTION AND FRAME PARTS
 #### BEARINGS AND RAILS
