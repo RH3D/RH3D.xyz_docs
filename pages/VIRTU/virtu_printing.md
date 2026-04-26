@@ -15,7 +15,7 @@ permalink: /virtu/build/printing_parts
 
 # PRINTING PARTS
 {: .text-center }
-
+<!--
 Before you start your first print, remember: you are building a high-speed machine. Cutting corners on part quality will directly limit how fast and precise your Virtu can be. Don't rush this stage.
 
 Nobody enjoys reprinting parts after the printer is already assembled. To reach the performance targets of Virtu, you need to ensure your current printer is properly calibrated for dimensional accuracy and that you are using the right materials.
@@ -81,3 +81,4 @@ continue to:
 [COLOR SCHEME]: https://rh3d.xyz/E3NG_v1_2/color_scheme
 [DOWNLOAD THE CALIBRATION CUBE.]: https://www.printables.com/en/model/478403
 [FILES]: https://rh3d.xyz/virtu/build/files
+-->
