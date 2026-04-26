@@ -15,62 +15,70 @@ permalink: /virtu/build/printing_parts
 
 # PRINTING PARTS
 {: .text-center }
-<!--
-Before you start your first print, remember: you are building a high-speed machine. Cutting corners on part quality will directly limit how fast and precise your Virtu can be. Don't rush this stage.
 
-Nobody enjoys reprinting parts after the printer is already assembled. To reach the performance targets of Virtu, you need to ensure your current printer is properly calibrated for dimensional accuracy and that you are using the right materials.
+Before we dive into downloading all the files and starting to print, it is important to be as prepared as possible. Nobody enjoys reprinting parts after the printer is already assembled and running. You'll need to choose the right material, ensure your printer is properly calibrated, and have the correct setup for printing. This all takes some time and effort, but it will save you plenty during the build and when using the printer. Try not to cut corners here and follow read the following.
 
 ---
 # MATERIAL SELECTION
 
-#### ABS / ASA (Highly Recommended)
-This is the only choice for a full-spec Virtu. These materials provide the necessary heat resistance and structural stiffness to handle high accelerations and enclosed environments.
+#### ABS/ASA
+The most recommended and best choice material for printing parts. It has great properties to withstand increased temperatures, repeated stress and continuous pressure.
+<details>
+    <summary><h4 style="display:inline-block;margin-left:1.5em;margin-top:0.4em;color:#0096FF"> ABS PRINTING TIPS </h4></summary>
+<ol style="margin-left:2em;font-size:14px">
+<li>Use enclosure! - the best and the most effective step, even if you use some temporary solution to help eliminating drafts and increasing the ambient air temperature.</li>
+<li>Use draft shield - without enclosure, draft shield will help to separate the cold air from the part itself. Draft shield may help even in enclosure when the air temperature is not high enough.</li>
+<li>Clean the build plate - no alcohol wiping, use warm water with a dish soap and rub the build plate thoroughly. Wash it well too. Using rough side of the sponge helps.</li>
+<li>Clamp your build plate - for magnetic flexible build plates. Your magnet may not be as strong as it used to be and bigger parts can lift the plate corners. Clamp the edges/corners of the build plate to the bed.</li>
+<li>Use brim or mouse ears for better adhesion to the build plate.</li>
+<li>Less is more - play with the print settings, you may need to decrease the fan speed and print speed.</li>
+<li>More is more - try increasing the hotend temperature to properly melt the filament. Try increasing the bed temperature for better sticking parts and hotter environment for the print.</li>
+<li>Use ABS+, ASA or a different brand - some filaments are more prone to warping, ASA overall tends to warp less. Do your research or testing to find better filament for you that could warp less.</li>
+<li>Use adhesive - if your parts still don't stick to the surface, use some kind of bed adhesive suitable for ABS.</li>
+<li>Avoid printing big parts, build the upgraded frame version with 2040 aluminium extrusions, build the "stock E3" or metal bed carriage.</li>
+</ol>
+</details>
 
-ASA is preferred for its lower warping tendency and better UV resistance.
+#### PETG
+Is significantly more flexible and has lower temperature resistance so enclosing the printer will get risky as some of the parts will most likely warp. If you do so, try using bed insulation and print at least the toolhead parts from ABS. It also helps if you only print lower temperature materials like PLA and PETG.
 
-Functional Parts: All toolhead (V-ION), XY towers, and Z-axis components must be printed in ABS/ASA.
-
-#### PETG / PLA
-Use with caution. PETG is too flexible for a high-performance frame and will reduce the resonance frequency of your printer (leading to more ghosting). PLA is stiff but will warp immediately if you ever decide to enclose the printer. If you must use these, keep the printer open-frame and use them only for non-structural cosmetic parts.
+#### PLA
+Can be used on an open frame printer but not with an enclosure as the parts will definitely warp. The toolhead and bed carriage still need to be printer with higher temperature resistant material.
 
 ---
 # PRINTING PARAMETERS
 
-All STL files are oriented in the optimal direction for strength and precision. Some parts include built-in supports (marked with ❌ in the filename)—do not add slicer supports to these.
+All STL files are prepared for direct import-and-slice, they are properly oriented, there are built-in supports where needed and some have notes embeded - follow if needed.
 
-#### RECOMMENDED SETTINGS:
+#### RECOMMENDED PRINT SETTINGS:
 <ul>
-<li>Perimeters: 4 (Minimum)</li>
-<li>Top/Bottom Layers: 5</li>
-<li>Infill: 30% - 40%</li>
-<li>Infill Type: Gyroid or Cubic (Avoid Grid/Honeycomb due to nozzle crossing)</li>
-<li>Layer Height: 0.2 mm</li>
-<li>Layer Width: 0.4 mm - 0.45 mm</li>
-<li>Supports: None (unless explicitly mentioned)</li>
+<li>4 perimeters</li>
+<li>5 top and bottom layers</li>
+<li>30% infill</li>
+<li>infill type: cubic, gyroid, grid, honeycomb, 3D honeycomb, triangles, stars</li>
+<li>0.2 mm layer height</li>
+<li>0.4 - 0.5 mm layer width</li>
+<li>Arachne slicing mode</li>
+<li>No supports</li>
 </ul>
 
 ---
-# CALIBRATION & TOLERANCES
+# CALIBRATION PRINT AND TOLERANCES
 
-For every DIY 3D printer with 3D printed parts, it is crucial to have your parts with proper dimensionaly accuracy. To achieve that, you need to calibrate your printer for the material you will use and compensate for skew and shrinkage properly before printing your parts.
+Even though the base of Virtu is the all-metal frame, which gives you the precision needed, it is still crucial to use dimensionally accurate 3D printed parts to experience a smooth build process with a great result. To achieve it, you need to calibrate your printer for the material used and compensate for skew and shrinkage properly before printing your parts.
 
-Before printing parts, it is highly recommended to print the calibration cube. It contains essential features that are related to the project parts like holes for 8mm rods, for LM8LUU bearing, M3 and M5 heat inserts and some other print features to view the print quality.
-
-All the parts are designed with rather tight tolerances (.2mm), so depending on your print quality and precision, it might cause too tight fit mainly on linear rods/bearings. If this is your case, you should clear the holes idealy with a reamer. You can also use properly sized drill bit or even a piece of fine-grit sandpaper on a round stick. Just proceed slowly and carefully so you don’t enlarge the holes too much, the ideal situation is to hand press the parts in with no noticeable play.
-
-[DOWNLOAD THE CALIBRATION CUBE.]{: .btn .fw-400 .text-yellow-300 .v-align-middle .pr-4 .pl-4 }
+For proper calibration, there are more steps involved:
+1) General printer calibration - [ELLIS' PRINT TUNING GUIDE](https://ellis3dp.com/Print-Tuning-Guide/)
+2) Skew and shrinkage calibration - [CALISTAR](https://github.com/dirtdigger/fleur_de_cali) / [CALIFLOWER](https://vector3d.shop/products/califlower-calibration-tool-mk2) / [CALILANTERN](https://vector3d.shop/products/calilantern-calibration)
 
 ---
-# COLOR SCHEME
-To help you organize your build, the files are categorized by their role in the design:
+# PRINTING PARTS IN COLOR
 
-[M] Main Color: The primary color for your frame and large components.
-
-[A] Accent Color: For the toolhead accents, logos, and highlights.
-
-[C] Clear: For LED diffusers (print in transparent PETG or PC).
-
-Take a look at the [COLOR SCHEME] tool to visualize your build before you commit your filament!
+STL file names will give you the color code to follow the default color scheme.
+ - **Filename_[M...]** = **Main color** - the primary color for structural and larger components
+ - **Filename_[A...]** = **Accent color** - smaller details to give your printer cubtle color accent
+ - **Filename_[X...]** = Part will not stay on the printer, color is not important (temporary parts or build helpers)
+But this is your printer, be creative and make your own color combination and design as you like it.
 
 continue to:
 {: .text-right .lh-0 .pt-8 }
@@ -81,4 +89,3 @@ continue to:
 [COLOR SCHEME]: https://rh3d.xyz/E3NG_v1_2/color_scheme
 [DOWNLOAD THE CALIBRATION CUBE.]: https://www.printables.com/en/model/478403
 [FILES]: https://rh3d.xyz/virtu/build/files
--->
