@@ -17,12 +17,16 @@ permalink: /virtu/build/build_guide
 # BUILD GUIDE?
 {: .text-center }
 
-There is no build guide at this moment. Even though Virtu has been in development for a very long time and has gone through thorough testing and issue fixing, build guide will be finished and released once it is a little bit settled and proven by even more community members.
+There is no build guide at this moment.
+{: .text-center }
+
+Even though Virtu has been in development for a very long time and has gone through thorough testing and issue fixing, build guide will be finished and released once it is a little bit settled and proven by even more community members.
 Thanks to the current stage I don't expect this to take too long.
 
 For now, feel free to use the online model viewer where you will find all the information needed.
 
 AUTODESK VIEWER
+{: .text-center }
 
 continue to:
 {: .text-right .lh-0 .pt-8 }
