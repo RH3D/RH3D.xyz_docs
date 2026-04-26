@@ -464,6 +464,54 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <col style="width:140px;">
   </colgroup>
   <tr>
+    <th colspan="4">TOOLHEAD</th>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td><strong>Hotend</strong> fan</td>
+    <td>Phaetus Rapido 2 UHF <code>option 1</code></td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3w8Ef3p">FYSETC</a></td>
+  </tr>
+  <tr>
+    <td><strong>Hotend</strong> fan</td>
+    <td>TRIANGLELAB CHC XL <code>option 2</code></td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c30sgLPZ">TRIANGLELAB</a></td>
+  </tr>
+  <tr>
+    <td><strong>Hotend</strong> fan</td>
+    <td>GOLIATH AIR <code>option 3</code></td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c2ukshmf">MELLOW 3D</a></td>
+  </tr>
+  <tr>
+    <td><strong>Bed probe</strong> fan</td>
+    <td>CARTOGRAPHER 3D <code>option 1</code></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><strong>Bed probe</strong> fan</td>
+    <td>BEACON SCANNER <code>option 2</code></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+</table>
+
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+  <tr>
     <th colspan="4">OTHER</th>
   </tr>
   <tr>
@@ -493,6 +541,12 @@ The links provided in the Bill of Materials (BOM) point to products that have be
   <tr>
     <td>PSU‑24V</td>
     <td>MW‑LRS 350‑24</td>
+    <td>1</td>
+    <td>REUSE FROM ENDER 3</td>
+  </tr>
+  <tr>
+    <td>BED</td>
+    <td>Stock Ender 3 - 235 x 235 mm heated bed with extra holes</td>
     <td>1</td>
     <td>REUSE FROM ENDER 3</td>
   </tr>
@@ -527,6 +581,8 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <td>WAGOS</td>
   </tr>
 </table>
+
+## OTHER
 
 <table class="bom_table">
   <colgroup>
