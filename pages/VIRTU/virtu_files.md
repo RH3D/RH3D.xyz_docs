@@ -22,7 +22,7 @@ This is the only official source of STL files and is always kept up to date.
 [PRINTABLES]{: .btn .fs-7 .fw-300 .mt-6 .mb-8 .text-yellow-300 }
 {: .text-center }
 
-STEP files are currently available to Patreon members only (even for one time small purchase)
+STEP files are currently available as a bonus to Patreon members only (even for one time small purchase)
 
 [![Patreon](../../assets/images/patreon_donate.png)](https://www.patreon.com/RH3D_cz)
 {: .text-center }
