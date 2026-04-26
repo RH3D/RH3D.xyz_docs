@@ -32,10 +32,10 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:350px;">
-    <col style="width:50px;">
-    <col style="width:140px;">
+    <col style="width:150px;">
+    <col style="width:380px;">
+    <col style="width:30px;">
+    <col style="width:100px;">
   </colgroup>
   <tr>
     <th colspan="4">SCREWS</th>
