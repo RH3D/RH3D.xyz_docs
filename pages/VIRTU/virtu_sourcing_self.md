@@ -248,8 +248,6 @@ The links provided in the Bill of Materials (BOM) point to products that have be
   </tr>
 </table>
 
-*GT2 belts - cut 3 x 990 mm (445T) for Z-Axis and 2 x 1680 mm (840T) for 4WD-XY-Axis or 2 x 1590 mm (795T) for 2WD-XY-Axis.*
-
 <table class="bom_table">
   <colgroup>
     <col style="width:120px;">
@@ -303,6 +301,7 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <td><a href="https://s.click.aliexpress.com/e/_c4mAKD8R">TRIANGLELAB</a></td>
   </tr>
 </table>
+*GT2 belts - cut 3 x 990 mm (445T) for Z-Axis and 2 x 1680 mm (840T) for 4WD-XY-Axis or 2 x 1590 mm (795T) for 2WD-XY-Axis.*
 
 <table class="bom_table">
   <colgroup>
@@ -311,84 +310,70 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <col style="width:80px;">
     <col style="width:140px;">
   </colgroup>
-
   <tr>
     <th colspan="4">FRAME EXTRUSIONS</th>
   </tr>
-
   <tr>
     <th>Type</th>
     <th>Specifications</th>
     <th>Quantity</th>
     <th>Link</th>
   </tr>
-
   <tr>
     <td>2040</td>
     <td><strong>2040 – 300 mm V‑Slot</strong> <code>black</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_c3Dx2QE3">VEEKAFT</a></td>
   </tr>
-
   <tr>
     <td>2020</td>
     <td><strong>2020 – 345 mm V‑Slot</strong> <code>black</code></td>
     <td>1</td>
     <td>ENDER 3 X‑AXIS</td>
   </tr>
-
   <tr>
     <td>2020</td>
     <td><strong>2020 – 330 mm V‑Slot</strong> <code>black</code></td>
     <td>1</td>
     <td>ENDER 3 TOP‑FRAME</td>
   </tr>
-
   <tr>
     <td>2040</td>
     <td><strong>2040 – 400 mm V‑Slot</strong> <code>black</code></td>
     <td>2</td>
     <td>ENDER 3 Z‑AXIS</td>
   </tr>
-
   <tr>
     <td>4040</td>
     <td><strong>4040 – 290 mm V‑Slot</strong> <code>black</code></td>
     <td>2</td>
     <td>ENDER 3 BASE‑SIDES</td>
   </tr>
-
   <tr>
     <td>4040</td>
     <td><strong>4040 – 250 mm V‑Slot</strong> <code>black</code></td>
     <td>1</td>
     <td>ENDER 3 BASE‑MIDDLE</td>
   </tr>
-
   <tr>
     <td>4040</td>
     <td><strong>4040 – 350 mm V‑Slot</strong> <code>black</code></td>
     <td>1</td>
     <td>ENDER 3 PRO Y‑AXIS (PRO)</td>
   </tr>
-
   <tr>
     <td>2040</td>
     <td><strong>2040 – 330 mm V‑Slot</strong> <code>black</code></td>
     <td>0</td>
     <td>ENDER 3 Y‑AXIS (ADD BELLOW)</td>
   </tr>
-
   <tr>
     <td>2040</td>
     <td><strong>2040 – 350 mm V‑Slot</strong> <code>black</code></td>
     <td>0</td>
     <td><a href="https://s.click.aliexpress.com/e/_c3Dx2QE3">VEEKAFT</a></td>
   </tr>
-
 </table>
-
-*PTFE tube - 9 mm for Goliath air hotend, 20mm for Rapido UHF hotend, 490mm from toolhead, 200mm inside Electronics bay, the rest outside.*
 
 <table class="bom_table">
   <colgroup>
@@ -397,48 +382,41 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <col style="width:80px;">
     <col style="width:140px;">
   </colgroup>
-
   <tr>
     <th colspan="4">OTHER</th>
   </tr>
-
   <tr>
     <th>Type</th>
     <th>Specifications</th>
     <th>Quantity</th>
     <th>Link</th>
   </tr>
-
   <tr>
     <td>PTFE tube</td>
     <td><strong>OD 4 x ID 2 mm</strong></td>
     <td>1 meter</td>
     <td><a href="https://s.click.aliexpress.com/e/_c2yi4d4L">MELLOW</a></td>
   </tr>
-
   <tr>
     <td>ECAS04</td>
     <td><strong>ECAS04</strong> tube connector</td>
     <td>5</td>
     <td><a href="https://s.click.aliexpress.com/e/_c4E073en">FYSETC</a></td>
   </tr>
-
   <tr>
     <td>Rubber feet</td>
     <td><strong>M5</strong> screw hole, size <code>38x19</code> or <code>27–47x19</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_c3g2mEjd">AliExpress</a></td>
   </tr>
-
   <tr>
     <td>EXTRUDER gears</td>
     <td>DDG gears</td>
     <td>1</td>
     <td><a href="https://s.click.aliexpress.com/e/_c30sgLPZ">MELLOW (SET1‑DDG)</a></td>
   </tr>
-
 </table>
-
+*PTFE tube - 9 mm for Goliath air hotend, 20mm for Rapido UHF hotend, 490mm from toolhead, 200mm inside Electronics bay, the rest outside.*
 
 ## ELECTRONICS
 
@@ -449,39 +427,33 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <col style="width:80px;">
     <col style="width:140px;">
   </colgroup>
-
   <tr>
     <th colspan="4">FANS</th>
   </tr>
-
   <tr>
     <th>Type</th>
     <th>Specifications</th>
     <th>Quantity</th>
     <th>Link</th>
   </tr>
-
   <tr>
     <td><strong>3010</strong> fan</td>
     <td><strong>axial</strong> fan <code>24V, dual ball bearing, HIGH RPM</code></td>
     <td>1</td>
     <td><a href="https://s.click.aliexpress.com/e/_c45hHyE3">GDStime</a></td>
   </tr>
-
   <tr>
     <td><strong>6015</strong> fan</td>
     <td><strong>axial</strong> fan <code>24V, dual ball bearing</code></td>
     <td>3</td>
     <td><a href="https://s.click.aliexpress.com/e/_c4qoGm0R">GDStime</a></td>
   </tr>
-
   <tr>
     <td><strong>5015</strong> fan</td>
     <td><strong>radial</strong> fan <code>24V, dual ball bearing, 8500 RPM</code></td>
     <td>1</td>
     <td><a href="https://s.click.aliexpress.com/e/_c3kbplwf">GDStime</a></td>
   </tr>
-
 </table>
 
 <table class="bom_table">
@@ -491,84 +463,70 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <col style="width:80px;">
     <col style="width:140px;">
   </colgroup>
-
   <tr>
     <th colspan="4">OTHER</th>
   </tr>
-
   <tr>
     <th>Type</th>
     <th>Specifications</th>
     <th>Quantity</th>
     <th>Link</th>
   </tr>
-
   <tr>
     <td>DIN rail</td>
     <td><strong>35 × 300</strong> mm</td>
     <td>3</td>
     <td><a href="https://s.click.aliexpress.com/e/_c30EH519">AliExpress</a></td>
   </tr>
-
   <tr>
     <td>CABLE CHAIN</td>
     <td><strong>10 × 11 mm R28</strong> cable chain</td>
     <td>10</td>
     <td><a href="https://s.click.aliexpress.com/e/_c4NmVlwR">VEEKAFT</a></td>
   </tr>
-
   <tr>
     <td>microswitch</td>
     <td><code>Omron D2F‑L</code></td>
     <td>2</td>
     <td><a href="https://s.click.aliexpress.com/e/_ompcb2M">AliExpress</a></td>
   </tr>
-
   <tr>
     <td>PSU‑24V</td>
     <td>MW‑LRS 350‑24</td>
     <td>1</td>
     <td>REUSE FROM ENDER 3</td>
   </tr>
-
   <tr>
     <td>AC PLUG</td>
     <td>AC PLUG + SWITCH</td>
     <td>1</td>
     <td>REUSE FROM ENDER 3</td>
   </tr>
-
   <tr>
     <td>MOTHERBOARD</td>
     <td>6 drivers minimum</td>
     <td>1</td>
     <td>MB</td>
   </tr>
-
   <tr>
     <td>SBC</td>
     <td>Raspberry Pi</td>
     <td>1</td>
     <td>SBC</td>
   </tr>
-
   <tr>
     <td>AC WIRES</td>
     <td>3 LEAD wires – AC→PSU – 30 cm</td>
     <td>1</td>
     <td>WIRES</td>
   </tr>
-
   <tr>
     <td>WAGO</td>
     <td>WAGOXXX</td>
     <td>3</td>
     <td>WAGOS</td>
   </tr>
-
 </table>
-
-*DXF files are available at printables.*
 
 <table class="bom_table">
   <colgroup>
@@ -577,39 +535,33 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <col style="width:80px;">
     <col style="width:140px;">
   </colgroup>
-
   <tr>
     <th colspan="4">PANELS</th>
   </tr>
-
   <tr>
     <th>Location</th>
     <th>Specifications</th>
     <th>Quantity</th>
     <th>Link</th>
   </tr>
-
   <tr>
     <td>BOTTOM</td>
     <td>bottom panel <code>305 × 305 × 3 mm</code> – cast acrylic</td>
     <td>1</td>
     <td>cut according to DXF</td>
   </tr>
-
   <tr>
     <td>BASE</td>
     <td>base cover panel <code>269 × 249 × 3 mm</code> – cast acrylic</td>
     <td>1</td>
     <td>cut according to DXF</td>
   </tr>
-
   <tr>
     <td>ELECTRONICS</td>
     <td>electronics cover panel <code>340 × 349 × 3 mm</code> – cast acrylic</td>
     <td>1</td>
     <td>cut according to DXF</td>
   </tr>
-
   <tr>
     <td>FRAME</td>
     <td>frame panel <code>350 × 320 × 3 mm</code> – ALUMINIUM</td>
@@ -617,7 +569,7 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <td>cut according to DXF</td>
   </tr>
 </table>
-
+*DXF files are available at printables.*
 
 continue to:
 {: .text-right .lh-0 .pt-8 }
