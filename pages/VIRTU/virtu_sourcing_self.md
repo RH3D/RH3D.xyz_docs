@@ -34,7 +34,7 @@ The links provided in the Bill of Materials (BOM) point to products that have be
   <colgroup>
     <col style="width:120px;">
     <col style="width:320px;">
-    <col style="width:80px;">
+    <col style="width:50px;">
     <col style="width:140px;">
   </colgroup>
   <tr>
