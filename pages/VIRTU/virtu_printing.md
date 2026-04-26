@@ -69,8 +69,8 @@ Even though the base of Virtu is the all-metal frame, which gives you the precis
 
 For proper calibration, there are more steps involved:
 
- 1) General printer calibration - [ELLIS' PRINT TUNING GUIDE](https://ellis3dp.com/Print-Tuning-Guide/) / OrcaSlicer calibration tools
- 2) Skew and shrinkage calibration - [CALISTAR](https://github.com/dirtdigger/fleur_de_cali) / [CALIFLOWER](https://vector3d.shop/products/califlower-calibration-tool-mk2) / [CALILANTERN](https://vector3d.shop/products/calilantern-calibration)
+1. General printer calibration - [ELLIS' PRINT TUNING GUIDE](https://ellis3dp.com/Print-Tuning-Guide/) / OrcaSlicer calibration tools
+2. Skew and shrinkage calibration - [CALISTAR](https://github.com/dirtdigger/fleur_de_cali) / [CALIFLOWER](https://vector3d.shop/products/califlower-calibration-tool-mk2) / [CALILANTERN](https://vector3d.shop/products/calilantern-calibration)
 
 ---
 # PRINTING PARTS IN COLOR
