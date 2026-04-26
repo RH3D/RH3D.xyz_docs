@@ -1,6 +1,7 @@
 ---
 title: Setup and calibration
 layout: default
+has_toc: false
 parent: Final steps
 grand_parent: VIRTU E3
 #has_children: true
@@ -10,7 +11,7 @@ permalink: /virtu/final_setup/setup_calibration
 ---
 
 {: .warning }
-**WORK IN PROGRESS**
+**THE SITE IS UNDER CONSTRUCTION**
 {: .text-center }
 
 # PRINTER SETUP AND CALIBRATION
