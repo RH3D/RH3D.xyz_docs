@@ -240,89 +240,426 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 
 ## MOTION AND FRAME PARTS
-#### BEARINGS AND RAILS
 
-| Size    | Type/specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| **MGN12C-300** | linear rail   |     5     |  [KGT](https://s.click.aliexpress.com/e/_c4lSHQEL)  |
-| **MGN12H-300** | linear rail   |    1     |  [KGT](https://s.click.aliexpress.com/e/_c4lSHQEL)  |
-| **F695**-2RS  | flanged ball bearing `ABEC - 7` |    42     |  [FUSHI](https://s.click.aliexpress.com/e/_c3kOfRCT)  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
 
-#### OTHER - MOTION SYSTEM
+  <tr>
+    <th colspan="4">BEARINGS AND RAILS</th>
+  </tr>
+
+  <tr>
+    <th>Size</th>
+    <th>Type/specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+
+  <tr>
+    <td><strong>MGN12C‑300</strong></td>
+    <td>linear rail</td>
+    <td>5</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c4lSHQEL">KGT</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>MGN12H‑300</strong></td>
+    <td>linear rail</td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c4lSHQEL">KGT</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>F695</strong>‑2RS</td>
+    <td>flanged ball bearing <code>ABEC ‑ 7</code></td>
+    <td>42</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3kOfRCT">FUSHI</a></td>
+  </tr>
+</table>
+
 *GT2 belts - cut 3 x 990 mm (445T) for Z-Axis and 2 x 1680 mm (840T) for 4WD-XY-Axis or 2 x 1590 mm (795T) for 2WD-XY-Axis.*
 
-| Type         | Specifications                                  |  Quantity |  Link  |
-|:-------------|:---------------------------------------|:---------:|:------------:|
-| **5x24 mm** | steel pin `5mm OD, 24-25mm L`       |     19     |  [NINDEJIN](https://s.click.aliexpress.com/e/_c3GC2P2f)  |
-| **GT2** belt | **6 mm** - open end `Powge or Gates`   |    7 meters     |  [POWGE](https://s.click.aliexpress.com/e/_c405PXlN)  |
-| **GT2** pulley  | **16T, 5 mm bore, for 6 mm belt**   |    3     |  [POWGE](https://s.click.aliexpress.com/e/_c3YiWUGP)  |
-| **GT2** pulley  | **20T, 5 mm bore, for 6 mm belt**   |    2     |  [POWGE](https://s.click.aliexpress.com/e/_c4k19Yon)  |
-| **N17** motor  | **Nema 17** - 3x Z-Axis, 2x XY-Axis    |    5     |  [MELLOW](https://s.click.aliexpress.com/e/_c2z32CWX)  |
-| **N14** motor  | **Nema 14**, 10 teeth - extruder  |    1     |  [TRIANGLELAB](https://s.click.aliexpress.com/e/_c4mAKD8R)  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
 
-#### FRAME EXTRUSIONS
+  <tr>
+    <th colspan="4">OTHER – MOTION SYSTEM</th>
+  </tr>
 
-| Type         | Specifications                                  |  Quantity |  Link  |
-|:-------------|:---------------------------------------|:---------:|:------------:|
-| 2040 | **2040 - 300 mm V-Slot** `black`   |    4     |  [VEEKAFT](https://s.click.aliexpress.com/e/_c3Dx2QE3)  |
-| 2020 | **2020 - 345 mm V-Slot** `black`       |     1     |  ENDER 3 X-AXIS  |
-| 2020 | **2020 - 330 mm V-Slot** `black`   |    1     |  ENDER 3 TOP-FRAME  |
-| 2040 | **2040 - 400 mm V-Slot** `black`   |    2     |  ENDER 3 Z-AXIS  |
-| 4040 | **4040 - 290 mm V-Slot** `black`   |    2     |  ENDER 3 BASE-SIDES  |
-| 4040 | **4040 - 250 mm V-Slot** `black`   |    1     |  ENDER 3 BASE-MIDDLE |
-| 4040 | **4040 - 350 mm V-Slot** `black`   |    1     |  ENDER 3 PRO Y-AXIS (PRO)  |
-| 2040 | **2040 - 330 mm V-Slot** `black`   |    0     |  ENDER 3 Y-AXIS (ADD BELLOW)  |
-| 2040 | **2040 - 350 mm V-Slot** `black`   |    0     |  [VEEKAFT](https://s.click.aliexpress.com/e/_c3Dx2QE3)  |
-{: class="transparant_table"}
+  <tr>
+    <th>Type</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
 
-#### OTHER
+  <tr>
+    <td><strong>5x24 mm</strong></td>
+    <td>steel pin <code>5mm OD, 24–25mm L</code></td>
+    <td>19</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3GC2P2f">NINDEJIN</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>GT2</strong> belt</td>
+    <td><strong>6 mm</strong> – open end <code>Powge or Gates</code></td>
+    <td>7 meters</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c405PXlN">POWGE</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>GT2</strong> pulley</td>
+    <td><strong>16T, 5 mm bore, for 6 mm belt</strong></td>
+    <td>3</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3YiWUGP">POWGE</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>GT2</strong> pulley</td>
+    <td><strong>20T, 5 mm bore, for 6 mm belt</strong></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c4k19Yon">POWGE</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>N17</strong> motor</td>
+    <td><strong>Nema 17</strong> – 3× Z‑Axis, 2× XY‑Axis</td>
+    <td>5</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c2z32CWX">MELLOW</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>N14</strong> motor</td>
+    <td><strong>Nema 14</strong>, 10 teeth – extruder</td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c4mAKD8R">TRIANGLELAB</a></td>
+  </tr>
+</table>
+
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+
+  <tr>
+    <th colspan="4">FRAME EXTRUSIONS</th>
+  </tr>
+
+  <tr>
+    <th>Type</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+
+  <tr>
+    <td>2040</td>
+    <td><strong>2040 – 300 mm V‑Slot</strong> <code>black</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3Dx2QE3">VEEKAFT</a></td>
+  </tr>
+
+  <tr>
+    <td>2020</td>
+    <td><strong>2020 – 345 mm V‑Slot</strong> <code>black</code></td>
+    <td>1</td>
+    <td>ENDER 3 X‑AXIS</td>
+  </tr>
+
+  <tr>
+    <td>2020</td>
+    <td><strong>2020 – 330 mm V‑Slot</strong> <code>black</code></td>
+    <td>1</td>
+    <td>ENDER 3 TOP‑FRAME</td>
+  </tr>
+
+  <tr>
+    <td>2040</td>
+    <td><strong>2040 – 400 mm V‑Slot</strong> <code>black</code></td>
+    <td>2</td>
+    <td>ENDER 3 Z‑AXIS</td>
+  </tr>
+
+  <tr>
+    <td>4040</td>
+    <td><strong>4040 – 290 mm V‑Slot</strong> <code>black</code></td>
+    <td>2</td>
+    <td>ENDER 3 BASE‑SIDES</td>
+  </tr>
+
+  <tr>
+    <td>4040</td>
+    <td><strong>4040 – 250 mm V‑Slot</strong> <code>black</code></td>
+    <td>1</td>
+    <td>ENDER 3 BASE‑MIDDLE</td>
+  </tr>
+
+  <tr>
+    <td>4040</td>
+    <td><strong>4040 – 350 mm V‑Slot</strong> <code>black</code></td>
+    <td>1</td>
+    <td>ENDER 3 PRO Y‑AXIS (PRO)</td>
+  </tr>
+
+  <tr>
+    <td>2040</td>
+    <td><strong>2040 – 330 mm V‑Slot</strong> <code>black</code></td>
+    <td>0</td>
+    <td>ENDER 3 Y‑AXIS (ADD BELLOW)</td>
+  </tr>
+
+  <tr>
+    <td>2040</td>
+    <td><strong>2040 – 350 mm V‑Slot</strong> <code>black</code></td>
+    <td>0</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3Dx2QE3">VEEKAFT</a></td>
+  </tr>
+
+</table>
+
 *PTFE tube - 9 mm for Goliath air hotend, 20mm for Rapido UHF hotend, 490mm from toolhead, 200mm inside Electronics bay, the rest outside.*
 
-| Type         | Specifications                                  |  Quantity |  Link  |
-|:-------------|:---------------------------------------|:---------:|:------------:|
-| PTFE tube  | **OD 4 x ID 2 mm**  |    1 meter     |  [MELLOW](https://s.click.aliexpress.com/e/_c2yi4d4L)  |
-| ECAS04  | **ECAS04** tube connector  |    5     |  [FYSETC](https://s.click.aliexpress.com/e/_c4E073en)  |
-| Rubber feet  | **M5** screw hole, size 38x19 or 27-47x19   |    4     |  [AliExpress](https://s.click.aliexpress.com/e/_c3g2mEjd)  |
-| EXTRUDER gears  | DDG gears |    1     |  [MELLOW (SET1-DDG)](https://s.click.aliexpress.com/e/_c30sgLPZ)  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+
+  <tr>
+    <th colspan="4">OTHER</th>
+  </tr>
+
+  <tr>
+    <th>Type</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+
+  <tr>
+    <td>PTFE tube</td>
+    <td><strong>OD 4 x ID 2 mm</strong></td>
+    <td>1 meter</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c2yi4d4L">MELLOW</a></td>
+  </tr>
+
+  <tr>
+    <td>ECAS04</td>
+    <td><strong>ECAS04</strong> tube connector</td>
+    <td>5</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c4E073en">FYSETC</a></td>
+  </tr>
+
+  <tr>
+    <td>Rubber feet</td>
+    <td><strong>M5</strong> screw hole, size <code>38x19</code> or <code>27–47x19</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3g2mEjd">AliExpress</a></td>
+  </tr>
+
+  <tr>
+    <td>EXTRUDER gears</td>
+    <td>DDG gears</td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c30sgLPZ">MELLOW (SET1‑DDG)</a></td>
+  </tr>
+
+</table>
+
 
 ## ELECTRONICS
-#### FANS
 
-| Type    | Specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| **3010** fan | **axial** fan `24V, dual ball bearing, HIGH RPM`   |     1     |  [GDStime](https://s.click.aliexpress.com/e/_c45hHyE3)  |
-| **6015** fan | **axial** fan `24V, dual ball bearing`  |    3     |  [GDStime](https://s.click.aliexpress.com/e/_c4qoGm0R)  |
-| **5015** fan  | **radial** fan `24V, dual ball bearing, 8500 RPM` |    1     |  [GDStime](https://s.click.aliexpress.com/e/_c3kbplwf)  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
 
-#### OTHER
+  <tr>
+    <th colspan="4">FANS</th>
+  </tr>
 
-| Type    | Specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| DIN rail | **35 x 300** mm   |     3     |  [AliExpress](https://s.click.aliexpress.com/e/_c30EH519)  |
-| CABLE CHAIN | **10 x 11 mm R28** cable chain   |     10     |  [VEEKAFT](https://s.click.aliexpress.com/e/_c4NmVlwR)  |
-| microswitch | `Omron D2F-L` |    2     |  [AliExpress](https://s.click.aliexpress.com/e/_ompcb2M)  |
-| PSU-24V | MW-LRS 350-24 |    1     |  REUSE FROM ENDER 3  |
-| AC PLUG | AC PLUG + SWITCH |    1     |  REUSE FROM ENDER 3  |
-| MOTHERBOARD | 6 drivers minimum |    1     |  MB  |
-| SBC | Raspberry Pi |    1     |  SBC  |
-| AC WIRES | 3 LEAD wires - AC->PSU - 30cm |    1     |  WIRES  |
-| WAGO | WAGOXXX |    3     |  WAGOS  |
-{: class="transparant_table"}
+  <tr>
+    <th>Type</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
 
-## PANELS
+  <tr>
+    <td><strong>3010</strong> fan</td>
+    <td><strong>axial</strong> fan <code>24V, dual ball bearing, HIGH RPM</code></td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c45hHyE3">GDStime</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>6015</strong> fan</td>
+    <td><strong>axial</strong> fan <code>24V, dual ball bearing</code></td>
+    <td>3</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c4qoGm0R">GDStime</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>5015</strong> fan</td>
+    <td><strong>radial</strong> fan <code>24V, dual ball bearing, 8500 RPM</code></td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c3kbplwf">GDStime</a></td>
+  </tr>
+
+</table>
+
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+
+  <tr>
+    <th colspan="4">OTHER</th>
+  </tr>
+
+  <tr>
+    <th>Type</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+
+  <tr>
+    <td>DIN rail</td>
+    <td><strong>35 × 300</strong> mm</td>
+    <td>3</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c30EH519">AliExpress</a></td>
+  </tr>
+
+  <tr>
+    <td>CABLE CHAIN</td>
+    <td><strong>10 × 11 mm R28</strong> cable chain</td>
+    <td>10</td>
+    <td><a href="https://s.click.aliexpress.com/e/_c4NmVlwR">VEEKAFT</a></td>
+  </tr>
+
+  <tr>
+    <td>microswitch</td>
+    <td><code>Omron D2F‑L</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ompcb2M">AliExpress</a></td>
+  </tr>
+
+  <tr>
+    <td>PSU‑24V</td>
+    <td>MW‑LRS 350‑24</td>
+    <td>1</td>
+    <td>REUSE FROM ENDER 3</td>
+  </tr>
+
+  <tr>
+    <td>AC PLUG</td>
+    <td>AC PLUG + SWITCH</td>
+    <td>1</td>
+    <td>REUSE FROM ENDER 3</td>
+  </tr>
+
+  <tr>
+    <td>MOTHERBOARD</td>
+    <td>6 drivers minimum</td>
+    <td>1</td>
+    <td>MB</td>
+  </tr>
+
+  <tr>
+    <td>SBC</td>
+    <td>Raspberry Pi</td>
+    <td>1</td>
+    <td>SBC</td>
+  </tr>
+
+  <tr>
+    <td>AC WIRES</td>
+    <td>3 LEAD wires – AC→PSU – 30 cm</td>
+    <td>1</td>
+    <td>WIRES</td>
+  </tr>
+
+  <tr>
+    <td>WAGO</td>
+    <td>WAGOXXX</td>
+    <td>3</td>
+    <td>WAGOS</td>
+  </tr>
+
+</table>
+
 *DXF files are available at printables.*
 
-| Location    | Specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| BOTTOM | bottom panel `305 x 305 x 3 mm` - cast ycrylic  |     1     |  cut according to DXF  |
-| BASE | base cover panel `269 x 249 x 3 mm` - cast ycrylic  |     1     |  cut according to DXF  |
-| ELECTRONICS | electronics cover panel `340 x 349 x 3 mm` - cast ycrylic  |     1     |  cut according to DXF  |
-| FRAME | frame panel `350 x 320 x 3 mm` - ALUMINIUM  |     1     |  cut according to DXF  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+
+  <tr>
+    <th colspan="4">PANELS</th>
+  </tr>
+
+  <tr>
+    <th>Location</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+
+  <tr>
+    <td>BOTTOM</td>
+    <td>bottom panel <code>305 × 305 × 3 mm</code> – cast acrylic</td>
+    <td>1</td>
+    <td>cut according to DXF</td>
+  </tr>
+
+  <tr>
+    <td>BASE</td>
+    <td>base cover panel <code>269 × 249 × 3 mm</code> – cast acrylic</td>
+    <td>1</td>
+    <td>cut according to DXF</td>
+  </tr>
+
+  <tr>
+    <td>ELECTRONICS</td>
+    <td>electronics cover panel <code>340 × 349 × 3 mm</code> – cast acrylic</td>
+    <td>1</td>
+    <td>cut according to DXF</td>
+  </tr>
+
+  <tr>
+    <td>FRAME</td>
+    <td>frame panel <code>350 × 320 × 3 mm</code> – ALUMINIUM</td>
+    <td>1</td>
+    <td>cut according to DXF</td>
+  </tr>
+</table>
+
 
 continue to:
 {: .text-right .lh-0 .pt-8 }
