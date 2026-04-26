@@ -24,139 +24,589 @@ Remember that the BOM covers all the required parts needed for the conversion bu
 # BILL OF MATERIAL
 
 ## PRINTER HARDWARE
-#### SCREWS
 
-| Size    | Type/specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| **M2** x 10 | **socket** head `DIN 912 / ISO 4762` |     4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 6  | **socket** head `DIN 912 / ISO 4762` |    72     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 8  | **socket** head `DIN 912 / ISO 4762` |    50     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 10 | **socket** head `DIN 912 / ISO 4762` |    34     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 16 | **socket** head `DIN 912 / ISO 4762` |     4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 20 | **socket** head `DIN 912 / ISO 4762` |    15     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 25 | **socket** head `DIN 912 / ISO 4762` |     8     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 35 | **socket** head `DIN 912 / ISO 4762` |    11     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M4** x 8  | **socket** head `DIN 912 / ISO 4762` |    34     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M4** x 10 | **socket** head `DIN 912 / ISO 4762` |    12     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M5** x 12 | **socket** head `DIN 912 / ISO 4762` |    24     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M5** x 20 | **socket** head `DIN 912 / ISO 4762` |     4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M5** x 25 | **socket** head `DIN 912 / ISO 4762` |    10     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M5** x 35 | **socket** head `DIN 912 / ISO 4762` |     4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M5** x 10 | **button** head `DIN 938 / ISO 7380` |     4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY)  |
-| **M5** x 20 | **button** head `DIN 938 / ISO 7380` |    20     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY)  |
-| **M5** x 30 | **button** head `DIN 938 / ISO 7380` |     4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oD0jZMY)  |
-| **M3** x 5  | **flatpoint** setscrew `DIN 913 / ISO 4026` |     8     |  [NINDEJIN](https://s.click.aliexpress.com/e/_ophdoDW)  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">SCREWS</th>
+  </tr>
+  <tr>
+    <th>Size</th>
+    <th>Type/specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td><strong>M2</strong> x 10</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 6</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>72</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 8</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>50</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 10</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>34</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 16</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 20</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>15</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 25</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>8</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 35</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>11</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M4</strong> x 8</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>34</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M4</strong> x 10</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>12</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong> x 12</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>24</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong> x 20</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong> x 25</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>10</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong> x 35</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong> x 10</td>
+    <td><strong>button</strong> head <code>DIN 938 / ISO 7380</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong> x 20</td>
+    <td><strong>button</strong> head <code>DIN 938 / ISO 7380</code></td>
+    <td>20</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong> x 30</td>
+    <td><strong>button</strong> head <code>DIN 938 / ISO 7380</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 5</td>
+    <td><strong>flatpoint</strong> setscrew <code>DIN 913 / ISO 4026</code></td>
+    <td>8</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ophdoDW">NINDEJIN</a></td>
+  </tr>
+</table>
 
-#### WASHERS, NUTS, T-NUTS, HEAT SET INSERTS
-
-| Size    | Type/specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| **M5** | **washer** `DIN 125A / ISO 7089` |    65     |  [NINDEJIN](https://s.click.aliexpress.com/e/_olHMc2g)  |
-| **M3** | **hex nut** `DIN 934 / ISO 8673` |    5     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oDy3nla)  |
-| **M3** | **T-nut** `for 2020 V-Slot extrusion` |    35     |  [NINDEJIN](https://s.click.aliexpress.com/e/_ooSJSAs)  |
-| **M4** | **T-nut** `for 2020 V-Slot extrusion` |    32     |  [NINDEJIN](https://s.click.aliexpress.com/e/_ooSJSAs)  |
-| **M3** | **heat set threaded insert** `M3 x L 4 x OD 4,5 mm` |    110     |  [EDGAR GARY st.](https://s.click.aliexpress.com/e/_oB9tEk4)  |
-| **M5** | **heat set threaded insert** `M5 x L 5 x OD 7 mm` |    24     |  [EDGAR GARY st.](https://s.click.aliexpress.com/e/_oB9tEk4)  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">WASHERS, NUTS, T‑NUTS, HEAT SET INSERTS</th>
+  </tr>
+  <tr>
+    <th>Size</th>
+    <th>Type/specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td><strong>M5</strong></td>
+    <td><strong>washer</strong> <code>DIN 125A / ISO 7089</code></td>
+    <td>65</td>
+    <td><a href="https://s.click.aliexpress.com/e/_olHMc2g">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>hex nut</strong> <code>DIN 934 / ISO 8673</code></td>
+    <td>5</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oDy3nla">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>T‑nut</strong> <code>for 2020 V‑Slot extrusion</code></td>
+    <td>35</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ooSJSAs">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M4</strong></td>
+    <td><strong>T‑nut</strong> <code>for 2020 V‑Slot extrusion</code></td>
+    <td>32</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ooSJSAs">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>heat set threaded insert</strong> <code>M3 x L 4 x OD 4,5 mm</code></td>
+    <td>110</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oB9tEk4">EDGAR GARY st.</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong></td>
+    <td><strong>heat set threaded insert</strong> <code>M5 x L 5 x OD 7 mm</code></td>
+    <td>24</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oB9tEk4">EDGAR GARY st.</a></td>
+  </tr>
+</table>
 
 ## MOTION AND FRAME PARTS
-#### BEARINGS
 
-| Size    | Type/specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| **LM8LUU** | linear motion bearing `ABEC - 5`   |     4     |  [FUSHI](https://s.click.aliexpress.com/e/_ol5zLEy)  |
-| **LM12UU**  | linear motion bearing `ABEC - 5`  |    3     |  [FUSHI](https://s.click.aliexpress.com/e/_ol5zLEy)  |
-| **F695**-2RS  | flanged ball bearing `ABEC - 5` |    32     |  [FUSHI](https://s.click.aliexpress.com/e/_ol5zLEy)  |
-| **608**-2RS | ball bearing                      |     6     |  [FUSHI](https://s.click.aliexpress.com/e/_ol5zLEy)  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">BEARINGS</th>
+  </tr>
+  <tr>
+    <th>Size</th>
+    <th>Type/specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td><strong>LM8LUU</strong></td>
+    <td>linear motion bearing <code>ABEC - 5</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ol5zLEy">FUSHI</a></td>
+  </tr>
+  <tr>
+    <td><strong>LM12UU</strong></td>
+    <td>linear motion bearing <code>ABEC - 5</code></td>
+    <td>3</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ol5zLEy">FUSHI</a></td>
+  </tr>
+  <tr>
+    <td><strong>F695</strong>-2RS</td>
+    <td>flanged ball bearing <code>ABEC - 5</code></td>
+    <td>32</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ol5zLEy">FUSHI</a></td>
+  </tr>
+  <tr>
+    <td><strong>608</strong>-2RS</td>
+    <td>ball bearing</td>
+    <td>6</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ol5zLEy">FUSHI</a></td>
+  </tr>
+</table>
 
-#### LINEAR RODS
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">LINEAR RODS</th>
+  </tr>
+  <tr>
+    <th>Size</th>
+    <th>Type/specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td><strong>8 × 350</strong> mm</td>
+    <td>linear rod <code>h6, hardened steel</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ol5zLEy">FUSHI</a></td>
+  </tr>
+  <tr>
+    <td><strong>12 × 350</strong> mm</td>
+    <td>linear rod <code>h6, hardened steel</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ol5zLEy">FUSHI</a></td>
+  </tr>
+  <tr>
+    <td><strong>12 × 320</strong> mm</td>
+    <td>linear rod <code>h6, hardened steel</code></td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ol5zLEy">FUSHI</a></td>
+  </tr>
+</table>
 
-| Size    | Type/specifications                      |  Quantity |  Link  |
-|:--------|:-----------------------------------------|:---------:|:------------:|
-| **8 x 350** mm | linear rod `h6, hardened steel`   |     4     |  [FUSHI](https://s.click.aliexpress.com/e/_ol5zLEy)  |
-| **12 x 350** mm  | linear rod `h6, hardened steel` |     2     |  [FUSHI](https://s.click.aliexpress.com/e/_ol5zLEy)  |
-| **12 x 320** mm  | linear rod `h6, hardened steel` |     1     |  [FUSHI](https://s.click.aliexpress.com/e/_ol5zLEy)  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">OTHER – MOTION</th>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td><strong>GT2</strong> belt</td>
+    <td><strong>6 mm × 1140 mm</strong> – closed loop</td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_onseDGo">POWGE</a></td>
+  </tr>
+  <tr>
+    <td><strong>GT2</strong> belt</td>
+    <td><strong>6 mm</strong> – open end <code>Powge or Gates</code></td>
+    <td>3 meters</td>
+    <td><a href="https://s.click.aliexpress.com/e/_omPS6LE">POWGE</a></td>
+  </tr>
+  <tr>
+    <td><strong>GT2</strong> pulley</td>
+    <td><strong>40T, 8 mm bore, for 6 mm belt</strong> <code>17mm total width</code></td>
+    <td>3</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oFO5eja">POWGE</a></td>
+  </tr>
+  <tr>
+    <td><strong>GT2</strong> pulley</td>
+    <td><strong>20T, 5 mm bore, for 6 mm belt</strong></td>
+    <td>3</td>
+    <td><a href="https://s.click.aliexpress.com/e/_opxx7yo">POWGE</a></td>
+  </tr>
+  <tr>
+    <td><strong>Leadscrew</strong></td>
+    <td><strong>T8/8 – 300 mm</strong></td>
+    <td>3</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oBpikUG">KINGROON</a></td>
+  </tr>
+  <tr>
+    <td><strong>Leadscrew nut</strong></td>
+    <td><strong>T8/8 – round shape, 4 holes</strong></td>
+    <td>3</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oBpikUG">KINGROON</a></td>
+  </tr>
+</table>
 
-#### OTHER - MOTION
-
-| Type         | Specifications                                  |  Quantity |  Link  |
-|:-------------|:---------------------------------------|:---------:|:------------:|
-| **GT2** belt | **6 mm x 1140 mm** - closed loop       |     1     |  [POWGE](https://s.click.aliexpress.com/e/_onseDGo)  |
-| **GT2** belt | **6 mm** - open end `Powge or Gates`   |    3 meters     |  [POWGE](https://s.click.aliexpress.com/e/_omPS6LE)  |
-| **GT2** pulley  | **40T, 8 mm bore, for 6 mm belt** `17mm total width` |    3     |  [POWGE](https://s.click.aliexpress.com/e/_oFO5eja)  |
-| **GT2** pulley  | **20T, 5 mm bore, for 6 mm belt**   |    3     |  [POWGE](https://s.click.aliexpress.com/e/_opxx7yo)  |
-| **Leadscrew**  | **T8/8 - 300 mm**                    |    3     |  [KINGROON](https://s.click.aliexpress.com/e/_oBpikUG)  |
-| **Leadscrew nut**  | **T8/8 - round shape, 4 holes**  |    3     |  [KINGROON](https://s.click.aliexpress.com/e/_oBpikUG)  |
-{: class="transparant_table"}
-
-#### OTHER
-
-| Type         | Specifications                                  |  Quantity |  Link  |
-|:-------------|:---------------------------------------|:---------:|:------------:|
-| extrusion | **2040 - 350 mm V-Slot** `black`       |     2     |  [VEEKAFT](https://s.click.aliexpress.com/e/_olW0kS0)  |
-| extrusion | **2040 - 300 mm V-Slot** `black`   |    2     |  [VEEKAFT](https://s.click.aliexpress.com/e/_olW0kS0)  |
-| PTFE tube  | **OD 4 x ID 2 mm**  |    1 meter     |  [MELLOW 3D](https://s.click.aliexpress.com/e/_ooNy9K4)  |
-| Rubber feet  | hole for **M5** screw, OD 27 mm base   |    4     |  [AliExpress](https://s.click.aliexpress.com/e/_opKmyGk)  |
-| Bed spacer  | silicone spacer, hole for **M4** screw                    |    4     |  [CREALITY 3D](https://s.click.aliexpress.com/e/_oBIiCGc)  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">OTHER</th>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>extrusion</td>
+    <td><strong>2040 – 350 mm V‑Slot</strong> <code>black</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_olW0kS0">VEEKAFT</a></td>
+  </tr>
+  <tr>
+    <td>extrusion</td>
+    <td><strong>2040 – 300 mm V‑Slot</strong> <code>black</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_olW0kS0">VEEKAFT</a></td>
+  </tr>
+  <tr>
+    <td>PTFE tube</td>
+    <td><strong>OD 4 × ID 2 mm</strong></td>
+    <td>1 meter</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ooNy9K4">MELLOW 3D</a></td>
+  </tr>
+  <tr>
+    <td>Rubber feet</td>
+    <td>hole for <strong>M5</strong> screw, OD 27 mm base</td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_opKmyGk">AliExpress</a></td>
+  </tr>
+  <tr>
+    <td>Bed spacer</td>
+    <td>silicone spacer, hole for <strong>M4</strong> screw</td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oBIiCGc">CREALITY 3D</a></td>
+  </tr>
+</table>
 
 ## ELECTRONICS
-#### FANS
 
-| Type    | Specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| **3010** fan | **axial** fan `24V, dual ball bearing, HIGH RPM`   |     1     |  [GDStime](https://s.click.aliexpress.com/e/_oCNiPq4)  |
-| **4010** fan | **radial** fan `24V, dual ball bearing, HIGH RPM`  |    2     |  [GDStime](https://s.click.aliexpress.com/e/_oEyKaE0)  |
-| **6015** fan  | **axial** fan `24V, dual ball bearing` |    2     |  [WINSINN](https://s.click.aliexpress.com/e/_oEQKmNI)  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">FANS</th>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td><strong>3010</strong> fan</td>
+    <td><strong>axial</strong> fan <code>24V, dual ball bearing, HIGH RPM</code></td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oCNiPq4">GDStime</a></td>
+  </tr>
+  <tr>
+    <td><strong>4010</strong> fan</td>
+    <td><strong>radial</strong> fan <code>24V, dual ball bearing, HIGH RPM</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEyKaE0">GDStime</a></td>
+  </tr>
+  <tr>
+    <td><strong>6015</strong> fan</td>
+    <td><strong>axial</strong> fan <code>24V, dual ball bearing</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEQKmNI">WINSINN</a></td>
+  </tr>
+</table>
 
-#### OTHER
-
-| Type    | Specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| DIN rail | **35 x 350** mm   |     2     |  [AliExpress](https://s.click.aliexpress.com/e/_ookAI5W)  |
-| DIN rail | **35 x 200** mm   |    1     |  [AliExpress](https://s.click.aliexpress.com/e/_ookAI5W)  |
-| microswitch | `Omron D2F-L` |    3     |  [AliExpress](https://s.click.aliexpress.com/e/_ompcb2M)  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">OTHER</th>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>DIN rail</td>
+    <td><strong>35 × 350</strong> mm</td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ookAI5W">AliExpress</a></td>
+  </tr>
+  <tr>
+    <td>DIN rail</td>
+    <td><strong>35 × 200</strong> mm</td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ookAI5W">AliExpress</a></td>
+  </tr>
+  <tr>
+    <td>microswitch</td>
+    <td><code>Omron D2F‑L</code></td>
+    <td>3</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ompcb2M">AliExpress</a></td>
+  </tr>
+</table>
 
 ## ENCLOSURE
-#### PANELS
+
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">PANELS</th>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>PANEL KIT</td>
+    <td><strong>5 mm</strong> door panel, other panels <strong>4 mm</strong></td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oCO1L0o">FUNSSOR</a></td>
+  </tr>
+</table>
 *DXF files are available at printables.*
 
-| Type    | Specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| PANEL KIT | **5 mm** door panel, other panels **4 mm**   |     1     |  [FUNSSOR](https://s.click.aliexpress.com/e/_oCO1L0o)  |
-{: class="transparant_table"}
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">OTHER</th>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <th>Specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td><strong>F695</strong>-2RS</td>
+    <td>flanged ball bearing <code>ABEC - 5</code></td>
+    <td>12</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ol5zLEy">FUSHI</a></td>
+  </tr>
+  <tr>
+    <td><strong>6015</strong> fan</td>
+    <td><strong>axial</strong> fan <code>24V, dual ball bearing</code></td>
+    <td>1</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEQKmNI">WINSINN</a></td>
+  </tr>
+  <tr>
+    <td><strong>N42</strong> magnet</td>
+    <td><strong>OD 6 × L 3</strong> mm – neodymium magnet</td>
+    <td>20</td>
+    <td>---</td>
+  </tr>
+</table>
 
-#### OTHER
-
-| Type    | Specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| **F695**-2RS | flanged ball bearing `ABEC - 5` |     12     |  [FUSHI](https://s.click.aliexpress.com/e/_ol5zLEy)  |
-| **6015** fan  | **axial** fan `24V, dual ball bearing` |    1     |  [WINSINN](https://s.click.aliexpress.com/e/_oEQKmNI)  |
-| **N42** magnet  | **OD 6 x L 3** mm - neodymium magnet |    20     |  ---  |
-{: class="transparant_table"}
-
-#### HARDWARE
-
-| Size    | Type/specifications                                   |  Quantity |  Link  |
-|:--------|:---------------------------------------|:---------:|:------------:|
-| **M3** x 6  | **socket** head `DIN 912 / ISO 4762` |    2     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 10 | **socket** head `DIN 912 / ISO 4762` |    51     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 14 | **socket** head `DIN 912 / ISO 4762` |    17     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 25 | **socket** head `DIN 912 / ISO 4762` |     4     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 35 | **socket** head `DIN 912 / ISO 4762` |    2     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M5** x 12 | **socket** head `DIN 912 / ISO 4762` |    12     |  [NINDEJIN](https://s.click.aliexpress.com/e/_oEqVeJK)  |
-| **M3** x 12 | **countersunk** head `DIN 7991 / ISO 10642` |    12     |  [NINDEJIN](https://s.click.aliexpress.com/e/_okNhDfW)  |
-| **M5** | **washer** `DIN 125A / ISO 7089` |    12     |  [NINDEJIN](https://s.click.aliexpress.com/e/_olHMc2g)  |
-| **M3** | **T-nut** `for 2020 V-Slot extrusion` |    46     |  [NINDEJIN](https://s.click.aliexpress.com/e/_ooSJSAs)  |
-| **M3** | **heat set threaded insert** `M3 x L 4 x OD 4,5 mm` |    41     |  [EDGAR GARY st.](https://s.click.aliexpress.com/e/_oB9tEk4)  |
-| **M5** | **heat set threaded insert** `M5 x L 5 x OD 7 mm` |    12     |  [EDGAR GARY st.](https://s.click.aliexpress.com/e/_oB9tEk4)  |
-{: class="transparant_table"}
-
+<table class="bom_table">
+  <colgroup>
+    <col style="width:120px;">
+    <col style="width:320px;">
+    <col style="width:80px;">
+    <col style="width:140px;">
+  </colgroup>
+  <tr>
+    <th colspan="4">HARDWARE</th>
+  </tr>
+  <tr>
+    <th>Size</th>
+    <th>Type/specifications</th>
+    <th>Quantity</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 6</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 10</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>51</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 14</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>17</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 25</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>4</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 35</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>2</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong> x 12</td>
+    <td><strong>socket</strong> head <code>DIN 912 / ISO 4762</code></td>
+    <td>12</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong> x 12</td>
+    <td><strong>countersunk</strong> head <code>DIN 7991 / ISO 10642</code></td>
+    <td>12</td>
+    <td><a href="https://s.click.aliexpress.com/e/_okNhDfW">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong></td>
+    <td><strong>washer</strong> <code>DIN 125A / ISO 7089</code></td>
+    <td>12</td>
+    <td><a href="https://s.click.aliexpress.com/e/_olHMc2g">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>T‑nut</strong> <code>for 2020 V‑Slot extrusion</code></td>
+    <td>46</td>
+    <td><a href="https://s.click.aliexpress.com/e/_ooSJSAs">NINDEJIN</a></td>
+  </tr>
+  <tr>
+    <td><strong>M3</strong></td>
+    <td><strong>heat set threaded insert</strong> <code>M3 x L 4 x OD 4,5 mm</code></td>
+    <td>41</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oB9tEk4">EDGAR GARY st.</a></td>
+  </tr>
+  <tr>
+    <td><strong>M5</strong></td>
+    <td><strong>heat set threaded insert</strong> <code>M5 x L 5 x OD 7 mm</code></td>
+    <td>12</td>
+    <td><a href="https://s.click.aliexpress.com/e/_oB9tEk4">EDGAR GARY st.</a></td>
+  </tr>
+</table>
 
 continue to:
 {: .text-right .lh-0 .pt-8 }
