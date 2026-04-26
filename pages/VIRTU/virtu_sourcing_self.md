@@ -30,8 +30,9 @@ The BOM covers all the required parts for the default build. Required parts for 
 *Some of the AliExpress links are affiliate links. They come at no additional cost to you but provide a small commission to the project, which helps keep development and testing alive. Vendor selection was in no way influenced by affiliate availability—quality, price, and seller reliability were our top priorities.*
 
 # BILL OF MATERIAL
+{: .text-center }
 
-## PRINTER HARDWARE
+# PRINTER HARDWARE
 
 <table class="bom_table">
   <colgroup>
