@@ -695,6 +695,8 @@ The BOM covers all the required parts for the default build. Required parts for 
 
 # UPGRADES
 
+#### OPTIONAL
+
 <table class="bom_table">
   <colgroup>
     <col style="width:125px;">
