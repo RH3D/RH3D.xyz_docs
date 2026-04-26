@@ -15,7 +15,7 @@ permalink: /virtu/build/files
 
 # FILES
 {: .text-center }
-
+<!--
 To download STL files, go to the printables model page. Files are organised into folder structure based on the part location or purpose.
 This is the only official source of STL files and is always kept up to date.
 
@@ -53,7 +53,7 @@ A typical filename looks like this: `filename_[M-2].stl`. The bracket contains t
    - `Mcooling` = Use only with motor cooling (optional), *eg. `EL_cover_top_fan-R_[Mcooling-M-1].stl`*
    - `4WD` = Use only with 4WD setup (optional), *eg. `XY_L_bottom_[4WD-M-1].stl`*
    - and more...
- - This means if the description doesn't match your build, don't print the part even if there is a non-zero number.
+ - **This means if the description doesn't match your build, don't print the part even if there is a non-zero number.**
 
 ---
 #### MODS / REMIXES
@@ -69,3 +69,4 @@ continue to:
 [PRINTABLES]: https://www.printables.com/model/1476283
 [BUILD GUIDE]: https://rh3d.xyz/virtu/build/build_guide
 [Printables remixes]: https://www.printables.com/model/1476283/remixes
+-->
