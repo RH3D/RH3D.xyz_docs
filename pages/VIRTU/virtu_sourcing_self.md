@@ -473,31 +473,31 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <th>Link</th>
   </tr>
   <tr>
-    <td><strong>Hotend</strong> fan</td>
+    <td>Hotend</td>
     <td>Phaetus Rapido 2 UHF <code>option 1</code></td>
     <td>1</td>
     <td><a href="https://s.click.aliexpress.com/e/_c3w8Ef3p">FYSETC</a></td>
   </tr>
   <tr>
-    <td><strong>Hotend</strong> fan</td>
+    <td>Hotend</td>
     <td>TRIANGLELAB CHC XL <code>option 2</code></td>
     <td>1</td>
     <td><a href="https://s.click.aliexpress.com/e/_c30sgLPZ">TRIANGLELAB</a></td>
   </tr>
   <tr>
-    <td><strong>Hotend</strong> fan</td>
+    <td>Hotend</td>
     <td>GOLIATH AIR <code>option 3</code></td>
     <td>1</td>
     <td><a href="https://s.click.aliexpress.com/e/_c2ukshmf">MELLOW 3D</a></td>
   </tr>
   <tr>
-    <td><strong>Bed probe</strong> fan</td>
+    <td>Bed probe</td>
     <td>CARTOGRAPHER 3D <code>option 1</code></td>
     <td>1</td>
     <td></td>
   </tr>
   <tr>
-    <td><strong>Bed probe</strong> fan</td>
+    <td>Bed probe</td>
     <td>BEACON SCANNER <code>option 2</code></td>
     <td>1</td>
     <td></td>
