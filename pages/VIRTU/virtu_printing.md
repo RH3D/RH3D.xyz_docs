@@ -1,6 +1,7 @@
 ---
 title: Printing parts
 layout: default
+has_toc: false
 parent: Printer build
 grand_parent: VIRTU E3
 has_children: false
@@ -15,7 +16,7 @@ permalink: /virtu/build/printing_parts
 
 # PRINTING PARTS
 {: .text-center }
-
+<!--
 Before we dive into downloading all the files and starting to print, it is important to be as prepared as possible. Nobody enjoys reprinting parts after the printer is already assembled and running. You'll need to choose the right material, ensure your printer is properly calibrated, and have the correct setup for printing. This all takes some time and effort, but it will save you plenty during the build and when using the printer. Try not to cut corners here and follow read the following.
 
 ---
@@ -86,6 +87,5 @@ continue to:
 [FILES]{: .btn .fs-6 .fw-300 .text-yellow-300 }
 {: .text-right }
 
-[COLOR SCHEME]: https://rh3d.xyz/E3NG_v1_2/color_scheme
-[DOWNLOAD THE CALIBRATION CUBE.]: https://www.printables.com/en/model/478403
 [FILES]: https://rh3d.xyz/virtu/build/files
+-->
