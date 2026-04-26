@@ -8,7 +8,7 @@ permalink: /virtu/final_setup
 ---
 
 {: .warning }
-**WORK IN PROGRESS**
+**THE SITE IS UNDER CONSTRUCTION**
 {: .text-center }
 
 # VIRTU FINAL SETUP
