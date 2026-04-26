@@ -24,6 +24,9 @@ If you prefer to source parts yourself or have spare hardware ready to use, this
 
 The links provided in the Bill of Materials (BOM) point to products that have been tested for the quality and tolerances required to hit the high-speed targets and reliability. If you choose to source from elsewhere, ensure your parts—especially linear rails, bearings, belts and high-speed steppers—meet these standards to avoid issues during tuning.
 
+{: .warning }
+The BOM covers all the required parts for the default build. Required parts for the optional UPGRADES are at the end of the BOM.
+
 *Some of the AliExpress links are affiliate links. They come at no additional cost to you but provide a small commission to the project, which helps keep development and testing alive. Vendor selection was in no way influenced by affiliate availability—quality, price, and seller reliability were our top priorities.*
 
 # BILL OF MATERIAL
