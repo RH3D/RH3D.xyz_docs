@@ -50,7 +50,7 @@ A typical filename looks like this: `filename_[M-2].stl`. The bracket contains t
    - `Goliath` = Use only with Goliath hotend, *eg. `V-ION_th-body_[Goliath-M-1].stl`*
    - `5015` = Use only with 5015 for part cooling, *eg. `V-ION_th-cooling_ducting_[5015-M-1].stl`*
    - `CPAP` = Use only with CPAP (WS7040) for part cooling, *eg. `EL_CPAP_body_[CPAP-M-1].stl`*
-   - `Mcooling` = Use only with stepper motor cooling (optional), *eg. `EL_cover_top_fan-R_[Mcooling-M-1].stl`*
+   - `Mcooling` = Use only with motor cooling (optional), *eg. `EL_cover_top_fan-R_[Mcooling-M-1].stl`*
    - `4WD` = Use only with 4WD setup (optional), *eg. `XY_L_bottom_[4WD-M-1].stl`*
    - and more...
  - This means if the description doesn't match your build, don't print the part even if there is a non-zero number.
