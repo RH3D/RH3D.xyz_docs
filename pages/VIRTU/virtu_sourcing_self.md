@@ -214,7 +214,7 @@ The BOM covers all the required parts for the default build. Required parts for 
   </tr>
 </table>
 
-## MOTION AND FRAME PARTS
+# MOTION AND FRAME PARTS
 
 <table class="bom_table">
   <colgroup>
@@ -422,7 +422,7 @@ The BOM covers all the required parts for the default build. Required parts for 
 </table>
 *PTFE tube - 9 mm for Goliath air hotend, 20mm for Rapido UHF hotend, 490mm from toolhead, 200mm inside Electronics bay, the rest outside.*
 
-## ELECTRONICS
+# ELECTRONICS
 
 <table class="bom_table">
   <colgroup>
@@ -586,7 +586,7 @@ The BOM covers all the required parts for the default build. Required parts for 
   </tr>
 </table>
 
-## OTHER
+# OTHER
 
 <table class="bom_table">
   <colgroup>
