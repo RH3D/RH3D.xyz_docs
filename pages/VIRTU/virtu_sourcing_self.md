@@ -37,116 +37,99 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <col style="width:80px;">
     <col style="width:140px;">
   </colgroup>
-
   <tr>
     <th colspan="4">SCREWS</th>
   </tr>
-
   <tr>
     <th>Size</th>
     <th>Type/specifications</th>
     <th>Quantity</th>
     <th>Link</th>
   </tr>
-
   <tr>
     <td><strong>M2</strong> x 10</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M3</strong> x 8</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
     <td>157</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M3</strong> x 12</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
     <td>14</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M3</strong> x 20</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
     <td>2</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M3</strong> x 30</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
     <td>19</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M4</strong> x 6</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M2.5</strong> x 6</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M2.5</strong> x 8</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M3</strong> x 6</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>10</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M5</strong> x 6</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M5</strong> x 10</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>38</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M5</strong> x 20</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>41</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M5</strong> x 25</td>
     <td><strong>button</strong> head <code>ISO 7380</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oD0jZMY">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M3</strong> x 8</td>
     <td><strong>countersunk</strong> head <code>ISO 10642</code></td>
     <td>20</td>
     <td><a href="https://s.click.aliexpress.com/e/_okNhDfW">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M4</strong> x 14</td>
     <td><strong>countersunk</strong> head <code>ISO 10642</code></td>
@@ -162,74 +145,63 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <col style="width:80px;">
     <col style="width:140px;">
   </colgroup>
-
   <tr>
     <th colspan="4">WASHERS, NUTS, T‑NUTS, HEAT SET INSERTS</th>
   </tr>
-
   <tr>
     <th>Size</th>
     <th>Type/specifications</th>
     <th>Quantity</th>
     <th>Link</th>
   </tr>
-
   <tr>
     <td><strong>M3</strong></td>
     <td><strong>washer</strong> <code>ISO 7089</code></td>
     <td>8</td>
     <td><a href="https://s.click.aliexpress.com/e/_olHMc2g">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M5</strong></td>
     <td><strong>washer</strong> <code>ISO 7089</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_olHMc2g">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M3</strong></td>
     <td><strong>hex nut</strong> <code>ISO 8673</code></td>
     <td>10</td>
     <td><a href="https://s.click.aliexpress.com/e/_oDy3nla">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M3</strong></td>
     <td><strong>Roll‑in T‑nut</strong> <code>for 2020 V‑Slot extrusion</code></td>
     <td>72</td>
     <td><a href="https://s.click.aliexpress.com/e/_ooSJSAs">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M5</strong></td>
     <td><strong>Roll‑in T‑nut</strong> <code>for 2020 V‑Slot extrusion</code></td>
     <td>35</td>
     <td><a href="https://s.click.aliexpress.com/e/_ooSJSAs">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>M3</strong></td>
     <td><strong>heat set threaded insert</strong> <code>M3 x L 4 x OD 4,5 mm</code></td>
     <td>89</td>
     <td><a href="https://s.click.aliexpress.com/e/_oB9tEk4">EDGAR GARY st.</a></td>
   </tr>
-
   <tr>
     <td><strong>M5</strong></td>
     <td><strong>heat set threaded insert</strong> <code>M5 x L 5 x OD 7 mm</code></td>
     <td>4</td>
     <td><a href="https://s.click.aliexpress.com/e/_oB9tEk4">EDGAR GARY st.</a></td>
   </tr>
-
   <tr>
     <td><strong>10‑M4</strong></td>
     <td><strong>steel ball</strong> <code>10mm OD, M4 threaded hole</code></td>
     <td>3</td>
     <td><a href="https://s.click.aliexpress.com/e/_c3l19mx9">MELLOW</a></td>
   </tr>
-
   <tr>
     <td><strong>8x8x5</strong></td>
     <td><strong>spacer</strong> <code>8mm OD, 8mm H, 5mm hole</code></td>
@@ -237,7 +209,6 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <td>REUSE E3 V‑WHEEL ALU‑SPACER</td>
   </tr>
 </table>
-
 
 ## MOTION AND FRAME PARTS
 
@@ -248,32 +219,27 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <col style="width:80px;">
     <col style="width:140px;">
   </colgroup>
-
   <tr>
     <th colspan="4">BEARINGS AND RAILS</th>
   </tr>
-
   <tr>
     <th>Size</th>
     <th>Type/specifications</th>
     <th>Quantity</th>
     <th>Link</th>
   </tr>
-
   <tr>
     <td><strong>MGN12C‑300</strong></td>
     <td>linear rail</td>
     <td>5</td>
     <td><a href="https://s.click.aliexpress.com/e/_c4lSHQEL">KGT</a></td>
   </tr>
-
   <tr>
     <td><strong>MGN12H‑300</strong></td>
     <td>linear rail</td>
     <td>1</td>
     <td><a href="https://s.click.aliexpress.com/e/_c4lSHQEL">KGT</a></td>
   </tr>
-
   <tr>
     <td><strong>F695</strong>‑2RS</td>
     <td>flanged ball bearing <code>ABEC ‑ 7</code></td>
@@ -291,53 +257,45 @@ The links provided in the Bill of Materials (BOM) point to products that have be
     <col style="width:80px;">
     <col style="width:140px;">
   </colgroup>
-
   <tr>
     <th colspan="4">OTHER – MOTION SYSTEM</th>
   </tr>
-
   <tr>
     <th>Type</th>
     <th>Specifications</th>
     <th>Quantity</th>
     <th>Link</th>
   </tr>
-
   <tr>
     <td><strong>5x24 mm</strong></td>
     <td>steel pin <code>5mm OD, 24–25mm L</code></td>
     <td>19</td>
     <td><a href="https://s.click.aliexpress.com/e/_c3GC2P2f">NINDEJIN</a></td>
   </tr>
-
   <tr>
     <td><strong>GT2</strong> belt</td>
     <td><strong>6 mm</strong> – open end <code>Powge or Gates</code></td>
     <td>7 meters</td>
     <td><a href="https://s.click.aliexpress.com/e/_c405PXlN">POWGE</a></td>
   </tr>
-
   <tr>
     <td><strong>GT2</strong> pulley</td>
     <td><strong>16T, 5 mm bore, for 6 mm belt</strong></td>
     <td>3</td>
     <td><a href="https://s.click.aliexpress.com/e/_c3YiWUGP">POWGE</a></td>
   </tr>
-
   <tr>
     <td><strong>GT2</strong> pulley</td>
     <td><strong>20T, 5 mm bore, for 6 mm belt</strong></td>
     <td>2</td>
     <td><a href="https://s.click.aliexpress.com/e/_c4k19Yon">POWGE</a></td>
   </tr>
-
   <tr>
     <td><strong>N17</strong> motor</td>
     <td><strong>Nema 17</strong> – 3× Z‑Axis, 2× XY‑Axis</td>
     <td>5</td>
     <td><a href="https://s.click.aliexpress.com/e/_c2z32CWX">MELLOW</a></td>
   </tr>
-
   <tr>
     <td><strong>N14</strong> motor</td>
     <td><strong>Nema 14</strong>, 10 teeth – extruder</td>
