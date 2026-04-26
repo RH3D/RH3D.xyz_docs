@@ -52,10 +52,10 @@ All STL files are prepared for direct import-and-slice, they are properly orient
 
 #### RECOMMENDED PRINT SETTINGS:
 
- - 4 perimeters
+ - 4 wall loops
  - 5 top and bottom layers
- - 30% infill
- - infill type: cubic, gyroid, grid, honeycomb, 3D honeycomb, triangles, stars
+ - 30% infill density
+ - infill pattern: cubic, gyroid, grid, honeycomb, 3D honeycomb, triangles, stars
  - 0.2 mm layer height
  - 0.4 - 0.5 mm layer width
  - Ensure vertical shell thickness: All
@@ -69,8 +69,8 @@ Even though the base of Virtu is the all-metal frame, which gives you the precis
 
 For proper calibration, there are more steps involved:
 
-1) General printer calibration - [ELLIS' PRINT TUNING GUIDE](https://ellis3dp.com/Print-Tuning-Guide/) / OrcaSlicer calibration tools
-2) Skew and shrinkage calibration - [CALISTAR](https://github.com/dirtdigger/fleur_de_cali) / [CALIFLOWER](https://vector3d.shop/products/califlower-calibration-tool-mk2) / [CALILANTERN](https://vector3d.shop/products/calilantern-calibration)
+ 1) General printer calibration - [ELLIS' PRINT TUNING GUIDE](https://ellis3dp.com/Print-Tuning-Guide/) / OrcaSlicer calibration tools
+ 2) Skew and shrinkage calibration - [CALISTAR](https://github.com/dirtdigger/fleur_de_cali) / [CALIFLOWER](https://vector3d.shop/products/califlower-calibration-tool-mk2) / [CALILANTERN](https://vector3d.shop/products/calilantern-calibration)
 
 ---
 # PRINTING PARTS IN COLOR
