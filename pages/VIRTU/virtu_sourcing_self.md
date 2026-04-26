@@ -43,7 +43,7 @@ The links provided in the Bill of Materials (BOM) point to products that have be
   <tr>
     <th>Size</th>
     <th>Type/specifications</th>
-    <th>Quantity</th>
+    <th>Qty.</th>
     <th>Link</th>
   </tr>
   <tr>
