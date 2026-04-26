@@ -574,7 +574,7 @@ The BOM covers all the required parts for the default build. Required parts for 
   </tr>
   <tr>
     <td>AC WIRES</td>
-    <td>3 LEAD wires – AC→PSU – 30 cm</td>
+    <td>3 Wire cable – AC→PSU – 30 cm</td>
     <td>1</td>
     <td>WIRES</td>
   </tr>
