@@ -27,10 +27,10 @@ Remember that the BOM covers all the required parts needed for the conversion bu
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">SCREWS</th>
@@ -153,10 +153,10 @@ Remember that the BOM covers all the required parts needed for the conversion bu
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">WASHERS, NUTS, T‑NUTS, HEAT SET INSERTS</th>
@@ -209,10 +209,10 @@ Remember that the BOM covers all the required parts needed for the conversion bu
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">BEARINGS</th>
@@ -251,10 +251,10 @@ Remember that the BOM covers all the required parts needed for the conversion bu
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">LINEAR RODS</th>
@@ -287,10 +287,10 @@ Remember that the BOM covers all the required parts needed for the conversion bu
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">OTHER – MOTION</th>
@@ -341,10 +341,10 @@ Remember that the BOM covers all the required parts needed for the conversion bu
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">OTHER</th>
@@ -391,10 +391,10 @@ Remember that the BOM covers all the required parts needed for the conversion bu
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">FANS</th>
@@ -427,10 +427,10 @@ Remember that the BOM covers all the required parts needed for the conversion bu
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">OTHER</th>
@@ -465,10 +465,10 @@ Remember that the BOM covers all the required parts needed for the conversion bu
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">PANELS</th>
@@ -490,10 +490,10 @@ Remember that the BOM covers all the required parts needed for the conversion bu
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">OTHER</th>
@@ -526,10 +526,10 @@ Remember that the BOM covers all the required parts needed for the conversion bu
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">HARDWARE</th>
