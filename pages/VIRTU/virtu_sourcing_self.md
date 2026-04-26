@@ -43,7 +43,7 @@ The links provided in the Bill of Materials (BOM) point to products that have be
   <tr>
     <th>Size</th>
     <th>Type/specifications</th>
-    <th>Qty.</th>
+    <th>Quantity</th>
     <th>Link</th>
   </tr>
   <tr>
@@ -140,10 +140,10 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">WASHERS, NUTS, T‑NUTS, HEAT SET INSERTS</th>
@@ -214,10 +214,10 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">BEARINGS AND RAILS</th>
@@ -250,10 +250,10 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">OTHER – MOTION SYSTEM</th>
@@ -305,10 +305,10 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">FRAME EXTRUSIONS</th>
@@ -377,10 +377,10 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">OTHER</th>
@@ -422,10 +422,10 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">FANS</th>
@@ -458,10 +458,10 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">TOOLHEAD</th>
@@ -506,10 +506,10 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">OTHER</th>
@@ -586,10 +586,10 @@ The links provided in the Bill of Materials (BOM) point to products that have be
 
 <table class="bom_table">
   <colgroup>
-    <col style="width:120px;">
-    <col style="width:320px;">
-    <col style="width:80px;">
-    <col style="width:140px;">
+    <col style="width:125px;">
+    <col style="width:350px;">
+    <col style="width:105px;">
+    <col style="width:150px;">
   </colgroup>
   <tr>
     <th colspan="4">PANELS</th>
