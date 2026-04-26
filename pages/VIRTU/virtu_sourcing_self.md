@@ -795,25 +795,25 @@ The BOM covers all the required parts for the default build. Required parts for 
   <tr>
     <td><strong>M3</strong> x 20</td>
     <td><strong>socket</strong> head <code>ISO 4762</code></td>
-    <td>8</td>
+    <td>8 (4WD)</td>
     <td><a href="https://s.click.aliexpress.com/e/_oEqVeJK">NINDEJIN</a></td>
   </tr>
   <tr>
     <td><strong>M3</strong></td>
     <td><strong>heat set threaded insert</strong> <code>M3 x L 4 x OD 4,5 mm</code></td>
-    <td>8</td>
+    <td>8 (4WD)</td>
     <td><a href="https://s.click.aliexpress.com/e/_oB9tEk4">EDGAR GARY st.</a></td>
   </tr>
   <tr>
     <td><strong>Heatsink</strong></td>
     <td>40x40x10 mm heatsink</td>
-    <td>2</td>
+    <td>2 (4WD)</td>
     <td><a href="https://s.click.aliexpress.com/e/_c37xq8b9">AliExpress</a></td>
   </tr>
   <tr>
     <td><strong>4020</strong> fan</td>
     <td><strong>axial</strong> fan <code>24V, dual ball bearing</code></td>
-    <td>2</td>
+    <td>2 (4WD)</td>
     <td><a href="https://s.click.aliexpress.com/e/_c3yZp3QP">GDStime</a></td>
   </tr>
   <tr>
@@ -843,13 +843,13 @@ The BOM covers all the required parts for the default build. Required parts for 
   <tr>
     <td><strong>M5</strong></td>
     <td><strong>washer</strong> <code>ISO 7089</code></td>
-    <td>1 (per motor)</td>
+    <td>1 per motor</td>
     <td><a href="https://s.click.aliexpress.com/e/_olHMc2g">NINDEJIN</a></td>
   </tr>
   <tr>
     <td><strong>F695</strong>‑2RS</td>
     <td>flanged ball bearing <code>ABEC ‑ 7</code></td>
-    <td>1 (per motor)</td>
+    <td>1 per motor</td>
     <td><a href="https://s.click.aliexpress.com/e/_c3kOfRCT">FUSHI</a></td>
   </tr>
 </table>
