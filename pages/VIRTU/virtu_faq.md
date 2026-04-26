@@ -1,6 +1,7 @@
 ---
 title: FAQ
 layout: default
+has_toc: false
 parent: VIRTU E3
 #has_children: false
 nav_order: 60
@@ -9,10 +10,8 @@ permalink: /virtu/faq
 ---
 
 {: .warning }
-**WORK IN PROGRESS**
+**THE SITE IS UNDER CONSTRUCTION**
 {: .text-center }
 
 # FREQUENTLY ASKED QUESTIONS
 {: .text-center }
-
-Lorem ipsum
