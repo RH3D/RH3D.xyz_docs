@@ -12,20 +12,10 @@ permalink: /virtu/gallery
 **WORK IN PROGRESS**
 {: .text-center }
 
-# WALLPAPERS
-{: .text-center }
+![](../../pages/VIRTU/img/gallery/VIRTU-E3_01_1440p_WM.JPG)
 
-![](../../pages/VIRTU/img/gallery/VIRTU-01.jpg)
+![](../../pages/VIRTU/img/gallery/VIRTU-E3_02_1440p_WM.JPG)
 
-![](../../pages/VIRTU/img/gallery/VIRTU-02.jpg)
+![](../../pages/VIRTU/img/gallery/V-ION_01_1440p_WM.JPG)
 
-![](../../pages/VIRTU/img/gallery/VIRTU-03.jpg)
-
-# PHOTOS
-{: .text-center }
-
-![](../../pages/VIRTU/img/gallery/VIRTU-04.jpg)
-
-![](../../pages/VIRTU/img/gallery/VIRTU-05.jpg)
-
-![](../../pages/VIRTU/img/gallery/VIRTU-06.jpg)
+![](../../pages/VIRTU/img/gallery/V-ION_02_1440p_WM.JPG)
