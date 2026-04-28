@@ -21,6 +21,14 @@ The second-generation hero, built to revive all the unused Enders. Purity, speed
 [![VirtuE3](../assets/images/VIRTU_E3.png)](https://rh3d.xyz/virtu)
 {: .text-center }
 
+# <span style="font-weight:800; font-size: 125%; font-style:italic;">V-ION</span>
+{: .mt-9 }
+
+Ionize for speed: a 260g, CFD-optimized toolhead built for 40k+ accel and extreme high-speed performance.
+
+[![V-ION](../assets/images/V-ION.png)](https://rh3d.xyz/v-ion)
+{: .text-center }
+
 ---
 # WELCOME!
 {: .text-center }
