@@ -70,7 +70,7 @@ The soul of Virtu is still about rescue and reuse. Many of us started with an En
 - **Active Motor Cooling** - built-in cooling and thermistor support to keep XY steppers cool.
 - **In Progress:** Enclosure and CNC Aluminum parts for the ultimate build.
 
-#### OFFICIAL MODS
+#### OFFICIAL MODS (STILL IN PROGRESS)
 - Klicky Probe
 - BDsensor
 - MGN12H rails on all axes
