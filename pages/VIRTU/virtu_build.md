@@ -9,15 +9,8 @@ description: "Virtu E3 offers a guided CoreXY upgrade for your Ender 3. Build fa
 permalink: /virtu/build
 ---
 
-{: .warning }
-**THE SITE IS UNDER CONSTRUCTION**
-{: .text-center }
-
-![](../../assets/images/virtu cad.png)
-
 # <span style="font-weight:800; font-style:italic;">VIRTU<sup style="font-size: 58%; font-weight:700;"> E3</sup></span>
 {: .text-center }
-<!--
 #### BUILDING THE PRINTER
 {: .text-center }
 
@@ -38,4 +31,3 @@ continue to:
 {: .text-right }
 
 [SOURCING PARTS]: https://rh3d.xyz/virtu/build/sourcing_parts
--->
