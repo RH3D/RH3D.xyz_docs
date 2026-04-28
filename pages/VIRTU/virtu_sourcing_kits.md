@@ -12,13 +12,9 @@ permalink: /virtu/build/sourcing_parts/kits
 
 {% include popup.html %}
 
-{: .warning }
-**THIS SITE IS UNDER CONSTRUCTION**
-{: .text-center }
-
 # KITS
 {: .no_toc .text-center }
-<!--
+
 {: .note }
 **THERE ARE CURRENTLY NO KITS AVAILABLE FOR VIRTU E3.**
 {: .text-center }
@@ -36,4 +32,3 @@ continue to:
 {: .text-right }
 
 [PRINTING PARTS]: https://rh3d.xyz/virtu/build/printing_parts
--->
