@@ -7,10 +7,10 @@ nav_order: 50
 description: "Ionize your printer for speed - that is V-ION by RH3D."
 permalink: /v-ion
 ---
+![](../pages/VIRTU/img/gallery/V-ION_01_1440p_WM.JPG)
+
 # <span style="font-weight:800; font-size: 125%; font-style:italic;">V-ION</span>
 {: .text-center }
-
-![](../pages/VIRTU/img/gallery/V-ION_01_1440p_WM.JPG)
 
 {: .warning }
 **THE SITE IS UNDER CONSTRUCTION**
