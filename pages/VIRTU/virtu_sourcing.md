@@ -10,13 +10,9 @@ description: "Source parts for your Virtu CoreXY build with ease. Choose curated
 permalink: /virtu/build/sourcing_parts
 ---
 
-{: .warning }
-**THE SITE IS UNDER CONSTRUCTION**
-{: .text-center }
-
 # SOURCING PARTS
 {: .text-center }
-<!--
+
 Getting your hardware ready is the first step. Whether you buy a kit or source individual parts, both paths assume you are reusing components from your Ender 3.
 
 Because Virtu is a performance machine, the quality of your parts matters. You have two ways to get what you need:
@@ -33,4 +29,3 @@ If you prefer to hand-pick your components or already have some spare parts in y
 
 [KITS]: https://rh3d.xyz/virtu/build/sourcing_parts/kits
 [BILL OF MATERIAL]: https://rh3d.xyz/virtu/build/sourcing_parts/self_sourcing
--->
