@@ -10,13 +10,9 @@ description: "Download and organize STL files for Virtu CoreXY builds. Learn par
 permalink: /virtu/build/files
 ---
 
-{: .warning }
-**THE SITE IS UNDER CONSTRUCTION**
-{: .text-center }
-
 # FILES
 {: .text-center }
-<!--
+
 To download STL files, go to the printables model page. Files are organised into folder structure based on the part location or purpose.
 This is the only official source of STL files and is always kept up to date.
 
@@ -70,4 +66,3 @@ continue to:
 [PRINTABLES]: https://www.printables.com/model/1476283
 [BUILD GUIDE]: https://rh3d.xyz/virtu/build/build_guide
 [Printables remixes]: https://www.printables.com/model/1476283/remixes
--->
