@@ -4,7 +4,7 @@ layout: default
 has_toc: false
 has_children: true
 nav_order: 50
-description: "Ionize your printer for speed - that is V-ION by RH3D."
+description: "Ionize your printer for speed with V-ION by RH3D. An ultra-lightweight (260g), Voron-compatible 3D printer toolhead optimized with CFD for extreme performance."
 permalink: /v-ion
 ---
 ![](../pages/VIRTU/img/gallery/V-ION_01_1440p_WM.JPG)
