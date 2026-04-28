@@ -10,8 +10,6 @@ permalink: /v-ion
 # <span style="font-weight:800; font-size: 125%; font-style:italic;">V-ION</span>
 {: .text-center }
 
-#### TOOLHEAD
-
 ![](../pages/VIRTU/img/gallery/V-ION_01_1440p_WM.JPG)
 
 {: .warning }
@@ -19,6 +17,7 @@ permalink: /v-ion
 {: .text-center }
 
 **Originally developed as the core toolhead for the Virtu E3, the V-ION was designed with a single goal: to be a no-compromise, high-performance platform for extreme speeds.**
+{: .text-center }
 
 ## QUICK SPECS
 
@@ -28,6 +27,8 @@ permalink: /v-ion
  - **Aero-Tuned:** CFD-optimized cooling ducts for high speed printing.
  - **Universal Mount:** Voron-compatible (MGN12H) for easy installation on various printers.
  - **Performance Focused:** Native support for UHF hotends and high-speed eddy-current probes.
+
+---
 
 The V-ION is more than just a part of the Virtu project. Because it uses a Voron-compatible mounting pattern, I decided to make it available as a standalone project. Whether you are building a Virtu or looking to upgrade a Voron or another CoreXY machine, the V-ION offers a level of optimization that is hard to find in "universal" toolheads. It is built for those who care about the fine details of fluid dynamics, mass distribution, and rigid extrusion.
 
