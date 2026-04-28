@@ -28,6 +28,11 @@ permalink: /v-ion
  - **Universal Mount:** Voron-compatible (MGN12H) for easy installation on various printers.
  - **Performance Focused:** Native support for UHF hotends and high-speed eddy-current probes.
 
+More details, including additional webpage content and a full structure for the V-ION project, will be added here later. For now, you can access the latest project files at the link below and find the design overview further down this page.
+
+[PRINTABLES]{: .btn .fs-7 .fw-300 .mt-6 .mb-8 .text-yellow-300 }
+{: .text-center }
+
 ---
 
 The V-ION is more than just a part of the Virtu project. Because it uses a Voron-compatible mounting pattern, I decided to make it available as a standalone project. Whether you are building a Virtu or looking to upgrade a Voron or another CoreXY machine, the V-ION offers a level of optimization that is hard to find in "universal" toolheads. It is built for those who care about the fine details of fluid dynamics, mass distribution, and rigid extrusion.
@@ -58,3 +63,5 @@ To achieve this level of optimization, the V-ION focuses on specific, high-perfo
  - **PROBES:** Cartographer3D od Beacon Scanner
  - **PART COOLING:** 5015 or CPAP
  - **THE ROADMAP:** While the focus is on top-tier performance, I am currently working on adapting more budget-friendly options like the BDsensor and PCBKlicky without compromising the core design.
+
+[PRINTABLES]: https://www.printables.com/model/1692067
