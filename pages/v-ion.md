@@ -28,6 +28,7 @@ permalink: /v-ion
  - **Universal Mount:** Voron-compatible (MGN12H) for easy installation on various printers.
  - **Performance Focused:** Native support for UHF hotends and high-speed eddy-current probes.
 
+{: .warning }
 More details, including additional webpage content and a full structure for the V-ION project, will be added here later. For now, you can access the latest project files at the link below and find the design overview further down this page.
 
 [PRINTABLES]{: .btn .fs-7 .fw-300 .mt-6 .mb-8 .text-yellow-300 }
