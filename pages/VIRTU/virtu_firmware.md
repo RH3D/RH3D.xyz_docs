@@ -10,13 +10,9 @@ description: "Set up Klipper firmware for your Virtu CoreXY build. Get configs, 
 permalink: /virtu/build/firmware
 ---
 
-{: .warning }
-**THE SITE IS UNDER CONSTRUCTION**
-{: .text-center }
-
 # FIRMWARE
 {: .text-center }
- <!--
+
 {: .warning }
 **Files Coming Soon:** These files are in the final stages of testing and will be uploaded here shortly. If you are building your Virtu right now, keep an eye on the Discord announcement channel for the release of the initial config pack, files will be linked here as well.
 
@@ -29,4 +25,3 @@ continue to:
 [Klipper FW]: https://www.klipper3d.org/
 [Marlin FW]: https://marlinfw.org/
 [FINAL SETUP]: https://rh3d.xyz/virtu/final_setup
--->
