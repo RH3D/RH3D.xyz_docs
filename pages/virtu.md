@@ -9,27 +9,9 @@ permalink: /virtu
 ---
 ![](../assets/images/VIRTU_E3_big.JPG)
 
-#### CURRENTLY IN DEVELOPMENT AND TESTING
-{: .text-center }
-
----
-
-*Thank you to everyone who helps bringing such projects into reality, especially all my Patreon members and supporters, but also companies like Fabreeko, BigTreeTech, LDO motors, FilamentPM.*
-
-*Thank you all, who are interested into my projects!*
-
-If you also want to help supporting the development, you can do so through any of the [DONATE](https://rh3d.xyz/donate) options. Any kind of support is greately appreciated.
-{: .text-center }
-
----
-
-{: .warning }
-**THE SITE IS UNDER CONSTRUCTION**
-{: .text-center }
-
 # <span style="font-weight:800; font-size: 125%; font-style:italic;">VIRTU<sup style="font-weight:700; font-size: 58%;"> E3</sup></span>
 {: .text-center }
-<!--
+
 **Take your old, faithful Ender 3 and transform it into a high-performance beast. Virtu E3 is the next evolution in DIY upcycling—a ground-up redesign focused on excellence, precision, and raw speed.**
 {: .text-center .mb-6 }
 
@@ -77,4 +59,3 @@ The soul of Virtu is still about rescue and reuse. Many of us started with an En
 
 ---
 A Note on the Build: Virtu E3 is about more than just assembly—it’s a project. To achieve this level of rigidity, you will need to drill new holes into your profiles for the blind joints. It’s an extra step that pays off with a cleaner, faster, and more precise machine than any other conversion.
--->
