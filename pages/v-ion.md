@@ -15,7 +15,7 @@ permalink: /v-ion
 {: .warning }
 **THE SITE IS UNDER CONSTRUCTION**
 {: .text-center }
-
+<!--
 **Originally developed as the core toolhead for the Virtu E3, the V-ION was designed with a single goal: to be a no-compromise, high-performance platform for extreme speeds.**
 {: .text-center }
 
@@ -66,3 +66,4 @@ To achieve this level of optimization, the V-ION focuses on specific, high-perfo
  - **THE ROADMAP:** While the focus is on top-tier performance, I am currently working on adapting more budget-friendly options like the BDsensor and PCBKlicky without compromising the core design.
 
 [PRINTABLES]: https://www.printables.com/model/1692067
+-->
