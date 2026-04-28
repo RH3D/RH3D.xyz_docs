@@ -10,13 +10,9 @@ description: "Prepare to print Virtu parts with material tips, slicing settings,
 permalink: /virtu/build/printing_parts
 ---
 
-{: .warning }
-**THE SITE IS UNDER CONSTRUCTION**
-{: .text-center }
-
 # PRINTING PARTS
 {: .text-center }
-<!--
+
 Before we dive into downloading all the files and starting to print, it is important to be as prepared as possible. Nobody enjoys reprinting parts after the printer is already assembled and running. You'll need to choose the right material, ensure your printer is properly calibrated, and have the correct setup for printing. This all takes some time and effort, but it will save you plenty during the build and when using the printer. Try not to cut corners here and follow read the following.
 
 ---
@@ -88,4 +84,3 @@ continue to:
 {: .text-right }
 
 [FILES]: https://rh3d.xyz/virtu/build/files
--->
