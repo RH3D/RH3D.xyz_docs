@@ -57,7 +57,7 @@ To make the V-ION accessible to more makers, it uses the standard Voron mounting
 
 To achieve this level of optimization, the V-ION focuses on specific, high-performance hardware. Trying to support every product on the market would mean cutting corners in the design—something I wasn't willing to do.
  - **HOTENDS:** Native support for Phaetus Rapido UHF, Goliath AIR or Trianglelab CHC XL.
- - **PROBES:** Cartographer3D od Beacon Scanner
+ - **PROBES:** Cartographer3D or Beacon Scanner
  - **PART COOLING:** 5015 or CPAP
  - **THE ROADMAP:** While the focus is on top-tier performance, I am currently working on adapting more budget-friendly options like the BDsensor and PCBKlicky without compromising the core design.
 
