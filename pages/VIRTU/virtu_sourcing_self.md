@@ -686,6 +686,8 @@ The BOM covers all the required parts for the default build. Required parts for 
   </tr>
 </table>
 
+---
+
 # UPGRADES
 
 #### OPTIONAL
