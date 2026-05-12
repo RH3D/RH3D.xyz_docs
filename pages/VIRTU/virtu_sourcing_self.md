@@ -526,7 +526,7 @@ The BOM covers all the required parts for the default build. Required parts for 
   <tr>
     <td>CABLE CHAIN</td>
     <td><strong>10 × 11 mm R28</strong> cable chain</td>
-    <td>10</td>
+    <td>10 links</td>
     <td><a href="https://s.click.aliexpress.com/e/_c4NmVlwR">VEEKAFT</a></td>
   </tr>
   <tr>
