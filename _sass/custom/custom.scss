@@ -247,9 +247,9 @@
 
 /* Custom Primary Button - Guaranteed Green */
 .rh-btn-primary {
-    background-color: #3c6926 !important;
-    color: $body-heading-color !important;
-    border: 1px solid #4a822f !important;
+    background-color: $base-button-color;
+    color: $body-heading-color;
+    /*border: 1px solid #4a822f;*/
     padding: 10px 20px;
     font-size: 0.9rem;
     font-weight: bold;
@@ -259,14 +259,14 @@
 }
 
 .rh-btn-primary:hover:not(:disabled) { 
-    background-color: #4a822f !important;
+    background-color: #3a6525;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .rh-btn-primary:disabled { 
-    background-color: #27401a !important; 
-    color: #888 !important;
-    border-color: #27401a !important;
+    background-color: #315720; 
+    color: #888;
+    /*border-color: #27401a;*/
     cursor: not-allowed; 
 }
 
