@@ -4,11 +4,11 @@
     "description": "Select your 3D printer model to automatically load its physical dimensions, kinematics geometry, and default features."
   },
   "motherboard": {
-    "title": "Controller board",
+    "title": "Main controller board",
     "description": "Choose the primary electronics control board installed in your printer electronic bay."
   },
   "4wd": {
-    "title": "XY AXIS - 4x motors",
+    "title": "XY - AXIS: 4x motors",
     "description": "Enable 4WD (4-motor CoreXY) setup for extreme acceleration, increased torque, and balanced belt tension."
   },
   "part_cooling": {
@@ -32,7 +32,7 @@
     "description": "Enable real-time thermal monitoring via thermistors attached directly to the front stepper motors."
   },
   "z_rails": {
-    "title": "Z-AXIS linear rails",
+    "title": "Z - AXIS: linear rails",
     "description": "Specify the exact type of MGN linear rails used on your Z-axis assembly carriage (e.g., MGN12C or MGN12H)."
   },
   "bed_probe": {
@@ -44,19 +44,19 @@
     "description": "Enable resonance testing and input shaping using the onboard or toolhead-connected ADXL345 accelerometer."
   },
   "z_tilt": {
-    "title": "Z-TILT gantry",
+    "title": "Z - TILT gantry",
     "description": "Enable automatic Z-axis gantry leveling utilizing independent Z stepper motors and calibration points."
   },
   "default_current_xy": {
-    "title": "XY - RMS current",
+    "title": "XY - current (RMS)",
     "description": "Provide the manufacturer specified RMS current in Amperes (A) for the X and Y axis stepper motors."
   },
   "default_current_z": {
-    "title": "Z - RMS current",
+    "title": "Z - current (RMS)",
     "description": "Provide the manufacturer specified RMS current in Amperes (A) for the Z axis stepper motors."
   },
   "default_current_e": {
-    "title": "EXTRUDER - RMS current",
+    "title": "EXTRUDER - current (RMS)",
     "description": "Provide the manufacturer specified RMS current in Amperes (A) for the extruder stepper motor."
   },
   "default_board": {
@@ -64,15 +64,15 @@
     "description": "Choose the primary controller board configured for your printer."
   },
   "default_driver_xy": {
-    "title": "XY - DRIVERS",
+    "title": "XY - drivers",
     "description": "Choose the TMC stepper driver used for the X and Y axes movement."
   },
   "default_driver_z": {
-    "title": "Z - DRIVERS",
+    "title": "Z - drivers",
     "description": "Choose the TMC stepper driver used for the Z axis movement."
   },
   "default_driver_e": {
-    "title": "E - DRIVER",
+    "title": "EXTRUDER - driver",
     "description": "Choose the TMC stepper driver used for the extruder motor."
   }
 }
