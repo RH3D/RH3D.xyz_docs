@@ -34,7 +34,7 @@ THIS TOOL IS A HEAVY WORK IN PROGRESS AND IS NOT MEANT TO BE USED BY ANYONE YET!
 </div>
 
 <div id="action-generate-container" class="action-bar">
-    <button type="button" id="btn-generate" class="btn-primary" disabled>Generate Configuration</button>
+    <button type="button" id="btn-generate" class="btn-primary" disabled>GENERATE KLIPPER .CFG FILES</button>
 </div>
 
 <div id="action-results-container" class="action-bar" style="display: none;">
