@@ -108,7 +108,7 @@
     border: 4px solid #525155;
     border-radius: 8px;
     box-shadow: 4px 4px 15px rgba(0,0,0,0.5);
-    overflow: hidden; /* Keeps the header background inside the rounded corners */
+    /*overflow: hidden; /* Keeps the header background inside the rounded corners */
 }
 
 /* Centralized Headers with solid background */
@@ -119,7 +119,8 @@
     font-size: 1.15rem;
     padding: 12px 15px;
     text-align: center;
-    /* Removed border-bottom */
+    border-top-left-radius: 4px; 
+    border-top-right-radius: 4px;
 }
 
 /* Content padding */
@@ -194,6 +195,7 @@
 
 .info-icon-wrapper:hover {
     color: $body-heading-color;
+    z-index: 9999; /* Forces the tooltip to be above all other sections */
 }
 
 /* Tooltip Bubble */
