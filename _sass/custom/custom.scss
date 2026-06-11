@@ -95,37 +95,41 @@
 #rh3d-configurator {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px; /* Trochu víc místa, ať tlusté rámečky dýchají */
     margin-top: 20px;
     font-family: inherit;
+    color: #e2e2e2; /* Světlý text pro tmavý režim */
 }
 
-.config-section {
-    background: rgba(0, 0, 0, 0.03); /* Slight contrast from JTD background */
-    border: 1px solid #e1e4e8;
+/* Obaly sekcí používají stejný styl jako .bom_table */
+.config-section, .action-bar {
+    background: rgba(0, 0, 0, 0.15); /* Jemně ztmavené pozadí */
+    border: 4px solid rgba(255,255,255,0.2);
     border-radius: 8px;
-    padding: 20px;
+    padding: 25px;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.5);
 }
 
 .config-section h2 {
     margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 1.25rem;
-    border-bottom: 2px solid #eaecef;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding-bottom: 10px;
+    color: #f7d12e; /* Tvoje žlutá barva z menu webu */
 }
 
 /* --- GRID SYSTEMS --- */
 .grid-2-col {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .grid-3-col {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 /* --- FORM ELEMENTS --- */
@@ -136,47 +140,65 @@
 
 .form-group label {
     font-weight: 600;
-    margin-bottom: 6px;
-    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
     display: flex;
     align-items: center;
     gap: 8px;
+    color: #ffffff;
 }
 
 .info-icon {
     cursor: pointer;
     font-size: 0.85rem;
-    color: #0366d6;
+    color: #6eb6ff; /* Světlejší modrá pro lepší čitelnost na tmavém */
 }
 
 .field-description {
-    font-size: 0.8rem;
-    color: #586069;
-    margin: 4px 0 8px 0;
-    display: none; /* Hidden by default */
+    font-size: 0.85rem;
+    color: #a0a5aa;
+    margin: 4px 0 10px 0;
+    display: none;
 }
 
-#rh3d-configurator select, #rh3d-configurator input {
-    padding: 8px 12px;
-    border: 1px solid #d1d5da;
+/* Tmavý vzhled pro políčka a roletky */
+#rh3d-configurator select, 
+#rh3d-configurator input {
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 6px;
     font-size: 0.95rem;
-    background-color: #fafbfc;
-    transition: border-color 0.2s;
+    background-color: rgba(0, 0, 0, 0.3); /* Průhledné černé pozadí */
+    color: #ffffff; /* Bílý text uvnitř políček */
+    transition: border-color 0.2s, background-color 0.2s;
 }
 
-#rh3d-configurator select:focus, #rh3d-configurator input:focus {
-    border-color: #0366d6;
+/* Roletka ve Windows/Linuxu potřebuje plné pozadí, jinak text splývá */
+#rh3d-configurator select option {
+    background-color: #1e1e1e; 
+    color: #ffffff;
+}
+
+/* Interakce - při kliknutí zežloutne okraj */
+#rh3d-configurator select:focus, 
+#rh3d-configurator input:focus {
+    border-color: #f7d12e;
+    background-color: rgba(0, 0, 0, 0.5);
     outline: none;
 }
 
 /* --- ACTION BARS & BUTTONS --- */
 .action-bar {
-    padding: 20px;
-    border-radius: 8px;
     text-align: center;
-    background: #f6f8fa;
-    border: 1px solid #e1e4e8;
+}
+
+.action-bar h3 {
+    color: #f7d12e;
+    margin-top: 0;
+}
+
+.result-info {
+    color: #e2e2e2;
 }
 
 .result-buttons {
@@ -187,31 +209,46 @@
     margin-top: 15px;
 }
 
+/* Hlavní tlačítko (Generate / Download) */
 .btn-primary {
     background-color: #2ea44f;
     color: white;
-    border: none;
+    border: 1px solid #2ea44f;
     padding: 12px 24px;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, border-color 0.2s;
 }
 
-.btn-primary:hover:not(:disabled) { background-color: #2c974b; }
-.btn-primary:disabled { background-color: #94d3a2; cursor: not-allowed; }
+.btn-primary:hover:not(:disabled) { 
+    background-color: #2c974b; 
+    border-color: #2c974b;
+}
 
+.btn-primary:disabled { 
+    background-color: #1a4f28; 
+    border-color: #1a4f28;
+    color: #888;
+    cursor: not-allowed; 
+}
+
+/* Tlačítka pro náhled (View) */
 .btn-secondary {
-    background-color: #fafbfc;
-    color: #24292e;
-    border: 1px solid #d1d5da;
-    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 16px;
     font-weight: 600;
     border-radius: 6px;
     cursor: pointer;
+    transition: background 0.2s;
 }
-.btn-secondary:hover { background-color: #f3f4f6; }
+
+.btn-secondary:hover { 
+    background-color: rgba(255, 255, 255, 0.2); 
+}
 
 /* --- POP-UP MODAL --- */
 .modal-overlay {
