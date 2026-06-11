@@ -8,11 +8,11 @@ let generatedFilesData = {}; // Stores the final text of compiled files
 let isGenerated = false;     // Tracks if files are currently generated
 
 const configFiles = {
-    printers: 'data/printers.json',
-    boards: 'data/boards.json',
-    drivers: 'data/drivers.json',
-    others: 'data/others.json',
-    labels: 'data/labels.json'
+    printers: '/data/printers.json',
+    boards: '/data/boards.json',
+    drivers: '/data/drivers.json',
+    others: '/data/others.json',
+    labels: '/data/labels.json'
 };
 
 const templatesToCompile = ['printer.cfg', 'user_variables.cfg', 'macro.cfg'];
@@ -358,7 +358,7 @@ function generateFirmware() {
     userConfig['DRIVER_E'] = userConfig['default_driver_e'];
 
     const promises = templatesToCompile.map(fName => 
-        fetch(`config/${fName}`)
+        fetch(`/config/${fName}`)
             .then(res => res.ok ? res.text() : Promise.reject(`Missing: ${fName}`))
             .then(txt => { generatedFilesData[fName] = compileTemplate(txt, userConfig); })
     );
