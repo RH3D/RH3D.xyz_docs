@@ -14,7 +14,7 @@ permalink: /cli-kli
 {: .text-center }
 
 {: .warning }
-HELLO WORLD
+THIS TOOL IS A HEAVY WORK IN PROGRESS AND IS NOT MEANT TO BE USED BY ANYONE YET! CLICK AT YOUR OWN RISK!
 
 <div id="rh3d-configurator">
     <div class="config-section">
