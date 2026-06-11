@@ -56,4 +56,4 @@ THIS TOOL IS A HEAVY WORK IN PROGRESS AND IS NOT MEANT TO BE USED BY ANYONE YET!
         <pre><code id="modal-code-body" class="language-klipper"></code></pre>
     </div>
 </div>
-<script src="/app.js" defer></script>
+<script src="app.js" defer></script>
