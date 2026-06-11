@@ -4,15 +4,15 @@
 
 const globalData = {};
 let userConfig = {};
-let generatedFilesData = {}; // Stores the final text of compiled files
-let isGenerated = false;     // Tracks if files are currently generated
+let generatedFilesData = {};
+let isGenerated = false;
 
 const configFiles = {
-    printers: '/pages/KLIPPER/data/printers.json',
-    boards: '/pages/KLIPPER/data/boards.json',
-    drivers: '/pages/KLIPPER/data/drivers.json',
-    others: '/pages/KLIPPER/data/others.json',
-    labels: '/pages/KLIPPER/data/labels.json'
+    printers: '/data/printers.json',
+    boards: '/data/boards.json',
+    drivers: '/data/drivers.json',
+    others: '/data/others.json',
+    labels: '/data/labels.json'
 };
 
 const templatesToCompile = ['printer.cfg', 'user_variables.cfg', 'macro.cfg'];
@@ -45,13 +45,12 @@ async function initializeApp() {
 // UI STATE MANAGEMENT
 // ============================================================================
 
-// Triggered whenever ANY input is changed after generation
 function handleInputChange() {
     if (isGenerated) {
         isGenerated = false;
         document.getElementById('action-results-container').style.display = 'none';
         document.getElementById('action-generate-container').style.display = 'block';
-        generatedFilesData = {}; // Clear old data
+        generatedFilesData = {};
     }
 }
 
@@ -73,27 +72,21 @@ function createFormGroup(key, inputElement) {
     label.setAttribute('for', inputElement.id);
     label.textContent = labelData.title;
 
+    // 11. Info icon now triggers a simple native alert
     if (labelData.description) {
         const infoIcon = document.createElement('span');
-        infoIcon.textContent = ' ℹ️';
+        infoIcon.innerHTML = '&#9432;'; // ⓘ Flat monochrome icon
         infoIcon.className = 'info-icon';
-        infoIcon.title = 'Click for more information';
-
-        const desc = document.createElement('p');
-        desc.className = 'field-description';
-        desc.textContent = labelData.description;
+        infoIcon.title = 'Click for details';
 
         infoIcon.addEventListener('click', () => {
-            desc.style.display = desc.style.display === 'none' ? 'block' : 'none';
+            alert(`${labelData.title}\n\n${labelData.description}`);
         });
 
         label.appendChild(infoIcon);
-        wrapper.appendChild(label);
-        wrapper.appendChild(desc);
-    } else {
-        wrapper.appendChild(label);
     }
 
+    wrapper.appendChild(label);
     wrapper.appendChild(inputElement);
     attachChangeListener(inputElement);
     return wrapper;
@@ -102,7 +95,6 @@ function createFormGroup(key, inputElement) {
 function renderMainSelections() {
     const container = document.getElementById('main-hardware-container');
     
-    // Printer
     const printerSelect = document.createElement('select');
     printerSelect.id = 'select-printer';
     printerSelect.innerHTML = `<option value="" disabled selected>-- Select Printer --</option>`;
@@ -110,7 +102,6 @@ function renderMainSelections() {
         printerSelect.innerHTML += `<option value="${k}">${globalData.printers[k].name}</option>`;
     });
 
-    // Board
     const boardSelect = document.createElement('select');
     boardSelect.id = 'select-board';
     boardSelect.disabled = true;
@@ -123,7 +114,6 @@ function renderMainSelections() {
         handleInputChange();
         const printer = globalData.printers[e.target.value];
         
-        // Update Board
         boardSelect.disabled = false;
         boardSelect.innerHTML = '';
         printer.compatible_boards.forEach(bId => {
@@ -131,7 +121,6 @@ function renderMainSelections() {
             boardSelect.innerHTML += `<option value="${bId}" ${isSelected}>${globalData.boards[bId].name}</option>`;
         });
 
-        // Render sections
         renderCategorizedFeatures(printer.features);
         
         document.getElementById('section-steppers').style.display = 'block';
@@ -156,7 +145,7 @@ function renderCategorizedFeatures(features) {
         const isNumber = typeof value === 'number';
         const isDriver = typeof value === 'string' && key.includes('driver');
 
-        if (!isArray && !isNumber && !isDriver) continue; // Skip static hidden features
+        if (!isArray && !isNumber && !isDriver) continue;
 
         let inputEl;
 
@@ -196,7 +185,6 @@ function renderCategorizedFeatures(features) {
 
         const formGroup = createFormGroup(key, inputEl);
 
-        // Categorize the element into the right grid layout
         if (key.includes('current')) {
             currentContainer.appendChild(formGroup);
         } else if (key.includes('driver')) {
@@ -236,12 +224,10 @@ function compileTemplate(template, config) {
     const flat = {};
     for (const [k, v] of Object.entries(config)) flat[k.toUpperCase()] = v;
 
-    // Phase 1: # IF
     result = result.replace(/^[ \t]*#[ \t]*IF[ \t]+(.*?)\r?\n([\s\S]*?)^[ \t]*#[ \t]*ENDIF[ \t]*\r?\n?/gm, 
         (m, cond, block) => evaluateCondition(cond, flat) ? block : ''
     );
 
-    // Phase 2: Math [[EXPR: ]]
     result = result.replace(/\[\[EXPR:(.*?)\]\]/g, (m, math) => {
         let expr = math.toUpperCase();
         for (const [k, v] of Object.entries(flat)) expr = expr.replace(new RegExp(`\\b${k}\\b`,'g'), v);
@@ -249,7 +235,6 @@ function compileTemplate(template, config) {
         catch (e) { return m; }
     });
 
-    // Phase 3: Variables [[VAR]]
     result = result.replace(/\[\[(.*?)\]\]/g, (m, varName) => {
         const key = varName.trim().toUpperCase();
         return flat[key] !== undefined ? flat[key] : m;
@@ -276,11 +261,8 @@ function triggerDownload(filename, text) {
 
 function syntaxHighlight(text) {
     let html = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    // Klipper sections [section]
     html = html.replace(/^(\[.*?\])/gm, '<span class="hl-section">$1</span>');
-    // Comments
     html = html.replace(/(#.*)$/gm, '<span class="hl-comment">$1</span>');
-    // Keys (anything before a colon that isn't a comment)
     html = html.replace(/^([a-zA-Z0-9_]+)\s*:/gm, '<span class="hl-key">$1</span>:');
     return html;
 }
@@ -291,9 +273,13 @@ function openModal(fileName, text) {
     document.getElementById('code-modal').style.display = 'flex';
 }
 
+function closeModal() {
+    document.getElementById('code-modal').style.display = 'none';
+}
+
 function buildResultUI() {
     const container = document.getElementById('result-buttons-container');
-    container.innerHTML = ''; // clear
+    container.innerHTML = '';
 
     Object.keys(generatedFilesData).forEach(fileName => {
         const text = generatedFilesData[fileName];
@@ -302,14 +288,15 @@ function buildResultUI() {
         wrapper.style.display = 'flex';
         wrapper.style.gap = '5px';
 
+        // 4. Monochrome buttons without colorful emojis
         const btnPreview = document.createElement('button');
         btnPreview.className = 'btn-secondary';
-        btnPreview.innerHTML = `👁️ View ${fileName}`;
+        btnPreview.innerHTML = `View ${fileName}`;
         btnPreview.onclick = () => openModal(fileName, text);
 
         const btnDownload = document.createElement('button');
         btnDownload.className = 'btn-primary';
-        btnDownload.innerHTML = `⬇️ Save ${fileName}`;
+        btnDownload.innerHTML = `Save ${fileName}`;
         btnDownload.onclick = () => triggerDownload(fileName, text);
 
         wrapper.appendChild(btnPreview);
@@ -349,7 +336,6 @@ function generateFirmware() {
         }
     }
 
-    // Unification aliases
     userConfig['CURRENT_XY'] = userConfig['default_current_xy'];
     userConfig['CURRENT_Z'] = userConfig['default_current_z'];
     userConfig['CURRENT_E'] = userConfig['default_current_e'];
@@ -358,7 +344,7 @@ function generateFirmware() {
     userConfig['DRIVER_E'] = userConfig['default_driver_e'];
 
     const promises = templatesToCompile.map(fName => 
-        fetch(`/pages/KLIPPER/config/${fName}`)
+        fetch(`/config/${fName}`)
             .then(res => res.ok ? res.text() : Promise.reject(`Missing: ${fName}`))
             .then(txt => { generatedFilesData[fName] = compileTemplate(txt, userConfig); })
     );
@@ -370,9 +356,15 @@ function generateFirmware() {
 
 // Attach Events
 document.getElementById('btn-generate').addEventListener('click', generateFirmware);
-document.getElementById('btn-modal-close').addEventListener('click', () => {
-    document.getElementById('code-modal').style.display = 'none';
+document.getElementById('btn-modal-close').addEventListener('click', closeModal);
+
+// 5. Zavření okna kliknutím mimo obsah (na tmavé pozadí)
+document.getElementById('code-modal').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('code-modal')) {
+        closeModal();
+    }
 });
+
 document.getElementById('btn-modal-copy').addEventListener('click', () => {
     const text = document.getElementById('modal-code-body').innerText;
     navigator.clipboard.writeText(text).then(() => {
