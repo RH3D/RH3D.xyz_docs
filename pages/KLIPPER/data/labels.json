@@ -48,15 +48,15 @@
     "description": "Enable automatic Z-axis gantry leveling utilizing independent Z stepper motors and calibration points."
   },
   "default_current_xy": {
-    "title": "XY motor current (RMS)",
+    "title": "XY - RMS current",
     "description": "Provide the manufacturer specified RMS current in Amperes (A) for the X and Y axis stepper motors."
   },
   "default_current_z": {
-    "title": "Z motor current (RMS)",
+    "title": "Z - RMS current",
     "description": "Provide the manufacturer specified RMS current in Amperes (A) for the Z axis stepper motors."
   },
   "default_current_e": {
-    "title": "EXTRUDER motor current (RMS)",
+    "title": "EXTRUDER - RMS current",
     "description": "Provide the manufacturer specified RMS current in Amperes (A) for the extruder stepper motor."
   },
   "default_board": {
@@ -64,15 +64,15 @@
     "description": "Choose the primary controller board configured for your printer."
   },
   "default_driver_xy": {
-    "title": "DRIVERS",
+    "title": "XY - DRIVERS",
     "description": "Choose the TMC stepper driver used for the X and Y axes movement."
   },
   "default_driver_z": {
-    "title": "DRIVERS",
+    "title": "Z - DRIVERS",
     "description": "Choose the TMC stepper driver used for the Z axis movement."
   },
   "default_driver_e": {
-    "title": "DRIVER",
+    "title": "E - DRIVER",
     "description": "Choose the TMC stepper driver used for the extruder motor."
   }
 }
