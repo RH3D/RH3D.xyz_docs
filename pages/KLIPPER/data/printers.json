@@ -49,12 +49,12 @@
 	"TILT_POINT3": "215, 10"
   },
   "features": {
-	"4wd": [true, false],
-	"part_cooling": ["cpap", "5015"],
+	"4wd": [false, true],
+	"part_cooling": ["5015", "cpap"],
 	"aux_cooling": false,
 	"bed_fan": false,
-	"motor_cooling": [true, false],
-	"motor_thermistors": [true, false],
+	"motor_cooling": [false, true],
+	"motor_thermistors": [false, true],
 	"z_rails": ["mgn12c", "mgn12h"],
 	"bed_probe": ["carto", "beacon", "klickypcb", "bdsensor"],
 	"adxl345": true,
