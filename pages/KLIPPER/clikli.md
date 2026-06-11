@@ -57,4 +57,4 @@ THIS TOOL IS A HEAVY WORK IN PROGRESS AND IS NOT MEANT TO BE USED BY ANYONE YET!
     </div>
 </div>
 
-<script src="app.js"></script>
+<script src="/app.js"></script>
