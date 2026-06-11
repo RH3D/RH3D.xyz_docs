@@ -18,7 +18,7 @@ THIS TOOL IS A HEAVY WORK IN PROGRESS AND IS NOT MEANT TO BE USED BY ANYONE YET!
 
 <div id="rh3d-configurator">
     <div class="config-section">
-        <h3>1. Main Hardware</h3>
+        <h3>MAIN HARDWARE</h3>
         <div class="section-content">
             <div class="grid-2-col" id="main-hardware-container">
                 </div>
@@ -26,7 +26,7 @@ THIS TOOL IS A HEAVY WORK IN PROGRESS AND IS NOT MEANT TO BE USED BY ANYONE YET!
     </div>
 
 <div class="config-section" id="section-steppers" style="display: none;">
-        <h3>2. Stepper Motors Configuration</h3>
+        <h3>STEPPER MOTORS CONFIGURATION</h3>
         <div class="section-content">
             <div class="grid-3-col" id="steppers-current-container"></div>
             <div class="grid-3-col" id="steppers-driver-container" style="margin-top: 15px;"></div>
@@ -34,7 +34,7 @@ THIS TOOL IS A HEAVY WORK IN PROGRESS AND IS NOT MEANT TO BE USED BY ANYONE YET!
     </div>
 
 <div class="config-section" id="section-features" style="display: none;">
-        <h3>3. Additional Features</h3>
+        <h3>ADDITIONAL FEATURES</h3>
         <div class="section-content">
             <div class="grid-3-col" id="dynamic-features-container"></div>
         </div>
