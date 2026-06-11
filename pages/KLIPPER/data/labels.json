@@ -1,6 +1,6 @@
 {
   "printer": {
-    "title": "3D PRINTER MODEL",
+    "title": "3D PRINTER",
     "description": "Select your 3D printer model to automatically load its physical dimensions, kinematics geometry, and default features."
   },
   "motherboard": {
@@ -8,15 +8,15 @@
     "description": "Choose the primary electronics control board installed in your printer electronic bay."
   },
   "4wd": {
-    "title": "FOUR MOTORS DRIVEN XY AXIS?",
+    "title": "FOUR MOTORS - XY AXIS",
     "description": "Enable 4WD (4-motor CoreXY) setup for extreme acceleration, increased torque, and balanced belt tension."
   },
   "part_cooling": {
-    "title": "PART COOLING FAN TYPE",
+    "title": "PART COOLING FAN",
     "description": "Select the cooling solution mounted on your toolhead. Choose between a high-power CPAP system or a traditional 5015 blower fan."
   },
   "aux_cooling": {
-    "title": "AUXILIARY COOLING FAN",
+    "title": "AUXILIARY COOLING",
     "description": "Enable or disable an auxiliary chamber cooling fan, typically used for high-speed printing of PLA/PETG materials."
   },
   "bed_fan": {
@@ -24,7 +24,7 @@
     "description": "Enable dedicated bed fans used to circulate air underneath the heated bed to normalize chamber temperatures."
   },
   "motor_cooling": {
-    "title": "ACTIVE STEPPER COOLING",
+    "title": "Active stepper cooling",
     "description": "Enable this option if your printer is equipped with dedicated cooling fans for the XY stepper motors to prevent overheating."
   },
   "motor_thermistors": {
