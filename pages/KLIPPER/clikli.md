@@ -7,7 +7,7 @@ nav_order: 50
 description: "Klipper config builder for your printer."
 permalink: /cli-kli
 ---
-# <span style="font-weight:800; font-size: 125%; font-style:italic;">CLI-KLI-CON</span>
+# <span style="font-weight:800; font-size: 125%; font-style:italic;">CLI-CON-KLI</span>
 {: .text-center }
 
 **Nothing to look for here**
