@@ -281,11 +281,14 @@ function buildResultUI() {
     Object.keys(generatedFilesData).forEach(fileName => {
         const text = generatedFilesData[fileName];
         
+        // This wrapper ensures the View and Save buttons for each file are stacked vertically
         const wrapper = document.createElement('div');
         wrapper.style.display = 'flex';
-        wrapper.style.gap = '5px';
+        wrapper.style.flexDirection = 'column'; // Vertical stacking!
+        wrapper.style.gap = '8px';
+        wrapper.style.width = '100%';
+        wrapper.style.maxWidth = '250px'; // Restricts button width so they don't stretch too far
 
-        // Using strictly distinct classes to prevent framework overrides
         const btnPreview = document.createElement('button');
         btnPreview.className = 'rh-btn-secondary';
         btnPreview.innerHTML = `View ${fileName}`;
