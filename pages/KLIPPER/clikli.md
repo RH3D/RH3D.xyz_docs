@@ -20,25 +20,25 @@ THIS TOOL IS A HEAVY WORK IN PROGRESS AND IS NOT MEANT TO BE USED BY ANYONE YET!
     <div class="config-section">
         <h2>1. Main Hardware</h2>
         <div class="grid-2-col" id="main-hardware-container">
-            </div>
+        </div>
     </div>
 
-    <div class="config-section" id="section-steppers" style="display: none;">
+<div class="config-section" id="section-steppers" style="display: none;">
         <h2>2. Stepper Motors Configuration</h2>
         <div class="grid-3-col" id="steppers-current-container"></div>
         <div class="grid-3-col" id="steppers-driver-container" style="margin-top: 15px;"></div>
-    </div>
+</div>
 
-    <div class="config-section" id="section-features" style="display: none;">
+<div class="config-section" id="section-features" style="display: none;">
         <h2>3. Additional Features</h2>
         <div class="grid-3-col" id="dynamic-features-container"></div>
-    </div>
+</div>
 
-    <div id="action-generate-container" class="action-bar">
+<div id="action-generate-container" class="action-bar">
         <button type="button" id="btn-generate" class="btn-primary" disabled>Generate Configuration</button>
-    </div>
+</div>
 
-    <div id="action-results-container" class="action-bar" style="display: none;">
+<div id="action-results-container" class="action-bar" style="display: none;">
         <h3>Configuration Ready!</h3>
         <p class="result-info">Review the files or download them directly to your PC.</p>
         <div id="result-buttons-container" class="result-buttons">
