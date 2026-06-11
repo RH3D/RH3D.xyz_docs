@@ -7,6 +7,7 @@ let userConfig = {};
 let generatedFilesData = {};
 let isGenerated = false;
 
+// STRICT ABSOLUTE PATHS
 const configFiles = {
     printers: '/pages/KLIPPER/data/printers.json',
     boards: '/pages/KLIPPER/data/boards.json',
@@ -72,17 +73,13 @@ function createFormGroup(key, inputElement) {
     label.setAttribute('for', inputElement.id);
     label.textContent = labelData.title;
 
-    // 11. Info icon now triggers a simple native alert
+    // Elegant Hover Tooltip with SVG Icon
     if (labelData.description) {
         const infoIcon = document.createElement('span');
-        infoIcon.innerHTML = '&#9432;'; // ⓘ Flat monochrome icon
-        infoIcon.className = 'info-icon';
-        infoIcon.title = 'Click for details';
-
-        infoIcon.addEventListener('click', () => {
-            alert(`${labelData.title}\n\n${labelData.description}`);
-        });
-
+        infoIcon.className = 'info-icon-wrapper';
+        infoIcon.dataset.tooltip = labelData.description;
+        // Clean SVG Information Circle
+        infoIcon.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`;
         label.appendChild(infoIcon);
     }
 
@@ -288,14 +285,14 @@ function buildResultUI() {
         wrapper.style.display = 'flex';
         wrapper.style.gap = '5px';
 
-        // 4. Monochrome buttons without colorful emojis
+        // Using strictly distinct classes to prevent framework overrides
         const btnPreview = document.createElement('button');
-        btnPreview.className = 'btn-secondary';
+        btnPreview.className = 'rh-btn-secondary';
         btnPreview.innerHTML = `View ${fileName}`;
         btnPreview.onclick = () => openModal(fileName, text);
 
         const btnDownload = document.createElement('button');
-        btnDownload.className = 'btn-primary';
+        btnDownload.className = 'rh-btn-primary';
         btnDownload.innerHTML = `Save ${fileName}`;
         btnDownload.onclick = () => triggerDownload(fileName, text);
 
@@ -343,6 +340,7 @@ function generateFirmware() {
     userConfig['DRIVER_Z'] = userConfig['default_driver_z'];
     userConfig['DRIVER_E'] = userConfig['default_driver_e'];
 
+    // STRICT ABSOLUTE PATHS FOR CONFIG FETCHING
     const promises = templatesToCompile.map(fName => 
         fetch(`/pages/KLIPPER/config/${fName}`)
             .then(res => res.ok ? res.text() : Promise.reject(`Missing: ${fName}`))
@@ -358,7 +356,7 @@ function generateFirmware() {
 document.getElementById('btn-generate').addEventListener('click', generateFirmware);
 document.getElementById('btn-modal-close').addEventListener('click', closeModal);
 
-// 5. Zavření okna kliknutím mimo obsah (na tmavé pozadí)
+// Close modal when clicking outside of it
 document.getElementById('code-modal').addEventListener('click', (e) => {
     if (e.target === document.getElementById('code-modal')) {
         closeModal();
