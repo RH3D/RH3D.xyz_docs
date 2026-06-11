@@ -56,7 +56,7 @@
     "description": "Provide the manufacturer specified RMS current in Amperes (A) for the Z axis stepper motors."
   },
   "default_current_e": {
-    "title": "EXTRUDER - current (RMS)",
+    "title": "EXTRUDER current (RMS)",
     "description": "Provide the manufacturer specified RMS current in Amperes (A) for the extruder stepper motor."
   },
   "default_board": {
@@ -72,7 +72,7 @@
     "description": "Choose the TMC stepper driver used for the Z axis movement."
   },
   "default_driver_e": {
-    "title": "EXTRUDER - driver",
+    "title": "EXTRUDER driver",
     "description": "Choose the TMC stepper driver used for the extruder motor."
   }
 }
