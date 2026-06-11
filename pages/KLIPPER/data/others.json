@@ -1,0 +1,12 @@
+{
+"z_rails": {
+"mgn12c": {
+  "name": "MGN12C",
+  "Z_TRAVEL_MODIFIER": 0
+},
+"mgn12h": {
+  "name": "MGN12H",
+  "Z_TRAVEL_MODIFIER": -10
+}
+}
+}

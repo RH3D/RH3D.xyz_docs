@@ -1,0 +1,78 @@
+{
+  "printer": {
+    "title": "3D PRINTER MODEL",
+    "description": "Select your 3D printer model to automatically load its physical dimensions, kinematics geometry, and default features."
+  },
+  "motherboard": {
+    "title": "MAIN CONTROLLER BOARD",
+    "description": "Choose the primary electronics control board installed in your printer electronic bay."
+  },
+  "4wd": {
+    "title": "FOUR MOTORS DRIVEN XY AXIS?",
+    "description": "Enable 4WD (4-motor CoreXY) setup for extreme acceleration, increased torque, and balanced belt tension."
+  },
+  "part_cooling": {
+    "title": "PART COOLING FAN TYPE",
+    "description": "Select the cooling solution mounted on your toolhead. Choose between a high-power CPAP system or a traditional 5015 blower fan."
+  },
+  "aux_cooling": {
+    "title": "AUXILIARY COOLING FAN",
+    "description": "Enable or disable an auxiliary chamber cooling fan, typically used for high-speed printing of PLA/PETG materials."
+  },
+  "bed_fan": {
+    "title": "BED CIRCULATION FAN",
+    "description": "Enable dedicated bed fans used to circulate air underneath the heated bed to normalize chamber temperatures."
+  },
+  "motor_cooling": {
+    "title": "ACTIVE STEPPER COOLING",
+    "description": "Enable this option if your printer is equipped with dedicated cooling fans for the XY stepper motors to prevent overheating."
+  },
+  "motor_thermistors": {
+    "title": "FRONT MOTOR TEMPERATURE SENSORS",
+    "description": "Enable real-time thermal monitoring via thermistors attached directly to the front stepper motors."
+  },
+  "z_rails": {
+    "title": "Z-AXIS LINEAR RAILS TYPE",
+    "description": "Specify the exact type of MGN linear rails used on your Z-axis assembly carriage (e.g., MGN12C or MGN12H)."
+  },
+  "bed_probe": {
+    "title": "BED PROBE",
+    "description": "Select the bed leveling sensor or surface probe installed on your toolhead. This injects the appropriate calibration macros."
+  },
+  "adxl345": {
+    "title": "ADXL345 ACCELEROMETER",
+    "description": "Enable resonance testing and input shaping using the onboard or toolhead-connected ADXL345 accelerometer."
+  },
+  "z_tilt": {
+    "title": "Z-TILT GANTRY ALIGNMENT",
+    "description": "Enable automatic Z-axis gantry leveling utilizing independent Z stepper motors and calibration points."
+  },
+  "default_current_xy": {
+    "title": "XY STEPPER CURRENT (RMS)",
+    "description": "Provide the manufacturer specified RMS current in Amperes (A) for the X and Y axis stepper motors."
+  },
+  "default_current_z": {
+    "title": "Z STEPPER CURRENT (RMS)",
+    "description": "Provide the manufacturer specified RMS current in Amperes (A) for the Z axis stepper motors."
+  },
+  "default_current_e": {
+    "title": "EXTRUDER STEPPER CURRENT (RMS)",
+    "description": "Provide the manufacturer specified RMS current in Amperes (A) for the extruder stepper motor."
+  },
+  "default_board": {
+    "title": "DEFAULT MOTHERBOARD MODEL",
+    "description": "Choose the primary controller board configured for your printer."
+  },
+  "default_driver_xy": {
+    "title": "XY STEPPER MOTOR DRIVER",
+    "description": "Choose the TMC stepper driver used for the X and Y axes movement."
+  },
+  "default_driver_z": {
+    "title": "Z STEPPER DRIVER",
+    "description": "Choose the TMC stepper driver used for the Z axis movement."
+  },
+  "default_driver_e": {
+    "title": "EXTRUDER MOTOR DRIVER",
+    "description": "Choose the TMC stepper driver used for the extruder motor."
+  }
+}

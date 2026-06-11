@@ -1,0 +1,44 @@
+{
+"tmc2130": {
+  "name": "TMC2130",
+  "type": "uart",
+  "max_rms_current": 1.2,
+  "default_stealthchop": 0,
+  "warning": "WARNING! With currents over 1.0 Amps, make sure to use proper cooling for your drivers!"
+},
+"tmc2208": {
+  "name": "TMC2208",
+  "type": "uart",
+  "max_rms_current": 1.2,
+  "default_stealthchop": 0,
+  "warning": "WARNING! With currents over 1.0 Amps, make sure to use proper cooling for your drivers!"
+},
+"tmc2209": {
+  "name": "TMC2209",
+  "type": "uart",
+  "max_rms_current": 1.2,
+  "default_stealthchop": 0,
+  "warning": "WARNING! With currents over 1.0 Amps, make sure to use proper cooling for your drivers!"
+},
+"tmc2240": {
+  "name": "TMC2240",
+  "type": "uart",
+  "max_rms_current": 1.2,
+  "default_stealthchop": 0,
+  "warning": "WARNING! With currents over 1.0 Amps, make sure to use proper cooling for your drivers!"
+},
+"tmc2660": {
+  "name": "TMC2660",
+  "type": "uart",
+  "max_rms_current": 1.2,
+  "default_stealthchop": 0,
+  "warning": "WARNING! With currents over 1.0 Amps, make sure to use proper cooling for your drivers!"
+},
+"tmc5160": {
+  "name": "TMC5160",
+  "type": "spi",
+  "max_rms_current": 3.0,
+  "default_stealthchop": 0,
+  "warning": "WARNING! TMC5160 run very hot even when idle, make sure to use proper cooling for your drivers!"
+}
+}
