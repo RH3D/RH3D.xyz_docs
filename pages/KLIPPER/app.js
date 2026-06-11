@@ -8,11 +8,11 @@ let generatedFilesData = {}; // Stores the final text of compiled files
 let isGenerated = false;     // Tracks if files are currently generated
 
 const configFiles = {
-    printers: 'data/printers.json',
-    boards: 'data/boards.json',
-    drivers: 'data/drivers.json',
-    others: 'data/others.json',
-    labels: 'data/labels.json'
+    printers: '/data/printers.json',
+    boards: '/data/boards.json',
+    drivers: '/data/drivers.json',
+    others: '/data/others.json',
+    labels: '/data/labels.json'
 };
 
 const templatesToCompile = ['printer.cfg', 'user_variables.cfg', 'macro.cfg'];
