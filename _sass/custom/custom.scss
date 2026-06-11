@@ -169,7 +169,7 @@
 #rh3d-configurator select:focus, 
 #rh3d-configurator input:focus {
     border-color: rgba(255, 255, 255, 0.2); 
-    background-color: #525155; 
+    background-color: #767676; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); 
     outline: none;
 }
@@ -249,7 +249,7 @@
 .rh-btn-primary {
     background-color: $base-button-color;
     color: $body-heading-color;
-    /*border: 1px solid #4a822f;*/
+    border: 1px solid $base-button-color;
     padding: 10px 20px;
     font-size: 0.9rem;
     font-weight: bold;
