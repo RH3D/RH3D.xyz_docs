@@ -145,5 +145,5 @@
 	"WIFI_RX": "PD9", "WIFI_TX": "PD8", "WIFI_CS": "PB12", "WIFI_MOSI": "PC3", "WIFI_MISO": "PC2", "WIFI_SCLK": "PB13",
 	"UNKNOWN": "WIFI - PD7, PD10, PG7, PG8"
   }
-},
+}
 }
