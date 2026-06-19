@@ -301,13 +301,21 @@ function compileTemplate(template, config) {
     const flat = {};
     for (const [k, v] of Object.entries(config)) flat[k.toUpperCase()] = v;
 
+    // --- PRE-PHASE: Generate the motor map BEFORE processing # IF blocks ---
+    const motorMap = buildMotorMap(flat);
+    
+    // Inject active motor flags (e.g., STEPPER_X: true, EXTRUDER: true) into the flat config.
+    // This allows the # IF HAS_STEPPER_X conditions to evaluate correctly!
+    Object.keys(motorMap).forEach(motorName => {
+        flat[motorName.toUpperCase()] = true; 
+    });
+
     // --- PHASE 1: # IF block removal ---
     result = result.replace(/^[ \t]*#[ \t]*IF[ \t]+(.*?)\r?\n([\s\S]*?)^[ \t]*#[ \t]*ENDIF[ \t]*\r?\n?/gm, 
         (m, cond, block) => evaluateCondition(cond, flat) ? block : ''
     );
 
     // --- PHASE 2: Motor Mapping & Dynamic Driver Generation ---
-    const motorMap = buildMotorMap(flat);
     let currentMotorIndex = null;
     let processedLines = [];
     
