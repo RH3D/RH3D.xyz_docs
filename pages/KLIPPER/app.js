@@ -43,7 +43,7 @@ async function initializeApp() {
 }
 
 // ============================================================================
-// UI STATE MANAGEMENT
+// UI STATE MANAGEMENT & VALIDATION
 // ============================================================================
 
 function handleInputChange() {
@@ -53,11 +53,50 @@ function handleInputChange() {
         document.getElementById('action-generate-container').style.display = 'block';
         generatedFilesData = {};
     }
+    validateCurrents(); // Check RMS limits dynamically
 }
 
 function attachChangeListener(element) {
     element.addEventListener('change', handleInputChange);
     element.addEventListener('input', handleInputChange);
+}
+
+function validateCurrents() {
+    // Clear previous warnings
+    document.querySelectorAll('.rms-warning').forEach(el => el.remove());
+    
+    const axes = ['xy', 'z', 'e'];
+    
+    axes.forEach(axis => {
+        const currentInput = document.getElementById(`feature-default_current_${axis}`);
+        const driverSelect = document.getElementById(`feature-default_driver_${axis}`);
+        
+        if (currentInput && driverSelect) {
+            const driverKey = driverSelect.value;
+            const driverData = globalData.drivers[driverKey];
+            const currentVal = parseFloat(currentInput.value);
+            
+            if (driverData && currentVal) {
+                let warningText = '';
+                let warningLevel = '';
+                
+                if (driverData.max_rms_current && currentVal >= driverData.max_rms_current) {
+                    warningText = driverData.warning_max_rms || `WARNING: Exceeds absolute max current of ${driverData.max_rms_current}A!`;
+                    warningLevel = 'error';
+                } else if (driverData.high_rms_current && currentVal >= driverData.high_rms_current) {
+                    warningText = driverData.warning_high_rms || `Warning: High current! Ensure cooling over ${driverData.high_rms_current}A.`;
+                    warningLevel = 'warn';
+                }
+                
+                if (warningText) {
+                    const warningSpan = document.createElement('div');
+                    warningSpan.className = `rms-warning ${warningLevel}`;
+                    warningSpan.textContent = `⚠ ${warningText}`;
+                    currentInput.parentElement.appendChild(warningSpan);
+                }
+            }
+        }
+    });
 }
 
 // ============================================================================
@@ -73,12 +112,10 @@ function createFormGroup(key, inputElement) {
     label.setAttribute('for', inputElement.id);
     label.textContent = labelData.title;
 
-    // Elegant Hover Tooltip with SVG Icon
     if (labelData.description) {
         const infoIcon = document.createElement('span');
         infoIcon.className = 'info-icon-wrapper';
         infoIcon.dataset.tooltip = labelData.description;
-        // Clean SVG Information Circle
         infoIcon.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`;
         label.appendChild(infoIcon);
     }
@@ -190,10 +227,11 @@ function renderCategorizedFeatures(features) {
             featuresContainer.appendChild(formGroup);
         }
     }
+    validateCurrents(); // Run initial validation based on default values
 }
 
 // ============================================================================
-// COMPILATION ENGINE
+// COMPILATION ENGINE & MOTOR MAPPING
 // ============================================================================
 
 function evaluateCondition(conditionStr, flatConfig) {
@@ -216,15 +254,118 @@ function evaluateCondition(conditionStr, flatConfig) {
     });
 }
 
+/**
+ * Dynamically builds the ordered M-index map for motors based on active features
+ * Result: { "stepper_x": 1, "stepper_y": 2, "stepper_z": 3, "extruder": 4 }
+ */
+function buildMotorMap(flatConfig) {
+    const activeMotors = ['stepper_x'];
+    
+    // Check 4WD extension for X
+    if (flatConfig['4WD']) activeMotors.push('stepper_x1');
+    
+    activeMotors.push('stepper_y');
+    
+    // Check 4WD extension for Y
+    if (flatConfig['4WD']) activeMotors.push('stepper_y1');
+    
+    activeMotors.push('stepper_z');
+    
+    // Check multiple Z configurations
+    const hasZtilt = flatConfig['Z_TILT'];
+    const hasDualZ = flatConfig['DUAL_Z'];
+    const hasQuadGantry = flatConfig['QUAD_GANTRY_LEVEL'];
+    
+    if (hasDualZ || hasZtilt || hasQuadGantry) activeMotors.push('stepper_z1');
+    if (hasZtilt || hasQuadGantry) activeMotors.push('stepper_z2');
+    if (hasQuadGantry) activeMotors.push('stepper_z3');
+    
+    // Extruders
+    const numExtruders = flatConfig['EXTRUDER_COUNT'] || 1;
+    activeMotors.push('extruder');
+    for (let i = 1; i < numExtruders; i++) {
+        activeMotors.push(`extruder${i}`);
+    }
+    
+    const map = {};
+    activeMotors.forEach((motor, index) => {
+        map[motor] = index + 1; // Assign M1, M2, M3...
+    });
+    
+    console.log("🛠️ Active Motor Map:", map);
+    return map;
+}
+
 function compileTemplate(template, config) {
     let result = template;
     const flat = {};
     for (const [k, v] of Object.entries(config)) flat[k.toUpperCase()] = v;
 
+    // --- PHASE 1: # IF block removal ---
     result = result.replace(/^[ \t]*#[ \t]*IF[ \t]+(.*?)\r?\n([\s\S]*?)^[ \t]*#[ \t]*ENDIF[ \t]*\r?\n?/gm, 
         (m, cond, block) => evaluateCondition(cond, flat) ? block : ''
     );
 
+    // --- PHASE 2: Motor Mapping & Dynamic Driver Generation ---
+    const motorMap = buildMotorMap(flat);
+    let currentMotorIndex = null;
+    let processedLines = [];
+    
+    result.split('\n').forEach(line => {
+        // 2A: Detect hidden motor anchor (e.g., # [[MOTOR: stepper_x]])
+        const motorMatch = line.match(/^[ \t]*#[ \t]*\[\[MOTOR:\s*([a-zA-Z0-9_]+)\]\]/);
+        if (motorMatch) {
+            const motorName = motorMatch[1].toLowerCase();
+            currentMotorIndex = motorMap[motorName] || null;
+            return; // Delete the anchor line from the final output
+        }
+        
+        // 2B: Generate Stepper Drivers dynamically from drivers.json
+        if (line.includes('[[GENERATE_STEPPER_DRIVERS]]')) {
+            let driverBlocks = [];
+            
+            Object.keys(motorMap).forEach(motorName => {
+                const mIndex = motorMap[motorName];
+                
+                // Deduce which axis setting applies to this motor
+                let axisKey = 'E';
+                if (motorName.includes('x') || motorName.includes('y')) axisKey = 'XY';
+                if (motorName.includes('z')) axisKey = 'Z';
+                
+                const driverId = flat[`DRIVER_${axisKey}`];
+                const motorCurrent = flat[`CURRENT_${axisKey}`];
+                
+                if (driverId && globalData.drivers[driverId.toLowerCase()]) {
+                    const dData = globalData.drivers[driverId.toLowerCase()];
+                    let block = dData.config_template || '';
+                    
+                    // Replace variables in the driver template
+                    block = block.replace(/\[\[MOTOR_NAME\]\]/g, motorName);
+                    block = block.replace(/\[\[M_NAME\]\]/g, motorName.toUpperCase());
+                    block = block.replace(/\[\[MOTOR_CURRENT\]\]/g, motorCurrent);
+                    
+                    // Assign the specific M-port number (e.g., [[M_CS_UART]] -> [[M1_CS_UART]])
+                    block = block.replace(/\[\[M_/g, `[[M${mIndex}_`);
+                    
+                    driverBlocks.push(block);
+                }
+            });
+            processedLines.push(driverBlocks.join('\n'));
+            return;
+        }
+        
+        // 2C: Contextual pin replacement inside Stepper blocks
+        if (currentMotorIndex && line.includes('[[M_')) {
+            processedLines.push(line.replace(/\[\[M_/g, `[[M${currentMotorIndex}_`));
+            return;
+        }
+        
+        processedLines.push(line);
+    });
+    
+    result = processedLines.join('\n');
+
+    // --- PHASE 3: Math Evaluations ---
     result = result.replace(/\[\[EXPR:(.*?)\]\]/g, (m, math) => {
         let expr = math.toUpperCase();
         for (const [k, v] of Object.entries(flat)) expr = expr.replace(new RegExp(`\\b${k}\\b`,'g'), v);
@@ -232,6 +373,7 @@ function compileTemplate(template, config) {
         catch (e) { return m; }
     });
 
+    // --- PHASE 4: Direct Variables ---
     result = result.replace(/\[\[(.*?)\]\]/g, (m, varName) => {
         const key = varName.trim().toUpperCase();
         return flat[key] !== undefined ? flat[key] : m;
@@ -241,7 +383,7 @@ function compileTemplate(template, config) {
 }
 
 // ============================================================================
-// GENERATION, MODALS & DOWNLOAD
+// MODALS & DOWNLOAD
 // ============================================================================
 
 function triggerDownload(filename, text) {
@@ -281,13 +423,12 @@ function buildResultUI() {
     Object.keys(generatedFilesData).forEach(fileName => {
         const text = generatedFilesData[fileName];
         
-        // This wrapper ensures the View and Save buttons for each file are stacked vertically
         const wrapper = document.createElement('div');
         wrapper.style.display = 'flex';
-        wrapper.style.flexDirection = 'column'; // Vertical stacking!
+        wrapper.style.flexDirection = 'column';
         wrapper.style.gap = '8px';
         wrapper.style.width = '100%';
-        wrapper.style.maxWidth = '250px'; // Restricts button width so they don't stretch too far
+        wrapper.style.maxWidth = '250px'; 
 
         const btnPreview = document.createElement('button');
         btnPreview.className = 'rh-btn-secondary';
@@ -343,7 +484,6 @@ function generateFirmware() {
     userConfig['DRIVER_Z'] = userConfig['default_driver_z'];
     userConfig['DRIVER_E'] = userConfig['default_driver_e'];
 
-    // STRICT ABSOLUTE PATHS FOR CONFIG FETCHING
     const promises = templatesToCompile.map(fName => 
         fetch(`/pages/KLIPPER/config/${fName}`)
             .then(res => res.ok ? res.text() : Promise.reject(`Missing: ${fName}`))
@@ -358,12 +498,8 @@ function generateFirmware() {
 // Attach Events
 document.getElementById('btn-generate').addEventListener('click', generateFirmware);
 document.getElementById('btn-modal-close').addEventListener('click', closeModal);
-
-// Close modal when clicking outside of it
 document.getElementById('code-modal').addEventListener('click', (e) => {
-    if (e.target === document.getElementById('code-modal')) {
-        closeModal();
-    }
+    if (e.target === document.getElementById('code-modal')) closeModal();
 });
 
 document.getElementById('btn-modal-copy').addEventListener('click', () => {
