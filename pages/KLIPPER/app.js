@@ -348,7 +348,6 @@ function compileTemplate(template, config) {
                     
                     // Replace variables in the driver template
                     block = block.replace(/\[\[MOTOR_NAME\]\]/g, motorName);
-                    block = block.replace(/\[\[M_NAME\]\]/g, motorName.toUpperCase());
                     block = block.replace(/\[\[MOTOR_CURRENT\]\]/g, motorCurrent);
                     
                     // Assign the specific M-port number (e.g., [[M_CS_UART]] -> [[M1_CS_UART]])
