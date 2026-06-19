@@ -61,7 +61,7 @@
 	"dual_z": false,
 	"z_tilt": true,
 	"quad_gantry_level": false,
-	"default_current_xy": 1.4,
+	"default_current_xy": 1.0,
 	"default_current_z": 0.8,
 	"default_current_e": 0.6,
 	"default_driver_xy": "tmc2209",
