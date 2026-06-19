@@ -254,24 +254,14 @@ function evaluateCondition(conditionStr, flatConfig) {
     });
 }
 
-/**
- * Dynamically builds the ordered M-index map for motors based on active features
- * Result: { "stepper_x": 1, "stepper_y": 2, "stepper_z": 3, "extruder": 4 }
- */
 function buildMotorMap(flatConfig) {
     const activeMotors = ['stepper_x'];
     
-    // Check 4WD extension for X
     if (flatConfig['4WD']) activeMotors.push('stepper_x1');
-    
     activeMotors.push('stepper_y');
-    
-    // Check 4WD extension for Y
     if (flatConfig['4WD']) activeMotors.push('stepper_y1');
-    
     activeMotors.push('stepper_z');
     
-    // Check multiple Z configurations
     const hasZtilt = flatConfig['Z_TILT'];
     const hasDualZ = flatConfig['DUAL_Z'];
     const hasQuadGantry = flatConfig['QUAD_GANTRY_LEVEL'];
@@ -280,7 +270,6 @@ function buildMotorMap(flatConfig) {
     if (hasZtilt || hasQuadGantry) activeMotors.push('stepper_z2');
     if (hasQuadGantry) activeMotors.push('stepper_z3');
     
-    // Extruders
     const numExtruders = flatConfig['EXTRUDER_COUNT'] || 1;
     activeMotors.push('extruder');
     for (let i = 1; i < numExtruders; i++) {
@@ -289,10 +278,9 @@ function buildMotorMap(flatConfig) {
     
     const map = {};
     activeMotors.forEach((motor, index) => {
-        map[motor] = index + 1; // Assign M1, M2, M3...
+        map[motor] = index + 1;
     });
     
-    console.log("🛠️ Active Motor Map:", map);
     return map;
 }
 
@@ -334,10 +322,15 @@ function compileTemplate(template, config) {
             Object.keys(motorMap).forEach(motorName => {
                 const mIndex = motorMap[motorName];
                 
-                // Deduce which axis setting applies to this motor
+                // STRICT Axis detection to prevent "extruder" from triggering "x" logic
                 let axisKey = 'E';
-                if (motorName.includes('x') || motorName.includes('y')) axisKey = 'XY';
-                if (motorName.includes('z')) axisKey = 'Z';
+                if (motorName.startsWith('stepper_x') || motorName.startsWith('stepper_y')) {
+                    axisKey = 'XY';
+                } else if (motorName.startsWith('stepper_z')) {
+                    axisKey = 'Z';
+                } else if (motorName.startsWith('extruder')) {
+                    axisKey = 'E';
+                }
                 
                 const driverId = flat[`DRIVER_${axisKey}`];
                 const motorCurrent = flat[`CURRENT_${axisKey}`];
@@ -360,7 +353,7 @@ function compileTemplate(template, config) {
             return;
         }
         
-        // 2C: Contextual pin replacement inside Stepper blocks (Translates [[M_STEP]] to [[M1_STEP]])
+        // 2C: Contextual pin replacement inside Stepper blocks
         if (currentMotorIndex && line.includes('[[M_')) {
             processedLines.push(line.replace(/\[\[M_/g, `[[M${currentMotorIndex}_`));
             return;
@@ -383,9 +376,9 @@ function compileTemplate(template, config) {
     result = result.replace(/\[\[(.*?)\]\]/g, (m, varName) => {
         const key = varName.trim().toUpperCase();
         if (flat[key] !== undefined) {
-            return flat[key]; // Return the actual value from JSON
+            return flat[key];
         }
-        return '# UNDEFINED'; // Return fallback if missing from database
+        return '# UNDEFINED'; // Fallback if missing
     });
 
     return result;
