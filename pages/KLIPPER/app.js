@@ -304,8 +304,7 @@ function compileTemplate(template, config) {
     // --- PRE-PHASE: Generate the motor map BEFORE processing # IF blocks ---
     const motorMap = buildMotorMap(flat);
     
-    // Inject active motor flags (e.g., STEPPER_X: true, EXTRUDER: true) into the flat config.
-    // This allows the # IF HAS_STEPPER_X conditions to evaluate correctly!
+    // Inject active motor flags (e.g., STEPPER_X: true, EXTRUDER: true)
     Object.keys(motorMap).forEach(motorName => {
         flat[motorName.toUpperCase()] = true; 
     });
@@ -320,8 +319,8 @@ function compileTemplate(template, config) {
     let processedLines = [];
     
     result.split('\n').forEach(line => {
-        // 2A: Detect hidden motor anchor (e.g., # [[MOTOR: stepper_x]])
-        const motorMatch = line.match(/^[ \t]*#[ \t]*\[\[MOTOR:\s*([a-zA-Z0-9_]+)\]\]/);
+        // 2A: Detect hidden motor anchor (e.g., [[MOTOR: stepper_x]] or # [[MOTOR: stepper_x]])
+        const motorMatch = line.match(/^[ \t]*(?:#\s*)?\[\[MOTOR:\s*([a-zA-Z0-9_]+)\]\]/);
         if (motorMatch) {
             const motorName = motorMatch[1].toLowerCase();
             currentMotorIndex = motorMap[motorName] || null;
@@ -362,7 +361,7 @@ function compileTemplate(template, config) {
             return;
         }
         
-        // 2C: Contextual pin replacement inside Stepper blocks
+        // 2C: Contextual pin replacement inside Stepper blocks (Translates [[M_STEP]] to [[M1_STEP]])
         if (currentMotorIndex && line.includes('[[M_')) {
             processedLines.push(line.replace(/\[\[M_/g, `[[M${currentMotorIndex}_`));
             return;
@@ -381,14 +380,18 @@ function compileTemplate(template, config) {
         catch (e) { return m; }
     });
 
-    // --- PHASE 4: Direct Variables ---
+    // --- PHASE 4: Direct Variables & Undefined Fallback ---
     result = result.replace(/\[\[(.*?)\]\]/g, (m, varName) => {
         const key = varName.trim().toUpperCase();
-        return flat[key] !== undefined ? flat[key] : m;
+        if (flat[key] !== undefined) {
+            return flat[key]; // Return the actual value from JSON
+        }
+        return '# UNDEFINED'; // Return fallback if missing from database
     });
 
     return result;
 }
+
 
 // ============================================================================
 // MODALS & DOWNLOAD
