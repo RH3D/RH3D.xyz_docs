@@ -235,22 +235,39 @@ function renderCategorizedFeatures(features) {
 // ============================================================================
 
 function evaluateCondition(conditionStr, flatConfig) {
-    const chunks = conditionStr.split('&&');
-    return chunks.every(chunk => {
-        let expr = chunk.trim().toUpperCase();
-        let isNegated = false;
-        if (expr.startsWith('!')) { isNegated = true; expr = expr.substring(1).trim(); }
-        let result = false;
+    // 1. Split the condition by OR (||)
+    // The .some() method ensures that if ANY of the OR blocks are true, the entire # IF is true.
+    const orChunks = conditionStr.split('||');
+    
+    return orChunks.some(orChunk => {
+        // 2. Inside each OR block, split by AND (&&)
+        // The .every() method ensures that ALL conditions within this block must be true.
+        const andChunks = orChunk.split('&&');
+        
+        return andChunks.every(chunk => {
+            let expr = chunk.trim().toUpperCase();
+            let isNegated = false;
+            
+            // Check for NOT (!)
+            if (expr.startsWith('!')) { 
+                isNegated = true; 
+                expr = expr.substring(1).trim(); 
+            }
+            
+            let result = false;
 
-        if (expr.startsWith('HAS_')) result = !!flatConfig[expr.replace('HAS_', '')];
-        else if (expr.includes('_IS_')) {
-            const [k, v] = expr.split('_IS_');
-            result = String(flatConfig[k.trim()]).toUpperCase() === v.trim();
-        } 
-        else if (expr.startsWith('PRINTER_IS_') || expr.startsWith('BOARD_IS_')) {
-            result = !!flatConfig[expr];
-        }
-        return isNegated ? !result : result;
+            // Evaluate the specific expression
+            if (expr.startsWith('HAS_')) {
+                result = !!flatConfig[expr.replace('HAS_', '')];
+            } else if (expr.includes('_IS_')) {
+                const [k, v] = expr.split('_IS_');
+                result = String(flatConfig[k.trim()]).toUpperCase() === v.trim();
+            } else if (expr.startsWith('PRINTER_IS_') || expr.startsWith('BOARD_IS_')) {
+                result = !!flatConfig[expr];
+            }
+            
+            return isNegated ? !result : result;
+        });
     });
 }
 
