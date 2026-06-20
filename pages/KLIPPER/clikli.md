@@ -10,7 +10,7 @@ permalink: /cli-kli
 # <span style="font-weight:800; font-size: 125%; font-style:italic;">CLI-KLI</span>
 {: .text-center }
 
-**Nothing to see here ;)**
+**Nothing to see here :)**
 {: .text-center }
 
 {: .warning }
