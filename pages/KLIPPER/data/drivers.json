@@ -12,7 +12,7 @@
   "name": "TMC2208",
   "type": "uart",
   "high_rms_current": 0.9,
-  "max_rms_current": 1.4,
+  "max_rms_current": 1.2,
   "config_template": "#--------------------    [[M_NAME]] DRIVER    --------------------\n[tmc2208 [[MOTOR_NAME]]]\nuart_pin: [[M_CS_UART]]\n#diag_pin: [[M_DIAG]]\nrun_current: 0.6\nhold_current: 0.6\n",
   "warning_high_rms": "WARNING! With currents over 0.9 Amps, make sure to use proper cooling for your drivers!",
   "warning_max_rms": "WARNING! You are exceeding the maximum RMS current for the specified driver, lower the current!"
@@ -48,9 +48,9 @@
   "name": "TMC5160",
   "type": "spi",
   "high_rms_current": 0.8,
-  "max_rms_current": 2.8,
+  "max_rms_current": 4.7,
   "config_template": "#--------------------    [[M_NAME]] DRIVER    --------------------\n[tmc5160 [[MOTOR_NAME]]]\ncs_pin: [[M_CS_UART]]\nspi_software_sclk_pin: [[SPI_SCLK]]\nspi_software_miso_pin: [[SPI_MISO]]\nspi_software_mosi_pin: [[SPI_MOSI]]\n#diag1_pin: [[M_DIAG]]\nrun_current: 1.2\nhold_current: 1.2\nsense_resistor: 0.050\n",
   "warning_high_rms": "WARNING! TMC5160 run pretty hot even at idle, make sure to use proper cooling for your drivers!",
-  "warning_max_rms": "WARNING! Hopefully you know what you are doing :) (Proceed at your own risk.)"
+  "warning_max_rms": "WARNING! You are exceeding the maximum RMS current for the specified driver, lower the current!"
 }
 }
