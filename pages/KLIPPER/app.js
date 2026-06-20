@@ -423,9 +423,13 @@ function buildResultUI() {
     const container = document.getElementById('result-buttons-container');
     container.innerHTML = '';
 
-    Object.keys(generatedFilesData).forEach(fileName => {
+    // Enforce STRICT ordering based on the templatesToCompile array
+    templatesToCompile.forEach(fileName => {
         const text = generatedFilesData[fileName];
         
+        // Safety check just in case a file failed to download
+        if (!text) return; 
+
         const wrapper = document.createElement('div');
         wrapper.style.display = 'flex';
         wrapper.style.flexDirection = 'column';
@@ -467,6 +471,7 @@ function generateFirmware() {
         ...globalData.boards[boardId].pins
     };
 
+    // 1. Gather all direct inputs from the form
     for (const [key, val] of Object.entries(pConfig.features)) {
         if (key === 'default_board') continue;
         const el = document.getElementById(`feature-${key}`);
@@ -480,6 +485,25 @@ function generateFirmware() {
         }
     }
 
+    // 2. DYNAMIC OTHERS.JSON DATA EXTRACTION
+    // Loop through all saved user configurations to find hidden variables in others.json
+    Object.keys(userConfig).forEach(key => {
+        const selectedValue = userConfig[key];
+        
+        // If the feature exists in others.json (e.g. key="z_rails", selectedValue="mgn12h")
+        if (typeof selectedValue === 'string' && globalData.others[key] && globalData.others[key][selectedValue]) {
+            const extraData = globalData.others[key][selectedValue];
+            
+            // Extract all nested properties (like Z_TRAVEL_MODIFIER) and push them to userConfig
+            Object.keys(extraData).forEach(extraKey => {
+                if (extraKey !== 'name') {
+                    userConfig[extraKey] = extraData[extraKey];
+                }
+            });
+        }
+    });
+
+    // 3. Unification aliases for steppers
     userConfig['CURRENT_XY'] = userConfig['default_current_xy'];
     userConfig['CURRENT_Z'] = userConfig['default_current_z'];
     userConfig['CURRENT_E'] = userConfig['default_current_e'];
@@ -487,6 +511,7 @@ function generateFirmware() {
     userConfig['DRIVER_Z'] = userConfig['default_driver_z'];
     userConfig['DRIVER_E'] = userConfig['default_driver_e'];
 
+    // STRICT ABSOLUTE PATHS FOR CONFIG FETCHING
     const promises = templatesToCompile.map(fName => 
         fetch(`/pages/KLIPPER/config/${fName}`)
             .then(res => res.ok ? res.text() : Promise.reject(`Missing: ${fName}`))
