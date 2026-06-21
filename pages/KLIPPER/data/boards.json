@@ -148,7 +148,7 @@
 },
 "btt_skr_mini_v2": {
   "name": "BTT SKR mini E3 v2.0",
-  "compatible_drivers": ["tmc2209"],
+  "compatible_drivers": ["tmc2209_ob"],
   "drivers": 4,
   "fans": 2,
   "mfans": 0,
