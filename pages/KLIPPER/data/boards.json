@@ -1,6 +1,7 @@
 {
 "generic": {
   "name": "Generic motherboard (fill yourself)",
+  "compatible_drivers": ["tmc2209"],
   "drivers": 0,
   "fans": 0,
   "mfans": 0,
