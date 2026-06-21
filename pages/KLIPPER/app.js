@@ -144,26 +144,41 @@ function renderMainSelections() {
     container.appendChild(createFormGroup('printer', printerSelect));
     container.appendChild(createFormGroup('motherboard', boardSelect));
 
+    // Handle Printer Change
     printerSelect.addEventListener('change', (e) => {
         handleInputChange();
         const printer = globalData.printers[e.target.value];
         
-        boardSelect.disabled = false;
         boardSelect.innerHTML = '';
         printer.compatible_boards.forEach(bId => {
             const isSelected = bId === printer.features.default_board ? 'selected' : '';
             boardSelect.innerHTML += `<option value="${bId}" ${isSelected}>${globalData.boards[bId].name}</option>`;
         });
 
-        renderCategorizedFeatures(printer.features);
+        // LOCK BOARD SELECT if there is only 1 compatible board
+        if (printer.compatible_boards.length === 1) {
+            boardSelect.disabled = true;
+        } else {
+            boardSelect.disabled = false;
+        }
+
+        renderCategorizedFeatures(printer.features, boardSelect.value);
         
         document.getElementById('section-steppers').style.display = 'block';
         document.getElementById('section-features').style.display = 'block';
         document.getElementById('btn-generate').disabled = false;
     });
+
+    // Handle Board Change (Updates compatible drivers dynamically)
+    boardSelect.addEventListener('change', (e) => {
+        handleInputChange();
+        const printer = globalData.printers[printerSelect.value];
+        // Re-render features based on the newly selected board
+        renderCategorizedFeatures(printer.features, e.target.value);
+    });
 }
 
-function renderCategorizedFeatures(features) {
+function renderCategorizedFeatures(features, boardId) {
     const currentContainer = document.getElementById('steppers-current-container');
     const driverContainer = document.getElementById('steppers-driver-container');
     const featuresContainer = document.getElementById('dynamic-features-container');
@@ -171,6 +186,11 @@ function renderCategorizedFeatures(features) {
     currentContainer.innerHTML = '';
     driverContainer.innerHTML = '';
     featuresContainer.innerHTML = '';
+
+    // Fetch the active board data to determine compatible drivers
+    const boardData = globalData.boards[boardId];
+    // If board doesn't restrict drivers, allow all of them
+    const allowedDrivers = boardData.compatible_drivers || Object.keys(globalData.drivers);
 
     for (const [key, value] of Object.entries(features)) {
         if (key === 'default_board') continue;
@@ -195,6 +215,11 @@ function renderCategorizedFeatures(features) {
                 optEl.textContent = isBool ? (opt ? 'Enabled' : 'Disabled') : String(opt).toUpperCase();
                 inputEl.appendChild(optEl);
             });
+
+            // LOCK SELECT if there is only 1 option
+            if (value.length === 1) {
+                inputEl.disabled = true;
+            }
         } 
         else if (isNumber) {
             inputEl = document.createElement('input');
@@ -208,13 +233,29 @@ function renderCategorizedFeatures(features) {
             inputEl = document.createElement('select');
             inputEl.id = `feature-${key}`;
             inputEl.dataset.type = 'string';
+            
+            let validOptionsCount = 0;
+            
             Object.keys(globalData.drivers).forEach(dKey => {
-                const optEl = document.createElement('option');
-                optEl.value = dKey;
-                optEl.textContent = globalData.drivers[dKey].name;
-                if (dKey === value) optEl.selected = true;
-                inputEl.appendChild(optEl);
+                if (allowedDrivers.includes(dKey)) {
+                    const optEl = document.createElement('option');
+                    optEl.value = dKey;
+                    optEl.textContent = globalData.drivers[dKey].name;
+                    if (dKey === value) optEl.selected = true;
+                    inputEl.appendChild(optEl);
+                    validOptionsCount++;
+                }
             });
+
+            // Fallback: If printer's default driver isn't supported by the board, select the first available one
+            if (!allowedDrivers.includes(value) && validOptionsCount > 0) {
+                inputEl.selectedIndex = 0;
+            }
+
+            // LOCK DRIVER SELECT if the board only supports 1 driver type (e.g. integrated TMC2209)
+            if (validOptionsCount === 1) {
+                inputEl.disabled = true;
+            }
         }
 
         const formGroup = createFormGroup(key, inputEl);
