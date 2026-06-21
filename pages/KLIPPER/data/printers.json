@@ -129,7 +129,7 @@
 	"default_driver_e": "tmc2209",
 	"default_board": "generic"
   },
-  "compatible_boards": ["generic", "btt_octopus", "btt_octopus_max_ez"]
+  "compatible_boards": ["generic"]
 },
 "e3ng": {
   "name": "E3NG V1.2 (ADVANCED)",
