@@ -67,7 +67,7 @@
 	"default_driver_xy": "tmc2209",
 	"default_driver_z": "tmc2209",
 	"default_driver_e": "tmc2209",
-	"default_board": "btt_octopus_max_ez"
+	"default_board": "generic"
   },
   "compatible_boards": ["generic"]
 },
