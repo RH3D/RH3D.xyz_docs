@@ -1,6 +1,7 @@
 {
 "generic": {
   "name": "Generic motherboard (fill yourself)",
+  "compatible_drivers": ["tmc2130", "tmc2208", "tmc2209", "tmc2240", "tmc2660", "tmc5160"],
   "drivers": 0,
   "fans": 0,
   "mfans": 0,
@@ -53,6 +54,7 @@
 },
 "btt_octopus_max_ez": {
   "name": "BTT Octopus Max EZ",
+  "compatible_drivers": ["tmc2130", "tmc2208", "tmc2209", "tmc2240", "tmc2660", "tmc5160"],
   "drivers": 10,
   "fans": 4,
   "mfans": 3,
@@ -102,6 +104,7 @@
 },
 "btt_octopus": {
   "name": "BTT Octopus v1.0",
+  "compatible_drivers": ["tmc2130", "tmc2208", "tmc2209", "tmc2240", "tmc2660", "tmc5160"],
   "drivers": 8,
   "fans": 6,
   "mfans": 2,
