@@ -22,7 +22,16 @@
   "type": "uart",
   "high_rms_current": 1.0,
   "max_rms_current": 2.0,
-  "config_template": "#--------------------    [[M_NAME]] DRIVER    --------------------\n[tmc2209 [[MOTOR_NAME]]]\nuart_pin: [[M_CS_UART]]\n# IF BOARD_IS_BTT_SKR_MINI_V2\ntx_pin: [[UART_TX]]\nuart_address: [[M_ADDR]]\n# ENDIF\n#diag_pin: [[M_DIAG]]\nrun_current: 0.6\nhold_current: 0.6\n",
+  "config_template": "#--------------------    [[M_NAME]] DRIVER    --------------------\n[tmc2209 [[MOTOR_NAME]]]\nuart_pin: [[M_CS_UART]]\n#diag_pin: [[M_DIAG]]\nrun_current: 0.6\nhold_current: 0.6\n",
+  "warning_high_rms": "WARNING! With currents over 1.0 Amps, make sure to use proper cooling for your drivers!",
+  "warning_max_rms": "WARNING! You are exceeding the maximum RMS current for the specified driver, lower the current!"
+},
+"tmc2209_ob": {
+  "name": "TMC2209 onboard",
+  "type": "uart",
+  "high_rms_current": 1.0,
+  "max_rms_current": 2.0,
+  "config_template": "#--------------------    [[M_NAME]] DRIVER    --------------------\n[tmc2209 [[MOTOR_NAME]]]\nuart_pin: [[M_CS_UART]]\ntx_pin: [[UART_TX]]\nuart_address: [[M_ADDR]]\n#diag_pin: [[M_DIAG]]\nrun_current: 0.6\nhold_current: 0.6\n",
   "warning_high_rms": "WARNING! With currents over 1.0 Amps, make sure to use proper cooling for your drivers!",
   "warning_max_rms": "WARNING! You are exceeding the maximum RMS current for the specified driver, lower the current!"
 },
