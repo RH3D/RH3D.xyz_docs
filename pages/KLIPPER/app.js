@@ -53,7 +53,7 @@ function handleInputChange() {
         document.getElementById('action-generate-container').style.display = 'block';
         generatedFilesData = {};
     }
-    validateCurrents(); // Check RMS limits dynamically
+    validateHardware(); // Check RMS limits dynamically
 }
 
 function attachChangeListener(element) {
@@ -61,38 +61,68 @@ function attachChangeListener(element) {
     element.addEventListener('input', handleInputChange);
 }
 
-function validateCurrents() {
+function validateHardware() {
     // Clear previous warnings
-    document.querySelectorAll('.rms-warning').forEach(el => el.remove());
+    document.querySelectorAll('.hw-warning').forEach(el => el.remove());
+    const generateBtn = document.getElementById('btn-generate');
+    generateBtn.disabled = false; // Default to enabled
     
+    const printerId = document.getElementById('select-printer').value;
+    const boardId = document.getElementById('select-board').value;
+    
+    if (!printerId || !boardId) return;
+
+    const pConfig = globalData.printers[printerId];
+    const boardData = globalData.boards[boardId];
+
+    // --- 1. DRIVER SLOT VALIDATION (Hard Limit) ---
+    // Build a temporary config from UI to count required motors
+    const tempConfig = { ...pConfig.config };
+    for (const [key, val] of Object.entries(pConfig.features)) {
+        if (key === 'default_board') continue;
+        const el = document.getElementById(`feature-${key}`);
+        if (el) tempConfig[key] = (el.dataset.type === 'boolean') ? (el.value === 'true') : el.value;
+        else tempConfig[key] = val;
+    }
+
+    const motorMap = buildMotorMap(tempConfig);
+    const requiredDrivers = Object.keys(motorMap).length;
+    const availableDrivers = boardData.drivers || 99; // Fallback if missing in JSON
+
+    if (requiredDrivers > availableDrivers) {
+        const warn = document.createElement('div');
+        warn.className = 'rms-warning error hw-warning';
+        warn.textContent = `⚠ ERROR: Board supports ${availableDrivers} drivers, but configuration requires ${requiredDrivers}. Disable some motors (e.g. 4WD) or select another board.`;
+        document.getElementById('select-board').parentElement.appendChild(warn);
+        generateBtn.disabled = true; // LOCK GENERATION
+    }
+
+    // --- 2. RMS CURRENT VALIDATION (Soft Limit) ---
     const axes = ['xy', 'z', 'e'];
-    
     axes.forEach(axis => {
         const currentInput = document.getElementById(`feature-default_current_${axis}`);
         const driverSelect = document.getElementById(`feature-default_driver_${axis}`);
         
         if (currentInput && driverSelect) {
             const driverKey = driverSelect.value;
-            const driverData = globalData.drivers[driverKey];
+            const dData = globalData.drivers[driverKey];
             const currentVal = parseFloat(currentInput.value);
             
-            if (driverData && currentVal) {
-                let warningText = '';
-                let warningLevel = '';
-                
-                if (driverData.max_rms_current && currentVal >= driverData.max_rms_current) {
-                    warningText = driverData.warning_max_rms || `WARNING: Exceeds absolute max current of ${driverData.max_rms_current}A!`;
-                    warningLevel = 'error';
-                } else if (driverData.high_rms_current && currentVal >= driverData.high_rms_current) {
-                    warningText = driverData.warning_high_rms || `Warning: High current! Ensure cooling over ${driverData.high_rms_current}A.`;
-                    warningLevel = 'warn';
+            if (dData && currentVal) {
+                let wText = ''; let wLevel = '';
+                if (dData.max_rms_current && currentVal >= dData.max_rms_current) {
+                    wText = dData.warning_max_rms || `WARNING: Exceeds absolute max current of ${dData.max_rms_current}A!`;
+                    wLevel = 'error';
+                } else if (dData.high_rms_current && currentVal >= dData.high_rms_current) {
+                    wText = dData.warning_high_rms || `Warning: Ensure cooling over ${dData.high_rms_current}A.`;
+                    wLevel = 'warn';
                 }
                 
-                if (warningText) {
-                    const warningSpan = document.createElement('div');
-                    warningSpan.className = `rms-warning ${warningLevel}`;
-                    warningSpan.textContent = `⚠ ${warningText}`;
-                    currentInput.parentElement.appendChild(warningSpan);
+                if (wText) {
+                    const wSpan = document.createElement('div');
+                    wSpan.className = `rms-warning hw-warning ${wLevel}`;
+                    wSpan.textContent = `⚠ ${wText}`;
+                    currentInput.parentElement.appendChild(wSpan);
                 }
             }
         }
@@ -268,7 +298,7 @@ function renderCategorizedFeatures(features, boardId) {
             featuresContainer.appendChild(formGroup);
         }
     }
-    validateCurrents(); // Run initial validation based on default values
+    validateHardware(); // Run initial validation based on default values
 }
 
 // ============================================================================
@@ -276,20 +306,15 @@ function renderCategorizedFeatures(features, boardId) {
 // ============================================================================
 
 function evaluateCondition(conditionStr, flatConfig) {
-    // 1. Split the condition by OR (||)
-    // The .some() method ensures that if ANY of the OR blocks are true, the entire # IF is true.
     const orChunks = conditionStr.split('||');
     
     return orChunks.some(orChunk => {
-        // 2. Inside each OR block, split by AND (&&)
-        // The .every() method ensures that ALL conditions within this block must be true.
         const andChunks = orChunk.split('&&');
         
         return andChunks.every(chunk => {
             let expr = chunk.trim().toUpperCase();
             let isNegated = false;
             
-            // Check for NOT (!)
             if (expr.startsWith('!')) { 
                 isNegated = true; 
                 expr = expr.substring(1).trim(); 
@@ -297,8 +322,22 @@ function evaluateCondition(conditionStr, flatConfig) {
             
             let result = false;
 
-            // Evaluate the specific expression
-            if (expr.startsWith('HAS_')) {
+            // NEW: Mathematical Operators (>, <, >=, <=, ==)
+            const mathMatch = expr.match(/^(.+?)\s*(>=|<=|>|<|==)\s*(.+)$/);
+            if (mathMatch) {
+                const leftKey = mathMatch[1].trim();
+                const operator = mathMatch[2].trim();
+                const rightVal = parseFloat(mathMatch[3].trim());
+                const leftVal = parseFloat(flatConfig[leftKey]) || 0;
+
+                if (operator === '>') result = leftVal > rightVal;
+                else if (operator === '>=') result = leftVal >= rightVal;
+                else if (operator === '<') result = leftVal < rightVal;
+                else if (operator === '<=') result = leftVal <= rightVal;
+                else if (operator === '==') result = leftVal === rightVal;
+            } 
+            // EXISTING: Boolean variables
+            else if (expr.startsWith('HAS_')) {
                 result = !!flatConfig[expr.replace('HAS_', '')];
             } else if (expr.includes('_IS_')) {
                 const [k, v] = expr.split('_IS_');
@@ -347,63 +386,79 @@ function compileTemplate(template, config) {
     const flat = {};
     for (const [k, v] of Object.entries(config)) flat[k.toUpperCase()] = v;
 
-    // --- PRE-PHASE: Generate the motor map BEFORE processing # IF blocks ---
+    // --- PRE-PHASE: Motor Map ---
     const motorMap = buildMotorMap(flat);
-    
-    // Inject active motor flags (e.g., STEPPER_X: true, EXTRUDER: true)
-    Object.keys(motorMap).forEach(motorName => {
-        flat[motorName.toUpperCase()] = true; 
-    });
+    Object.keys(motorMap).forEach(motorName => { flat[motorName.toUpperCase()] = true; });
 
     // --- PHASE 1: # IF block removal ---
     result = result.replace(/^[ \t]*#[ \t]*IF[ \t]+(.*?)\r?\n([\s\S]*?)^[ \t]*#[ \t]*ENDIF[ \t]*\r?\n?/gm, 
         (m, cond, block) => evaluateCondition(cond, flat) ? block : ''
     );
 
-    // --- PHASE 2: Motor Mapping & Dynamic Driver Generation ---
+    // --- PHASE 1.5: DYNAMIC FAN ALLOCATOR ---
+    // 1. Scan remaining text to see which fans survived the # IF blocks
+    const fanRegex = /^[ \t]*(?:#\s*)?\[\[FAN:\s*([a-zA-Z0-9_]+)\]\]/gm;
+    const activeFans = [];
+    let match;
+    while ((match = fanRegex.exec(result)) !== null) {
+        activeFans.push(match[1].toLowerCase());
+    }
+
+    // 2. Sort active fans strictly by priority
+    const fanPriority = ['part_cooling', 'hotend_cooling', 'controller_fan', 'driver_fan', 'stepper_fan', 'filter_fan', 'aux_fan'];
+    activeFans.sort((a, b) => {
+        let idxA = fanPriority.indexOf(a);
+        let idxB = fanPriority.indexOf(b);
+        if (idxA === -1) idxA = 99;
+        if (idxB === -1) idxB = 99;
+        return idxA - idxB;
+    });
+
+    // 3. Create the mapping
+    const fanMap = {};
+    activeFans.forEach((fanName, index) => { fanMap[fanName] = index; });
+    const maxFans = flat['BOARD_FANS'] || 99;
+    const maxMfans = flat['BOARD_MFANS'] || 0; // The spillover capacity
+
+    // --- PHASE 2: Object Mapping & Generation ---
     let currentMotorIndex = null;
+    let currentFanIndex = null;
     let processedLines = [];
     
     result.split('\n').forEach(line => {
-        // 2A: Detect hidden motor anchor (e.g., [[MOTOR: stepper_x]] or # [[MOTOR: stepper_x]])
+        // Detect Motor Anchor
         const motorMatch = line.match(/^[ \t]*(?:#\s*)?\[\[MOTOR:\s*([a-zA-Z0-9_]+)\]\]/);
         if (motorMatch) {
-            const motorName = motorMatch[1].toLowerCase();
-            currentMotorIndex = motorMap[motorName] || null;
-            return; // Delete the anchor line from the final output
+            currentMotorIndex = motorMap[motorMatch[1].toLowerCase()] || null;
+            currentFanIndex = null; 
+            return; 
+        }
+
+        // Detect Fan Anchor
+        const fanMatch = line.match(/^[ \t]*(?:#\s*)?\[\[FAN:\s*([a-zA-Z0-9_]+)\]\]/);
+        if (fanMatch) {
+            const fName = fanMatch[1].toLowerCase();
+            currentFanIndex = fanMap[fName] !== undefined ? fanMap[fName] : null;
+            currentMotorIndex = null; 
+            return;
         }
         
-        // 2B: Generate Stepper Drivers dynamically from drivers.json
+        // Generate Stepper Drivers
         if (line.includes('[[GENERATE_STEPPER_DRIVERS]]')) {
             let driverBlocks = [];
-            
             Object.keys(motorMap).forEach(motorName => {
                 const mIndex = motorMap[motorName];
-                
-                // STRICT Axis detection to prevent "extruder" from triggering "x" logic
                 let axisKey = 'E';
-                if (motorName.startsWith('stepper_x') || motorName.startsWith('stepper_y')) {
-                    axisKey = 'XY';
-                } else if (motorName.startsWith('stepper_z')) {
-                    axisKey = 'Z';
-                } else if (motorName.startsWith('extruder')) {
-                    axisKey = 'E';
-                }
+                if (motorName.startsWith('stepper_x') || motorName.startsWith('stepper_y')) axisKey = 'XY';
+                else if (motorName.startsWith('stepper_z')) axisKey = 'Z';
                 
                 const driverId = flat[`DRIVER_${axisKey}`];
-                const motorCurrent = flat[`CURRENT_${axisKey}`];
-                
                 if (driverId && globalData.drivers[driverId.toLowerCase()]) {
                     const dData = globalData.drivers[driverId.toLowerCase()];
                     let block = dData.config_template || '';
-                    
-                    // Replace variables in the driver template
                     block = block.replace(/\[\[MOTOR_NAME\]\]/g, motorName);
-                    block = block.replace(/\[\[MOTOR_CURRENT\]\]/g, motorCurrent);
-                    
-                    // Assign the specific M-port number (e.g., [[M_CS_UART]] -> [[M1_CS_UART]])
+                    block = block.replace(/\[\[MOTOR_CURRENT\]\]/g, flat[`CURRENT_${axisKey}`]);
                     block = block.replace(/\[\[M_/g, `[[M${mIndex}_`);
-                    
                     driverBlocks.push(block);
                 }
             });
@@ -411,9 +466,28 @@ function compileTemplate(template, config) {
             return;
         }
         
-        // 2C: Contextual pin replacement inside Stepper blocks
+        // Contextual M-Port replacement
         if (currentMotorIndex && line.includes('[[M_')) {
             processedLines.push(line.replace(/\[\[M_/g, `[[M${currentMotorIndex}_`));
+            return;
+        }
+
+        // Contextual FAN replacement with MFAN Spillover
+        if (currentFanIndex !== null && line.includes('[[FAN')) {
+            if (currentFanIndex < maxFans) {
+                // E.g. [[FAN]] -> [[FAN0]], [[FAN_TACHO]] -> [[FAN0_TACHO]]
+                processedLines.push(line.replace(/\[\[FAN(.*?)\]\]/g, `[[FAN${currentFanIndex}$1]]`));
+            } 
+            else if (currentFanIndex < maxFans + maxMfans) {
+                // SPILLOVER: Out of PWM fans, use Always-On MFANs
+                const mFanIndex = currentFanIndex - maxFans;
+                // E.g. [[FAN]] -> [[MFAN0]]
+                processedLines.push(line.replace(/\[\[FAN(.*?)\]\]/g, `[[MFAN${mFanIndex}$1]]`));
+            } 
+            else {
+                // Out of ALL ports fallback!
+                processedLines.push(line.replace(/\[\[FAN.*?\]\]/g, '# UNDEFINED (USE OTHER SUITABLE FREE PIN, Y SPLITTER FOR OTHER FAN OR WIRE IT SEPARATELY)'));
+            }
             return;
         }
         
@@ -433,10 +507,8 @@ function compileTemplate(template, config) {
     // --- PHASE 4: Direct Variables & Undefined Fallback ---
     result = result.replace(/\[\[(.*?)\]\]/g, (m, varName) => {
         const key = varName.trim().toUpperCase();
-        if (flat[key] !== undefined) {
-            return flat[key];
-        }
-        return '# UNDEFINED'; // Fallback if missing
+        if (flat[key] !== undefined) return flat[key];
+        return '# UNDEFINED';
     });
 
     return result;
@@ -526,7 +598,10 @@ function generateFirmware() {
         PRINTER: printerId.toUpperCase(),
         BOARD: boardId.toUpperCase(),
         ...pConfig.config,
-        ...globalData.boards[boardId].pins
+        ...globalData.boards[boardId].pins,
+        BOARD_DRIVERS: globalData.boards[boardId].drivers || 99,
+        BOARD_FANS: globalData.boards[boardId].fan || 99,
+        BOARD_MFANS: globalData.boards[boardId].mfan || 0
     };
 
     // 1. Gather all direct inputs from the form
