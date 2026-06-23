@@ -473,20 +473,22 @@ function compileTemplate(template, config) {
         }
 
         // Contextual FAN replacement with MFAN Spillover
-        if (currentFanIndex !== null && line.includes('[[FAN')) {
+        // Matches any variable containing "FAN" inside the brackets (e.g., [[2W_FAN]], [[4W_FAN_CTRL]])
+        if (currentFanIndex !== null && line.match(/\[\[.*?FAN.*?\]\]/)) {
             if (currentFanIndex < maxFans) {
-                // E.g. [[FAN]] -> [[FAN0]], [[FAN_TACHO]] -> [[FAN0_TACHO]]
-                processedLines.push(line.replace(/\[\[FAN(.*?)\]\]/g, `[[FAN${currentFanIndex}$1]]`));
+                // Captures prefix ($1) and suffix ($2) and injects the index dynamically
+                // E.g., [[2W_FAN]] -> [[2W_FAN0]], [[4W_FAN_CTRL]] -> [[4W_FAN0_CTRL]]
+                processedLines.push(line.replace(/\[\[(.*?)FAN(.*?)\]\]/g, `[[$1FAN${currentFanIndex}$2]]`));
             } 
             else if (currentFanIndex < maxFans + maxMfans) {
-                // SPILLOVER: Out of PWM fans, use Always-On MFANs
+                // SPILLOVER: Forces the prefix to M_FAN and drops the original prefix (e.g. 2W_ or 4W_)
                 const mFanIndex = currentFanIndex - maxFans;
-                // E.g. [[FAN]] -> [[MFAN0]]
-                processedLines.push(line.replace(/\[\[FAN(.*?)\]\]/g, `[[MFAN${mFanIndex}$1]]`));
+                // E.g., [[2W_FAN]] -> [[M_FAN0]], [[4W_FAN_CTRL]] -> [[M_FAN0_CTRL]]
+                processedLines.push(line.replace(/\[\[.*?FAN(.*?)\]\]/g, `[[M_FAN${mFanIndex}$1]]`));
             } 
             else {
-                // Out of ALL ports fallback!
-                processedLines.push(line.replace(/\[\[FAN.*?\]\]/g, '# UNDEFINED (USE OTHER SUITABLE FREE PIN, Y SPLITTER FOR OTHER FAN OR WIRE IT SEPARATELY)'));
+                // Out of ALL ports fallback
+                processedLines.push(line.replace(/\[\[.*?FAN.*?\]\]/g, '# UNDEFINED (USE OTHER SUITABLE FREE PIN, Y SPLITTER FOR OTHER FAN OR WIRE IT SEPARATELY)'));
             }
             return;
         }
