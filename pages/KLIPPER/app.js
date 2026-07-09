@@ -2,6 +2,7 @@
 // GLOBAL STATE & CONFIGURATION
 // ============================================================================
 
+const APP_VERSION = "1.0.0";
 const globalData = {};
 let userConfig = {};
 let generatedFilesData = {};
@@ -590,6 +591,10 @@ function buildResultUI() {
 }
 
 function generateFirmware() {
+    const today = new Date();
+    const dateStr = today.getFullYear() + '.' + 
+                String(today.getMonth() + 1).padStart(2, '0') + '.' + 
+                String(today.getDate()).padStart(2, '0');
     const printerId = document.getElementById('select-printer').value;
     const boardId = document.getElementById('select-board').value;
     const pConfig = globalData.printers[printerId];
@@ -603,7 +608,10 @@ function generateFirmware() {
         ...globalData.boards[boardId].pins,
         BOARD_DRIVERS: globalData.boards[boardId].drivers || 99,
         BOARD_FANS: globalData.boards[boardId].fan || 99,
-        BOARD_MFANS: globalData.boards[boardId].mfan || 0
+        BOARD_MFANS: globalData.boards[boardId].mfan || 0,
+        DATE: dateStr,
+        'CLI-KLI_VERSION': APP_VERSION,
+        BOARD_NAME: globalData.boards[boardId].name
     };
 
     // 1. Gather all direct inputs from the form
