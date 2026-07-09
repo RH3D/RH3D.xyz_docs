@@ -39,7 +39,10 @@ HI! THIS TOOL IS A HEAVY WORK IN PROGRESS AND IT MAY CONTAIN FATAL ISSUES, IT IS
             <div class="grid-3-col" id="dynamic-features-container"></div>
         </div>
     </div>
-
+    
+<div id="mcu-inputs-container" style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+    </div>
+    
 <div id="action-generate-container" class="action-bar">
         <h3>Compile Klipper Configuration</h3>
         <div class="section-content">
