@@ -2,7 +2,7 @@
 // GLOBAL STATE & CONFIGURATION
 // ============================================================================
 
-const APP_VERSION = "1.0.0";
+const APP_VERSION = "1.1.1";
 const globalData = {};
 let userConfig = {};
 let generatedFilesData = {};
@@ -60,6 +60,46 @@ function handleInputChange() {
 function attachChangeListener(element) {
     element.addEventListener('change', handleInputChange);
     element.addEventListener('input', handleInputChange);
+}
+
+function updateMcuInputs(tempConfig) {
+    const container = document.getElementById('mcu-inputs-container');
+    container.innerHTML = ''; // Clear container on every hardware change
+
+    // Helper function to dynamically create text inputs
+    function createInput(id, labelText, placeholder) {
+        const wrap = document.createElement('div');
+        wrap.className = 'feature-item';
+        wrap.style.flex = '1';
+        wrap.style.minWidth = '250px';
+
+        const label = document.createElement('label');
+        label.setAttribute('for', id);
+        label.textContent = labelText;
+
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.id = id;
+        input.placeholder = placeholder;
+        input.className = 'mcu-serial-input'; // Class used to fetch data later
+
+        wrap.appendChild(label);
+        wrap.appendChild(input);
+        container.appendChild(wrap);
+    }
+
+    // 1. Mainboard (ALWAYS REQUIRED)
+    createInput('mcu_main', 'Mainboard MCU Serial ID', '/dev/serial/by-id/usb-Klipper_...');
+
+    // 2. Cartographer (ONLY IF SELECTED AS BED PROBE)
+    if (tempConfig['bed_probe'] === 'cartographer' || tempConfig['bed_probe'] === 'cartographer_touch') {
+        createInput('mcu_carto', 'Cartographer MCU Serial ID', '/dev/serial/by-id/usb-Cartographer_...');
+    }
+
+    // 3. Future expansions (e.g., Toolhead boards)
+    // if (tempConfig['toolhead_board'] === 'ebb36') {
+    //     createInput('mcu_toolhead', 'Toolhead MCU Serial ID', '...');
+    // }
 }
 
 function validateHardware() {
@@ -128,6 +168,7 @@ function validateHardware() {
             }
         }
     });
+    updateMcuInputs(tempConfig);
 }
 
 // ============================================================================
@@ -679,6 +720,13 @@ document.getElementById('btn-modal-copy').addEventListener('click', () => {
         const btn = document.getElementById('btn-modal-copy');
         btn.textContent = 'Copied!';
         setTimeout(() => btn.textContent = 'Copy to Clipboard', 2000);
+    });
+    
+// Collect all dynamically generated MCU serial inputs
+    const mcuInputs = document.querySelectorAll('.mcu-serial-input');
+    mcuInputs.forEach(input => {
+        // Converts 'mcu_main' to 'MCU_MAIN' and assigns user input or fallback placeholder
+        userConfig[input.id.toUpperCase()] = input.value || input.placeholder; 
     });
 });
 
