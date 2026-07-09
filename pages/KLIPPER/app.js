@@ -16,7 +16,7 @@ const configFiles = {
     labels: '/pages/KLIPPER/data/labels.json'
 };
 
-const templatesToCompile = ['printer.cfg', 'user_variables.cfg', 'macro.cfg'];
+const templatesToCompile = ['printer.cfg', 'user_variables.cfg', 'macros.cfg'];
 
 // ============================================================================
 // INITIALIZATION
