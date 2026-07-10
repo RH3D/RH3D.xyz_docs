@@ -33,6 +33,13 @@ HI! THIS TOOL IS A HEAVY WORK IN PROGRESS AND IT MAY CONTAIN FATAL ISSUES, IT IS
         </div>
     </div>
 
+<div class="config-section" id="section-settings" style="display: none;">
+        <h3>ADDITIONAL SETTINGS</h3>
+        <div class="section-content">
+            <div class="grid-3-col" id="dynamic-settings-container"></div>
+        </div>
+    </div>
+    
 <div class="config-section" id="section-features" style="display: none;">
         <h3>ADDITIONAL FEATURES</h3>
         <div class="section-content">
