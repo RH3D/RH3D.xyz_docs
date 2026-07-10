@@ -64,42 +64,66 @@ function attachChangeListener(element) {
 
 function updateMcuInputs(tempConfig) {
     const container = document.getElementById('mcu-inputs-container');
-    container.innerHTML = ''; // Clear container on every hardware change
+    if (!container) return;
 
-    // Helper function to dynamically create text inputs
-    function createInput(id, labelText, placeholder) {
-        const wrap = document.createElement('div');
-        wrap.className = 'feature-item';
-        wrap.style.flex = '1';
-        wrap.style.minWidth = '250px';
+    // Persistent management function for MCU text input elements
+    function manageInput(id, isRequired) {
+        let wrap = document.getElementById(`${id}-wrap`);
 
-        const label = document.createElement('label');
-        label.setAttribute('for', id);
-        label.textContent = labelText;
+        if (isRequired) {
+            // If the element does not exist yet, build it out completely
+            if (!wrap) {
+                wrap = document.createElement('div');
+                wrap.className = 'form-group';
+                wrap.id = `${id}-wrap`;
+                wrap.style.flex = '1';
+                wrap.style.minWidth = '250px';
 
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.id = id;
-        input.placeholder = placeholder;
-        input.className = 'mcu-serial-input'; // Class used to fetch data later
+                // Fetch metadata using 'title' and 'description' from labels.json
+                const labelData = (globalData.labels && globalData.labels[id]) ? globalData.labels[id] : { title: id, description: "" };
 
-        wrap.appendChild(label);
-        wrap.appendChild(input);
-        container.appendChild(wrap);
+                const label = document.createElement('label');
+                label.setAttribute('for', id);
+                label.textContent = labelData.title;
+
+                // Build uniform SVG layout for technical tooltips
+                if (labelData.description) {
+                    const infoIcon = document.createElement('span');
+                    infoIcon.className = 'info-icon-wrapper';
+                    infoIcon.dataset.tooltip = labelData.description;
+                    infoIcon.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`;
+                    label.appendChild(infoIcon);
+                }
+
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.id = id;
+                input.className = 'mcu-serial-input';
+                input.placeholder = id === 'mcu_main' 
+                    ? '/dev/serial/by-id/usb-Klipper_firmware_YOUR_BOARD-if00' 
+                    : '/dev/serial/by-id/usb-Cartographer_Klipper_firmware-if00';
+
+                // Revert system back to "GENERATE" state as soon as user modifies string data
+                attachChangeListener(input);
+
+                wrap.appendChild(label);
+                wrap.appendChild(input);
+                container.appendChild(wrap);
+            }
+        } else {
+            // Safe teardown: if feature condition drops out (e.g. bed probe changed), clean up DOM segment
+            if (wrap) {
+                wrap.remove();
+            }
+        }
     }
 
-    // 1. Mainboard (ALWAYS REQUIRED)
-    createInput('mcu_main', 'Mainboard MCU Serial ID', '/dev/serial/by-id/usb-Klipper_...');
+    // 1. Mainboard Context (Always Active and Persistent)
+    manageInput('mcu_main', true);
 
-    // 2. Cartographer (ONLY IF SELECTED AS BED PROBE)
-    if (tempConfig['bed_probe'] === 'cartographer' || tempConfig['bed_probe'] === 'cartographer_touch') {
-        createInput('mcu_carto', 'Cartographer MCU Serial ID', '/dev/serial/by-id/usb-Cartographer_...');
-    }
-
-    // 3. Future expansions (e.g., Toolhead boards)
-    // if (tempConfig['toolhead_board'] === 'ebb36') {
-    //     createInput('mcu_toolhead', 'Toolhead MCU Serial ID', '...');
-    // }
+    // 2. Eddy Current Surface Probe Context (Conditional Validation)
+    const hasCarto = (tempConfig['bed_probe'] === 'cartographer' || tempConfig['bed_probe'] === 'cartographer_touch');
+    manageInput('mcu_carto', hasCarto);
 }
 
 function validateHardware() {
@@ -117,7 +141,6 @@ function validateHardware() {
     const boardData = globalData.boards[boardId];
 
     // --- 1. DRIVER SLOT VALIDATION (Hard Limit) ---
-    // Build a temporary config from UI to count required motors
     const tempConfig = { ...pConfig.config };
     for (const [key, val] of Object.entries(pConfig.features)) {
         if (key === 'default_board') continue;
@@ -227,7 +250,6 @@ function renderMainSelections() {
             boardSelect.innerHTML += `<option value="${bId}" ${isSelected}>${globalData.boards[bId].name}</option>`;
         });
 
-        // LOCK BOARD SELECT if there is only 1 compatible board
         if (printer.compatible_boards.length === 1) {
             boardSelect.disabled = true;
         } else {
@@ -245,7 +267,6 @@ function renderMainSelections() {
     boardSelect.addEventListener('change', (e) => {
         handleInputChange();
         const printer = globalData.printers[printerSelect.value];
-        // Re-render features based on the newly selected board
         renderCategorizedFeatures(printer.features, e.target.value);
     });
 }
@@ -259,9 +280,7 @@ function renderCategorizedFeatures(features, boardId) {
     driverContainer.innerHTML = '';
     featuresContainer.innerHTML = '';
 
-    // Fetch the active board data to determine compatible drivers
     const boardData = globalData.boards[boardId];
-    // If board doesn't restrict drivers, allow all of them
     const allowedDrivers = boardData.compatible_drivers || Object.keys(globalData.drivers);
 
     for (const [key, value] of Object.entries(features)) {
@@ -288,7 +307,6 @@ function renderCategorizedFeatures(features, boardId) {
                 inputEl.appendChild(optEl);
             });
 
-            // LOCK SELECT if there is only 1 option
             if (value.length === 1) {
                 inputEl.disabled = true;
             }
@@ -319,12 +337,10 @@ function renderCategorizedFeatures(features, boardId) {
                 }
             });
 
-            // Fallback: If printer's default driver isn't supported by the board, select the first available one
             if (!allowedDrivers.includes(value) && validOptionsCount > 0) {
                 inputEl.selectedIndex = 0;
             }
 
-            // LOCK DRIVER SELECT if the board only supports 1 driver type (e.g. integrated TMC2209)
             if (validOptionsCount === 1) {
                 inputEl.disabled = true;
             }
@@ -340,7 +356,7 @@ function renderCategorizedFeatures(features, boardId) {
             featuresContainer.appendChild(formGroup);
         }
     }
-    validateHardware(); // Run initial validation based on default values
+    validateHardware();
 }
 
 // ============================================================================
@@ -364,7 +380,6 @@ function evaluateCondition(conditionStr, flatConfig) {
             
             let result = false;
 
-            // NEW: Mathematical Operators (>, <, >=, <=, ==)
             const mathMatch = expr.match(/^(.+?)\s*(>=|<=|>|<|==)\s*(.+)$/);
             if (mathMatch) {
                 const leftKey = mathMatch[1].trim();
@@ -378,7 +393,6 @@ function evaluateCondition(conditionStr, flatConfig) {
                 else if (operator === '<=') result = leftVal <= rightVal;
                 else if (operator === '==') result = leftVal === rightVal;
             } 
-            // EXISTING: Boolean variables
             else if (expr.startsWith('HAS_')) {
                 result = !!flatConfig[expr.replace('HAS_', '')];
             } else if (expr.includes('_IS_')) {
@@ -428,17 +442,13 @@ function compileTemplate(template, config) {
     const flat = {};
     for (const [k, v] of Object.entries(config)) flat[k.toUpperCase()] = v;
 
-    // --- PRE-PHASE: Motor Map ---
     const motorMap = buildMotorMap(flat);
     Object.keys(motorMap).forEach(motorName => { flat[motorName.toUpperCase()] = true; });
 
-    // --- PHASE 1: # IF block removal ---
     result = result.replace(/^[ \t]*#[ \t]*IF[ \t]+(.*?)\r?\n([\s\S]*?)^[ \t]*#[ \t]*ENDIF[ \t]*\r?\n?/gm, 
         (m, cond, block) => evaluateCondition(cond, flat) ? block : ''
     );
 
-    // --- PHASE 1.5: DYNAMIC FAN ALLOCATOR ---
-    // 1. Scan remaining text to see which fans survived the # IF blocks
     const fanRegex = /^[ \t]*(?:#\s*)?\[\[FAN:\s*([a-zA-Z0-9_]+)\]\]/gm;
     const activeFans = [];
     let match;
@@ -446,7 +456,6 @@ function compileTemplate(template, config) {
         activeFans.push(match[1].toLowerCase());
     }
 
-    // 2. Sort active fans strictly by priority
     const fanPriority = ['part_cooling', 'hotend_cooling', 'controller_fan', 'driver_fan', 'stepper_fan', 'filter_fan', 'aux_fan'];
     activeFans.sort((a, b) => {
         let idxA = fanPriority.indexOf(a);
@@ -456,19 +465,16 @@ function compileTemplate(template, config) {
         return idxA - idxB;
     });
 
-    // 3. Create the mapping
     const fanMap = {};
     activeFans.forEach((fanName, index) => { fanMap[fanName] = index; });
     const maxFans = flat['BOARD_FANS'] || 99;
-    const maxMfans = flat['BOARD_MFANS'] || 0; // The spillover capacity
+    const maxMfans = flat['BOARD_MFANS'] || 0;
 
-    // --- PHASE 2: Object Mapping & Generation ---
     let currentMotorIndex = null;
     let currentFanIndex = null;
     let processedLines = [];
     
     result.split('\n').forEach(line => {
-        // Detect Motor Anchor
         const motorMatch = line.match(/^[ \t]*(?:#\s*)?\[\[MOTOR:\s*([a-zA-Z0-9_]+)\]\]/);
         if (motorMatch) {
             currentMotorIndex = motorMap[motorMatch[1].toLowerCase()] || null;
@@ -476,7 +482,6 @@ function compileTemplate(template, config) {
             return; 
         }
 
-        // Detect Fan Anchor
         const fanMatch = line.match(/^[ \t]*(?:#\s*)?\[\[FAN:\s*([a-zA-Z0-9_]+)\]\]/);
         if (fanMatch) {
             const fName = fanMatch[1].toLowerCase();
@@ -485,7 +490,6 @@ function compileTemplate(template, config) {
             return;
         }
         
-        // Generate Stepper Drivers
         if (line.includes('[[GENERATE_STEPPER_DRIVERS]]')) {
             let driverBlocks = [];
             Object.keys(motorMap).forEach(motorName => {
@@ -508,28 +512,20 @@ function compileTemplate(template, config) {
             return;
         }
         
-        // Contextual M-Port replacement
         if (currentMotorIndex && line.includes('[[M_')) {
             processedLines.push(line.replace(/\[\[M_/g, `[[M${currentMotorIndex}_`));
             return;
         }
 
-        // Contextual FAN replacement with MFAN Spillover
-        // Matches any variable containing "FAN" inside the brackets (e.g., [[2W_FAN]], [[4W_FAN_CTRL]])
         if (currentFanIndex !== null && line.match(/\[\[.*?FAN.*?\]\]/)) {
             if (currentFanIndex < maxFans) {
-                // Captures prefix ($1) and suffix ($2) and injects the index dynamically
-                // E.g., [[2W_FAN]] -> [[2W_FAN0]], [[4W_FAN_CTRL]] -> [[4W_FAN0_CTRL]]
                 processedLines.push(line.replace(/\[\[(.*?)FAN(.*?)\]\]/g, `[[$1FAN${currentFanIndex}$2]]`));
             } 
             else if (currentFanIndex < maxFans + maxMfans) {
-                // SPILLOVER: Forces the prefix to M_FAN and drops the original prefix (e.g. 2W_ or 4W_)
                 const mFanIndex = currentFanIndex - maxFans;
-                // E.g., [[2W_FAN]] -> [[M_FAN0]], [[4W_FAN_CTRL]] -> [[M_FAN0_CTRL]]
                 processedLines.push(line.replace(/\[\[.*?FAN(.*?)\]\]/g, `[[M_FAN${mFanIndex}$1]]`));
             } 
             else {
-                // Out of ALL ports fallback
                 processedLines.push(line.replace(/\[\[.*?FAN.*?\]\]/g, '# UNDEFINED (USE OTHER SUITABLE FREE PIN, Y SPLITTER FOR OTHER FAN OR WIRE IT SEPARATELY)'));
             }
             return;
@@ -540,7 +536,6 @@ function compileTemplate(template, config) {
     
     result = processedLines.join('\n');
 
-    // --- PHASE 3: Math Evaluations ---
     result = result.replace(/\[\[EXPR:(.*?)\]\]/g, (m, math) => {
         let expr = math.toUpperCase();
         for (const [k, v] of Object.entries(flat)) expr = expr.replace(new RegExp(`\\b${k}\\b`,'g'), v);
@@ -548,7 +543,6 @@ function compileTemplate(template, config) {
         catch (e) { return m; }
     });
 
-    // --- PHASE 4: Direct Variables & Undefined Fallback ---
     result = result.replace(/\[\[(.*?)\]\]/g, (m, varName) => {
         const key = varName.trim().toUpperCase();
         if (flat[key] !== undefined) return flat[key];
@@ -557,7 +551,6 @@ function compileTemplate(template, config) {
 
     return result;
 }
-
 
 // ============================================================================
 // MODALS & DOWNLOAD
@@ -597,11 +590,8 @@ function buildResultUI() {
     const container = document.getElementById('result-buttons-container');
     container.innerHTML = '';
 
-    // Enforce STRICT ordering based on the templatesToCompile array
     templatesToCompile.forEach(fileName => {
         const text = generatedFilesData[fileName];
-        
-        // Safety check just in case a file failed to download
         if (!text) return; 
 
         const wrapper = document.createElement('div');
@@ -670,15 +660,10 @@ function generateFirmware() {
     }
 
     // 2. DYNAMIC OTHERS.JSON DATA EXTRACTION
-    // Loop through all saved user configurations to find hidden variables in others.json
     Object.keys(userConfig).forEach(key => {
         const selectedValue = userConfig[key];
-        
-        // If the feature exists in others.json (e.g. key="z_rails", selectedValue="mgn12h")
         if (typeof selectedValue === 'string' && globalData.others[key] && globalData.others[key][selectedValue]) {
             const extraData = globalData.others[key][selectedValue];
-            
-            // Extract all nested properties (like Z_TRAVEL_MODIFIER) and push them to userConfig
             Object.keys(extraData).forEach(extraKey => {
                 if (extraKey !== 'name') {
                     userConfig[extraKey] = extraData[extraKey];
@@ -694,6 +679,13 @@ function generateFirmware() {
     userConfig['DRIVER_XY'] = userConfig['default_driver_xy'];
     userConfig['DRIVER_Z'] = userConfig['default_driver_z'];
     userConfig['DRIVER_E'] = userConfig['default_driver_e'];
+
+    // 4. FIXED & MOVED MCU DATA EXTRACTION: Read serial fields at compilation runtime
+    const mcuInputs = document.querySelectorAll('.mcu-serial-input');
+    mcuInputs.forEach(input => {
+        const key = input.id.toUpperCase();
+        userConfig[key] = input.value.trim() !== "" ? input.value.trim() : input.placeholder; 
+    });
 
     // STRICT ABSOLUTE PATHS FOR CONFIG FETCHING
     const promises = templatesToCompile.map(fName => 
@@ -721,13 +713,6 @@ document.getElementById('btn-modal-copy').addEventListener('click', () => {
         btn.textContent = 'Copied!';
         setTimeout(() => btn.textContent = 'Copy to Clipboard', 2000);
     });
-    
-// Collect all dynamically generated MCU serial inputs
-    const mcuInputs = document.querySelectorAll('.mcu-serial-input');
-    mcuInputs.forEach(input => {
-        // Converts 'mcu_main' to 'MCU_MAIN' and assigns user input or fallback placeholder
-        userConfig[input.id.toUpperCase()] = input.value || input.placeholder; 
-    });
-});
+}); // CLEANUP: Misplaced extraction loops completely decoupled from clipboard bounds
 
 initializeApp();
