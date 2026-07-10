@@ -218,6 +218,34 @@ function validateHardware() {
         document.getElementById('select-board').parentElement.appendChild(warn);
         generateBtn.disabled = true; // LOCK GENERATION
     }
+
+    // --- 4. FAN SLOT VALIDATION (Soft Limit - Warning Only) ---
+    // Base requirement is typically 1 (Hotend cooling fan is almost always present)
+    let requiredFans = 1; 
+    
+    // Add dynamically based on user's selected features (checks if true or a valid string choice)
+    const fanFeatures = ['part_cooling', 'aux_cooling', 'bed_fan', 'motor_cooling', 'controller_fan'];
+    fanFeatures.forEach(feat => {
+        const val = tempConfig[feat];
+        if (val === true || (typeof val === 'string' && val.toLowerCase() !== 'false' && val.toLowerCase() !== 'none')) {
+            requiredFans += 1;
+        }
+    });
+
+    // Handle generic boards where 0 means unlimited (99)
+    let availableFans = 2;
+    if (boardData.fan !== undefined) {
+        availableFans = boardData.fan === 0 ? 99 : boardData.fan;
+    }
+
+    if (requiredFans > availableFans) {
+        const warn = document.createElement('div');
+        // 'warn' class makes it yellow/orange (soft warning), 'error' makes it red
+        warn.className = 'rms-warning warn hw-warning';
+        warn.textContent = `⚠ WARNING: Configuration requires ~${requiredFans} PWM fans, but the board only has ${availableFans === 99 ? 'unlimited' : availableFans}. Extra fans will be generated as UNDEFINED for manual wiring.`;
+        document.getElementById('select-board').parentElement.appendChild(warn);
+        // WE DO NOT DISABLE THE GENERATE BUTTON HERE! Let the user continue.
+    }
     updateMcuInputs(tempConfig);
 }
 
@@ -629,14 +657,14 @@ function compileTemplate(template, config) {
         // Contextual FAN replacement
         if (currentFanIndex !== null && line.match(/\[\[.*?FAN.*?\]\]/)) {
             if (currentFanIndex < maxFans) {
+                // We have a PWM port available
                 processedLines.push(line.replace(/\[\[(.*?)FAN(.*?)\]\]/g, `[[$1FAN${currentFanIndex}$2]]`));
             } 
-            else if (currentFanIndex < maxFans + maxMfans) {
-                const mFanIndex = currentFanIndex - maxFans;
-                processedLines.push(line.replace(/\[\[.*?FAN(.*?)\]\]/g, `[[M_FAN${mFanIndex}$1]]`));
-            } 
             else {
-                processedLines.push(line.replace(/\[\[.*?FAN.*?\]\]/g, '# UNDEFINED (USE OTHER SUITABLE FREE PIN, Y SPLITTER FOR OTHER FAN OR WIRE IT SEPARATELY)'));
+                // OUT OF PORTS: Inject intelligent UNDEFINED string
+                const mfanNote = maxMfans > 0 ? `M-FAN Always-On port (${maxMfans} available)` : `M-FAN port`;
+                const undefinedStr = `# UNDEFINED (NOT ENOUGH PWM PORTS! Use ${mfanNote}, a different free PIN, Y-splitter, external power, or a 4-pin fan header)`;
+                processedLines.push(line.replace(/\[\[.*?FAN.*?\]\]/g, undefinedStr));
             }
             return;
         }
