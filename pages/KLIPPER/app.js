@@ -100,8 +100,8 @@ function updateMcuInputs(tempConfig) {
                 input.id = id;
                 input.className = 'mcu-serial-input';
                 input.placeholder = id === 'mcu_main' 
-                    ? '/dev/serial/by-id/usb-Klipper_firmware_YOUR_BOARD-if00' 
-                    : '/dev/serial/by-id/usb-Cartographer_Klipper_firmware-if00';
+                    ? '/dev/serial/by-id/......' 
+                    : '/dev/serial/by-id/......';
 
                 // Revert system back to "GENERATE" state as soon as user modifies string data
                 attachChangeListener(input);
