@@ -660,10 +660,20 @@ function compileTemplate(template, config) {
                 processedLines.push(line.replace(/\[\[(.*?)FAN(.*?)\]\]/g, `[[$1FAN${currentFanIndex}$2]]`));
             } 
             else {
-                // OUT OF PORTS: Inject intelligent UNDEFINED string
+                // OUT OF PORTS: Inject intelligent UNDEFINED string or simple # UNDEFINED
                 const mfanNote = maxMfans > 0 ? `M-FAN Always-On port (${maxMfans} available)` : `M-FAN port`;
-                const undefinedStr = `# UNDEFINED (NOT ENOUGH PWM PORTS! Use ${mfanNote}, a different free PIN, Y-splitter, external power, or a 4-pin fan header)`;
-                processedLines.push(line.replace(/\[\[.*?FAN.*?\]\]/g, undefinedStr));
+                const detailedUndefined = `# UNDEFINED (NOT ENOUGH PWM PORTS! Use ${mfanNote}, a different free PIN, Y-splitter, external power, or a 4-pin fan header)`;
+                
+                // Smart regex callback to treat _NAME variables differently
+                const newLine = line.replace(/\[\[(.*?FAN.*?)\]\]/g, (match, varName) => {
+                    if (varName.toUpperCase().endsWith('_NAME')) {
+                        return '# UNDEFINED'; // Clean look for names
+                    } else {
+                        return detailedUndefined; // Informative look for pins
+                    }
+                });
+                
+                processedLines.push(newLine);
             }
             return;
         }
