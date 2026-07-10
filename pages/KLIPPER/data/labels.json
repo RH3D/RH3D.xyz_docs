@@ -31,6 +31,14 @@
     "title": "Front motors T sensors",
     "description": "Enable real-time thermal monitoring via thermistors attached directly to the front stepper motors."
   },
+  "chamber_thermistor": {
+    "title": "Chamber temperature sensor",
+    "description": "Enable a dedicated thermistor to monitor the ambient temperature inside the printer's heated enclosure."
+  },
+  "bed_surface_thermistor": {
+    "title": "Bed surface thermistor",
+    "description": "Enable a secondary thermistor mounted on the top surface of the heated bed for highly accurate print surface temperature readings."
+  },
   "z_rails": {
     "title": "Z - AXIS: linear rails",
     "description": "Specify the exact type of MGN linear rails used on your Z-axis assembly carriage (e.g., MGN12C or MGN12H)."
