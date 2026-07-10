@@ -317,9 +317,10 @@ function renderCategorizedFeatures(features, boardId) {
 
         const isArray = Array.isArray(value);
         const isNumber = typeof value === 'number';
-        const isDriver = typeof value === 'string' && key.includes('driver');
+        // FIX: Match strictly "default_driver" to prevent grabbing "driver_cooling"
+        const isStepperDriver = typeof value === 'string' && key.includes('default_driver');
 
-        if (!isArray && !isNumber && !isDriver) continue;
+        if (!isArray && !isNumber && !isStepperDriver) continue;
 
         let inputEl;
 
@@ -348,7 +349,7 @@ function renderCategorizedFeatures(features, boardId) {
             inputEl.value = value;
             inputEl.dataset.type = 'number';
         }
-        else if (isDriver) {
+        else if (isStepperDriver) {
             inputEl = document.createElement('select');
             inputEl.id = `feature-${key}`;
             inputEl.dataset.type = 'string';
@@ -377,20 +378,18 @@ function renderCategorizedFeatures(features, boardId) {
 
         const formGroup = createFormGroup(key, inputEl);
 
-        if (key.includes('current')) {
+        // FIX: Strict placement logic using "default_current" and "default_driver"
+        if (key.includes('default_current')) {
             currentContainer.appendChild(formGroup);
-        } else if (key.includes('driver')) {
+        } else if (key.includes('default_driver')) {
             driverContainer.appendChild(formGroup);
         } else if (inputEl.dataset.type === 'boolean') {
-            // Check for explicit boolean flags (e.g. [false, true]) -> ADDITIONAL FEATURES
             if (featuresContainer) featuresContainer.appendChild(formGroup);
         } else {
-            // Everything else (Strings, Numbers) -> ADDITIONAL SETTINGS
             if (settingsContainer) settingsContainer.appendChild(formGroup);
         }
     }
 
-    // Intelligently hide containers if they are empty
     if (settingsContainer) {
         document.getElementById('section-settings').style.display = settingsContainer.children.length > 0 ? 'block' : 'none';
     }
