@@ -2,7 +2,7 @@
 // GLOBAL STATE & CONFIGURATION
 // ============================================================================
 
-const APP_VERSION = "1.1.3";
+const APP_VERSION = "1.1.4";
 const globalData = {};
 let userConfig = {};
 let generatedFilesData = {};
@@ -285,8 +285,8 @@ function renderMainSelections() {
 
         renderCategorizedFeatures(printer.features, boardSelect.value);
         
+        // Only Steppers are hard-enabled here; features/settings are handled dynamically based on content
         document.getElementById('section-steppers').style.display = 'block';
-        document.getElementById('section-features').style.display = 'block';
         document.getElementById('btn-generate').disabled = false;
     });
 
@@ -301,11 +301,13 @@ function renderMainSelections() {
 function renderCategorizedFeatures(features, boardId) {
     const currentContainer = document.getElementById('steppers-current-container');
     const driverContainer = document.getElementById('steppers-driver-container');
+    const settingsContainer = document.getElementById('dynamic-settings-container');
     const featuresContainer = document.getElementById('dynamic-features-container');
 
     currentContainer.innerHTML = '';
     driverContainer.innerHTML = '';
-    featuresContainer.innerHTML = '';
+    if (settingsContainer) settingsContainer.innerHTML = '';
+    if (featuresContainer) featuresContainer.innerHTML = '';
 
     const boardData = globalData.boards[boardId];
     const allowedDrivers = boardData.compatible_drivers || Object.keys(globalData.drivers);
@@ -379,10 +381,23 @@ function renderCategorizedFeatures(features, boardId) {
             currentContainer.appendChild(formGroup);
         } else if (key.includes('driver')) {
             driverContainer.appendChild(formGroup);
+        } else if (inputEl.dataset.type === 'boolean') {
+            // Check for explicit boolean flags (e.g. [false, true]) -> ADDITIONAL FEATURES
+            if (featuresContainer) featuresContainer.appendChild(formGroup);
         } else {
-            featuresContainer.appendChild(formGroup);
+            // Everything else (Strings, Numbers) -> ADDITIONAL SETTINGS
+            if (settingsContainer) settingsContainer.appendChild(formGroup);
         }
     }
+
+    // Intelligently hide containers if they are empty
+    if (settingsContainer) {
+        document.getElementById('section-settings').style.display = settingsContainer.children.length > 0 ? 'block' : 'none';
+    }
+    if (featuresContainer) {
+        document.getElementById('section-features').style.display = featuresContainer.children.length > 0 ? 'block' : 'none';
+    }
+
     validateHardware();
 }
 
