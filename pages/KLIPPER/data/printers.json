@@ -113,7 +113,7 @@
 	"CARTO_MESH_COUNT": "20, 20"
   },
   "features": {
-	"hotend_thermistor": ["PT1000", "ATC Semitec 104GT-2", "ATC Semitec 104NT-4-R025H42G", "EPCOS 100K B57560G104F", "Generic 3950", "Honeywell 100K 135-104LAG-J01", "NTC 100K MGB18-104F39050L32", "SliceEngineering 450", "TDK NTCG104LH104JT1"],
+	"hotend_thermistor": ["ATC Semitec 104GT-2", "ATC Semitec 104NT-4-R025H42G", "EPCOS 100K B57560G104F", "Generic 3950", "Honeywell 100K 135-104LAG-J01", "NTC 100K MGB18-104F39050L32", "SliceEngineering 450", "TDK NTCG104LH104JT1", "PT1000"],
 	"4wd": false,
 	"part_cooling": false,
 	"aux_cooling": false,
@@ -177,7 +177,7 @@
 	"CARTO_MESH_COUNT": "20, 20"
   },
   "features": {
-	"hotend_thermistor": ["PT1000", "ATC Semitec 104GT-2", "ATC Semitec 104NT-4-R025H42G", "EPCOS 100K B57560G104F", "Generic 3950", "Honeywell 100K 135-104LAG-J01", "NTC 100K MGB18-104F39050L32", "SliceEngineering 450", "TDK NTCG104LH104JT1"],
+	"hotend_thermistor": ["ATC Semitec 104GT-2", "ATC Semitec 104NT-4-R025H42G", "EPCOS 100K B57560G104F", "Generic 3950", "Honeywell 100K 135-104LAG-J01", "NTC 100K MGB18-104F39050L32", "SliceEngineering 450", "TDK NTCG104LH104JT1", "PT1000"],
 	"4wd": false,
 	"part_cooling": false,
 	"aux_cooling": [true, false],
