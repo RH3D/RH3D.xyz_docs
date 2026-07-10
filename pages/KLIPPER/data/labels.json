@@ -7,6 +7,10 @@
     "title": "Main controller board",
     "description": "Choose the primary electronics control board installed in your printer electronic bay."
   },
+  "hotend_thermistor": {
+    "title": "Hotend thermistor",
+    "description": "Select the proper thermistor type used in your hotend, if using PT1000, make sure the motherboard supports it."
+  },
   "4wd": {
     "title": "XY - AXIS: 4x motors",
     "description": "Enable 4WD (4-motor CoreXY) setup for extreme acceleration, increased torque, and balanced belt tension."
