@@ -27,6 +27,10 @@
     "title": "Bed circulation fan",
     "description": "Enable dedicated bed fans used to circulate air underneath the heated bed to normalize chamber temperatures."
   },
+  "filter_fan": {
+    "title": "Air filter fan",
+    "description": "Enable air filtration with a dedicated fan port."
+  },
   "driver_cooling": {
     "title": "Separate driver fan",
     "description": "Enable this if you want separate control for the motor driver cooling (separate from the electronics fan)."
