@@ -2,7 +2,7 @@
 // GLOBAL STATE & CONFIGURATION
 // ============================================================================
 
-const APP_VERSION = "1.1.2";
+const APP_VERSION = "1.1.3";
 const globalData = {};
 let userConfig = {};
 let generatedFilesData = {};
@@ -204,12 +204,17 @@ function validateHardware() {
     if (tempConfig['chamber_thermistor']) requiredThermistors += 1;
     if (tempConfig['bed_surface_thermistor']) requiredThermistors += 1;
 
-    const availableThermistors = boardData.thermistors || 2; // Fallback if missing in JSON
+    // FIX: If the board explicitly defines 0 (generic), treat it as 99 (unlimited).
+    // If it's completely missing from JSON, fallback to 2.
+    let availableThermistors = 2; 
+    if (boardData.thermistors !== undefined) {
+        availableThermistors = boardData.thermistors === 0 ? 99 : boardData.thermistors;
+    }
 
     if (requiredThermistors > availableThermistors) {
         const warn = document.createElement('div');
         warn.className = 'rms-warning error hw-warning';
-        warn.textContent = `⚠ ERROR: Board supports ${availableThermistors} thermistors, but configuration requires ${requiredThermistors}. Disable some sensors or select another board.`;
+        warn.textContent = `⚠ ERROR: Board supports ${availableThermistors === 99 ? 'unlimited' : availableThermistors} thermistors, but configuration requires ${requiredThermistors}. Disable some sensors or select another board.`;
         document.getElementById('select-board').parentElement.appendChild(warn);
         generateBtn.disabled = true; // LOCK GENERATION
     }
