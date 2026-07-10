@@ -7,6 +7,7 @@
   "mfans": 0,
   "endstops": 0,
   "extruders": 0,
+  "thermistors": 0,
   "pins": {
 	"M1_STEP": "PIN_M1_STEP", "M1_DIR": "PIN_M1_DIR", "M1_ENABLE": "PIN_M1_EN", "M1_CS_UART": "PIN_M1_CS", "M1_DIAG": "PIN_ENDSTOP_1", "M1_NAME": "MOTOR_1",
 	"M2_STEP": "PIN_M2_STEP", "M2_DIR": "PIN_M2_DIR", "M2_ENABLE": "PIN_M2_EN", "M2_CS_UART": "PIN_M2_CS", "M2_DIAG": "PIN_ENDSTOP_2", "M2_NAME": "MOTOR_2",
@@ -60,6 +61,7 @@
   "mfans": 3,
   "endstops": 6,
   "extruders": 4,
+  "thermistors": 5,
   "pins": {
 	"M1_STEP": "PC13", "M1_DIR": "PC14", "M1_ENABLE": "!PE6", "M1_CS_UART": "PG14", "M1_DIAG": "PF0", "M1_NAME": "MOTOR_1",
 	"M2_STEP": "PE4", "M2_DIR": "!PE5", "M2_ENABLE": "!PE3", "M2_CS_UART": "PG13", "M2_DIAG": "PF2", "M2_NAME": "MOTOR_2",
@@ -110,6 +112,7 @@
   "mfans": 2,
   "endstops": 8,
   "extruders": 4,
+  "thermistors": 5,
   "pins": {
 	"M1_STEP": "PF13", "M1_DIR": "PF12", "M1_ENABLE": "!PF14", "M1_CS_UART": "PC4", "M1_DIAG": "PG6", "M1_NAME": "MOTOR_0",
 	"M2_STEP": "PG0", "M2_DIR": "PG1", "M2_ENABLE": "!PF15", "M2_CS_UART": "PD11", "M2_DIAG": "PG9", "M2_NAME": "MOTOR_1",
@@ -157,6 +160,7 @@
   "mfans": 1,
   "endstops": 4,
   "extruders": 1,
+  "thermistors": 2,
   "pins": {
 	"M1_STEP": "PB13", "M1_DIR": "PB12", "M1_ENABLE": "!PB14", "M1_CS_UART": "PC11", "M1_ADDR": "0", "M1_NAME": "XM",
 	"M2_STEP": "PB10", "M2_DIR": "PB2", "M2_ENABLE": "!PB11", "M2_CS_UART": "PC11", "M2_ADDR": "2", "M2_NAME": "YM",
@@ -185,6 +189,7 @@
   "mfans": 1,
   "endstops": 4,
   "extruders": 1,
+  "thermistors": 2,
   "pins": {
 	"M1_STEP": "PB13", "M1_DIR": "PB12", "M1_ENABLE": "!PB14", "M1_CS_UART": "PB15", "M1_NAME": "XM",
 	"M2_STEP": "PB10", "M2_DIR": "PB2", "M2_ENABLE": "!PB11", "M2_CS_UART": "PC6", "M2_NAME": "YM",
@@ -212,6 +217,7 @@
   "mfans": 0,
   "endstops": 4,
   "extruders": 1,
+  "thermistors": 2,
   "pins": {
 	"M1_STEP": "PB13", "M1_DIR": "PB12", "M1_ENABLE": "!PB14", "M1_CS_UART": "PC11", "M1_ADDR": "0", "M1_NAME": "XM",
 	"M2_STEP": "PB10", "M2_DIR": "PB2", "M2_ENABLE": "!PB11", "M2_CS_UART": "PC11", "M2_ADDR": "2", "M2_NAME": "YM",
@@ -241,6 +247,7 @@
   "mfans": 0,
   "endstops": 4,
   "extruders": 1,
+  "thermistors": 2,
   "pins": {
 	"M1_STEP": "PB13", "M1_DIR": "PB12", "M1_ENABLE": "!PB14", "M1_CS_UART": "PC11", "M1_ADDR": "0", "M1_NAME": "XM",
 	"M2_STEP": "PB10", "M2_DIR": "PB2", "M2_ENABLE": "!PB11", "M2_CS_UART": "PC11", "M2_ADDR": "2", "M2_NAME": "YM",
@@ -271,6 +278,7 @@
   "mfans": 0,
   "endstops": 4,
   "extruders": 1,
+  "thermistors": 2,
   "pins": {
 	"M1_STEP": "PC11", "M1_DIR": "PC12", "M1_ENABLE": "!PC10", "M1_CS_UART": "PC7", "M1_ADDR": "0", "M1_NAME": "XM",
 	"M2_STEP": "PB12", "M2_DIR": "PB10", "M2_ENABLE": "!PB13", "M2_CS_UART": "PC7", "M2_ADDR": "2", "M2_NAME": "YM",
