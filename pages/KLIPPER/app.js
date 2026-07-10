@@ -2,7 +2,7 @@
 // GLOBAL STATE & CONFIGURATION
 // ============================================================================
 
-const APP_VERSION = "1.1.4";
+const APP_VERSION = "1.1.5";
 const globalData = {};
 let userConfig = {};
 let generatedFilesData = {};
@@ -283,26 +283,40 @@ function renderMainSelections() {
             boardSelect.disabled = false;
         }
 
-        renderCategorizedFeatures(printer.features, boardSelect.value);
+        // PRINTER CHANGE -> resetState = true (Wipe everything)
+        renderCategorizedFeatures(printer.features, boardSelect.value, true);
         
-        // Only Steppers are hard-enabled here; features/settings are handled dynamically based on content
         document.getElementById('section-steppers').style.display = 'block';
         document.getElementById('btn-generate').disabled = false;
     });
 
-    // Handle Board Change (Updates compatible drivers dynamically)
+    // Handle Board Change
     boardSelect.addEventListener('change', (e) => {
         handleInputChange();
         const printer = globalData.printers[printerSelect.value];
-        renderCategorizedFeatures(printer.features, e.target.value);
+        
+        // BOARD CHANGE -> resetState = false (Preserve user's choices!)
+        renderCategorizedFeatures(printer.features, e.target.value, false);
     });
 }
 
-function renderCategorizedFeatures(features, boardId) {
+function renderCategorizedFeatures(features, boardId, resetState = false) {
     const currentContainer = document.getElementById('steppers-current-container');
     const driverContainer = document.getElementById('steppers-driver-container');
     const settingsContainer = document.getElementById('dynamic-settings-container');
     const featuresContainer = document.getElementById('dynamic-features-container');
+
+    // --- STATE PRESERVATION LOGIC ---
+    // Scrape and remember all currently selected UI values before wiping the HTML containers
+    const savedValues = {};
+    if (!resetState) {
+        for (const key of Object.keys(features)) {
+            const el = document.getElementById(`feature-${key}`);
+            if (el) {
+                savedValues[key] = el.value; // Keeps selection as string ("true", "false", "Generic 3950", etc.)
+            }
+        }
+    }
 
     currentContainer.innerHTML = '';
     driverContainer.innerHTML = '';
@@ -317,7 +331,6 @@ function renderCategorizedFeatures(features, boardId) {
 
         const isArray = Array.isArray(value);
         const isNumber = typeof value === 'number';
-        // FIX: Match strictly "default_driver" to prevent grabbing "driver_cooling"
         const isStepperDriver = typeof value === 'string' && key.includes('default_driver');
 
         if (!isArray && !isNumber && !isStepperDriver) continue;
@@ -334,6 +347,11 @@ function renderCategorizedFeatures(features, boardId) {
                 const optEl = document.createElement('option');
                 optEl.value = opt;
                 optEl.textContent = isBool ? (opt ? 'Enabled' : 'Disabled') : String(opt).toUpperCase();
+                
+                // If we have a saved value and it matches this option, restore it
+                if (!resetState && savedValues[key] !== undefined && String(opt) === savedValues[key]) {
+                    optEl.selected = true;
+                }
                 inputEl.appendChild(optEl);
             });
 
@@ -346,7 +364,8 @@ function renderCategorizedFeatures(features, boardId) {
             inputEl.type = 'number';
             inputEl.step = '0.05';
             inputEl.id = `feature-${key}`;
-            inputEl.value = value;
+            // Restore number or fallback to default
+            inputEl.value = (!resetState && savedValues[key] !== undefined) ? savedValues[key] : value;
             inputEl.dataset.type = 'number';
         }
         else if (isStepperDriver) {
@@ -355,19 +374,28 @@ function renderCategorizedFeatures(features, boardId) {
             inputEl.dataset.type = 'string';
             
             let validOptionsCount = 0;
-            
+            let driverToSelect = value; // Default fallback from printers.json
+
+            // Smart check: If user had a driver selected, and it IS compatible with the new board, keep it.
+            // If it's NOT compatible, it will fall back to the printer's default 'value'.
+            if (!resetState && savedValues[key] !== undefined && allowedDrivers.includes(savedValues[key])) {
+                driverToSelect = savedValues[key];
+            }
+
             Object.keys(globalData.drivers).forEach(dKey => {
                 if (allowedDrivers.includes(dKey)) {
                     const optEl = document.createElement('option');
                     optEl.value = dKey;
                     optEl.textContent = globalData.drivers[dKey].name;
-                    if (dKey === value) optEl.selected = true;
+                    if (dKey === driverToSelect) optEl.selected = true;
                     inputEl.appendChild(optEl);
                     validOptionsCount++;
                 }
             });
 
-            if (!allowedDrivers.includes(value) && validOptionsCount > 0) {
+            // Ultimate fallback: If neither the saved driver nor the printer default driver is supported 
+            // by the new board, automatically select the first valid option.
+            if (!allowedDrivers.includes(driverToSelect) && validOptionsCount > 0) {
                 inputEl.selectedIndex = 0;
             }
 
@@ -378,7 +406,6 @@ function renderCategorizedFeatures(features, boardId) {
 
         const formGroup = createFormGroup(key, inputEl);
 
-        // FIX: Strict placement logic using "default_current" and "default_driver"
         if (key.includes('default_current')) {
             currentContainer.appendChild(formGroup);
         } else if (key.includes('default_driver')) {
@@ -397,6 +424,7 @@ function renderCategorizedFeatures(features, boardId) {
         document.getElementById('section-features').style.display = featuresContainer.children.length > 0 ? 'block' : 'none';
     }
 
+    // Trigger validation (Will catch if the preserved settings now violate thermistor limits, endstops, etc.)
     validateHardware();
 }
 
