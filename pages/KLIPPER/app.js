@@ -2,7 +2,7 @@
 // GLOBAL STATE & CONFIGURATION
 // ============================================================================
 
-const APP_VERSION = "1.1.5";
+const APP_VERSION = "1.1.6";
 const globalData = {};
 let userConfig = {};
 let generatedFilesData = {};
@@ -220,31 +220,30 @@ function validateHardware() {
     }
 
     // --- 4. FAN SLOT VALIDATION (Soft Limit - Warning Only) ---
-    // Base requirement is typically 1 (Hotend cooling fan is almost always present)
-    let requiredFans = 1; 
+    let requiredFans = 3; // Base requirement: Hotend fan + Part cooling fan + Controller fan
     
-    // Add dynamically based on user's selected features (checks if true or a valid string choice)
-    const fanFeatures = ['part_cooling', 'aux_cooling', 'bed_fan', 'motor_cooling', 'controller_fan'];
-    fanFeatures.forEach(feat => {
+    // Add dynamically based on EXTRA user features only (to prevent double-counting)
+    const extraFanFeatures = ['aux_cooling', 'aux_fan', 'bed_fan', 'motor_cooling', 'driver_cooling', 'filter_fan'];
+    extraFanFeatures.forEach(feat => {
         const val = tempConfig[feat];
         if (val === true || (typeof val === 'string' && val.toLowerCase() !== 'false' && val.toLowerCase() !== 'none')) {
             requiredFans += 1;
         }
     });
 
-    // Handle generic boards where 0 means unlimited (99)
-    let availableFans = 2;
-    if (boardData.fan !== undefined) {
-        availableFans = boardData.fan === 0 ? 99 : boardData.fan;
+    // Robust check: Support both "fans" and "fan" keys from boards.json
+    const boardFansRaw = boardData.fans !== undefined ? boardData.fans : boardData.fan;
+    
+    let availableFans = 2; // Default fallback if completely missing
+    if (boardFansRaw !== undefined) {
+        availableFans = boardFansRaw === 0 ? 99 : boardFansRaw;
     }
 
     if (requiredFans > availableFans) {
         const warn = document.createElement('div');
-        // 'warn' class makes it yellow/orange (soft warning), 'error' makes it red
         warn.className = 'rms-warning warn hw-warning';
         warn.textContent = `⚠ WARNING: Configuration requires ~${requiredFans} PWM fans, but the board only has ${availableFans === 99 ? 'unlimited' : availableFans}. Extra fans will be generated as UNDEFINED for manual wiring.`;
         document.getElementById('select-board').parentElement.appendChild(warn);
-        // WE DO NOT DISABLE THE GENERATE BUTTON HERE! Let the user continue.
     }
     updateMcuInputs(tempConfig);
 }
@@ -786,8 +785,11 @@ function generateFirmware() {
         ...pConfig.config,
         ...globalData.boards[boardId].pins,
         BOARD_DRIVERS: globalData.boards[boardId].drivers || 99,
-        BOARD_FANS: globalData.boards[boardId].fan || 99,
-        BOARD_MFANS: globalData.boards[boardId].mfan || 0,
+        BOARD_FANS: (() => {
+            const f = globalData.boards[boardId].fans !== undefined ? globalData.boards[boardId].fans : globalData.boards[boardId].fan;
+            return f === 0 ? 99 : (f || 2);
+        })(),
+        BOARD_MFANS: globalData.boards[boardId].mfan !== undefined ? globalData.boards[boardId].mfan : (globalData.boards[boardId].mfan || 0),
         DATE: dateStr,
         'CLI-KLI_VERSION': APP_VERSION,
         BOARD_NAME: globalData.boards[boardId].name
