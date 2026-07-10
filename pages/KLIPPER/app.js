@@ -194,6 +194,25 @@ function validateHardware() {
             }
         }
     });
+    
+    // --- 3. THERMISTOR SLOT VALIDATION (Hard Limit) ---
+    // Base requirement is 2 (TH0 for Hotend + THB for Bed)
+    let requiredThermistors = 2; 
+    
+    // Add dynamically based on user's selected features
+    if (tempConfig['motor_thermistors']) requiredThermistors += 2;
+    if (tempConfig['chamber_thermistor']) requiredThermistors += 1;
+    if (tempConfig['bed_surface_thermistor']) requiredThermistors += 1;
+
+    const availableThermistors = boardData.thermistors || 2; // Fallback if missing in JSON
+
+    if (requiredThermistors > availableThermistors) {
+        const warn = document.createElement('div');
+        warn.className = 'rms-warning error hw-warning';
+        warn.textContent = `⚠ ERROR: Board supports ${availableThermistors} thermistors, but configuration requires ${requiredThermistors}. Disable some sensors or select another board.`;
+        document.getElementById('select-board').parentElement.appendChild(warn);
+        generateBtn.disabled = true; // LOCK GENERATION
+    }
     updateMcuInputs(tempConfig);
 }
 
@@ -452,6 +471,7 @@ function compileTemplate(template, config) {
         (m, cond, block) => evaluateCondition(cond, flat) ? block : ''
     );
 
+    // --- PHASE 1.5: DYNAMIC FAN ALLOCATOR ---
     const fanRegex = /^[ \t]*(?:#\s*)?\[\[FAN:\s*([a-zA-Z0-9_]+)\]\]/gm;
     const activeFans = [];
     let match;
@@ -473,26 +493,64 @@ function compileTemplate(template, config) {
     const maxFans = flat['BOARD_FANS'] || 99;
     const maxMfans = flat['BOARD_MFANS'] || 0;
 
+    // --- PHASE 1.6: DYNAMIC THERMISTOR ALLOCATOR ---
+    const thRegex = /^[ \t]*(?:#\s*)?\[\[TH:\s*([a-zA-Z0-9_]+)\]\]/gm;
+    const activeTh = [];
+    let thMatch;
+    while ((thMatch = thRegex.exec(result)) !== null) {
+        activeTh.push(thMatch[1].toLowerCase());
+    }
+
+    const thPriority = ['bed_surface', 'bed_top', 'motor_right', 'motor_left', 'chamber_temperature', 'chamber'];
+    activeTh.sort((a, b) => {
+        let idxA = thPriority.indexOf(a);
+        let idxB = thPriority.indexOf(b);
+        if (idxA === -1) idxA = 99;
+        if (idxB === -1) idxB = 99;
+        return idxA - idxB;
+    });
+
+    const thMap = {};
+    // Indexing starts strictly at 1, because TH0 is extruder and THB is bed
+    activeTh.forEach((thName, index) => { thMap[thName] = index + 1; });
+
+    // --- PHASE 2: Object Mapping & Generation ---
     let currentMotorIndex = null;
     let currentFanIndex = null;
+    let currentThIndex = null;
     let processedLines = [];
     
     result.split('\n').forEach(line => {
+        // Detect Motor Anchor
         const motorMatch = line.match(/^[ \t]*(?:#\s*)?\[\[MOTOR:\s*([a-zA-Z0-9_]+)\]\]/);
         if (motorMatch) {
             currentMotorIndex = motorMap[motorMatch[1].toLowerCase()] || null;
             currentFanIndex = null; 
+            currentThIndex = null;
             return; 
         }
 
+        // Detect Fan Anchor
         const fanMatch = line.match(/^[ \t]*(?:#\s*)?\[\[FAN:\s*([a-zA-Z0-9_]+)\]\]/);
         if (fanMatch) {
             const fName = fanMatch[1].toLowerCase();
             currentFanIndex = fanMap[fName] !== undefined ? fanMap[fName] : null;
             currentMotorIndex = null; 
+            currentThIndex = null;
+            return;
+        }
+
+        // Detect Thermistor Anchor
+        const thAnchorMatch = line.match(/^[ \t]*(?:#\s*)?\[\[TH:\s*([a-zA-Z0-9_]+)\]\]/);
+        if (thAnchorMatch) {
+            const tName = thAnchorMatch[1].toLowerCase();
+            currentThIndex = thMap[tName] !== undefined ? thMap[tName] : null;
+            currentMotorIndex = null; 
+            currentFanIndex = null;
             return;
         }
         
+        // Generate Stepper Drivers
         if (line.includes('[[GENERATE_STEPPER_DRIVERS]]')) {
             let driverBlocks = [];
             Object.keys(motorMap).forEach(motorName => {
@@ -515,11 +573,13 @@ function compileTemplate(template, config) {
             return;
         }
         
+        // Contextual M-Port replacement
         if (currentMotorIndex && line.includes('[[M_')) {
             processedLines.push(line.replace(/\[\[M_/g, `[[M${currentMotorIndex}_`));
             return;
         }
 
+        // Contextual FAN replacement
         if (currentFanIndex !== null && line.match(/\[\[.*?FAN.*?\]\]/)) {
             if (currentFanIndex < maxFans) {
                 processedLines.push(line.replace(/\[\[(.*?)FAN(.*?)\]\]/g, `[[$1FAN${currentFanIndex}$2]]`));
@@ -533,12 +593,21 @@ function compileTemplate(template, config) {
             }
             return;
         }
+
+        // Contextual Thermistor replacement
+        // Safely targets only tags starting with TH_ to prevent mangling tags like [[LENGTH]]
+        if (currentThIndex !== null && line.match(/\[\[TH_.*?\]\]/)) {
+            // Converts [[TH_TEMP]] to [[TH1_TEMP]], [[TH_PIN]] to [[TH1_PIN]], etc.
+            processedLines.push(line.replace(/\[\[TH_(.*?)\]\]/g, `[[TH${currentThIndex}_$1]]`));
+            return;
+        }
         
         processedLines.push(line);
     });
     
     result = processedLines.join('\n');
 
+    // --- PHASE 3: Math Evaluations ---
     result = result.replace(/\[\[EXPR:(.*?)\]\]/g, (m, math) => {
         let expr = math.toUpperCase();
         for (const [k, v] of Object.entries(flat)) expr = expr.replace(new RegExp(`\\b${k}\\b`,'g'), v);
@@ -546,6 +615,7 @@ function compileTemplate(template, config) {
         catch (e) { return m; }
     });
 
+    // --- PHASE 4: Direct Variables & Undefined Fallback ---
     result = result.replace(/\[\[(.*?)\]\]/g, (m, varName) => {
         const key = varName.trim().toUpperCase();
         if (flat[key] !== undefined) return flat[key];
