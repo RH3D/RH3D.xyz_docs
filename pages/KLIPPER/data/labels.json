@@ -9,7 +9,7 @@
   },
   "hotend_thermistor": {
     "title": "Hotend thermistor",
-    "description": "Select the proper thermistor type used in your hotend, if using PT1000, make sure the motherboard supports it."
+    "description": "Select the specific thermistor model used in your hotend for accurate temperature readings. If using PT1000, make sure the motherboard supports it."
   },
   "4wd": {
     "title": "XY - AXIS: 4x motors",
