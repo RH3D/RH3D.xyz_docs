@@ -74,5 +74,13 @@
   "default_driver_e": {
     "title": "EXTRUDER driver",
     "description": "Choose the TMC stepper driver used for the extruder motor."
+  },
+  "mcu_main": {
+    "title": "Mainboard MCU Serial ID",
+    "description": "Enter the unique serial path of your primary controller board. You can find this ID by running 'ls /dev/serial/by-id/*' via SSH terminal on your Raspberry Pi."
+  },
+  "mcu_carto": {
+    "title": "Cartographer MCU Serial ID",
+    "description": "Enter the unique serial path of your Cartographer board. If left blank, default system fallback definitions will be used."
   }
 }
