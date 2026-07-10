@@ -27,6 +27,10 @@
     "title": "Bed circulation fan",
     "description": "Enable dedicated bed fans used to circulate air underneath the heated bed to normalize chamber temperatures."
   },
+  "driver_cooling": {
+    "title": "Separate driver fan",
+    "description": "Enable this if you want separate control for the motor driver cooling (separate from the electronics fan)."
+  },
   "motor_cooling": {
     "title": "Active stepper cooling",
     "description": "Enable this option if your printer is equipped with dedicated cooling fans for the XY stepper motors to prevent overheating."
