@@ -553,7 +553,7 @@ function compileTemplate(template, config) {
         activeFans.push(match[1].toLowerCase());
     }
 
-    const fanPriority = ['part_cooling', 'hotend_cooling', 'controller_fan', 'driver_fan', 'stepper_fan', 'filter_fan', 'aux_fan'];
+    const fanPriority = ['part_cooling', 'hotend_cooling', 'controller_fan', 'driver_fan', 'stepper_fan', 'aux_fan', 'bed_fan', 'filter_fan'];
     activeFans.sort((a, b) => {
         let idxA = fanPriority.indexOf(a);
         let idxB = fanPriority.indexOf(b);
