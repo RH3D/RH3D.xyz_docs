@@ -662,7 +662,7 @@ function compileTemplate(template, config) {
             else {
                 // OUT OF PORTS: Inject intelligent UNDEFINED string or simple # UNDEFINED
                 const mfanNote = maxMfans > 0 ? `M-FAN Always-On port (${maxMfans} available)` : `M-FAN port`;
-                const detailedUndefined = `# UNDEFINED (NOT ENOUGH PWM PORTS! Use ${mfanNote}, a different free PIN, Y-splitter, external power, or a 4-pin fan header)`;
+                const detailedUndefined = `# UNDEFINED (NOT ENOUGH PWM FAN PORTS! Use ${mfanNote}, a different free PIN, Y-splitter, external power, or a 4-pin fan (if available) and update the configuration accordingly)`;
                 
                 // Smart regex callback to treat _NAME variables differently
                 const newLine = line.replace(/\[\[(.*?FAN.*?)\]\]/g, (match, varName) => {
