@@ -121,8 +121,11 @@ function updateMcuInputs(tempConfig) {
     // 1. Mainboard Context (Always Active and Persistent)
     manageInput('mcu_main', true);
 
-    // 2. Eddy Current Surface Probe Context (Conditional Validation)
-    const hasCarto = (tempConfig['bed_probe'] === 'cartographer' || tempConfig['bed_probe'] === 'cartographer_touch');
+    // 2. Eddy Current Surface Probe Context (Robust condition checking for any variation of 'carto')
+    // Fallback to empty string safely prevents errors if bed_probe is undefined
+    const bedProbeOption = String(tempConfig['bed_probe'] || '').toLowerCase();
+    const hasCarto = bedProbeOption.includes('carto');
+    
     manageInput('mcu_carto', hasCarto);
 }
 
