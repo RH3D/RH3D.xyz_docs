@@ -49,6 +49,7 @@
 	"TILT_POINT3": "215, 10"
   },
   "features": {
+	"hotend_thermistor": ["PT1000", "104NT", "3950", "NTC 100K"],
 	"4wd": [false, true],
 	"part_cooling": ["5015", "cpap"],
 	"aux_cooling": false,
@@ -111,6 +112,7 @@
 	"CARTO_MESH_COUNT": "20, 20"
   },
   "features": {
+	"hotend_thermistor": ["PT1000", "104NT", "3950", "NTC 100K"],
 	"4wd": false,
 	"part_cooling": false,
 	"aux_cooling": false,
@@ -173,6 +175,7 @@
 	"CARTO_MESH_COUNT": "20, 20"
   },
   "features": {
+	"hotend_thermistor": ["PT1000", "104NT", "3950", "NTC 100K"],
 	"4wd": false,
 	"part_cooling": false,
 	"aux_cooling": [true, false],
