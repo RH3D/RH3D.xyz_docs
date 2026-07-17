@@ -318,10 +318,10 @@
   "extruders": 2,
   "thermistors": 3,
   "pins": {
-	"M1_STEP": "PD4", "M1_DIR": "PD3", "M1_ENABLE": "PD6", "M1_CS_UART": "PD5", "M1_DIAG": "PC1", "M1_NAME": "XM",
-	"M2_STEP": "PA15", "M2_DIR": "PA8", "M2_ENABLE": "PD1", "M2_CS_UART": "PD0", "M2_DIAG": "PC3", "M2_NAME": "YM",
-	"M3_STEP": "PE2", "M3_DIR": "PE3", "M3_ENABLE": "PE0", "M3_CS_UART": "PE1", "M3_DIAG": "PC0", "M3_NAME": "ZAM/ZBM",
-	"M4_STEP": "PD15", "M4_DIR": "PD14", "M4_ENABLE": "PC7", "M4_CS_UART": "PC6", "M4_DIAG": "PC2", "M4_NAME": "E0M",
+	"M1_STEP": "PD4", "M1_DIR": "!PD3", "M1_ENABLE": "!PD6", "M1_CS_UART": "PD5", "M1_DIAG": "PC1", "M1_NAME": "XM",
+	"M2_STEP": "PA15", "M2_DIR": "!PA8", "M2_ENABLE": "!PD1", "M2_CS_UART": "PD0", "M2_DIAG": "PC3", "M2_NAME": "YM",
+	"M3_STEP": "PE2", "M3_DIR": "PE3", "M3_ENABLE": "!PE0", "M3_CS_UART": "PE1", "M3_DIAG": "PC0", "M3_NAME": "ZAM/ZBM",
+	"M4_STEP": "PD15", "M4_DIR": "PD14", "M4_ENABLE": "!PC7", "M4_CS_UART": "PC6", "M4_DIAG": "PC2", "M4_NAME": "E0M",
 	"M5_STEP": "PD11", "M5_DIR": "PD10", "M5_ENABLE": "PD13", "M5_CS_UART": "PD12", "M5_DIAG": "PA0", "M5_NAME": "E1M",
 	"SPI_MISO": "PE15", "SPI_MOSI": "PE13", "SPI_SCLK": "PE14",
 	"STOP_1": "PC1 # X-STOP", "STOP_2": "PC3 # Y-STOP", "STOP_3": "PC0 # Z-STOP", "STOP_4": "PC2 # E0-STOP", "STOP_5": "PA0 # E1-STOP",
@@ -354,7 +354,7 @@
   "extruders": 2,
   "thermistors": 3,
   "pins": {
-	"M1_STEP": "PD4", "M1_DIR": "PD3", "M1_ENABLE": "PD6", "M1_CS_UART": "PD5", "M1_DIAG": "PC1", "M1_NAME": "XM",
+	"M1_STEP": "PD4", "M1_DIR": "!PD3", "M1_ENABLE": "!PD6", "M1_CS_UART": "PD5", "M1_DIAG": "PC1", "M1_NAME": "XM",
 	"M2_STEP": "PA15", "M2_DIR": "PA8", "M2_ENABLE": "PD1", "M2_CS_UART": "PD0", "M2_DIAG": "PC3", "M2_NAME": "YM",
 	"M3_STEP": "PE2", "M3_DIR": "PE3", "M3_ENABLE": "PE0", "M3_CS_UART": "PE1", "M3_DIAG": "PC0", "M3_NAME": "ZAM/ZBM",
 	"M4_STEP": "PD15", "M4_DIR": "PD14", "M4_ENABLE": "PC7", "M4_CS_UART": "PC6", "M4_DIAG": "PC2", "M4_NAME": "E0M",
